@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción:}{1}{section.1}%
+\contentsline {section}{\numberline {2}¿Cuáles son las diferencias entre la seguridad de la información y ciberseguridad?}{1}{section.2}%
+\contentsline {section}{\numberline {3}Enfoque Táctico: Defensivo vs. Ofensivo:}{1}{section.3}%
+\contentsline {section}{Referencias}{2}{section*.1}%

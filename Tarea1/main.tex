@@ -1,0 +1,357 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS --
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing,babel}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE CÓDIGO ---
+\usepackage{listings}
+% Configuración del estilo de listings
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}   
+\definecolor{keyword}{rgb}{0.0,0.2,0.6}     
+\definecolor{comment}{rgb}{0.25,0.5,0.35}   
+\definecolor{string}{rgb}{0.6,0.0,0.0}      
+\definecolor{number}{rgb}{0.5,0.0,0.5}      
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  literate={á}{{\'a}}1
+           {é}{{\'e}}1
+           {í}{{\'i}}1
+           {ó}{{\'o}}1
+           {ú}{{\'u}}1
+           {Á}{{\'A}}1
+           {É}{{\'E}}1
+           {Í}{{\'I}}1
+           {Ó}{{\'O}}1
+           {Ú}{{\'U}}1
+           {ñ}{{\~n}}1
+           {Ñ}{{\~N}}1
+           {¿}{{\textquestiondown}}1
+           {¡}{{\textexclamdown}}1
+}
+
+% Estilo para código en C
+\lstdefinestyle{cstyle}{
+  language=C,
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+    keywordstyle=[2]\color{yellow!70!orange}\bfseries,
+    morekeywords=[2]{MPI_Init,MPI_Comm_size,MPI_Comm_rank,MPI_Send,MPI_Recv,MPI_Scatter,MPI_Gather,MPI_Bcast,MPI_Reduce,MPI_Finalize},
+    emph={printf},
+    emphstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false
+}
+
+% Definición del lenguaje Python para listings
+\lstdefinelanguage[LAB]{Python}{
+    morekeywords={False, None, True, and, as, assert, async, await, break,
+                                class, continue, def, del, elif, else, except, finally,
+                                for, from, global, if, import, in, is, lambda, nonlocal,
+                                not, or, pass, raise, return, try, while, with, yield,
+                                machine, Pin, PWM, ADC, Timer, sleep_ms, sleep_us},
+    morecomment=[l]{\#},
+    morestring=[b]",
+    morestring=[b]',
+    sensitive=true
+}
+
+% Estilo para salidas de consola/terminal
+\lstdefinestyle{output}{
+  backgroundcolor=\color{black!5},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  frame=single,
+  rulecolor=\color{black!30},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  xleftmargin=0.5cm,
+  xrightmargin=0.5cm
+}
+
+% --- ESTILOS PARA DIAGRAMAS DE FLUJO (TIKZ) ---
+\tikzset{
+  startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30},
+  process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30},
+  decision/.style={diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30},
+  io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30},
+  arrow/.style={thick,->,>=stealth}
+}
+
+
+\definecolor{azulresultado}{HTML}{0072C6}
+\definecolor{rojoacarreo}{HTML}{FF0000}
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=25mm, 
+    right=25mm,
+    top=35mm,
+    bottom=30mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip} 
+\usepackage{lipsum}  
+
+% --- VARIABLES GLOBALES ---
+\newcommand{\materia}{}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+
+\fancypagestyle{estiloindice}{
+  \fancyhf{} 
+  \fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+  \fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+  \renewcommand{\headrulewidth}{0.4pt} 
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+
+{\hypersetup{linkcolor=black}\tableofcontents}
+\thispagestyle{estiloindice}
+
+
+\newpage
+
+\thispagestyle{fancy}
+\setcounter{page}{1}
+\singlespacing
+
+\section{Semblanza de la charla}
+
+La platica fue dada por los ingenieros 
+Fernando Marcos Parra Arroyo y 
+Virgilio Castro Rendón, 
+contando en la moderación con la Dra. Cintia Quezada Reyes 
+por parte del Diplomado en Ciberseguridad. 
+
+\begin{itemize}
+    \item \textbf{Dra. Cintia Quezada Reyes:} Ingeniera en Computación, Maestra en Ciencias de la Computación y Doctora en Educación, 
+    actualmente es administradora del laboratorio de Redes 
+    y Seguridad, ademas de ser integrante de la Comisión 
+    Técnica del Diplomado en Ciberseguridad.
+    
+    \item \textbf{Ing. Virgilio Castro Rendón:} Ingeniero en Computación egresado de la FI-UNAM y 
+    mejor promedio de la 11a generación del UNAM-CERT. 
+    Ganador del ``Premio Universitario ESET 2017''. 
+    
+    \item \textbf{Ing. Fernando Marcos Parra Arroyo:} Ingeniero en Computación egresado de la FI-UNAM, 
+    y también integrante de la 11a generación del Plan de Becas del UNAM-CERT. 
+    Posee certificaciones como Certified Ethical Hacker (CEH) y LFCS.
+\end{itemize}
+
+Durante la presentación, se enfocó en el uso de estrategias 
+de \textit{Deception} y \textit{Honeypots} 
+en la ciberseguridad defensiva, 
+abordando cómo detectar intrusos, 
+se discutió el cambio 
+en la seguridad: pasar de intentar buscar a los atacantes 
+entre millones de eventos legítimos
+a crear trampas diseñadas específicamente para que 
+los atacantes interactúen con ellas y revelen su presencia.
+
+\section{Resumen de la charla}
+
+La charlase centro directamente en el problema actual 
+en los Centros de Operaciones de Seguridad, que aqui los denominaron como SOC,
+estos radican en el gran volumen de ruido.
+Ahora bien, las herramientas de seguridad que tenemos normlente como lo son 
+los Antivirus, Firewalls, 
+generan muchos eventos diarios de forma independiente,
+de los cuales la gran parte terminan siendo falsos positivos. 
+Directamente, los ingenieros utilizaron 
+el ejemplo de la alarma de un coche sensible 
+que suena por una motocicleta ruidosa; 
+al principio se tiene la atención, 
+pero despues de un tiempo se termina ignorando. 
+De manera similar, los propios analistas o personas
+pierden tiempo descartando alertas que terminan siendo falsas. 
+
+Para solucionar esto, 
+se propone un cambio que en este caso va encaminado hacia el 
+\textit{Deception}, que es el engaño. Esto en lugar 
+de buscar al atacante entre millones de eventos que son verdaderos,
+se despliegan señuelos (\textit{Honeypots}) 
+estos son con los que ningun usuario real debera o deberia de 
+interactuar. Bajo esta forma, se nos hablo de que 
+cualquier interacción se convierte en una alerta de alta y confianza. 
+El propio defensor controla el entorno,
+diseñando un camino que el atacante cree estar tomando por decisión, 
+haciendo que el intruso se delate por sus propias acciones directamente, por eso se le dice señuelo.
+
+De igual forma se hizo un resumen de la historia de esto mismo, partiendo desde
+el 88 con Cliff Stoll, este era un administrador 
+en el laboratorio de Berkeley que despues de 
+investigar un pequeño error contable de 75 
+centavos en un sistema,
+termino descubriendo una operación de espionaje informatico, directamente 
+de ese desfase; despues de esto, en 1991,
+Bill Cheswick creó uno de los primeros honeypots diseñados para ser atacados y registrar la actividad, 
+y por ultimo en el 2003 se creo directamente el Deception Toolkit.
+
+Un Honeypot moderno se define entonces como un recurso sin uso productivo, 
+lo que quisieron decir, que directamente fue diseñado exclusivamente para ser atacado y ganar tiempo, 
+a la par que genera un registro de tipo bitacoras. Para funcionar correctamente, todo honeypot debe tener cuatro características principales:
+
+\begin{enumerate}
+    \item \textbf{Deceptive (Engañoso):} Debe parecer real. Un honeypot debe tener nombres logicos como server-backup-01 y no Honeypot-01.
+    \item \textbf{Discoverable (Descubrible):} Debe ser fácil de encontrar, eso lo explicaron de la forma en que en sistemas, deben ubicarse en zonas lógicas (DMZ, cerca de servicios activos) para ser encontrados durante la fase de reconocimiento del mismo atancante.
+    \item \textbf{Interactive (Interactivo):} El atacante debe poder interactuar y ``tomar'' la trampa. 
+    \item \textbf{Monitoreado:} Este debe de existir con la capacidad de recolectar logs y mandar alertas en texto plano o webhooks hacia agregadores.
+\end{enumerate}
+
+Por ultimo, directamente, se quitaron varias creencias donde 
+dijieron por ejemplo que los honeypots no son 
+solo para investigadores, 
+no son difíciles de configurar, 
+y si el atacante los descubre, 
+la herramienta ya cumplió su propósito al decirnos que los atancantes
+ya estaban ahi.
+
+De hecho, nos dijieron el ejemplo de \textit{Think and Do}: pensar dónde buscará el atacante y decirle practicamente
+donde interactuar. Los ejemplos que dieron fueron estos:
+
+\begin{itemize}
+    \item \textbf{Honey files y Honey tokens:} Archivos que por sí mismos llaman la atención los ejemplos que dieron fueron \texttt{passwords.docx}. Una técnica para monitorearlos es habilitar auditorías de Windows.
+    \item \textbf{Cuentas falsas en Active Directory:} Crear cuentas vulnerables intencionalmente. Por ejemplo, cuentas de servicio con un SPN expuesto para que sean blanco de ataques de Kerberoasting.
+    \item \textbf{Otros métodos:} Tokens de API hardcodeados en repositorios de código para prevenir ataques a la cadena de suministro, carpetas trampa que son los Honey folders, y engaños en respuestas de red.
+\end{itemize}
+
+
+\section{Reflexión (tema de interés)}
+
+Para mi, directamente lo que me llamo mas la atencion, fue el concepto del engaño, 
+por que esto nos lo pintaron como la herramienta más poderosas en ciberseguridad. 
+Esto, con los honeypots cambia directamente como tenemos la percepcion de lo que creer, esto debido a que
+en lugar de estar revisando muchas de alertas diarias (que al final pueden ser falsos positivos,
+como en mi caso que avast detecta cada vez que compilo un codigo en C), 
+es mejor ahora colocar una trampa tan directa y burda, que solo
+esperas a que el atacante caiga, esto debido a que sigue siendo humano, y no se espera que se trampa
+se esta esperando a que seamos lo suficientemente mensos para dejar eso al descubierto y poder interceptarlo. 
+
+De hecho tambien, me llamo la idea de los 
+\textit{Honey files} y los \textit{Honey tokens}. 
+Esto por que, si lo he llegado a pensar
+desde que lleve redes de datos y nos pusieron directamente a configurar servidores
+y solicitar informacion al servidor, me dejo pensando el como dijieron
+que se puede dejar las 
+credenciales de VPN en un servidor que, 
+al momento de ser utilizado o abierto, 
+lanza una alerta silenciosa al equipo de seguridad, 
+esto lo vimos como con syslog y ntp cuando haciamos las topologias de red
+que levabamos un registro de todas las actividades. 
+Como bien concluyeron los expositores, 
+esto no quita de aplicar otras medidas de seguridad, 
+pero de ua nueva forma nos añade una nueva forma de prevenir 
+las cosas, ademas de llevar un registro 
+que atrapa a los intrusos.
+
+
+\section{Evidencia de participación}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/image1.jpeg}
+  \caption{Captura de pantalla durante la sesión.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/image2.jpeg}
+  \caption{Confirmacion de asistencia durante la sesion.}
+\end{figure}
+
+% Impresión Referencias
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Referencias}]
+\end{document}
