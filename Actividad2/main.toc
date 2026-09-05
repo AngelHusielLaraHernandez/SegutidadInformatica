@@ -1,0 +1,36 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{1}{section.1}%
+\contentsline {section}{\numberline {2}Características Generales del Sector Automotriz}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Definición y Alcance}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Tendencias Tecnológicas Actuales}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Actores del Ecosistema}{1}{subsection.2.3}%
+\contentsline {section}{\numberline {3}La Empresa: VELOX Automotriz S.A. de C.V.}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descripción General}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Objetivo de negocio}{2}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Inventario de Activos Tecnológicos}{2}{section.4}%
+\contentsline {section}{\numberline {5}Listado de Tecnología Utilizada}{3}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Redes y Protocolos de Comunicación}{3}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Plataformas de Software Empresarial}{4}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Infraestructura Cloud y Servidores}{4}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Tecnología Embebida en el Vehículo}{4}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Herramientas de Seguridad}{5}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Gestores de Bases de Datos}{5}{subsection.5.6}%
+\contentsline {section}{\numberline {6}Endpoints, Servidores Web y APIs de VELOX Automotriz}{6}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Endpoints de la Organización}{6}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Endpoints de Usuario Final (IT)}{6}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Endpoints de Tecnología Operacional (OT / Planta)}{6}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Endpoints Vehiculares (In-Vehicle)}{7}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Servidores Web y de Aplicaciones}{7}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Diagrama de Conectividad de Activos}{8}{section.7}%
+\contentsline {section}{\numberline {8}Análisis de Vulnerabilidades en el Stack Tecnológico}{9}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Infraestructura IT y Sistemas Operativos}{10}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Servidores Web y de Aplicaciones}{10}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}ERP, Bases de Datos y Plataformas Empresariales}{11}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Infraestructura Cloud y Contenedores}{11}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Tecnología OT / Industrial (SCADA, PLCs y Protocolos)}{12}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Seguridad Perimetral y Herramientas SOC}{12}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Tecnología Vehicular Embebida}{13}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Actores de Amenaza Relevantes en el Sector Automotriz}{14}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Top 5 Actores de Amenaza en el Sector Automotriz}{14}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}5 Eventos Recientes de Ciberataques en el Sector Automotriz}{14}{subsection.9.2}%
+\contentsline {section}{Referencias}{16}{section*.3}%

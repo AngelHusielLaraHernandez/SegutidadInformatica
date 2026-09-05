@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxonomía de Adversarios - Edición Pokémon</title>
+    <!-- Fuentes de Google para el look cibernético -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #050510;
+            --neon-green: #00ff66;
+            --cyber-blue: #00f0ff;
+            --hacker-purple: #9d00ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(0, 255, 102, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fondo Animado de Cuadrícula Cibernética */
+        .cyber-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200vw;
+            height: 200vh;
+            background-image: 
+                linear-gradient(rgba(0, 255, 102, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 102, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+            animation: gridMove 20s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(50px) translateZ(-200px); }
+        }
+
+        /* Contenedor del Slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0.95) translateY(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+        }
+
+        /* Contenido Glassmorphism */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.05), inset 0 0 20px rgba(0, 255, 102, 0.02);
+            display: grid;
+            gap: 2rem;
+        }
+
+        .glass-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+        .glass-panel::-webkit-scrollbar-thumb {
+            background: var(--neon-green);
+            border-radius: 10px;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        /* Tipografía */
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 0 0 10px var(--neon-green);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 span { color: var(--neon-green); }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--cyber-blue);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .highlight {
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: var(--neon-green);
+            font-size: 1rem;
+            top: 4px;
+        }
+
+        /* Imágenes de Pokémon */
+        .pokemon-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .pokemon-img-container::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: pulse 3s infinite;
+        }
+
+        .pokemon-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 102, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .pokemon-img:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.1); opacity: 0.25; }
+            100% { transform: scale(1); opacity: 0.15; }
+        }
+
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 240, 255, 0.1);
+            color: var(--cyber-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+
+        tr:hover td {
+            background-color: rgba(0, 255, 102, 0.05);
+        }
+
+        /* Controles de Navegación */
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 100;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(5px);
+        }
+
+        button.nav-btn {
+            background: transparent;
+            border: none;
+            color: var(--neon-green);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        button.nav-btn:hover {
+            color: var(--cyber-blue);
+            transform: scale(1.2);
+            text-shadow: 0 0 10px var(--cyber-blue);
+        }
+
+        .dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+            transform: scale(1.3);
+        }
+
+        /* Responsividad */
+        @media (max-width: 900px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+            .pokemon-img {
+                max-height: 250px;
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+
+    <div class="slider-container" id="slider">
+
+        <!-- Slide 1: Título -->
+        <div class="slide active">
+            <div class="glass-panel" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 60vh;">
+                <i class="fa-solid fa-shield-halved" style="font-size: 5rem; color: var(--neon-green); margin-bottom: 1rem;"></i>
+                <h1>Taxonomía de Adversarios<br><span>Edición Pokémon</span></h1>
+                <p style="font-size: 1.5rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; margin-bottom: 1.5rem;">
+                    Identificación de Activos Tecnológicos y Perfilado de Amenazas en el Sector Automotriz (Caso: VELOX Automotriz)
+                </p>
+                
+                <div style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem 2.5rem; border-radius: 15px; border: 1px solid var(--cyber-blue); text-align: left; margin-bottom: 2rem; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
+                    <h3 style="color: var(--cyber-blue); font-size: 1.2rem; margin-bottom: 1rem; text-align: center;"><i class="fa-solid fa-users" style="margin-right: 10px;"></i>Equipo de Seguridad</h3>
+                    <ul style="margin: 0; padding: 0;">
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Lara Hernandez Angel Husiel <span style="color: var(--text-muted); font-size: 0.9rem;">[ 320060829]</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Lugo Manzano Rodrigo <span style="color: var(--text-muted); font-size: 0.9rem;">[ 320206968]</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Flores Colin Victor Jaziel <span style="color: var(--text-muted); font-size: 0.9rem;">[ 320266083]</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Adolfo de Jesus Garcia Cortes <span style="color: var(--text-muted); font-size: 0.9rem;">[ 320317264]</span></li>
+                    </ul>
+                </div>
+
+                <div style="padding: 10px 20px; border: 1px solid var(--neon-green); border-radius: 5px; color: var(--neon-green); display: inline-block;">
+                    INICIANDO SISTEMA DE DETECCIÓN...
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Introducción -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Un Nuevo Enfoque <span class="highlight">Defensivo</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <p>Inspirados en metodologías líderes (Microsoft / Mandiant), hemos desarrollado una taxonomía propia para <strong>VELOX Automotriz</strong> que abandona la tradicional y aburrida división demográfica.</p>
+                        <p>Nuestra clasificación se centra en <span class="highlight">motivaciones, sofisticación y modus operandi</span>, utilizando el ecosistema Pokémon como sistema de nomenclatura oficial.</p>
+                        <ul>
+                            <li>Facilita la identificación ágil de amenazas.</li>
+                            <li>Mejora la comunicación entre equipos de respuesta a incidentes.</li>
+                            <li>Clasifica ataques a entornos IT/OT y vehículos conectados.</li>
+                        </ul>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <i class="fa-solid fa-network-wired" style="font-size: 12rem; color: rgba(0, 240, 255, 0.5);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Mewtwo -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Actores Patrocinados <span class="highlight">(Estado-Nación)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3><i class="fa-solid fa-crown" style="color: gold;"></i> Clase: Legendarios</h3>
+                        <p><strong>Perfil:</strong> Amenazas Persistentes Avanzadas (APT) financiadas por gobiernos. Cuentan con alta sofisticación y recursos virtualmente ilimitados.</p>
+                        <p><strong>Objetivos en VELOX:</strong> Enfocados en espionaje corporativo (robo de planos de vehículos autónomos o tecnología de baterías) y sabotaje de infraestructuras críticas.</p>
+                        <p><strong>Equivalente de Industria:</strong> Microsoft Typhoon / Mandiant APT.</p>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <!-- [Imagen de Mewtwo] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo" class="pokemon-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Gengar -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Sindicatos de Cibercrimen <span style="color: #a855f7;">(Motivación Financiera)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <!-- [Imagen de Gengar] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #a855f7;"><i class="fa-solid fa-ghost"></i> Clase: Siniestro / Veneno</h3>
+                        <p><strong>Perfil:</strong> Grupos que operan en las sombras, motivados puramente por el impacto económico y el lucro directo a expensas del negocio.</p>
+                        <p><strong>Modus Operandi:</strong> Ransomware-as-a-Service (RaaS), doble extorsión, robo de bases de datos de clientes automotrices y secuestro de líneas de ensamblaje.</p>
+                        <p><strong>Equivalente de Industria:</strong> Familias Tempest (Microsoft) o actores FIN.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Electrode -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Operaciones de Hacktivismo <span style="color: #eab308;">(Disrupción)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 style="color: #eab308;"><i class="fa-solid fa-bolt"></i> Clase: Eléctrico / Enjambre</h3>
+                        <p><strong>Perfil:</strong> Grupos motivados por ideologías, que buscan enviar un mensaje atacando a grandes marcas automotrices globales.</p>
+                        <p><strong>Impacto en VELOX:</strong> Su meta principal es la disrupción pública mediante ataques DDoS contra portales web, APIs de vehículos conectados y 'defacement' (vandalismo digital).</p>
+                        <p><strong>Equivalente de Industria:</strong> Microsoft Flood / Grupos como KillNet.</p>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <!-- [Imagen de Electrode] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png" alt="Electrode" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Bisharp -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Mercenarios e IABs <span style="color: #ef4444;">(Acceso Inicial)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <!-- [Imagen de Bisharp] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/625.png" alt="Bisharp" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #ef4444;"><i class="fa-solid fa-khanda"></i> Clase: Acero / Lucha</h3>
+                        <p><strong>Perfil:</strong> Desarrolladores de exploits comerciales, actores ofensivos privados y corredores de acceso inicial (Initial Access Brokers).</p>
+                        <p><strong>Actividad:</strong> No ejecutan el ataque final. Comprometen la red de VELOX y venden la puerta trasera o las credenciales al mejor postor en la Dark Web.</p>
+                        <p><strong>Equivalente de Industria:</strong> Nomenclatura Tsunami (Microsoft).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Ditto -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Amenazas Internas <span style="color: #ec4899;">(Supply Chain)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 style="color: #ec4899;"><i class="fa-solid fa-masks-theater"></i> Clase: Metamorfos</h3>
+                        <p><strong>Perfil:</strong> El infiltrado que parece 100% legítimo. Tienen acceso autorizado a la red o a la cadena de suministro, pero operan maliciosamente.</p>
+                        <p><strong>Orígenes:</strong> Empleados descontentos, o proveedores Tier 1/2 comprometidos que introducen malware sigilosamente en las actualizaciones de software del vehículo (OTA).</p>
+                        <p><strong>Impacto:</strong> Altamente destructivo debido a que evaden el perímetro de seguridad tradicional.</p>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <!-- [Imagen de Ditto] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png" alt="Ditto" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.6));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Unown -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Clústeres No Categorizados <span style="color: #cbd5e1;">(Lo Desconocido)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <!-- [Imagen de Unown] -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/201.png" alt="Unown" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(203, 213, 225, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #cbd5e1;"><i class="fa-solid fa-question"></i> Clase: Unown / Huevos</h3>
+                        <p><strong>Perfil:</strong> Representa actividad maliciosa nueva, emergente y críptica detectada en los sistemas de VELOX.</p>
+                        <p><strong>Seguimiento:</strong> Anomalías y amenazas que aún no poseen suficientes TTPs (Tácticas, Técnicas y Procedimientos) para ser atribuidas a un grupo o "Pokémon" conocido.</p>
+                        <p><strong>Equivalente de Industria:</strong> UNC (Uncategorized) en Mandiant o Storm en Microsoft.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Tabla -->
+        <div class="slide">
+            <div class="glass-panel" style="max-width: 1000px;">
+                <h2 style="text-align: center;">Matriz de Nomenclatura <span class="highlight">VELOX</span></h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoría (Motivación)</th>
+                                <th>Nomenclatura Pokémon</th>
+                                <th>Equivalente Industrial</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Estado-Nación (Espionaje)</td>
+                                <td><span style="color: gold;">Legendarios (Mewtwo)</span></td>
+                                <td>Typhoon / APT</td>
+                            </tr>
+                            <tr>
+                                <td>Cibercrimen (Ransomware)</td>
+                                <td><span style="color: #a855f7;">Siniestro / Veneno (Gengar)</span></td>
+                                <td>Tempest / FIN</td>
+                            </tr>
+                            <tr>
+                                <td>Hacktivismo (Disrupción)</td>
+                                <td><span style="color: #eab308;">Eléctrico (Electrode)</span></td>
+                                <td>Flood</td>
+                            </tr>
+                            <tr>
+                                <td>Mercenarios (Acceso)</td>
+                                <td><span style="color: #ef4444;">Acero / Lucha (Bisharp)</span></td>
+                                <td>Tsunami / PSOAs</td>
+                            </tr>
+                            <tr>
+                                <td>Amenaza Interna (Insider)</td>
+                                <td><span style="color: #ec4899;">Metamorfos (Ditto)</span></td>
+                                <td>Insider Threat</td>
+                            </tr>
+                            <tr>
+                                <td>No Categorizado</td>
+                                <td><span style="color: #cbd5e1;">Unown</span></td>
+                                <td>Storm / UNC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Fin -->
+        <div class="slide">
+            <div class="glass-panel" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 60vh;">
+                <h1 style="font-size: 5rem; margin-bottom: 0;">Gotta Catch 'Em <span class="highlight">All!</span></h1>
+                <p style="font-size: 2rem; color: var(--cyber-blue); margin-top: 1rem;">(Antes de que vulneren nuestros sistemas)</p>
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); width: 100%;">
+                    <p style="color: var(--text-muted); font-family: 'Orbitron', sans-serif;">Centro de Operaciones de Seguridad (SOC) | VELOX Automotriz</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button class="nav-btn" id="prevBtn" title="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="dots" id="dotsContainer">
+            <!-- Los puntos se generan con JS -->
+        </div>
+        <button class="nav-btn" id="nextBtn" title="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentSlide = 0;
+
+        // Crear los puntos indicadores
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlide() {
+            // Remover clase active de todas las diapositivas y puntos
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Añadir clase active a la actual
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        // Event Listeners para botones
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Event Listener para teclado (Flechas)
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if(e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>

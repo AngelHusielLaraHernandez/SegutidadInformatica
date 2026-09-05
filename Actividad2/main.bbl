@@ -1,0 +1,2189 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{bleepingcomputer-continental}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88df9bb1252cdcbe886c5882f7724bef}{%
+           family={Abrams},
+           familyi={A\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{fullhash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{fullhashraw}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{bibnamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorbibnamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authornamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorfullhash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorfullhashraw}{88df9bb1252cdcbe886c5882f7724bef}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Continental Confirms Data Theft After {LockBit} Ransomware Attack}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/continental-confirms-data-theft-after-lockbit-ransomware-attack/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/continental-confirms-data-theft-after-lockbit-ransomware-attack/
+      \endverb
+    \endentry
+    \entry{blackberry-badalloc}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a38131c0e971ad52b25747ef45e64239}{%
+           family={{BlackBerry Limited}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {BlackBerry Limited}%
+      }
+      \strng{namehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{fullhash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{fullhashraw}{a38131c0e971ad52b25747ef45e64239}
+      \strng{bibnamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorbibnamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authornamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorfullhash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorfullhashraw}{a38131c0e971ad52b25747ef45e64239}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{QNX} Software Development Platform Security Advisory -- {BadAlloc} ({CVE-2021-22156})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://support.blackberry.com/kb/articleDetail?articleNumber=000082334
+      \endverb
+      \verb{url}
+      \verb https://support.blackberry.com/kb/articleDetail?articleNumber=000082334
+      \endverb
+    \endentry
+    \entry{crowdstrike-report-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=644f3463fa9123f00a3ebd05ecc9ae56}{%
+           family={{CrowdStrike}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CrowdStrike Inc.}%
+      }
+      \strng{namehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{fullhash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{fullhashraw}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{bibnamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorbibnamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authornamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorfullhash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorfullhashraw}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{2024 Global Threat Report}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.crowdstrike.com/resources/reports/global-threat-report/
+      \endverb
+      \verb{url}
+      \verb https://www.crowdstrike.com/resources/reports/global-threat-report/
+      \endverb
+    \endentry
+    \entry{cisa-automotive-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=97329f9723291d80bcb72f021cddf30c}{%
+           family={{Cybersecurity and Infrastructure Security Agency}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CISA}%
+      }
+      \strng{namehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{fullhash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{fullhashraw}{97329f9723291d80bcb72f021cddf30c}
+      \strng{bibnamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorbibnamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authornamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorfullhash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorfullhashraw}{97329f9723291d80bcb72f021cddf30c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Transportation Systems Sector}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors/transportation-systems-sector
+      \endverb
+      \verb{url}
+      \verb https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors/transportation-systems-sector
+      \endverb
+    \endentry
+    \entry{spiegel-vw-breach}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=135aaa96cac63c2f192777fe4e50a0ae}{%
+           family={{Der Spiegel}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Der Spiegel}%
+      }
+      \strng{namehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{fullhash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{fullhashraw}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{bibnamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorbibnamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authornamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorfullhash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorfullhashraw}{135aaa96cac63c2f192777fe4e50a0ae}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Datenpanne bei {VW}: Standortdaten von 800.000 {E-Autos} offen im {Internet}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.spiegel.de/netzwelt/web/volkswagen-datenpanne-standortdaten-von-800-000-e-autos-offen-im-internet-a-8d7b6db7-0847-4c82-8aac-5e0a1e52eebc
+      \endverb
+      \verb{url}
+      \verb https://www.spiegel.de/netzwelt/web/volkswagen-datenpanne-standortdaten-von-800-000-e-autos-offen-im-internet-a-8d7b6db7-0847-4c82-8aac-5e0a1e52eebc
+      \endverb
+    \endentry
+    \entry{enisa-automotive-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bef4f608c380747e1001d8de77c553e8}{%
+           family={{European Union Agency for Cybersecurity}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ENISA}%
+      }
+      \strng{namehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{fullhash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{fullhashraw}{bef4f608c380747e1001d8de77c553e8}
+      \strng{bibnamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorbibnamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authornamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorfullhash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorfullhashraw}{bef4f608c380747e1001d8de77c553e8}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ENISA} Threat Landscape 2023}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023
+      \endverb
+      \verb{url}
+      \verb https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023
+      \endverb
+    \endentry
+    \entry{fortinet-psirt-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26347c5c3990b360a9a927ccf38c3fc4}{%
+           family={{Fortinet PSIRT}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Fortinet Inc.}%
+      }
+      \strng{namehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{fullhash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{fullhashraw}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{bibnamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorbibnamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authornamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorfullhash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorfullhashraw}{26347c5c3990b360a9a927ccf38c3fc4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FortiOS} {SSL-VPN} Heap-Based Buffer Overflow Vulnerability ({FG-IR-24-015})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fortiguard.com/psirt/FG-IR-24-015
+      \endverb
+      \verb{url}
+      \verb https://www.fortiguard.com/psirt/FG-IR-24-015
+      \endverb
+    \endentry
+    \entry{securityweek-continental}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00ae37dcc16fd91d79bb1b1dbfb19103}{%
+           family={Kovacs},
+           familyi={K\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {SecurityWeek}%
+      }
+      \strng{namehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{bibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorbibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authornamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Continental Cyber Incident: What We Know So Far}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.securityweek.com/continental-says-hackers-stole-data-in-recent-cyberattack/
+      \endverb
+      \verb{url}
+      \verb https://www.securityweek.com/continental-says-hackers-stole-data-in-recent-cyberattack/
+      \endverb
+    \endentry
+    \entry{securityweek-vw-breach}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00ae37dcc16fd91d79bb1b1dbfb19103}{%
+           family={Kovacs},
+           familyi={K\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {SecurityWeek}%
+      }
+      \strng{namehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{bibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorbibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authornamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Volkswagen {Cariad} Data Breach Exposed Location of 800,000 {EVs}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.securityweek.com/volkswagen-cariad-data-breach-exposed-location-of-800000-evs/
+      \endverb
+      \verb{url}
+      \verb https://www.securityweek.com/volkswagen-cariad-data-breach-exposed-location-of-800000-evs/
+      \endverb
+    \endentry
+    \entry{mandiant-apt41-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a68cd723c1aaed48311ebb623fc143d}{%
+           family={{Mandiant}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mandiant Inc.}%
+      }
+      \strng{namehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{fullhash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{fullhashraw}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{bibnamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorbibnamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authornamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorfullhash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorfullhashraw}{4a68cd723c1aaed48311ebb623fc143d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{APT41}: A Dual Espionage and Cyber Crime Operation}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mandiant.com/resources/apt41-dual-espionage-and-cyber-crime-operation
+      \endverb
+      \verb{url}
+      \verb https://www.mandiant.com/resources/apt41-dual-espionage-and-cyber-crime-operation
+      \endverb
+    \endentry
+    \entry{mckinsey-automotive-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=96eaa81a81a29c441708d1ec4be5a27b}{%
+           family={{McKinsey \& Company}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {McKinsey \& Company}%
+      }
+      \strng{namehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{bibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorbibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authornamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automotive Software and Electrical/Electronic Architecture}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/automotive-software-and-electrical-electronic-architecture
+      \endverb
+      \verb{url}
+      \verb https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/automotive-software-and-electrical-electronic-architecture
+      \endverb
+    \endentry
+    \entry{msrc-advisory}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e5f26a563b54df7c06a069bcce80d73a}{%
+           family={{Microsoft Security Response Center}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Microsoft Corporation}%
+      }
+      \strng{namehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{fullhash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{fullhashraw}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{bibnamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorbibnamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authornamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorfullhash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorfullhashraw}{e5f26a563b54df7c06a069bcce80d73a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsoft Security Update Guide}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://msrc.microsoft.com/update-guide/
+      \endverb
+      \verb{url}
+      \verb https://msrc.microsoft.com/update-guide/
+      \endverb
+    \endentry
+    \entry{mitre-akira}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Akira} ({S1129}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/software/S1129/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/software/S1129/
+      \endverb
+    \endentry
+    \entry{mitre-apt41}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{APT41} ({G0096}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G0096/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G0096/
+      \endverb
+    \endentry
+    \entry{mitre-blackcat}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{BlackCat/ALPHV} ({S1076}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/software/S1076/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/software/S1076/
+      \endverb
+    \endentry
+    \entry{mitre-killnet}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{KillNet} ({G1014}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G1014/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G1014/
+      \endverb
+    \endentry
+    \entry{mitre-lazarus}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Lazarus Group} ({G0032}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G0032/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G0032/
+      \endverb
+    \endentry
+    \entry{nist-ics-security}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Guide to Industrial Control Systems ({ICS}) Security -- {NIST SP 800-82 Rev.~3}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+      \endverb
+      \verb{url}
+      \verb https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+      \endverb
+    \endentry
+    \entry{nvd-nist}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{National Vulnerability Database ({NVD})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nvd.nist.gov/
+      \endverb
+      \verb{url}
+      \verb https://nvd.nist.gov/
+      \endverb
+    \endentry
+    \entry{rockwell-advisory-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b97076409949c3370d585f84edabe761}{%
+           family={{Rockwell Automation}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rockwell Automation}%
+      }
+      \strng{namehash}{b97076409949c3370d585f84edabe761}
+      \strng{fullhash}{b97076409949c3370d585f84edabe761}
+      \strng{fullhashraw}{b97076409949c3370d585f84edabe761}
+      \strng{bibnamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authorbibnamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authornamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authorfullhash}{b97076409949c3370d585f84edabe761}
+      \strng{authorfullhashraw}{b97076409949c3370d585f84edabe761}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Security Advisory {SD1699}: Remote Code Execution Vulnerabilities in {ControlLogix} Communications Modules}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rockwellautomation.com/en-us/support/advisory.SD1699.html
+      \endverb
+      \verb{url}
+      \verb https://www.rockwellautomation.com/en-us/support/advisory.SD1699.html
+      \endverb
+    \endentry
+    \entry{sae-21434}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c823732636c3fca8652a18a68c2391eb}{%
+           family={{SAE International}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {SAE International}%
+      }
+      \strng{namehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \strng{bibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorbibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authornamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ISO/SAE} 21434: Road Vehicles -- Cybersecurity Engineering}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sae.org/standards/content/iso_sae_21434/
+      \endverb
+      \verb{url}
+      \verb https://www.sae.org/standards/content/iso_sae_21434/
+      \endverb
+    \endentry
+    \entry{reuters-toyota-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0f29c8aefa88b3b9ae99ff4d500c89b0}{%
+           family={Soo},
+           familyi={S\bibinitperiod},
+           given={Zen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Reuters}%
+      }
+      \strng{namehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{fullhash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{fullhashraw}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{bibnamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorbibnamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authornamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorfullhash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorfullhashraw}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Toyota Says Data of 2.15 Million Customers in {Japan} Exposed for 10 Years}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.reuters.com/business/autos-transportation/toyota-says-data-21-million-customers-may-have-been-exposed-2023-05-12/
+      \endverb
+      \verb{url}
+      \verb https://www.reuters.com/business/autos-transportation/toyota-says-data-21-million-customers-may-have-been-exposed-2023-05-12/
+      \endverb
+    \endentry
+    \entry{therecord-yanfeng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1df4cc572f1dacbbe61134f9fa27eb9d}{%
+           family={{The Record by Recorded Future}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Recorded Future News}%
+      }
+      \strng{namehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{fullhash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{fullhashraw}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{bibnamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorbibnamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authornamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorfullhash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorfullhashraw}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Akira Ransomware Attack on Yanfeng Disrupted Stellantis Production Lines}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://therecord.media/akira-ransomware-yanfeng-automotive-stellantis
+      \endverb
+      \verb{url}
+      \verb https://therecord.media/akira-ransomware-yanfeng-automotive-stellantis
+      \endverb
+    \endentry
+    \entry{bleepingcomputer-yanfeng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83529ea999fcc578dafe7d033d33eb56}{%
+           family={Toulas},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{bibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorbibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authornamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Yanfeng Automotive Interiors Hit by Akira Ransomware}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/akira-ransomware-hit-yanfeng-automotive-interiors-caused-stellantis-supply-chain-disruption/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/akira-ransomware-hit-yanfeng-automotive-interiors-caused-stellantis-supply-chain-disruption/
+      \endverb
+    \endentry
+    \entry{hyundai-blackbasta-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83529ea999fcc578dafe7d033d33eb56}{%
+           family={Toulas},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{bibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorbibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authornamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hyundai Motor Europe Hit by {Black Basta} Ransomware Attack}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/hyundai-motor-europe-hit-by-black-basta-ransomware-attack/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/hyundai-motor-europe-hit-by-black-basta-ransomware-attack/
+      \endverb
+    \endentry
+    \entry{toyota-disclosure-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb65b49975dc7287afaa4f6ff920c23b}{%
+           family={{Toyota Motor Corporation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Toyota Motor Corporation}%
+      }
+      \strng{namehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{fullhash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{fullhashraw}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{bibnamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorbibnamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authornamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorfullhash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorfullhashraw}{eb65b49975dc7287afaa4f6ff920c23b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Notice Regarding Vehicle Data Stored in a Cloud Environment}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://global.toyota/en/newsroom/corporate/39285947.html
+      \endverb
+      \verb{url}
+      \verb https://global.toyota/en/newsroom/corporate/39285947.html
+      \endverb
+    \endentry
+    \entry{upstream-security-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7d8928e93ab70a4ce74746faa1bbbdf}{%
+           family={{Upstream Security}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Upstream Security}%
+      }
+      \strng{namehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{bibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorbibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authornamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Automotive Cybersecurity Report 2024}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+      \verb{url}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+    \endentry
+    \entry{trendmicro-car-hacking}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e08895f2e4992fa6dcf6844bb58f7dad}{%
+           family={Wilhoit},
+           familyi={W\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98840fcd361cd4f27fff7922881e78fe}{%
+           family={Hilt},
+           familyi={H\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Trend Micro Research}%
+      }
+      \strng{namehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{fullhash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{fullhashraw}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{bibnamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorbibnamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authornamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorfullhash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorfullhashraw}{70efe71de87e6e5ac80874a9f9138460}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Driving Security Into Connected Cars: Threat Model and Recommendations}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/driving-security-into-connected-cars-threat-model-and-recommendations
+      \endverb
+      \verb{url}
+      \verb https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/driving-security-into-connected-cars-threat-model-and-recommendations
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{bleepingcomputer-continental}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88df9bb1252cdcbe886c5882f7724bef}{%
+           family={Abrams},
+           familyi={A\bibinitperiod},
+           given={Lawrence},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{fullhash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{fullhashraw}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{bibnamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorbibnamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authornamehash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorfullhash}{88df9bb1252cdcbe886c5882f7724bef}
+      \strng{authorfullhashraw}{88df9bb1252cdcbe886c5882f7724bef}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Continental Confirms Data Theft After {LockBit} Ransomware Attack}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/continental-confirms-data-theft-after-lockbit-ransomware-attack/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/continental-confirms-data-theft-after-lockbit-ransomware-attack/
+      \endverb
+    \endentry
+    \entry{blackberry-badalloc}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a38131c0e971ad52b25747ef45e64239}{%
+           family={{BlackBerry Limited}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {BlackBerry Limited}%
+      }
+      \strng{namehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{fullhash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{fullhashraw}{a38131c0e971ad52b25747ef45e64239}
+      \strng{bibnamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorbibnamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authornamehash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorfullhash}{a38131c0e971ad52b25747ef45e64239}
+      \strng{authorfullhashraw}{a38131c0e971ad52b25747ef45e64239}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{QNX} Software Development Platform Security Advisory -- {BadAlloc} ({CVE-2021-22156})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://support.blackberry.com/kb/articleDetail?articleNumber=000082334
+      \endverb
+      \verb{url}
+      \verb https://support.blackberry.com/kb/articleDetail?articleNumber=000082334
+      \endverb
+    \endentry
+    \entry{crowdstrike-report-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=644f3463fa9123f00a3ebd05ecc9ae56}{%
+           family={{CrowdStrike}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CrowdStrike Inc.}%
+      }
+      \strng{namehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{fullhash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{fullhashraw}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{bibnamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorbibnamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authornamehash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorfullhash}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \strng{authorfullhashraw}{644f3463fa9123f00a3ebd05ecc9ae56}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{2024 Global Threat Report}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.crowdstrike.com/resources/reports/global-threat-report/
+      \endverb
+      \verb{url}
+      \verb https://www.crowdstrike.com/resources/reports/global-threat-report/
+      \endverb
+    \endentry
+    \entry{cisa-automotive-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=97329f9723291d80bcb72f021cddf30c}{%
+           family={{Cybersecurity and Infrastructure Security Agency}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {CISA}%
+      }
+      \strng{namehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{fullhash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{fullhashraw}{97329f9723291d80bcb72f021cddf30c}
+      \strng{bibnamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorbibnamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authornamehash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorfullhash}{97329f9723291d80bcb72f021cddf30c}
+      \strng{authorfullhashraw}{97329f9723291d80bcb72f021cddf30c}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Transportation Systems Sector}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors/transportation-systems-sector
+      \endverb
+      \verb{url}
+      \verb https://www.cisa.gov/topics/critical-infrastructure-security-and-resilience/critical-infrastructure-sectors/transportation-systems-sector
+      \endverb
+    \endentry
+    \entry{spiegel-vw-breach}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=135aaa96cac63c2f192777fe4e50a0ae}{%
+           family={{Der Spiegel}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Der Spiegel}%
+      }
+      \strng{namehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{fullhash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{fullhashraw}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{bibnamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorbibnamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authornamehash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorfullhash}{135aaa96cac63c2f192777fe4e50a0ae}
+      \strng{authorfullhashraw}{135aaa96cac63c2f192777fe4e50a0ae}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Datenpanne bei {VW}: Standortdaten von 800.000 {E-Autos} offen im {Internet}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.spiegel.de/netzwelt/web/volkswagen-datenpanne-standortdaten-von-800-000-e-autos-offen-im-internet-a-8d7b6db7-0847-4c82-8aac-5e0a1e52eebc
+      \endverb
+      \verb{url}
+      \verb https://www.spiegel.de/netzwelt/web/volkswagen-datenpanne-standortdaten-von-800-000-e-autos-offen-im-internet-a-8d7b6db7-0847-4c82-8aac-5e0a1e52eebc
+      \endverb
+    \endentry
+    \entry{enisa-automotive-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bef4f608c380747e1001d8de77c553e8}{%
+           family={{European Union Agency for Cybersecurity}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ENISA}%
+      }
+      \strng{namehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{fullhash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{fullhashraw}{bef4f608c380747e1001d8de77c553e8}
+      \strng{bibnamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorbibnamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authornamehash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorfullhash}{bef4f608c380747e1001d8de77c553e8}
+      \strng{authorfullhashraw}{bef4f608c380747e1001d8de77c553e8}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ENISA} Threat Landscape 2023}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023
+      \endverb
+      \verb{url}
+      \verb https://www.enisa.europa.eu/publications/enisa-threat-landscape-2023
+      \endverb
+    \endentry
+    \entry{fortinet-psirt-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26347c5c3990b360a9a927ccf38c3fc4}{%
+           family={{Fortinet PSIRT}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Fortinet Inc.}%
+      }
+      \strng{namehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{fullhash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{fullhashraw}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{bibnamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorbibnamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authornamehash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorfullhash}{26347c5c3990b360a9a927ccf38c3fc4}
+      \strng{authorfullhashraw}{26347c5c3990b360a9a927ccf38c3fc4}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{FortiOS} {SSL-VPN} Heap-Based Buffer Overflow Vulnerability ({FG-IR-24-015})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fortiguard.com/psirt/FG-IR-24-015
+      \endverb
+      \verb{url}
+      \verb https://www.fortiguard.com/psirt/FG-IR-24-015
+      \endverb
+    \endentry
+    \entry{securityweek-continental}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00ae37dcc16fd91d79bb1b1dbfb19103}{%
+           family={Kovacs},
+           familyi={K\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {SecurityWeek}%
+      }
+      \strng{namehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{bibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorbibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authornamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Continental Cyber Incident: What We Know So Far}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.securityweek.com/continental-says-hackers-stole-data-in-recent-cyberattack/
+      \endverb
+      \verb{url}
+      \verb https://www.securityweek.com/continental-says-hackers-stole-data-in-recent-cyberattack/
+      \endverb
+    \endentry
+    \entry{securityweek-vw-breach}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00ae37dcc16fd91d79bb1b1dbfb19103}{%
+           family={Kovacs},
+           familyi={K\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {SecurityWeek}%
+      }
+      \strng{namehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{fullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{bibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorbibnamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authornamehash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhash}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \strng{authorfullhashraw}{00ae37dcc16fd91d79bb1b1dbfb19103}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Volkswagen {Cariad} Data Breach Exposed Location of 800,000 {EVs}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.securityweek.com/volkswagen-cariad-data-breach-exposed-location-of-800000-evs/
+      \endverb
+      \verb{url}
+      \verb https://www.securityweek.com/volkswagen-cariad-data-breach-exposed-location-of-800000-evs/
+      \endverb
+    \endentry
+    \entry{mandiant-apt41-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a68cd723c1aaed48311ebb623fc143d}{%
+           family={{Mandiant}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Mandiant Inc.}%
+      }
+      \strng{namehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{fullhash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{fullhashraw}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{bibnamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorbibnamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authornamehash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorfullhash}{4a68cd723c1aaed48311ebb623fc143d}
+      \strng{authorfullhashraw}{4a68cd723c1aaed48311ebb623fc143d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{APT41}: A Dual Espionage and Cyber Crime Operation}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mandiant.com/resources/apt41-dual-espionage-and-cyber-crime-operation
+      \endverb
+      \verb{url}
+      \verb https://www.mandiant.com/resources/apt41-dual-espionage-and-cyber-crime-operation
+      \endverb
+    \endentry
+    \entry{mckinsey-automotive-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=96eaa81a81a29c441708d1ec4be5a27b}{%
+           family={{McKinsey \& Company}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {McKinsey \& Company}%
+      }
+      \strng{namehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{fullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{bibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorbibnamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authornamehash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhash}{96eaa81a81a29c441708d1ec4be5a27b}
+      \strng{authorfullhashraw}{96eaa81a81a29c441708d1ec4be5a27b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automotive Software and Electrical/Electronic Architecture}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/automotive-software-and-electrical-electronic-architecture
+      \endverb
+      \verb{url}
+      \verb https://www.mckinsey.com/industries/automotive-and-assembly/our-insights/automotive-software-and-electrical-electronic-architecture
+      \endverb
+    \endentry
+    \entry{msrc-advisory}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e5f26a563b54df7c06a069bcce80d73a}{%
+           family={{Microsoft Security Response Center}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Microsoft Corporation}%
+      }
+      \strng{namehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{fullhash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{fullhashraw}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{bibnamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorbibnamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authornamehash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorfullhash}{e5f26a563b54df7c06a069bcce80d73a}
+      \strng{authorfullhashraw}{e5f26a563b54df7c06a069bcce80d73a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microsoft Security Update Guide}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://msrc.microsoft.com/update-guide/
+      \endverb
+      \verb{url}
+      \verb https://msrc.microsoft.com/update-guide/
+      \endverb
+    \endentry
+    \entry{mitre-akira}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Akira} ({S1129}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/software/S1129/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/software/S1129/
+      \endverb
+    \endentry
+    \entry{mitre-apt41}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{APT41} ({G0096}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G0096/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G0096/
+      \endverb
+    \endentry
+    \entry{mitre-blackcat}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{BlackCat/ALPHV} ({S1076}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/software/S1076/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/software/S1076/
+      \endverb
+    \endentry
+    \entry{mitre-killnet}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{KillNet} ({G1014}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G1014/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G1014/
+      \endverb
+    \endentry
+    \entry{mitre-lazarus}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=74ba159b7a793d67eb4e566a38793238}{%
+           family={{MITRE Corporation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MITRE Corporation}%
+      }
+      \strng{namehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{fullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \strng{bibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorbibnamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authornamehash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhash}{74ba159b7a793d67eb4e566a38793238}
+      \strng{authorfullhashraw}{74ba159b7a793d67eb4e566a38793238}
+      \field{extraname}{5}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Lazarus Group} ({G0032}) -- {MITRE ATT\&CK}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/groups/G0032/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/groups/G0032/
+      \endverb
+    \endentry
+    \entry{nist-ics-security}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Guide to Industrial Control Systems ({ICS}) Security -- {NIST SP 800-82 Rev.~3}}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+      \endverb
+      \verb{url}
+      \verb https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf
+      \endverb
+    \endentry
+    \entry{nvd-nist}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {NIST}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{National Vulnerability Database ({NVD})}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nvd.nist.gov/
+      \endverb
+      \verb{url}
+      \verb https://nvd.nist.gov/
+      \endverb
+    \endentry
+    \entry{rockwell-advisory-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b97076409949c3370d585f84edabe761}{%
+           family={{Rockwell Automation}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Rockwell Automation}%
+      }
+      \strng{namehash}{b97076409949c3370d585f84edabe761}
+      \strng{fullhash}{b97076409949c3370d585f84edabe761}
+      \strng{fullhashraw}{b97076409949c3370d585f84edabe761}
+      \strng{bibnamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authorbibnamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authornamehash}{b97076409949c3370d585f84edabe761}
+      \strng{authorfullhash}{b97076409949c3370d585f84edabe761}
+      \strng{authorfullhashraw}{b97076409949c3370d585f84edabe761}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Security Advisory {SD1699}: Remote Code Execution Vulnerabilities in {ControlLogix} Communications Modules}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rockwellautomation.com/en-us/support/advisory.SD1699.html
+      \endverb
+      \verb{url}
+      \verb https://www.rockwellautomation.com/en-us/support/advisory.SD1699.html
+      \endverb
+    \endentry
+    \entry{sae-21434}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c823732636c3fca8652a18a68c2391eb}{%
+           family={{SAE International}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {SAE International}%
+      }
+      \strng{namehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \strng{bibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorbibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authornamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ISO/SAE} 21434: Road Vehicles -- Cybersecurity Engineering}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sae.org/standards/content/iso_sae_21434/
+      \endverb
+      \verb{url}
+      \verb https://www.sae.org/standards/content/iso_sae_21434/
+      \endverb
+    \endentry
+    \entry{reuters-toyota-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0f29c8aefa88b3b9ae99ff4d500c89b0}{%
+           family={Soo},
+           familyi={S\bibinitperiod},
+           given={Zen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Reuters}%
+      }
+      \strng{namehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{fullhash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{fullhashraw}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{bibnamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorbibnamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authornamehash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorfullhash}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \strng{authorfullhashraw}{0f29c8aefa88b3b9ae99ff4d500c89b0}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Toyota Says Data of 2.15 Million Customers in {Japan} Exposed for 10 Years}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.reuters.com/business/autos-transportation/toyota-says-data-21-million-customers-may-have-been-exposed-2023-05-12/
+      \endverb
+      \verb{url}
+      \verb https://www.reuters.com/business/autos-transportation/toyota-says-data-21-million-customers-may-have-been-exposed-2023-05-12/
+      \endverb
+    \endentry
+    \entry{therecord-yanfeng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1df4cc572f1dacbbe61134f9fa27eb9d}{%
+           family={{The Record by Recorded Future}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Recorded Future News}%
+      }
+      \strng{namehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{fullhash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{fullhashraw}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{bibnamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorbibnamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authornamehash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorfullhash}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \strng{authorfullhashraw}{1df4cc572f1dacbbe61134f9fa27eb9d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Akira Ransomware Attack on Yanfeng Disrupted Stellantis Production Lines}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://therecord.media/akira-ransomware-yanfeng-automotive-stellantis
+      \endverb
+      \verb{url}
+      \verb https://therecord.media/akira-ransomware-yanfeng-automotive-stellantis
+      \endverb
+    \endentry
+    \entry{bleepingcomputer-yanfeng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83529ea999fcc578dafe7d033d33eb56}{%
+           family={Toulas},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{bibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorbibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authornamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Yanfeng Automotive Interiors Hit by Akira Ransomware}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/akira-ransomware-hit-yanfeng-automotive-interiors-caused-stellantis-supply-chain-disruption/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/akira-ransomware-hit-yanfeng-automotive-interiors-caused-stellantis-supply-chain-disruption/
+      \endverb
+    \endentry
+    \entry{hyundai-blackbasta-2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=83529ea999fcc578dafe7d033d33eb56}{%
+           family={Toulas},
+           familyi={T\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {BleepingComputer}%
+      }
+      \strng{namehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{fullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{bibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorbibnamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authornamehash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhash}{83529ea999fcc578dafe7d033d33eb56}
+      \strng{authorfullhashraw}{83529ea999fcc578dafe7d033d33eb56}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hyundai Motor Europe Hit by {Black Basta} Ransomware Attack}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bleepingcomputer.com/news/security/hyundai-motor-europe-hit-by-black-basta-ransomware-attack/
+      \endverb
+      \verb{url}
+      \verb https://www.bleepingcomputer.com/news/security/hyundai-motor-europe-hit-by-black-basta-ransomware-attack/
+      \endverb
+    \endentry
+    \entry{toyota-disclosure-2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb65b49975dc7287afaa4f6ff920c23b}{%
+           family={{Toyota Motor Corporation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Toyota Motor Corporation}%
+      }
+      \strng{namehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{fullhash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{fullhashraw}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{bibnamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorbibnamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authornamehash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorfullhash}{eb65b49975dc7287afaa4f6ff920c23b}
+      \strng{authorfullhashraw}{eb65b49975dc7287afaa4f6ff920c23b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Notice Regarding Vehicle Data Stored in a Cloud Environment}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://global.toyota/en/newsroom/corporate/39285947.html
+      \endverb
+      \verb{url}
+      \verb https://global.toyota/en/newsroom/corporate/39285947.html
+      \endverb
+    \endentry
+    \entry{upstream-security-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7d8928e93ab70a4ce74746faa1bbbdf}{%
+           family={{Upstream Security}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Upstream Security}%
+      }
+      \strng{namehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{bibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorbibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authornamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Automotive Cybersecurity Report 2024}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+      \verb{url}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+    \endentry
+    \entry{trendmicro-car-hacking}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e08895f2e4992fa6dcf6844bb58f7dad}{%
+           family={Wilhoit},
+           familyi={W\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98840fcd361cd4f27fff7922881e78fe}{%
+           family={Hilt},
+           familyi={H\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {Trend Micro Research}%
+      }
+      \strng{namehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{fullhash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{fullhashraw}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{bibnamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorbibnamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authornamehash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorfullhash}{70efe71de87e6e5ac80874a9f9138460}
+      \strng{authorfullhashraw}{70efe71de87e6e5ac80874a9f9138460}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Driving Security Into Connected Cars: Threat Model and Recommendations}
+      \field{urlday}{29}
+      \field{urlmonth}{8}
+      \field{urlyear}{2025}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/driving-security-into-connected-cars-threat-model-and-recommendations
+      \endverb
+      \verb{url}
+      \verb https://www.trendmicro.com/vinfo/us/security/news/internet-of-things/driving-security-into-connected-cars-threat-model-and-recommendations
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

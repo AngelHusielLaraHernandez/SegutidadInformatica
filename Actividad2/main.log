@@ -1,0 +1,2911 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2026.1.31)  5 SEP 2026 09:57
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/angel/Documentos/9semestre/seguridad/SegutidadInformatica/Actividad2/main.tex
+(/home/angel/Documentos/9semestre/seguridad/SegutidadInformatica/Actividad2/main.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/home/angel/.miktex/texmfs/install/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/home/angel/.miktex/texmfs/install/tex/latex/base/size11.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/home/angel/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2025/03/27 v25.6 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count270
+\U@D=\dimen142
+\l@unhyphenated=\language79
+ (/home/angel/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count271
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/angel/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/home/angel/.miktex/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks17
+\es@quotdepth=\count272
+Package babel Info: Making " an active character on input line 570.
+)) (/home/angel/.miktex/texmfs/install/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (/home/angel/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (/home/angel/.miktex/texmfs/install/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+ (/home/angel/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count273
+) (/home/angel/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+\csq@reset=\count274
+\csq@gtype=\count275
+\csq@glevel=\count276
+\csq@qlevel=\count277
+\csq@maxlvl=\count278
+\csq@tshold=\count279
+\csq@ltx@everypar=\toks21
+ (/home/angel/.miktex/texmfs/install/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/home/angel/.miktex/texmfs/install/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/home/angel/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (/home/angel/.miktex/texmfs/install/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2026/03/30 v0.6h Insert pages of external PDF documents (AM)
+ (/home/angel/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/home/angel/.miktex/texmfs/install/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen143
+\calc@Bdimen=\dimen144
+\calc@Askip=\skip51
+\calc@Bskip=\skip52
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip53
+) (/home/angel/.miktex/texmfs/install/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+\ESO@tempdima=\dimen145
+\ESO@tempdimb=\dimen146
+ (/home/angel/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/home/angel/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/home/angel/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+) (/home/angel/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)) (/home/angel/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/home/angel/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/home/angel/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/home/angel/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+\AM@pagewidth=\dimen149
+\AM@pageheight=\dimen150
+\AM@fboxrule=\dimen151
+ (/home/angel/.miktex/texmfs/install/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2026/03/30 v0.6h Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count283
+\AM@pagebox=\box52
+\AM@global@opts=\toks22
+\AM@pagecnt=\count284
+\AM@toc@title=\toks23
+\AM@lof@heading=\toks24
+\c@AM@survey=\count285
+\AM@templatesizebox=\box53
+) (/home/angel/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip54
+
+For additional information on amsmath, use the `?' option.
+(/home/angel/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/home/angel/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks25
+\ex@=\dimen152
+)) (/home/angel/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen153
+) (/home/angel/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen154
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count291
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip17
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks26
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks27
+\eqnshift@=\dimen155
+\alignsep@=\dimen156
+\tagshift@=\dimen157
+\tagwidth@=\dimen158
+\totwidth@=\dimen159
+\lineht@=\dimen160
+\@envbody=\toks28
+\multlinegap=\skip55
+\multlinetaggap=\skip56
+\mathdisplay@stack=\toks29
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/home/angel/.miktex/texmfs/install/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/home/angel/.miktex/texmfs/install/tex/latex/jknappen/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup4
+) (/home/angel/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count298
+\float@exts=\toks30
+\float@box=\box56
+\@float@everytoks=\toks31
+\@floatcapt=\box57
+) (/home/angel/.miktex/texmfs/install/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (/home/angel/.miktex/texmfs/install/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/home/angel/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/home/angel/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen161
+\captionmargin=\dimen162
+\caption@leftmargin=\dimen163
+\caption@rightmargin=\dimen164
+\caption@width=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: float package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count301
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count302
+) (/home/angel/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+ (/home/angel/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen169
+\ar@mcellbox=\box58
+\extrarowheight=\dimen170
+\NC@list=\toks32
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box59
+)
+\everycr=\toks33
+\minrowclearance=\skip59
+\rownum=\count303
+) (/home/angel/.miktex/texmfs/install/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen171
+\c@nlinenum=\count304
+\TeXr@lab=\toks34
+) (/home/angel/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty (/home/angel/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty (/home/angel/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box60
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/angel/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty (/home/angel/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks38
+))
+\pgf@x=\dimen174
+\pgf@y=\dimen175
+\pgf@xa=\dimen176
+\pgf@ya=\dimen177
+\pgf@xb=\dimen178
+\pgf@yb=\dimen179
+\pgf@xc=\dimen180
+\pgf@yc=\dimen181
+\pgf@xd=\dimen182
+\pgf@yd=\dimen183
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count305
+\c@pgf@countb=\count306
+\c@pgf@countc=\count307
+\c@pgf@countd=\count308
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
+\pgf@sys@id@count=\count309
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count310
+\pgfsyssoftpath@bigbuffer@items=\count311
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count312
+\pgfmath@box=\box61
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count313
+)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen185
+\pgf@picmaxx=\dimen186
+\pgf@picminy=\dimen187
+\pgf@picmaxy=\dimen188
+\pgf@pathminx=\dimen189
+\pgf@pathmaxx=\dimen190
+\pgf@pathminy=\dimen191
+\pgf@pathmaxy=\dimen192
+\pgf@xx=\dimen193
+\pgf@xy=\dimen194
+\pgf@yx=\dimen195
+\pgf@yy=\dimen196
+\pgf@zx=\dimen197
+\pgf@zy=\dimen198
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen199
+\pgf@path@lasty=\dimen256
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen257
+\pgf@shorten@start@additional=\dimen258
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count314
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen259
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen260
+\pgf@pt@y=\dimen261
+\pgf@pt@temp=\dimen262
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen263
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen264
+\pgf@sys@shading@range@num=\count315
+\pgf@shadingcount=\count316
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box65
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box66
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen265
+\pgf@nodesepend=\dimen266
+) (/home/angel/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/angel/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty (/home/angel/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/angel/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty (/home/angel/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen267
+\pgffor@skip=\dimen268
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
+)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count317
+\pgfplotmarksize=\dimen269
+)
+\tikz@lastx=\dimen270
+\tikz@lasty=\dimen271
+\tikz@lastxsaved=\dimen272
+\tikz@lastysaved=\dimen273
+\tikz@lastmovetox=\dimen274
+\tikz@lastmovetoy=\dimen275
+\tikzleveldistance=\dimen276
+\tikzsiblingdistance=\dimen277
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count318
+\tikznumberofchildren=\count319
+\tikznumberofcurrentchild=\count320
+\tikz@fig@count=\count321
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count322
+\pgfmatrixcurrentcolumn=\count323
+\pgf@matrix@numberofcolumns=\count324
+)
+\tikz@expandcount=\count325
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box71
+\pgfnodeparttwobox=\box72
+\pgfnodepartthreebox=\box73
+\pgfnodepartfourbox=\box74
+\pgfnodeparttwentybox=\box75
+\pgfnodepartnineteenbox=\box76
+\pgfnodeparteighteenbox=\box77
+\pgfnodepartseventeenbox=\box78
+\pgfnodepartsixteenbox=\box79
+\pgfnodepartfifteenbox=\box80
+\pgfnodepartfourteenbox=\box81
+\pgfnodepartthirteenbox=\box82
+\pgfnodeparttwelvebox=\box83
+\pgfnodepartelevenbox=\box84
+\pgfnodeparttenbox=\box85
+\pgfnodepartninebox=\box86
+\pgfnodeparteightbox=\box87
+\pgfnodepartsevenbox=\box88
+\pgfnodepartsixbox=\box89
+\pgfnodepartfivebox=\box90
+)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen278
+\pgfarrowlength=\dimen279
+\pgfarrowwidth=\dimen280
+\pgfarrowlinewidth=\dimen281
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/home/angel/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen282
+\pgfdecoratedremainingdistance=\dimen283
+\pgfdecoratedinputsegmentcompleteddistance=\dimen284
+\pgfdecoratedinputsegmentremainingdistance=\dimen285
+\pgf@decorate@distancetomove=\dimen286
+\pgf@decorate@repeatstate=\count326
+\pgfdecorationsegmentamplitude=\dimen287
+\pgfdecorationsegmentlength=\dimen288
+)
+\tikz@lib@dec@box=\box91
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
+File: tikzlibrarybabel.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box92
+\pgf@layerboxsaved@background=\box93
+) (/home/angel/.miktex/texmfs/install/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip60
+\enit@outerparindent=\dimen289
+\enit@toks=\toks47
+\enit@inbox=\box94
+\enit@count@id=\count327
+\enitdp@description=\count328
+) (/home/angel/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen290
+\lightrulewidth=\dimen291
+\cmidrulewidth=\dimen292
+\belowrulesep=\dimen293
+\belowbottomsep=\dimen294
+\aboverulesep=\dimen295
+\abovetopsep=\dimen296
+\cmidrulesep=\dimen297
+\cmidrulekern=\dimen298
+\defaultaddspace=\dimen299
+\@cmidla=\count329
+\@cmidlb=\count330
+\@aboverulesep=\dimen300
+\@belowrulesep=\dimen301
+\@thisruleclass=\count331
+\@lastruleclass=\count332
+\@thisrulewidth=\dimen302
+) (/home/angel/.miktex/texmfs/install/tex/latex/listings/listings.sty
+\lst@mode=\count333
+\lst@gtempboxa=\box95
+\lst@token=\toks48
+\lst@length=\count334
+\lst@currlwidth=\dimen303
+\lst@column=\count335
+\lst@pos=\count336
+\lst@lostspace=\dimen304
+\lst@width=\dimen305
+\lst@newlines=\count337
+\lst@lineno=\count338
+\lst@maxwidth=\dimen306
+ (/home/angel/.miktex/texmfs/install/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (/home/angel/.miktex/texmfs/install/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count339
+\lst@skipnumbers=\count340
+\lst@framebox=\box96
+) (/home/angel/.miktex/texmfs/install/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (/home/angel/.miktex/texmfs/install/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip61
+\cftbeforetoctitleskip=\skip62
+\cftaftertoctitleskip=\skip63
+\cftbeforepartskip=\skip64
+\cftpartnumwidth=\skip65
+\cftpartindent=\skip66
+\cftbeforesecskip=\skip67
+\cftsecindent=\skip68
+\cftsecnumwidth=\skip69
+\cftbeforesubsecskip=\skip70
+\cftsubsecindent=\skip71
+\cftsubsecnumwidth=\skip72
+\cftbeforesubsubsecskip=\skip73
+\cftsubsubsecindent=\skip74
+\cftsubsubsecnumwidth=\skip75
+\cftbeforeparaskip=\skip76
+\cftparaindent=\skip77
+\cftparanumwidth=\skip78
+\cftbeforesubparaskip=\skip79
+\cftsubparaindent=\skip80
+\cftsubparanumwidth=\skip81
+\cftbeforeloftitleskip=\skip82
+\cftafterloftitleskip=\skip83
+\cftbeforefigskip=\skip84
+\cftfigindent=\skip85
+\cftfignumwidth=\skip86
+\c@lofdepth=\count341
+\c@lotdepth=\count342
+\cftbeforelottitleskip=\skip87
+\cftafterlottitleskip=\skip88
+\cftbeforetabskip=\skip89
+\cfttabindent=\skip90
+\cfttabnumwidth=\skip91
+) (/home/angel/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/home/angel/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count343
+\Gm@cntv=\count344
+\c@Gm@tempcnt=\count345
+\Gm@bindingoffset=\dimen307
+\Gm@wd@mp=\dimen308
+\Gm@odd@mp=\dimen309
+\Gm@even@mp=\dimen310
+\Gm@layoutwidth=\dimen311
+\Gm@layoutheight=\dimen312
+\Gm@layouthoffset=\dimen313
+\Gm@layoutvoffset=\dimen314
+\Gm@dimlist=\toks49
+ (/home/angel/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/angel/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/home/angel/.miktex/texmfs/install/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+ (/home/angel/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (/home/angel/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/angel/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))) (/home/angel/.miktex/texmfs/install/tex/latex/lipsum/lipsum.sty (/home/angel/.miktex/texmfs/install/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/home/angel/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+ (/home/angel/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count346
+\l__pdf_internal_box=\box97
+))
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count347
+\l__lipsum_a_int=\count348
+\l__lipsum_b_int=\count349
+ (/home/angel/.miktex/texmfs/install/tex/latex/lipsum/lipsum.ltd.tex)) (/home/angel/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip92
+\f@nch@offset@elh=\skip93
+\f@nch@offset@erh=\skip94
+\f@nch@offset@olh=\skip95
+\f@nch@offset@orh=\skip96
+\f@nch@offset@elf=\skip97
+\f@nch@offset@erf=\skip98
+\f@nch@offset@olf=\skip99
+\f@nch@offset@orf=\skip100
+\f@nch@height=\skip101
+\f@nch@footalignment=\skip102
+\f@nch@widthL=\skip103
+\f@nch@widthC=\skip104
+\f@nch@widthR=\skip105
+\@temptokenb=\toks50
+) (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+ (/home/angel/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/home/angel/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/home/angel/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count350
+
+(/home/angel/.miktex/texmfs/install/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/home/angel/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count351
+\c@listtotal=\count352
+\c@listcount=\count353
+\c@liststart=\count354
+\c@liststop=\count355
+\c@citecount=\count356
+\c@citetotal=\count357
+\c@multicitecount=\count358
+\c@multicitetotal=\count359
+\c@instcount=\count360
+\c@maxnames=\count361
+\c@minnames=\count362
+\c@maxitems=\count363
+\c@minitems=\count364
+\c@citecounter=\count365
+\c@maxcitecounter=\count366
+\c@savedcitecounter=\count367
+\c@uniquelist=\count368
+\c@uniquename=\count369
+\c@refsection=\count370
+\c@refsegment=\count371
+\c@maxextratitle=\count372
+\c@maxextratitleyear=\count373
+\c@maxextraname=\count374
+\c@maxextradate=\count375
+\c@maxextraalpha=\count376
+\c@abbrvpenalty=\count377
+\c@highnamepenalty=\count378
+\c@lownamepenalty=\count379
+\c@maxparens=\count380
+\c@parenlevel=\count381
+\blx@tempcnta=\count382
+\blx@tempcntb=\count383
+\blx@tempcntc=\count384
+\c@blx@maxsection=\count385
+\blx@maxsegment@0=\count386
+\blx@notetype=\count387
+\blx@parenlevel@text=\count388
+\blx@parenlevel@foot=\count389
+\blx@sectionciteorder@0=\count390
+\blx@sectionciteorderinternal@0=\count391
+\blx@entrysetcounter=\count392
+\blx@biblioinstance=\count393
+\labelnumberwidth=\skip106
+\labelalphawidth=\skip107
+\biblabelsep=\skip108
+\bibitemsep=\skip109
+\bibnamesep=\skip110
+\bibinitsep=\skip111
+\bibparsep=\skip112
+\bibhang=\skip113
+\blx@bcfin=\read4
+\blx@bcfout=\write4
+\blx@langwohyphens=\language80
+\c@mincomprange=\count394
+\c@maxcomprange=\count395
+\c@mincompwidth=\count396
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'apa.dbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex-apa/apa.dbx
+File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count397
+\c@savedafterword=\count398
+\c@annotator=\count399
+\c@savedannotator=\count400
+\c@author=\count401
+\c@savedauthor=\count402
+\c@bookauthor=\count403
+\c@savedbookauthor=\count404
+\c@commentator=\count405
+\c@savedcommentator=\count406
+\c@editor=\count407
+\c@savededitor=\count408
+\c@editora=\count409
+\c@savededitora=\count410
+\c@editorb=\count411
+\c@savededitorb=\count412
+\c@editorc=\count413
+\c@savededitorc=\count414
+\c@foreword=\count415
+\c@savedforeword=\count416
+\c@holder=\count417
+\c@savedholder=\count418
+\c@introduction=\count419
+\c@savedintroduction=\count420
+\c@namea=\count421
+\c@savednamea=\count422
+\c@nameb=\count423
+\c@savednameb=\count424
+\c@namec=\count425
+\c@savednamec=\count426
+\c@translator=\count427
+\c@savedtranslator=\count428
+\c@shortauthor=\count429
+\c@savedshortauthor=\count430
+\c@shorteditor=\count431
+\c@savedshorteditor=\count432
+\c@narrator=\count433
+\c@savednarrator=\count434
+\c@execproducer=\count435
+\c@savedexecproducer=\count436
+\c@execdirector=\count437
+\c@savedexecdirector=\count438
+\c@with=\count439
+\c@savedwith=\count440
+\c@labelname=\count441
+\c@savedlabelname=\count442
+\c@institution=\count443
+\c@savedinstitution=\count444
+\c@lista=\count445
+\c@savedlista=\count446
+\c@listb=\count447
+\c@savedlistb=\count448
+\c@listc=\count449
+\c@savedlistc=\count450
+\c@listd=\count451
+\c@savedlistd=\count452
+\c@liste=\count453
+\c@savedliste=\count454
+\c@listf=\count455
+\c@savedlistf=\count456
+\c@location=\count457
+\c@savedlocation=\count458
+\c@organization=\count459
+\c@savedorganization=\count460
+\c@origlocation=\count461
+\c@savedoriglocation=\count462
+\c@origpublisher=\count463
+\c@savedorigpublisher=\count464
+\c@publisher=\count465
+\c@savedpublisher=\count466
+\c@language=\count467
+\c@savedlanguage=\count468
+\c@origlanguage=\count469
+\c@savedoriglanguage=\count470
+\c@citation=\count471
+\c@savedcitation=\count472
+\c@pageref=\count473
+\c@savedpageref=\count474
+\shorthandwidth=\skip114
+\shortjournalwidth=\skip115
+\shortserieswidth=\skip116
+\shorttitlewidth=\skip117
+\shortauthorwidth=\skip118
+\shorteditorwidth=\skip119
+\locallabelnumberwidth=\skip120
+\locallabelalphawidth=\skip121
+\localshorthandwidth=\skip122
+\localshortjournalwidth=\skip123
+\localshortserieswidth=\skip124
+\localshorttitlewidth=\skip125
+\localshortauthorwidth=\skip126
+\localshorteditorwidth=\skip127
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count475
+\c@textcitetotal=\count476
+\c@textcitemaxnames=\count477
+\c@biburlbigbreakpenalty=\count478
+\c@biburlbreakpenalty=\count479
+\c@biburlnumpenalty=\count480
+\c@biburlucpenalty=\count481
+\c@biburllcpenalty=\count482
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count483
+)
+Package biblatex Info: Trying to load bibliography style 'apa'...
+Package biblatex Info: ... file 'apa.bbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex-apa/apa.bbx
+File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count484
+\c@bbx:relatedtotal=\count485
+)
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
+Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already defined, overwriting.
+Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already defined, overwriting.
+)
+Package biblatex Info: Trying to load citation style 'apa'...
+Package biblatex Info: ... file 'apa.cbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex-apa/apa.cbx
+File: apa.cbx 2025/08/27 v9.20 APA biblatex citation style
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
+Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined, overwriting.
+Package biblatex Info: Redefining '\fullcite'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2025-01-18 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/blx-case-expl3.sty (/home/angel/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+)) (/home/angel/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+ (/home/angel/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/angel/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/home/angel/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/home/angel/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/home/angel/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/home/angel/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count486
+) (/home/angel/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen315
+\Hy@linkcounter=\count487
+\Hy@pagecounter=\count488
+ (/home/angel/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/home/angel/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count489
+ (/home/angel/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count490
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen316
+ (/home/angel/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/home/angel/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count491
+\Field@Width=\dimen317
+\Fld@charsize=\dimen318
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/home/angel/.miktex/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count492
+\c@Item=\count493
+\c@Hfootnote=\count494
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/home/angel/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+ (/home/angel/.miktex/texmfs/install/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count495
+\c@bookmark@seq@number=\count496
+ (/home/angel/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/home/angel/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip128
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 185.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+ (main.aux
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 9.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 187.
+LaTeX Font Info:    ... okay on input line 187.
+LaTeX Info: Redefining \. on input line 187.
+LaTeX Info: Redefining \% on input line 187.
+ (/home/angel/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count497
+\scratchdimen=\dimen319
+\scratchbox=\box98
+\nofMPsegments=\count498
+\nofMParguments=\count499
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count500
+\MPscratchDim=\dimen320
+\MPnumerator=\count501
+\makeMPintoPDFobject=\count502
+\everyMPtoPDFconversion=\toks52
+) (/home/angel/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/home/angel/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (/home/angel/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/home/angel/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (/home/angel/.miktex/texmfs/install/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count503
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03113pt, 71.13188pt)
+* v-part:(T,H,B)=(99.58464pt, 610.02716pt, 85.35826pt)
+* \paperwidth=614.29489pt
+* \paperheight=794.97006pt
+* \textwidth=472.03113pt
+* \textheight=610.02716pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-74.68535pt
+* \headheight=77.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package biblatex Info: Trying to load language 'spanish' -> 'spanish-apa'...
+Package biblatex Info: ... file 'spanish-apa.lbx' found.
+(/home/angel/.miktex/texmfs/install/tex/latex/biblatex-apa/spanish-apa.lbx
+File: spanish-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'spanish'...
+Package biblatex Info: ... file 'spanish.lbx' found.
+ (/home/angel/.miktex/texmfs/install/tex/latex/biblatex/lbx/spanish.lbx
+File: spanish.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 187.
+Package biblatex Info: Reference segment=0 on input line 187.
+Package hyperref Info: Link coloring ON on input line 187.
+ (main.out) (main.out)
+\@outlinefile=\write5
+\openout5 = `main.out'.
+
+ (portada.tex
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 6.
+ (/home/angel/.miktex/texmfs/install/tex/latex/jknappen/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+<portada_img/der.png, id=170, 332.24126pt x 393.47pt>
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 8.
+(pdftex.def)             Requested size: 56.9055pt x 67.38733pt.
+<portada_img/izq.png, id=172, 254.9525pt x 301.125pt>
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 14.
+(pdftex.def)             Requested size: 56.9055pt x 67.20801pt.
+)
+
+[1
+
+{/home/angel/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map} <./portada_img/der.png> <./portada_img/izq.png>] (main.toc
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+[2])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 195.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 195.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[3]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 232.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 232.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.232     \item \textbf
+                       {Proveedores Tier~1 y Tier~2:} Suministran módulos y... [1]
+Underfull \hbox (badness 1184) in paragraph at lines 249--250
+[]|\OT1/cmr/m/n/10.95 Fabricaci^^Son y dis-tri-bu-ci^^Son de veh^^S^^Pcu-los co-nec-ta-dos y
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 280--280
+\OT1/cmr/m/n/10 de firm-wa-re y soft-wa-re a los
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 280--281
+\OT1/cmr/m/n/10 fir-ma di-gi-tal de pa-que-tes con
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--282
+[]|\OT1/cmr/m/n/10 Portal Web de
+ []
+
+
+Underfull \hbox (badness 6978) in paragraph at lines 282--283
+\OT1/cmr/m/n/10 ja-da en AWS; au-ten-ti-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--286
+[]|\OT1/cmr/m/n/10 ERP SAP
+ []
+
+
+Underfull \hbox (badness 6859) in paragraph at lines 296--296
+[]|\OT1/cmr/m/n/10 Interfaz diagn^^Sosti-ca en-tre el
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 296--297
+\OT1/cmr/m/n/10 Fi/-BLE; pro-to-co-lo ISO 15765
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--298
+[]|\OT1/cmr/m/n/10 ECU Prin-ci-pal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+[]|\OT1/cmr/m/n/10 Microprocesador Re-ne-sas
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+\OT1/cmr/m/n/10 RH850; firm-wa-re pro-pie-ta-rio;
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 306.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 306.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.306 \section
+              {Listado de Tecnología Utilizada} [2]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 316.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 316.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.316     \item \textbf
+                       {4G LTE / 5G:} Conectividad celular del vehículo par... [3]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 347.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 347.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[4]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 374.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 374.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[5]
+Underfull \hbox (badness 2591) in paragraph at lines 392--393
+[]|\OT1/cmr/m/n/10 Microsoft In-tu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+[]|\OT1/cmr/m/n/10 Active Di-rec-
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 396--396
+[]|\OT1/cmr/m/n/10 Smartphones cor-po-ra-ti-
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 396--397
+[]|\OT1/cmr/m/n/10 Microsoft In-tu-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--398
+[]|\OT1/cmr/m/n/10 Android 13 (mo-do
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 400--400
+[]|\OT1/cmr/m/n/10 Tel^^Sefo-nos IP (softpho-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+[]|\OT1/cmr/m/n/10 Cisco Uni-fied
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+[]|\OT1/cmr/m/n/10 PLCs Allen-Bradley
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+[]|\OT1/cmr/m/n/10 EtherNet/IP,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--419
+[]|\OT1/cmr/m/n/10 PROFINET,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--422
+[]|\OT1/cmr/m/n/10 Temperatura, vi-bra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--423
+[]|\OT1/cmr/m/n/10 MQTT over
+ []
+
+
+Underfull \hbox (badness 7344) in paragraph at lines 424--424
+[]|\OT1/cmr/m/n/10 Impresoras in-dus-tria-les
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 442--442
+[]|\OT1/cmr/m/n/10 Telemetr^^S^^Pa 4G/5G y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+[]|\OT1/cmr/m/n/10 MQTT/TLS,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+[]|\OT1/cmr/m/n/10 Navegaci^^Son, au-dio,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+\OT1/cmr/m/n/10 Car-Pla-y/An-dro-id
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+[]|\OT1/cmr/m/n/10 Wi-Fi, BLE,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
+[]|\OT1/cmr/m/n/10 ISO 15765
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+[]|\OT1/cmr/m/n/10 Ethernet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+\OT1/cmr/m/n/10 au-to-mo-triz
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 454.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 454.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 468--468
+[]|\OT1/cmr/m/n/10 Sitio cor-po-ra-ti-vo,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--468
+\OT1/cmr/m/n/10 cat^^Salo-go de veh^^S^^Pcu-
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 468--468
+\OT1/cmr/m/n/10 los y ge-ne-ra-dor de
+ []
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 468--469
+[]|\OT1/cmr/m/n/10 Nginx 1.25 + AWS
+ []
+
+
+Overfull \hbox (5.41444pt too wide) in paragraph at lines 470--470
+[]|\OT1/cmtt/m/n/10 connect.veloxauto.mx| 
+ []
+
+
+Underfull \hbox (badness 7203) in paragraph at lines 470--470
+\OT1/cmr/m/n/10 LOX Con-nect: te-le-
+ []
+
+
+Underfull \hbox (badness 7468) in paragraph at lines 470--471
+[]|\OT1/cmr/m/n/10 Node.js 20 LTS +
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 472--472
+\OT1/cmr/m/n/10 in-ven-ta-rio y pe-di-dos
+ []
+
+
+Overfull \hbox (15.91435pt too wide) in paragraph at lines 474--474
+[]|\OT1/cmtt/m/n/10 erp-sap.velox.internal| 
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 474--474
+\OT1/cmr/m/n/10 SAP S/4HANA pa-ra
+ []
+
+
+Underfull \hbox (badness 5592) in paragraph at lines 474--475
+[]|\OT1/cmr/m/n/10 SAP Fio-ri (Launch-
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 476--476
+\OT1/cmr/m/n/10 ci^^Son de pa-que-tes de
+ []
+
+
+Underfull \hbox (badness 1024) in paragraph at lines 476--477
+[]|\OT1/cmr/m/n/10 Nginx + ser-vi-dor de
+ []
+
+
+Underfull \hbox (badness 3780) in paragraph at lines 478--478
+[]|\OT1/cmr/m/n/10 Consola web Splunk
+ []
+
+
+Overfull \hbox (10.6644pt too wide) in paragraph at lines 480--480
+[]|\OT1/cmtt/m/n/10 api-gw.velox.internal| 
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 480--480
+\OT1/cmr/m/n/10 tra-li-za-do pa-ra to-dos
+ []
+
+
+Underfull \hbox (badness 1668) in paragraph at lines 480--480
+\OT1/cmr/m/n/10 los mi-cro-ser-vi-cios in-
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 491.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 491.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[7]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 604.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 604.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[8]
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 645--645
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 647--647
+[]|\OT1/cmtt/m/n/9 CVE-2021-42278 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 647--647
+\OT1/cmtt/m/n/9 CVE-2021-42287| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
+[]|\OT1/cmr/m/n/9 Escalaci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
+[]|\OT1/cmr/m/n/9 Active Di-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
+\OT1/cmr/m/n/9 rec-tory /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 647--647
+\OT1/cmr/m/n/9 Win-dows
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 647--648
+\OT1/cmr/m/n/9 KB5008602; ac-ti-var
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 649--649
+[]|\OT1/cmtt/m/n/9 CVE-2024-38077| 
+ []
+
+
+Overfull \hbox (11.66725pt too wide) in paragraph at lines 649--649
+[]|\OT1/cmr/m/n/9 Desbordamiento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\OT1/cmr/m/n/9 de b^^Sufer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+[]|\OT1/cmr/m/n/9 Windows
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 649--649
+\OT1/cmr/m/n/9 Ser-ver 2022
+ []
+
+
+Underfull \hbox (badness 1968) in paragraph at lines 649--649
+\OT1/cmr/m/n/9 mi-te RCE sin au-ten-ti-ca-
+ []
+
+
+Underfull \hbox (badness 1688) in paragraph at lines 649--650
+\OT1/cmr/m/n/9 ha-bi-li-tar el ser-vi-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 651--651
+[]|\OT1/cmr/m/n/9 Escalaci^^Son
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 653--653
+[]|\OT1/cmtt/m/n/9 CVE-2022-26923| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--653
+[]|\OT1/cmr/m/n/9 Escalaci^^Son
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 653--653
+\OT1/cmr/m/n/9 ni-pu-la-da per-mi-te a cual-
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 653--653
+\OT1/cmr/m/n/9 quier usua-rio de do-mi-nio
+ []
+
+
+Underfull \hbox (badness 1067) in paragraph at lines 653--653
+\OT1/cmr/m/n/9 ob-te-ner un cer-ti-fi-ca-do de
+ []
+
+
+Underfull \hbox (badness 7595) in paragraph at lines 653--654
+[]|\OT1/cmr/m/n/9 Deshabilitar plan-ti-
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 659.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 659.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[9]
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 667--667
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 669--669
+[]|\OT1/cmtt/m/n/9 CVE-2021-23017| 
+ []
+
+
+Overfull \hbox (11.66725pt too wide) in paragraph at lines 669--669
+[]|\OT1/cmr/m/n/9 Desbordamiento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
+\OT1/cmr/m/n/9 de b^^Sufer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
+[]|\OT1/cmr/m/n/9 Nginx 1.x
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 669--669
+\OT1/cmr/m/n/9 (re-sol-ve-dor
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 669--669
+[]|\OT1/cmr/m/n/9 Off-by-one en el re-sol-ve-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 671--671
+[]|\OT1/cmtt/m/n/9 CVE-2025-24813| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
+[]|\OT1/cmr/m/n/9 RCE sin
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 671--671
+\OT1/cmr/m/n/9 au-ten-ti-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 671--671
+\OT1/cmr/m/n/9 path es-pe-cial-men-te cons-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 673--673
+[]|\OT1/cmtt/m/n/9 CVE-2023-30589| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--673
+[]|\OT1/cmr/m/n/9 Inyecci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--673
+\OT1/cmr/m/n/9 HTTP
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--673
+[]|\OT1/cmr/m/n/9 Node.js 20
+ []
+
+
+Underfull \hbox (badness 1365) in paragraph at lines 673--674
+\OT1/cmr/m/n/9 co-mo re-ver-se proxy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+[]|\OT1/cmr/m/n/9 Server-Side
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+\OT1/cmr/m/n/9 Tem-pla-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+\OT1/cmr/m/n/9 In-jec-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+[]|\OT1/cmr/m/n/9 ServiceNow
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+\OT1/cmr/m/n/9 (Van-cou-ve-r/-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
+\OT1/cmr/m/n/9 Wa-shing-ton
+ []
+
+
+Underfull \hbox (badness 1205) in paragraph at lines 675--676
+[]|\OT1/cmr/m/n/9 Aplicar par-che HF-
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 675--676
+\OT1/cmr/m/n/9 po-si-ci^^Son del por-tal
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 677--677
+[]|\OT1/cmtt/m/n/9 CVE-2023-22518| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
+[]|\OT1/cmr/m/n/9 Control
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
+\OT1/cmr/m/n/9 de ac-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
+\OT1/cmr/m/n/9 inade-cua-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
+[]|\OT1/cmr/m/n/9 Atlassian
+ []
+
+
+Underfull \hbox (badness 7722) in paragraph at lines 677--678
+[]|\OT1/cmr/m/n/9 Actualizar a Con-
+ []
+
+
+Underfull \hbox (badness 4279) in paragraph at lines 677--678
+\OT1/cmr/m/n/9 8.5.4; apli-car re-gla
+ []
+
+
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 691--691
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 693--693
+[]|\OT1/cmtt/m/n/9 CVE-2022-22536| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--693
+[]|\OT1/cmr/m/n/9 Corrupci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--693
+\OT1/cmr/m/n/9 de me-mo-ria
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--693
+[]|\OT1/cmr/m/n/9 SAP Net-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--693
+\OT1/cmr/m/n/9 Wea-ver /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--693
+\OT1/cmr/m/n/9 S/4HANA
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+[]|\OT1/cmr/m/n/9 Control
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+\OT1/cmr/m/n/9 de ac-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+\OT1/cmr/m/n/9 inade-cua-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+[]|\OT1/cmr/m/n/9 SAP Net-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+\OT1/cmr/m/n/9 Wea-ver
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--695
+\OT1/cmr/m/n/9 Ap-pli-ca-tion
+ []
+
+
+Underfull \hbox (badness 7963) in paragraph at lines 695--696
+[]|\OT1/cmr/m/n/9 Aplicar no-ta SAP
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--696
+\OT1/cmr/m/n/9 #2934135; des-ha-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--696
+\OT1/cmr/m/n/9 bi-li-tar el ser-vi-cio
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--696
+\OT1/cmr/m/n/9 LM Con-fi-gu-ra-tion
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 697--697
+[]|\OT1/cmtt/m/n/9 CVE-2023-41056| 
+ []
+
+
+Overfull \hbox (11.66725pt too wide) in paragraph at lines 697--697
+[]|\OT1/cmr/m/n/9 Desbordamiento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--697
+\OT1/cmr/m/n/9 de en-te-ro
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 699--699
+[]|\OT1/cmtt/m/n/9 CVE-2024-10978| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+[]|\OT1/cmr/m/n/9 Control
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+\OT1/cmr/m/n/9 de ac-ce-so
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+\OT1/cmr/m/n/9 inade-cua-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--699
+[]|\OT1/cmr/m/n/9 PostgreSQL
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 699--700
+[]|\OT1/cmr/m/n/9 Actualizar a Post-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 701--701
+[]|\OT1/cmtt/m/n/9 CVE-2021-32804| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
+\OT1/cmr/m/n/9 sal (CWE-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--701
+[]|\OT1/cmr/m/n/9 Node.js \OT1/cmtt/m/n/9 tar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
+[]|\OT1/cmr/m/n/9 Actualizar pa-que-te
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 701--702
+\OT1/cmr/m/n/9 es-ca-neo SCA en el
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 707.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 707.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[10]
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 715--715
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 717--717
+[]|\OT1/cmr/m/n/9 Inyecci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--717
+\OT1/cmr/m/n/9 con-fi-gu-ra-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--717
+[]|\OT1/cmr/m/n/9 Kubernetes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--718
+[]|\OT1/cmr/m/n/9 Actualizar ingress-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--718
+\OT1/cmr/m/n/9 nginx $\OMS/cmsy/m/n/9 ^^U$ \OT1/cmr/m/n/9 1.11.2;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--718
+\OT1/cmr/m/n/9 de crear re-cur-sos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--719
+[]|\OT1/cmr/m/n/9 Escalaci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--719
+[]|\OT1/cmr/m/n/9 Kubernetes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--719
+\OT1/cmr/m/n/9 1.28 (no-dos
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 719--719
+\OT1/cmr/m/n/9 Path en no-dos Win-dows
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 719--720
+\OT1/cmr/m/n/9 Pod-Se-cu-rity Ad-mis-
+ []
+
+
+Underfull \hbox (badness 1796) in paragraph at lines 719--720
+\OT1/cmr/m/n/9 sion pa-ra res-trin-gir
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--721
+[]|\OT1/cmr/m/n/9 Bypass de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--721
+\OT1/cmr/m/n/9 au-ten-ti-ca-ci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--721
+[]|\OT1/cmr/m/n/9 HashiCorp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--721
+\OT1/cmr/m/n/9 Vault
+ []
+
+
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 735--735
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Underfull \hbox (badness 2486) in paragraph at lines 737--737
+[]|\OT1/cmr/m/n/9 Escritura de
+ []
+
+
+Underfull \hbox (badness 6559) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 firm-wa-re no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 au-ten-ti-ca-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--737
+[]|\OT1/cmr/m/n/9 Rockwell
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 Allen-Bradley
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 Con-tro-lLo-gix
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 wa-re en los m^^Sodu-los de
+ []
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 737--737
+\OT1/cmr/m/n/9 sin au-ten-ti-ca-ci^^Son, lo que
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
+\OT1/cmr/m/n/9 well SA 2023-003;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
+\OT1/cmr/m/n/9 des-ha-bi-li-tar ac-ce-so
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 739--739
+[]|\OT1/cmtt/m/n/9 CVE-2024-35783| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--739
+[]|\OT1/cmr/m/n/9 Siemens SI-
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 739--740
+[]|\OT1/cmr/m/n/9 Actualizar a SI-NE-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 739--740
+\OT1/cmr/m/n/9 blo-quear ac-ce-so ex-
+ []
+
+
+Underfull \hbox (badness 2680) in paragraph at lines 739--740
+\OT1/cmr/m/n/9 terno a la con-so-la
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 741--741
+[]|\OT1/cmtt/m/n/9 CVE-2023-28366| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+[]|\OT1/cmr/m/n/9 P^^Serdi-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+\OT1/cmr/m/n/9 de me-mo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 741--741
+\OT1/cmr/m/n/9 ria / DoS
+ []
+
+
+Underfull \hbox (badness 4634) in paragraph at lines 741--741
+[]|\OT1/cmr/m/n/9 Eclipse Mos-
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 741--742
+[]|\OT1/cmr/m/n/9 Actualizar a Mos-
+ []
+
+
+Underfull \hbox (badness 1028) in paragraph at lines 741--742
+\OT1/cmr/m/n/9 quit-to $\OMS/cmsy/m/n/9 ^^U$ \OT1/cmr/m/n/9 2.0.16; li-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 743--743
+[]|\OT1/cmtt/m/n/9 CVE-2022-44725| 
+ []
+
+
+Overfull \hbox (11.66725pt too wide) in paragraph at lines 743--743
+[]|\OT1/cmr/m/n/9 Desbordamiento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+\OT1/cmr/m/n/9 de b^^Sufer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+[]|\OT1/cmr/m/n/9 OPC Foun-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+\OT1/cmr/m/n/9 da-tion UA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--743
+\OT1/cmr/m/n/9 .NET Stan-
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 749.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 749.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[11]
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 757--757
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 759--759
+[]|\OT1/cmtt/m/n/9 CVE-2024-21762| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+[]|\OT1/cmr/m/n/9 Escritura
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+\OT1/cmr/m/n/9 fue-ra de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+\OT1/cmr/m/n/9 l^^S^^Pmi-tes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+[]|\OT1/cmr/m/n/9 Fortinet
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+\OT1/cmr/m/n/9 For-tiOS 7.x
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 761--761
+[]|\OT1/cmtt/m/n/9 CVE-2024-36985| 
+ []
+
+
+Underfull \hbox (badness 3078) in paragraph at lines 761--761
+\OT1/cmr/m/n/9 loo-kups de b^^Susque-da de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--763
+[]|\OT1/cmr/m/n/9 Lectura no
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--763
+\OT1/cmr/m/n/9 au-to-ri-za-da
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 763--763
+[]|\OT1/cmr/m/n/9 HashiCorp
+ []
+
+
+Overfull \hbox (9.06664pt too wide) in paragraph at lines 777--777
+[]|\OT1/cmr/bx/n/9 CVSS| 
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 779--779
+[]|\OT1/cmtt/m/n/9 CVE-2021-22156| 
+ []
+
+
+Overfull \hbox (11.66725pt too wide) in paragraph at lines 779--779
+[]|\OT1/cmr/m/n/9 Desbordamiento
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--779
+\OT1/cmr/m/n/9 de en-te-ro
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--779
+[]|\OT1/cmr/m/n/9 BlackBerry
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--779
+\OT1/cmr/m/n/9 QNX RTOS
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 779--779
+[]|\OT1/cmr/m/n/9 BadAlloc: des-bor-da-mien-to
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 779--779
+\OT1/cmr/m/n/9 de en-te-ro en la fun-ci^^Son
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 779--779
+\OT1/cmtt/m/n/9 calloc \OT1/cmr/m/n/9 del ker-nel QNX
+ []
+
+
+Underfull \hbox (badness 1436) in paragraph at lines 779--779
+\OT1/cmr/m/n/9 Afec-ta sis-te-mas ADAS y
+ []
+
+
+Underfull \hbox (badness 3646) in paragraph at lines 779--780
+[]|\OT1/cmr/m/n/9 Aplicar par-ches de
+ []
+
+
+Underfull \hbox (badness 1895) in paragraph at lines 779--780
+\OT1/cmr/m/n/9 Black-Berry; ac-tua-li-
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 779--780
+\OT1/cmr/m/n/9 zar BSP del fa-bri-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 781--781
+[]|\OT1/cmtt/m/n/9 CVE-2024-33066| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--781
+[]|\OT1/cmr/m/n/9 Corrupci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--781
+\OT1/cmr/m/n/9 de me-mo-ria
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--781
+[]|\OT1/cmr/m/n/9 Qualcomm
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--781
+\OT1/cmr/m/n/9 Snap-dra-gon
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 781--781
+\OT1/cmr/m/n/9 sa-jes WLAN del firm-wa-
+ []
+
+
+Underfull \hbox (badness 4254) in paragraph at lines 781--782
+[]|\OT1/cmr/m/n/9 Actualizar firm-wa-re
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 783--783
+[]|\OT1/cmtt/m/n/9 CVE-2022-21449| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--783
+[]|\OT1/cmr/m/n/9 Bypass de
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 783--783
+\OT1/cmr/m/n/9 fir-ma di-gi-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--783
+[]|\OT1/cmr/m/n/9 Java 15--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--783
+\OT1/cmr/m/n/9 17 / JWT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--783
+\OT1/cmr/m/n/9 (Bouncy
+ []
+
+
+Underfull \hbox (badness 5862) in paragraph at lines 783--784
+[]|\OT1/cmr/m/n/9 Actualizar Ja-va $\OMS/cmsy/m/n/9 ^^U$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
+\OT1/cmr/m/n/9 17.0.3 / 11.0.15;
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 783--784
+\OT1/cmr/m/n/9 ac-tua-li-zar Bouncy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--785
+[]|\OT1/cmr/m/n/9 Credenciales
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--785
+\OT1/cmr/m/n/9 em-be-bi-das
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 785--785
+[]|\OT1/cmr/m/n/9 Dongles Car-
+ []
+
+
+Overfull \hbox (0.70781pt too wide) in paragraph at lines 787--787
+[]|\OT1/cmtt/m/n/9 CVE-2023-27321| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+[]|\OT1/cmr/m/n/9 Denegaci^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 787--787
+\OT1/cmr/m/n/9 de ser-vi-cio
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 787--787
+\OT1/cmr/m/n/9 sa-jes OPC-UA mal-for-ma-
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 787--788
+\OMS/cmsy/m/n/9 ^^U$ \OT1/cmr/m/n/9 1.04.362; im-ple-
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 793.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 793.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[12]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 793.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 793.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 811--811
+\OT1/cmr/m/n/9 (APT38) ([]MI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--811
+\OT1/cmr/m/n/9 TRE Cor-po-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 812--812
+[]|\OT1/cmr/m/n/9 Corea
+ []
+
+
+Underfull \hbox (badness 3168) in paragraph at lines 812--812
+\OT1/cmr/m/n/9 del Nor-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--813
+[]|\OT1/cmr/m/n/9 Espionaje tec-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--813
+\OT1/cmr/m/n/9 nol^^Sogi-co; ro-bo
+ []
+
+
+Underfull \hbox (badness 5832) in paragraph at lines 813--813
+\OT1/cmr/m/n/9 de IP de EV,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--813
+\OT1/cmr/m/n/9 se-mi-con-duc-to-res
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 813--813
+\OT1/cmr/m/n/9 y ba-ter^^S^^Pas pa-ra
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--813
+\OT1/cmr/m/n/9 fi-nan-cia-mien-to
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 815--816
+\OT1/cmr/m/n/9 to-mo-tri-ces; pro-vee-do-res
+ []
+
+
+Underfull \hbox (badness 5050) in paragraph at lines 815--816
+\OT1/cmr/m/n/9 con-tra-tis-tas de OEMs
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 817--817
+\OT1/cmr/m/n/9 Cor-po-ra-tion,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 818--818
+[]|\OT1/cmr/m/n/9 China
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--819
+\OT1/cmr/m/n/9 dad in-te-lec-tual:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--819
+\OT1/cmr/m/n/9 di-se~nos ADAS,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--819
+\OT1/cmr/m/n/9 tec-no-log^^S^^Pa de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--819
+\OT1/cmr/m/n/9 co-mer-cia-les de
+ []
+
+
+Underfull \hbox (badness 2326) in paragraph at lines 820--820
+\OT1/cmr/m/n/9 wa-re em-pre-sa-rial; living-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
+[]|\OT1/cmr/bx/n/9 BlackCat /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
+\OT1/cmr/bx/n/9 ALPHV \OT1/cmr/m/n/9 ([]MI-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--823
+\OT1/cmr/m/n/9 TRE Cor-po-ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
+[]|\OT1/cmr/m/n/9 Rusia /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
+\OT1/cmr/m/n/9 Eu-ro-pa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 824--824
+\OT1/cmr/m/n/9 del Es-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
+[]|\OT1/cmr/m/n/9 Extorsi^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
+\OT1/cmr/m/n/9 econ^^Somi-ca me-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
+\OT1/cmr/m/n/9 dian-te do-ble
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 825--825
+\OT1/cmr/m/n/9 ex-tor-si^^Son: ci-
+ []
+
+
+Underfull \hbox (badness 7907) in paragraph at lines 825--825
+\OT1/cmr/m/n/9 fra-do de da-tos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
+[]|\OT1/cmr/bx/n/9 Continental AG
+ []
+
+
+Underfull \hbox (badness 4569) in paragraph at lines 827--828
+\OT1/cmr/m/n/9 (2022): 40TB ex-fil-tra-
+ []
+
+
+Underfull \hbox (badness 8075) in paragraph at lines 829--829
+[]|\OT1/cmr/bx/n/9 Akira \OT1/cmr/m/n/9 ([]MI-TRE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 829--829
+\OT1/cmr/m/n/9 Cor-po-ra-tion,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
+[]|\OT1/cmr/m/n/9 Rusia /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
+\OT1/cmr/m/n/9 Eu-ro-pa
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 830--830
+\OT1/cmr/m/n/9 del Es-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
+[]|\OT1/cmr/m/n/9 Extorsi^^Son
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
+\OT1/cmr/m/n/9 econ^^Somi-ca;
+ []
+
+
+Underfull \hbox (badness 7759) in paragraph at lines 831--831
+\OT1/cmr/m/n/9 es-pe-cia-li-za-do en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
+\OT1/cmr/m/n/9 ma-nu-fac-tu-ra e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 831--831
+\OT1/cmr/m/n/9 in-fra-es-truc-tu-ra
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 833--834
+\OT1/cmr/bx/n/9 In-te-riors \OT1/cmr/m/n/9 (2023): in-te-
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 833--834
+\OT1/cmr/m/n/9 rrum-pi^^So pro-duc-ci^^Son de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--835
+\OT1/cmr/bx/n/9 Na-me057(16)
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 835--835
+\OT1/cmr/m/n/9 ([]MI-TRE Cor-po-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--836
+[]|\OT1/cmr/m/n/9 Rusia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--836
+\OT1/cmr/m/n/9 (hack-ti-
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 836--836
+\OT1/cmr/m/n/9 vis-ta pro-
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 838--838
+\OT1/cmr/m/n/9 a por-ta-les web p^^Subli-cos;
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 853.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 853.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 858--858
+[]|\OT1/cmr/m/n/9 Ago.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
+[]|\OT1/cmr/m/n/9 Continental AG
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--859
+\OT1/cmr/m/n/9 (Ale-ma-nia) ---
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 859--859
+\OT1/cmr/m/n/9 ADAS, fre-nos y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 860--860
+[]|\OT1/cmr/m/n/9 BlackCat /
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 862--863
+[]|\OT1/cmr/m/n/9 ([]Abrams, [][]2022[][][];
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--864
+[]|\OT1/cmr/m/n/9 Nov.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--865
+[]|\OT1/cmr/m/n/9 Yanfeng Au-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--865
+\OT1/cmr/m/n/9 to-mo-ti-ve In-te-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--865
+\OT1/cmr/m/n/9 riors (Chi-na /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 865--865
+\OT1/cmr/m/n/9 ci-pal pro-vee-dor
+ []
+
+
+Underfull \hbox (badness 2564) in paragraph at lines 865--865
+\OT1/cmr/m/n/9 de in-te-rio-res de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 866--866
+[]|\OT1/cmr/m/n/9 Akira Ran-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 870--870
+[]|\OT1/cmr/m/n/9 May.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--871
+[]|\OT1/cmr/m/n/9 Toyota Mo-tor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 871--871
+\OT1/cmr/m/n/9 Cor-po-ra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
+[]|\OT1/cmr/m/n/9 Misconfigura-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--872
+\OT1/cmr/m/n/9 (sin ac-tor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--876
+[]|\OT1/cmr/m/n/9 Ene.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--877
+[]|\OT1/cmr/m/n/9 Hyundai Mo-tor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--877
+\OT1/cmr/m/n/9 Eu-ro-pe (Co-rea
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 877--877
+\OT1/cmr/m/n/9 / Ale-ma-nia) ---
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 878--878
+[]|\OT1/cmr/m/n/9 Black Bas-ta
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 882--882
+[]|\OT1/cmr/m/n/9 Dic.
+ []
+
+
+Underfull \hbox (badness 7888) in paragraph at lines 883--883
+\OT1/cmr/m/n/9 riad (Ale-ma-nia)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--884
+[]|\OT1/cmr/m/n/9 Misconfigura-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 884--884
+\OT1/cmr/m/n/9 (de-tec-ta-do
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 885--885
+[]|\OT1/cmr/m/n/9 800,000 re-gis-tros de pro-pie-ta-rios de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 886--887
+[]|\OT1/cmr/m/n/9 ([]Der Spie-gel,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 886--887
+[][]\OT1/cmr/m/n/9 2024[][][]; Ko-vacs,
+ []
+
+
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 891.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 891.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[15]
+Overfull \hbox (8.5222pt too wide) in paragraph at lines 896--896
+\OT1/cmr/m/n/10.95 Con-sul-ta-do el 29 de agos-to de 2025, des-de [][]$https : / / www . cisa . gov / topics / critical -[] infrastructure -[]
+ []
+
+
+
+[16]
+
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 897.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 897.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+[17] (main.aux
+LaTeX Info: Redefining \sptext on input line 9.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 6FDE288898E8B1A40656503BE9A62634;8511.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 38190 strings out of 473524
+ 746384 string characters out of 5719506
+ 1775521 words of memory out of 5000000
+ 60756 multiletter control sequences out of 15000+600000
+ 569922 words of font info for 78 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,16n,93p,954b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx9.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss8.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmss9.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy9.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/angel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (20 pages, 573063 bytes).
+PDF statistics:
+ 494 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
+

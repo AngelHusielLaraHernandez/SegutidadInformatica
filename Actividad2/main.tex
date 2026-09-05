@@ -1,0 +1,897 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS --
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing, babel, fit, backgrounds}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE TABLAS ---
+\usepackage{booktabs}
+
+% --- PAQUETES DE CÓDIGO ---
+\usepackage{listings}
+% Configuración del estilo de listings
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}   
+\definecolor{keyword}{rgb}{0.0,0.2,0.6}     
+\definecolor{comment}{rgb}{0.25,0.5,0.35}   
+\definecolor{string}{rgb}{0.6,0.0,0.0}      
+\definecolor{number}{rgb}{0.5,0.0,0.5}      
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  literate={á}{{\'a}}1
+           {é}{{\'e}}1
+           {í}{{\'i}}1
+           {ó}{{\'o}}1
+           {ú}{{\'u}}1
+           {Á}{{\'A}}1
+           {É}{{\'E}}1
+           {Í}{{\'I}}1
+           {Ó}{{\'O}}1
+           {Ú}{{\'U}}1
+           {ñ}{{\~n}}1
+           {Ñ}{{\~N}}1
+           {¿}{{\textquestiondown}}1
+           {¡}{{\textexclamdown}}1
+}
+
+% Estilo para código en C
+\lstdefinestyle{cstyle}{
+  language=C,
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+    keywordstyle=[2]\color{yellow!70!orange}\bfseries,
+    morekeywords=[2]{MPI_Init,MPI_Comm_size,MPI_Comm_rank,MPI_Send,MPI_Recv,MPI_Scatter,MPI_Gather,MPI_Bcast,MPI_Reduce,MPI_Finalize},
+    emph={printf},
+    emphstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false
+}
+
+% Definición del lenguaje Python para listings
+\lstdefinelanguage[LAB]{Python}{
+    morekeywords={False, None, True, and, as, assert, async, await, break,
+                                class, continue, def, del, elif, else, except, finally,
+                                for, from, global, if, import, in, is, lambda, nonlocal,
+                                not, or, pass, raise, return, try, while, with, yield,
+                                machine, Pin, PWM, ADC, Timer, sleep_ms, sleep_us},
+    morecomment=[l]{\#},
+    morestring=[b]",
+    morestring=[b]',
+    sensitive=true
+}
+
+% Estilo para salidas de consola/terminal
+\lstdefinestyle{output}{
+  backgroundcolor=\color{black!5},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  frame=single,
+  rulecolor=\color{black!30},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  xleftmargin=0.5cm,
+  xrightmargin=0.5cm
+}
+
+% --- ESTILOS PARA DIAGRAMAS DE FLUJO (TIKZ) ---
+\tikzset{
+  startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30},
+  process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30},
+  decision/.style={diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30},
+  io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30},
+  arrow/.style={thick,->,>=stealth}
+}
+
+
+\definecolor{azulresultado}{HTML}{0072C6}
+\definecolor{rojoacarreo}{HTML}{FF0000}
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=25mm, 
+    right=25mm,
+    top=35mm,
+    bottom=30mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip} 
+\usepackage{lipsum}  
+
+% --- VARIABLES GLOBALES ---
+\newcommand{\materia}{}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+{\hypersetup{linkcolor=black}\tableofcontents}
+
+
+\newpage
+\setcounter{page}{1}
+\singlespacing
+
+% =========================================================
+\section{Introducción}
+% =========================================================
+
+El sector automotriz ha dejado de ser un mundo puramente mecánico para convertirse en uno de los ecosistemas tecnológicos más complejos del siglo XXI. Los vehículos modernos integran cientos de microprocesadores, millones de líneas de código y conexiones permanentes a internet, lo que los convierte en plataformas digitales sobre ruedas. Este panorama exige a las organizaciones del sector una gestión rigurosa de sus activos tecnológicos. A lo largo de este documento se analizan las características generales del sector automotriz y se presenta el perfil de \textit{VELOX Automotriz S.A. de C.V.}, una empresa ficticia representativa, con el fin de identificar y mapear sus activos, la tecnología que emplea y la forma en que estos se interconectan.
+
+% =========================================================
+\section{Características Generales del Sector Automotriz}
+% =========================================================
+
+\subsection{Definición y Alcance}
+
+El sector automotriz comprende todas las actividades económicas vinculadas al diseño, manufactura, distribución y mantenimiento de vehículos de motor. A nivel global, se estima que existen más de 1{,}400 millones de unidades en circulación \autocite{upstream-security-report}. En México, el sector representa aproximadamente el 3.5\% del PIB nacional, siendo Guanajuato, Nuevo León y Puebla los principales polos de manufactura y exportación \autocite{cisa-automotive-2024}.
+
+\subsection{Tendencias Tecnológicas Actuales}
+
+La industria vive una transformación acelerada impulsada por cuatro grandes fuerzas, conocidas como las ``Cuatro Ces'':
+
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{Conectividad:} Módulos 4G/LTE y 5G permiten la comunicación vehículo-vehículo (V2V) y vehículo-infraestructura (V2I) en tiempo real.
+    \item \textbf{Conducción Autónoma:} Los sistemas ADAS integran cámaras, LiDAR y radar para asistir o automatizar la conducción.
+    \item \textbf{Electrificación:} La adopción de vehículos eléctricos e híbridos introduce nuevas arquitecturas de control y gestión energética.
+    \item \textbf{Servicios Compartidos:} La movilidad como servicio (MaaS) demanda telemetría en tiempo real y gestión remota de flotas.
+\end{itemize}
+
+El concepto de \textit{Software-Defined Vehicle} (SDV) está en el centro de esta transformación: el vehículo se concibe como una plataforma de hardware que puede actualizarse de forma remota (OTA), de manera similar a un teléfono inteligente \autocite{trendmicro-car-hacking}.
+
+\subsection{Actores del Ecosistema}
+
+El sector automotriz moderno no se limita a los fabricantes de vehículos (OEMs). Su cadena de valor incluye a múltiples actores con roles tecnológicos bien diferenciados:
+
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{OEMs} (\textit{Original Equipment Manufacturers}): Diseñan la arquitectura eléctrica y electrónica del vehículo.
+    \item \textbf{Proveedores Tier~1 y Tier~2:} Suministran módulos y componentes embebidos (ECUs, sensores, módems).
+    \item \textbf{Proveedores de Software:} Desarrollan sistemas operativos de vehículo, middlewares y plataformas de telemetría.
+    \item \textbf{Concesionarios y Talleres:} Puntos de contacto directo con el cliente, con acceso al puerto diagnóstico OBD-II.
+    \item \textbf{Plataformas de Movilidad:} Aplicaciones y servicios en la nube que consumen datos del vehículo.
+\end{itemize}
+
+% =========================================================
+\section{La Empresa: VELOX Automotriz S.A. de C.V.}
+% =========================================================
+
+\subsection{Descripción General}
+
+
+\begin{center}
+\begin{tabular}{>{\bfseries}p{4.0cm} p{9.7cm}}
+\toprule
+Razón social & VELOX Automotriz S.A. de C.V. \\
+Giro & Fabricación y distribución de vehículos conectados y eléctricos \\
+Año de fundación & 2018 \\
+Sede / planta & Planta de manufactura en Guanajuato, México \\
+Cobertura comercial & Red de concesionarios en 12 estados de la república mexicana \\
+Servicios digitales & Plataforma de telemetría para su flota de vehículos conectados \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\subsection{Objetivo de negocio}
+ 
+VELOX Automotriz tiene como objetivo de negocio diseñar, fabricar y comercializar vehículos eléctricos conectados que ofrezcan al usuario final servicios digitales de valor agregado (monitoreo remoto, actualizaciones de funciones vía OTA, asistencia telemática), al tiempo que optimiza sus procesos de manufactura y cadena de suministro mediante la digitalización de su planta y su integración con proveedores Tier 1 y Tier 2. Dado este modelo de negocio, la disponibilidad, integridad y confidencialidad de sus activos tecnológicos son condiciones necesarias para su operación.
+
+% =========================================================
+\section{Inventario de Activos Tecnológicos}
+% =========================================================
+
+A continuación se presenta el inventario de activos tecnológicos de VELOX Automotriz. Cada activo se describe en función de su nombre, el objetivo de negocio que soporta y la forma en que hace uso de la tecnología.
+
+\vspace{0.3cm}
+\begingroup
+\small
+\rowcolors{2}{gray!12}{white}
+\begin{tabular}{|p{0.4cm}|p{3.0cm}|p{5.0cm}|p{5.0cm}|}
+\hline
+\rowcolor{blue!25}
+\textbf{\#} & \textbf{Nombre del Activo} & \textbf{Objetivo de Negocio} & \textbf{Uso de la Tecnología} \\
+\hline
+1 & Servidores de Telemetría & Monitoreo en tiempo real de la flota de vehículos conectados & Recepción de datos CAN Bus vía módulo 4G/LTE; almacenados en AWS S3 \\
+\hline
+2 & Servidor OTA & Distribución de actualizaciones de firmware y software a los vehículos & HTTPS/TLS sobre red celular; firma digital de paquetes con PKI interna \\
+\hline
+3 & Portal Web de Clientes & Punto de acceso de los usuarios a servicios digitales VELOX Connect & Aplicación web en Node.js alojada en AWS; autenticación OAuth 2.0 \\
+\hline
+4 & Firewall / VPN Perimetral & Proteger la red corporativa de accesos no autorizados & Fortinet FortiGate 600F; túneles VPN IPSec con concesionarios y proveedores \\
+\hline
+5 & ERP SAP S/4HANA & Gestión integral de manufactura, finanzas, compras y RRHH & Instancia SAP en la nube (RISE with SAP); integración EDI con proveedores Tier~1 \\
+\hline
+6 & Sistema MES & Control y trazabilidad del proceso de manufactura en planta & Software FactoryTalk MES integrado con PLCs Allen-Bradley vía OPC-UA \\
+\hline
+7 & SCADA Industrial & Supervisión y control de equipos críticos de producción & Red industrial Ethernet; protocolos Modbus TCP y PROFINET; HMIs Siemens \\
+\hline
+8 & Active Directory & Gestión de identidades y accesos de los colaboradores & Microsoft AD DS en Windows Server 2022; políticas GPO y autenticación LDAP \\
+\hline
+9 & App Móvil VELOX Connect & Brindar al cliente acceso a telemetría, soporte y servicios del vehículo & Aplicación iOS/Android; comunicación REST API con servidores de telemetría \\
+\hline
+10 & Gateway OBD-II & Interfaz diagnóstica entre el vehículo y las herramientas externas & Dispositivo embebido con WiFi/BLE; protocolo ISO 15765 (CAN) y ISO 14229 (UDS) \\
+\hline
+11 & ECU Principal (VCU) & Coordinar las funciones críticas del vehículo eléctrico & Microprocesador Renesas RH850; firmware propietario; buses CAN FD y LIN \\
+\hline
+12 & Sensores ADAS & Asistir al conductor y habilitar funciones de conducción semi-autónoma & Cámaras, radar de 77~GHz y sensor ultrasónico; procesador NVIDIA Drive Orin \\
+\hline
+\end{tabular}
+\endgroup
+
+% =========================================================
+\section{Listado de Tecnología Utilizada}
+% =========================================================
+
+A continuación se presenta un inventario categorizado de la tecnología que emplea VELOX Automotriz en sus distintas áreas de operación \autocite{sae-21434}.
+
+\subsection{Redes y Protocolos de Comunicación}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{CAN Bus / CAN FD:} Red interna del vehículo para comunicación entre ECUs.
+    \item \textbf{LIN Bus:} Protocolo de bajo costo para actuadores secundarios (ventanas, espejos).
+    \item \textbf{Ethernet Automotriz (100BASE-T1):} Backbone de alta velocidad para ADAS y cámaras.
+    \item \textbf{4G LTE / 5G:} Conectividad celular del vehículo para telemetría y actualizaciones OTA.
+    \item \textbf{Bluetooth BLE 5.2:} Enlace de corto alcance con el teléfono del conductor.
+    \item \textbf{GPS / GNSS:} Posicionamiento global para navegación y rastreo de flota.
+    \item \textbf{Wi-Fi 6 (802.11ax):} Hotspot interno del vehículo y red corporativa en oficinas.
+    \item \textbf{Ethernet Industrial (PROFINET, OPC-UA):} Comunicación en planta entre PLCs y sistemas MES/SCADA.
+    \item \textbf{VPN IPSec / SSL:} Túneles seguros entre la planta, concesionarios y la nube.
+\end{itemize}
+
+\subsection{Plataformas de Software Empresarial}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{SAP S/4HANA:} ERP principal para manufactura, finanzas, logística y RRHH.
+    \item \textbf{FactoryTalk MES (Rockwell):} Sistema de ejecución de manufactura en planta.
+    \item \textbf{Siemens WinCC:} Software SCADA para supervisión de líneas de producción.
+    \item \textbf{Microsoft Active Directory:} Gestión de identidades y control de acceso corporativo.
+    \item \textbf{ServiceNow:} Plataforma ITSM para gestión de incidentes y cambios.
+    \item \textbf{Jira / Confluence:} Gestión de proyectos y documentación técnica de ingeniería.
+\end{itemize}
+
+\subsection{Infraestructura Cloud y Servidores}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{Amazon Web Services (AWS):} Cómputo en nube (EC2), almacenamiento (S3), base de datos (RDS) y IoT Core para telemetría.
+    \item \textbf{Kubernetes (EKS):} Orquestación de contenedores para los microservicios del portal VELOX Connect.
+    \item \textbf{Servidores HPE ProLiant:} Infraestructura física on-premise para AD, MES y respaldo.
+    \item \textbf{PKI Interna (EJBCA):} Infraestructura de clave pública para firma de actualizaciones OTA y certificados de vehículo.
+\end{itemize}
+
+\subsection{Tecnología Embebida en el Vehículo}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{Renesas RH850 / R-Car:} Microcontroladores para ECUs de powertrain y seguridad funcional (ASIL-D).
+    \item \textbf{NVIDIA Drive Orin:} SoC de inteligencia artificial para el procesamiento de sensores ADAS.
+    \item \textbf{Qualcomm Snapdragon Automotive:} Plataforma para el sistema de infoentretenimiento y conectividad celular.
+    \item \textbf{AUTOSAR Classic / Adaptive:} Capa de abstracción de software estándar para el software embebido.
+    \item \textbf{RTOS (FreeRTOS / QNX):} Sistemas operativos de tiempo real para ECUs de control crítico.
+\end{itemize}
+
+\subsection{Herramientas de Seguridad}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{Fortinet FortiGate 600F:} Firewall de nueva generación (NGFW) con inspección SSL y detección de intrusiones (IDS/IPS).
+    \item \textbf{CrowdStrike Falcon:} Plataforma EDR para endpoints corporativos.
+    \item \textbf{Upstream Security Platform:} Monitoreo de ciberseguridad específico para la flota vehicular \autocite{upstream-security-report}.
+    \item \textbf{HashiCorp Vault:} Gestión segura de secretos, tokens y credenciales de infraestructura.
+    \item \textbf{SIEM (Splunk Enterprise):} Correlación y análisis centralizado de eventos de seguridad.
+\end{itemize}
+
+\subsection{Gestores de Bases de Datos}
+\begin{itemize}[leftmargin=1.5cm]
+    \item \textbf{PostgreSQL 17 (AWS RDS):} Base de datos relacional principal para el portal VELOX Connect y los microservicios de citas, usuarios y concesionarios. Alojada en Amazon RDS con replicación Multi-AZ y cifrado AES-256 en reposo.
+    \item \textbf{SAP HANA 2.0 SPS07:} Base de datos en memoria (in-memory) que sirve como motor de persistencia y analítica del ERP SAP S/4HANA. Soporta procesamiento OLTP y OLAP simultáneo sobre los datos de manufactura, finanzas y cadena de suministro.
+    \item \textbf{Redis 7.2 (AWS ElastiCache):} Almacén de datos clave-valor en memoria utilizado como caché de sesiones de la app web, colas de mensajes de telemetría en tiempo real y gestión de tokens JWT. Configurado con modo clúster y TLS obligatorio.
+    \item \textbf{MongoDB Atlas 7.0:} Base de datos documental NoSQL empleada para almacenar los documentos de telemetría vehicular (series de tiempo: batería, GPS, powertrain). Su esquema flexible permite ingerir los distintos payloads MQTT enviados por el TCU de cada modelo de vehículo.
+    \item \textbf{InfluxDB 3.0 (AWS EC2):} Base de datos de series temporales dedicada al almacenamiento de métricas de sensores IoT de planta (temperatura de soldadora, vibración de robot, consumo energético). Integrada con Grafana para dashboards de producción en tiempo real.
+\end{itemize}
+
+% =========================================================
+\section{Endpoints, Servidores Web y APIs de VELOX Automotriz}
+% =========================================================
+
+La infraestructura digital de VELOX Automotriz está compuesta por tres capas de exposición que es importante identificar con precisión: los \textbf{endpoints} (dispositivos y nodos que generan o consumen datos), los \textbf{servidores web y de aplicaciones} (que alojan los servicios públicos e internos), y las \textbf{APIs e interfaces de integración} (que permiten la comunicación entre sistemas). A continuación se detalla cada capa.
+
+% ---------------------------------------------------------
+\subsection{Endpoints de la Organización}
+% ---------------------------------------------------------
+
+Un endpoint es cualquier dispositivo o nodo que se conecta a la red de la organización y puede ser origen o destino de tráfico. VELOX cuenta con tres categorías de endpoints bien diferenciadas.
+
+\subsubsection{Endpoints de Usuario Final (IT)}
+
+\vspace{0.2cm}
+\begingroup
+\small
+\rowcolors{2}{gray!12}{white}
+\begin{tabular}{|p{3.8cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
+\hline
+\rowcolor{blue!22}
+\textbf{Endpoint} & \textbf{Cantidad aprox.} & \textbf{Sistema Operativo} & \textbf{Gestión} \\
+\hline
+Laptops corporativas & 420 unidades & Windows 11 Pro & Microsoft Intune (MDM) \\
+\hline
+Estaciones de trabajo ingeniería & 85 unidades & Windows 11 / Ubuntu 22.04 LTS & Active Directory + GPO \\
+\hline
+Smartphones corporativos & 210 unidades & iOS 17 / Android 14 & Microsoft Intune \\
+\hline
+Tablets de planta (operadores) & 60 unidades & Android 13 (modo quiosco) & MDM Jamf \\
+\hline
+Teléfonos IP (softphones) & 350 extensiones & Cisco IP Phone / Webex & Cisco Unified CM \\
+\hline
+\end{tabular}
+\endgroup
+
+\subsubsection{Endpoints de Tecnología Operacional (OT / Planta)}
+
+\vspace{0.2cm}
+\begingroup
+\small
+\rowcolors{2}{gray!12}{white}
+\begin{tabular}{|p{3.8cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
+\hline
+\rowcolor{orange!28}
+\textbf{Endpoint OT} & \textbf{Cantidad aprox.} & \textbf{Función} & \textbf{Protocolo} \\
+\hline
+PLCs Allen-Bradley ControlLogix & 32 unidades & Control de robots de ensamblaje & EtherNet/IP, OPC-UA \\
+\hline
+HMIs Siemens SIMATIC & 18 paneles & Supervisión de línea de producción & PROFINET, OPC-UA \\
+\hline
+Robots ABB IRB 6700 & 24 celdas & Soldadura y ensamblaje de carrocería & Ethernet industrial propietario \\
+\hline
+Sensores IoT de planta & 320 nodos & Temperatura, vibración, consumo & MQTT over TLS (AWS IoT) \\
+\hline
+Impresoras industriales (etiquetado) & 14 unidades & Etiquetado de piezas y VINs & TCP/IP \\
+\hline
+\end{tabular}
+\endgroup
+
+\subsubsection{Endpoints Vehiculares (In-Vehicle)}
+
+\vspace{0.2cm}
+\begingroup
+\small
+\rowcolors{2}{gray!12}{white}
+\begin{tabular}{|p{3.8cm}|p{3.5cm}|p{3.5cm}|p{2.5cm}|}
+\hline
+\rowcolor{red!18}
+\textbf{Endpoint Vehicular} & \textbf{Cantidad aprox.} & \textbf{Función} & \textbf{Protocolo} \\
+\hline
+ECU Principal (VCU) & 1 por vehículo & Gestión de energía y modos de conducción & CAN FD, LIN \\
+\hline
+Módulo de conectividad (TCU) & 1 por vehículo & Telemetría 4G/5G y OTA & MQTT/TLS, HTTPS \\
+\hline
+Unidad de infoentretenimiento (IVI) & 1 por vehículo & Navegación, audio, CarPlay/Android Auto & Wi-Fi, BLE, USB \\
+\hline
+Gateway OBD-II & 1 por vehículo & Diagnóstico remoto y acceso de taller & ISO 15765 (CAN), UDS \\
+\hline
+Sensores ADAS (radar, cámara, ultrasonido) & 8--12 por vehículo & Asistencia a la conducción & Ethernet automotriz (100BASE-T1) \\
+\hline
+\end{tabular}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Servidores Web y de Aplicaciones}
+% ---------------------------------------------------------
+
+VELOX opera múltiples servidores web para atender tanto a usuarios externos (clientes y concesionarios) como a sistemas internos. La siguiente tabla describe cada servidor, su función y la tecnología base que utiliza.
+
+\vspace{0.2cm}
+\begingroup
+\small
+\rowcolors{2}{gray!12}{white}
+\begin{tabular}{|p{3.5cm}|p{2.8cm}|p{3.5cm}|p{3.5cm}|}
+\hline
+\rowcolor{green!22}
+\textbf{Servidor} & \textbf{Tipo} & \textbf{Función} & \textbf{Tecnología} \\
+\hline
+\texttt{veloxauto.com.mx} & Web público & Sitio corporativo, catálogo de vehículos y generador de cotizaciones & Nginx 1.25 + AWS CloudFront (CDN) \\
+\hline
+\texttt{connect.veloxauto.mx} & App web (SPA) & Portal de cliente VELOX Connect: telemetría, historial, citas de servicio & Node.js 20 LTS + React 18; alojado en AWS EKS \\
+\hline
+\texttt{dealer.veloxauto.mx} & Web interna (concesionarios) & Sistema de gestión de inventario y pedidos para la red de concesionarios & Apache Tomcat 10 + Spring Boot 3; HTTPS/TLS 1.3 \\
+\hline
+\texttt{erp-sap.velox.internal} & Aplicación empresarial & Interfaz web del ERP SAP S/4HANA para usuarios corporativos & SAP Fiori (Launchpad); acceso vía VPN \\
+\hline
+\texttt{ota.velox.internal} & Servidor de actualizaciones & Repositorio y distribución de paquetes de firmware firmados digitalmente & Nginx + servidor de artefactos Artifactory \\
+\hline
+\texttt{siem.velox.internal} & Plataforma de seguridad & Consola web Splunk para análisis de logs y alertas de seguridad & Splunk Enterprise 9.x; acceso restringido por rol \\
+\hline
+\texttt{api-gw.velox.internal} & API Gateway & Punto de entrada centralizado para todos los microservicios internos & AWS API Gateway + Kong Enterprise \\
+\hline
+\end{tabular}
+\endgroup
+
+
+% =========================================================
+\section{Diagrama de Conectividad de Activos}
+% =========================================================
+
+El siguiente diagrama ilustra cómo se interconectan los activos tecnológicos de VELOX Automotriz, agrupados en cuatro zonas lógicas: \textbf{Zona Vehículo/Cliente}, \textbf{Seguridad Perimetral}, \textbf{Zona Corporativa} y \textbf{Zona Nube}. Las flechas continuas representan conexiones directas y las flechas discontinuas indican canales de comunicación protegidos o externos.
+
+\vspace{0.4cm}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance = 1.0cm and 1.6cm,
+  every node/.style = {font=\footnotesize\sffamily},
+  nodo/.style = {rectangle, rounded corners=4pt, minimum width=2.5cm,
+                 minimum height=0.75cm, text centered, draw, thick, text width=2.4cm},
+  cnube/.style  = {nodo, fill=green!20,  draw=green!50!black},
+  ccorp/.style  = {nodo, fill=blue!15,   draw=blue!50!black},
+  cveh/.style   = {nodo, fill=red!15,    draw=red!50!black},
+  cseg/.style   = {nodo, fill=orange!20, draw=orange!70!black},
+  cusr/.style   = {circle, minimum size=1.1cm, text centered, draw=purple!70!black,
+                   fill=purple!15, thick, font=\footnotesize\sffamily, text width=1.5cm},
+  lin/.style    = {->, >=Stealth, thick},
+  linv/.style   = {->, >=Stealth, thick, dashed, gray!70},
+  linusr/.style = {->, >=Stealth, thick, purple!70!black}
+]
+
+%--- USUARIO FINAL (y=11.0) ---
+\node[cusr] (user) at (4,11.0)  {\textbf{Usuario}\\Final};
+
+%--- ZONA NUBE (y=8.5) ---
+\node[cnube] (aws)      at (0,8.5)   {AWS Cloud\\(IoT Core / S3)};
+\node[cnube] (ota)      at (4,8.5)   {Servidor OTA\\(Actualizaciones)};
+\node[cnube] (portal)   at (8,8.5)   {Portal Web\\VELOX Connect};
+
+%--- ZONA SEGURIDAD (y=6.5) ---
+\node[cseg]  (fw)       at (4,6.5)   {Firewall / VPN\\FortiGate 600F};
+
+%--- ZONA CORPORATIVA (y=4.5 y 3.0) ---
+\node[ccorp] (erp)      at (0,4.5)   {ERP SAP\\S/4HANA};
+\node[ccorp] (mes)      at (4,4.5)   {Sistema MES\\FactoryTalk};
+\node[ccorp] (scada)    at (8,4.5)   {SCADA\\Siemens WinCC};
+\node[ccorp] (ad)       at (0,3.0)   {Active Directory\\Corporativo};
+\node[ccorp] (siem)     at (4,3.0)   {SIEM\\Splunk};
+\node[ccorp] (pki)      at (8,3.0)   {PKI Interna\\EJBCA};
+
+%--- ZONA VEHICULO (y=1.0) ---
+\node[cveh]  (app)      at (0,1.0)   {App Móvil\\VELOX Connect};
+\node[cveh]  (obd)      at (3,1.0)   {Gateway\\OBD-II};
+\node[cveh]  (ecu)      at (6,1.0)   {ECU Principal\\(VCU)};
+\node[cveh]  (adas)     at (9,1.0)   {Sensores ADAS\\(Radar/LiDAR)};
+
+%--- CONEXIONES NUBE interna ---
+\draw[lin]  (aws)    -- (fw);
+\draw[lin]  (ota)    -- (fw);
+\draw[linv] (portal) -- (fw);
+\draw[linv] (aws)    -- (ota);
+
+%--- CONEXIONES FW a CORP ---
+\draw[lin]  (fw)     -- (erp);
+\draw[lin]  (fw)     -- (mes);
+\draw[lin]  (fw)     -- (scada);
+\draw[lin]  (erp)    -- (ad);
+\draw[lin]  (mes)    -- (siem);
+\draw[lin]  (scada)  -- (siem);
+\draw[lin]  (pki)    -- (ota);
+\draw[linv] (pki)    -- (ecu);
+
+%--- CONEXIONES ZONA VEHICULO ---
+\draw[lin]  (app)  -- (obd);
+\draw[lin]  (obd)  -- (ecu);
+\draw[lin]  (ecu)  -- (adas);
+
+%--- CONEXIONES VEHÍCULO <-> NUBE ---
+\draw[linv] (app.north)  to[out=90, in=250] (portal.south);
+\draw[linv] (ecu.north)  to[out=90, in=270] (ota.south);
+\draw[linv] (ecu.north)  to[out=100,in=280] (aws.south);
+
+%--- CONEXIONES USUARIO FINAL ---
+\draw[linusr] (user.south) to[out=270, in=70] (portal.north)
+  node[midway, right, font=\tiny\sffamily, text=purple!70!black] {HTTPS (navegador)};
+\draw[linusr] (user.west)  to[out=200, in=100] (app.north)
+  node[midway, left,  font=\tiny\sffamily, text=purple!70!black] {App móvil};
+
+%--- ZONAS (rectangulos de fondo) ---
+\begin{pgfonlayer}{background}
+  % Zona Usuario
+  \draw[dashed, purple!60!black, rounded corners=7pt, thick, fill=purple!5]
+    (2.5,10.2) rectangle (5.5,11.8);
+  \node[purple!60!black, font=\footnotesize\bfseries\sffamily]
+    at (5.2,11.6) {Cliente};
+
+  \draw[dashed, green!60!black, rounded corners=7pt, thick, fill=green!5]
+    (-1.6,7.8) rectangle (10.0,9.4);
+  \node[green!50!black, font=\footnotesize\bfseries\sffamily]
+    at (8.8,9.2) {Zona Nube};
+
+  \draw[dashed, orange!70!black, rounded corners=7pt, thick, fill=orange!5]
+    (-1.6,5.8) rectangle (10.0,7.3);
+  \node[orange!60!black, font=\footnotesize\bfseries\sffamily]
+    at (8.5,7.1) {Seg. Perimetral};
+
+  \draw[dashed, blue!60!black, rounded corners=7pt, thick, fill=blue!5]
+    (-1.6,2.2) rectangle (10.0,5.3);
+  \node[blue!50!black, font=\footnotesize\bfseries\sffamily]
+    at (8.8,5.1) {Zona Corporativa};
+
+  \draw[dashed, red!60!black, rounded corners=7pt, thick, fill=red!5]
+    (-1.6,0.2) rectangle (10.5,1.8);
+  \node[red!50!black, font=\footnotesize\bfseries\sffamily]
+    at (9.3,1.6) {Zona Vehículo};
+\end{pgfonlayer}
+
+\end{tikzpicture}
+\caption{Diagrama de conectividad de activos --- VELOX Automotriz S.A. de C.V.}
+\label{fig:red-velox}
+\end{figure}
+
+% =========================================================
+\newpage
+\section{Análisis de Vulnerabilidades en el Stack Tecnológico}
+% =========================================================
+
+El stack tecnológico de VELOX Automotriz, al ser amplio y heterogéneo, presenta una superficie de ataque considerable. A continuación se identifican vulnerabilidades reales ---tanto conocidas como menos divulgadas--- presentes en cada capa tecnológica, desde los sistemas operativos hasta los protocolos embebidos en el vehículo. Las vulnerabilidades se ordenan por tecnología e incluyen su identificador CVE, puntuación CVSS v3.1, categoría de seguridad según CWE, descripción técnica y recomendación de mitigación. Todas las entradas han sido verificadas en la base de datos del NIST National Vulnerability Database \autocite{nvd-nist}, complementadas con avisos de seguridad de cada fabricante \autocite{msrc-advisory, fortinet-psirt-2024, rockwell-advisory-2023, blackberry-badalloc}.
+
+\vspace{0.3cm}
+
+\subsubsection*{Escala de Severidad CVSS v3.1}
+
+\begingroup\small
+\rowcolors{2}{white}{white}
+\begin{tabular}{|p{2.8cm}|p{2.8cm}|p{8.0cm}|}
+\hline
+\rowcolor{gray!25}
+\textbf{Rango CVSS} & \textbf{Severidad} & \textbf{Descripción general} \\
+\hline
+\textbf{9.0 -- 10.0} & \cellcolor{red!30}\textbf{Crítica} & Explotación inmediata sin autenticación; impacto total en confidencialidad, integridad y disponibilidad del sistema. \\
+\hline
+\textbf{7.0 -- 8.9}  & \cellcolor{orange!40}\textbf{Alta}     & Explotación factible con baja complejidad; impacto significativo en uno o más vectores de seguridad. \\
+\hline
+\textbf{4.0 -- 6.9}  & \cellcolor{yellow!60}\textbf{Media}    & Requiere condiciones específicas o interacción del usuario; impacto parcial o limitado sobre el sistema. \\
+\hline
+\textbf{0.1 -- 3.9}  & \cellcolor{green!30}\textbf{Baja}     & Explotación difícil con impacto mínimo; generalmente requiere acceso local o privilegios elevados previos. \\
+\hline
+\end{tabular}
+\endgroup
+
+\vspace{0.3cm}
+
+\vspace{0.3cm}
+
+% ----------------------------------------------------------
+\subsection{Infraestructura IT y Sistemas Operativos}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{blue!22}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2021-42278} \newline \texttt{CVE-2021-42287} & 8.8 & Escalación de privilegios (CWE-269) & Active Directory / Windows Server 2022 & NoPac: el cambio de nombre de cuentas de máquina permite impersonar controladores de dominio y obtener TGT de admin de dominio. & Aplicar KB5008380 y KB5008602; activar PAC Verification en el DC. \\
+\hline
+\texttt{CVE-2024-38077} & 9.8 & Desbordamiento de búfer (CWE-122) & Windows Server 2022 (RDS) & Buffer overflow en el servicio de licencias de Windows Remote Desktop permite RCE sin autenticación. & Instalar KB5040434; si no es posible, deshabilitar el servicio de licencias RDS. \\
+\hline
+\texttt{CVE-2024-0044} & 7.8 & Escalación de privilegios (CWE-862) & Android 13 / 14 & Vulnerabilidad en el sistema de instalación de aplicaciones permite a una app sin privilegios escalar a system. & Aplicar parche de seguridad Android de agosto 2024; gestionar con MDM Intune. \\
+\hline
+\texttt{CVE-2022-26923} & 8.8 & Escalación de privilegios (CWE-295) & Active Directory Certificate Services & Solicitud de certificado manipulada permite a cualquier usuario de dominio obtener un certificado de DC y autenticarse como admin. & Deshabilitar plantillas vulnerables; aplicar KB5014754. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{Servidores Web y de Aplicaciones}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{green!22}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2021-23017} & 9.4 & Desbordamiento de búfer (CWE-193) & Nginx 1.x (resolvedor DNS) & Off-by-one en el resolvedor DNS de Nginx permite RCE mediante respuestas DNS maliciosas. Afecta al servidor web corporativo y OTA. & Actualizar a Nginx $\geq$ 1.21.0; usar resolvedor DNS interno confiable. \\
+\hline
+\texttt{CVE-2025-24813} & 9.8 & RCE sin autenticación (CWE-44) & Apache Tomcat 10 & Partial PUT request con un path especialmente construido permite ejecución remota de código sin credenciales. & Actualizar a Tomcat $\geq$ 10.1.35; deshabilitar Partial PUT en conf. \\
+\hline
+\texttt{CVE-2023-30589} & 7.5 & Inyección HTTP (CWE-444) & Node.js 20 LTS & HTTP Request Smuggling en el módulo nativo \texttt{http}: cabeceras malformadas permiten envenenar proxies y bypassar controles. & Actualizar a Node.js $\geq$ 20.3.1; usar Nginx como reverse proxy con validación de cabeceras. \\
+\hline
+\texttt{CVE-2024-4879} & 9.3 & Server-Side Template Injection (CWE-94) & ServiceNow (Vancouver/Washington DC) & SSTI sin autenticación en el endpoint de la interfaz Jelly permite ejecución de código en el servidor. & Aplicar parche HF-2024-06; limitar exposición del portal ServiceNow a la VPN interna. \\
+\hline
+\texttt{CVE-2023-22518} & 9.1 & Control de acceso inadecuado (CWE-306) & Atlassian Confluence & Restablecimiento del estado de la instancia sin autenticación: permite a un atacante crear un usuario admin. & Actualizar a Confluence $\geq$ 7.19.16 / 8.5.4; aplicar regla WAF temporal. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{ERP, Bases de Datos y Plataformas Empresariales}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{orange!22}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2022-22536} & 10.0 & Corrupción de memoria (CWE-444) & SAP NetWeaver / S/4HANA (ICM) & ICMAD: corrupción de memoria en el servidor de mensajes ICM de SAP permite toma de sesión y RCE sin autenticación. & Aplicar nota de seguridad SAP \#3123396 urgentemente; monitorear WAF. \\
+\hline
+\texttt{CVE-2020-6287} & 10.0 & Control de acceso inadecuado (CWE-306) & SAP NetWeaver Application Server Java & RECON: creación de usuarios administradores sin autenticación en el portal Java de SAP mediante endpoint no protegido. & Aplicar nota SAP \#2934135; deshabilitar el servicio LM Configuration Wizard. \\
+\hline
+\texttt{CVE-2023-41056} & 8.8 & Desbordamiento de entero (CWE-190) & Redis 7.2 & Integer overflow en el procesamiento de comandos de lista permite escritura fuera de límites y potencial RCE en el servidor Redis. & Actualizar a Redis $\geq$ 7.0.15 / 7.2.4; limitar acceso a Redis a red interna. \\
+\hline
+\texttt{CVE-2024-10978} & 4.2 & Control de acceso inadecuado (CWE-274) & PostgreSQL 17 & \texttt{SET ROLE} en contextos de función de seguridad DEFINER permite ejecutar sentencias con privilegios no autorizados. & Actualizar a PostgreSQL $\geq$ 17.1; auditar funciones con SECURITY DEFINER. \\
+\hline
+\texttt{CVE-2021-32804} & 7.1 & Path Traversal (CWE-22) & Node.js \texttt{tar} (npm pkg) & Extracción de archivos tar con rutas absolutas permite sobrescribir archivos arbitrarios del sistema. Afecta pipelines CI/CD y el servidor Artifactory. & Actualizar paquete \texttt{tar} a $\geq$ 6.1.5; usar escaneo SCA en el pipeline. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{Infraestructura Cloud y Contenedores}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{blue!15}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2024-7646} & 8.8 & Inyección de configuración (CWE-20) & Kubernetes Ingress-Nginx & Anotaciones de Ingress manipuladas inyectan directivas arbitrarias en la configuración Nginx del controlador, permitiendo escalar privilegios en el clúster. & Actualizar ingress-nginx $\geq$ 1.11.2; restringir quién puede crear recursos Ingress. \\
+\hline
+\texttt{CVE-2023-5528} & 8.8 & Escalación de privilegios (CWE-59) & Kubernetes 1.28 (nodos Windows) & Montaje de volúmenes hostPath en nodos Windows permite traversal y escalación de privilegios en el nodo subyacente. & Actualizar a Kubernetes $\geq$ 1.28.4; usar PodSecurity Admission para restringir hostPath. \\
+\hline
+\texttt{CVE-2024-2048} & 8.2 & Bypass de autenticación (CWE-295) & HashiCorp Vault 1.15/1.16 & Petición OCSP manipulada en el motor PKI de Vault permite emitir certificados sin pasar la validación de la política configurada. & Actualizar a Vault $\geq$ 1.15.6 / 1.16.2; auditar logs de emisión de certificados. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{Tecnología OT / Industrial (SCADA, PLCs y Protocolos)}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{orange!30}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2023-3595} & 9.8 & Escritura de firmware no autenticada (CWE-306) & Rockwell Allen-Bradley ControlLogix 1756 & Escritura arbitraria de firmware en los módulos de comunicación ControlLogix sin autenticación, lo que permite toma de control total del PLC. & Aplicar parche Rockwell SA 2023-003; aislar la red OT con firewall industrial y deshabilitar acceso remoto al módulo. \\
+\hline
+\texttt{CVE-2024-35783} & 9.8 & RCE (CWE-78) & Siemens SINEMA Server & Inyección de comandos en la interfaz web de administración de SINEMA sin autenticación previa. & Actualizar a SINEMA Server v14 SP3; bloquear acceso externo a la consola web. \\
+\hline
+\texttt{CVE-2023-28366} & 9.8 & Pérdida de memoria / DoS (CWE-401) & Eclipse Mosquitto MQTT 2.x & Uso de memoria no liberada en el manejo de sesiones MQTT persistentes con QoS 1/2 permite agotar la memoria del broker y colapsar el servicio de telemetría. & Actualizar a Mosquitto $\geq$ 2.0.16; limitar clientes concurrentes y QoS máximo. \\
+\hline
+\texttt{CVE-2022-44725} & 9.8 & Desbordamiento de búfer (CWE-122) & OPC Foundation UA-.NET Standard & Heap overflow en el procesamiento de mensajes OPC-UA permite RCE en el servidor MES que consume datos de PLCs. & Actualizar OPC-UA SDK $\geq$ 1.04.368; segmentar red OT de IT. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{Seguridad Perimetral y Herramientas SOC}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{red!18}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2024-21762} & 9.6 & Escritura fuera de límites (CWE-787) & Fortinet FortiOS 7.x (SSL-VPN) & Out-of-bounds write en el portal SSL-VPN de FortiGate permite RCE sin autenticación. Explotada activamente en producción. & Actualizar FortiOS $\geq$ 7.4.3 de forma urgente; deshabilitar SSL-VPN si no es crítico. \\
+\hline
+\texttt{CVE-2024-36985} & 9.0 & RCE (CWE-77) & Splunk Enterprise 9.x & Inyección de comandos en lookups de búsqueda de Splunk: un usuario con rol bajo puede ejecutar código arbitrario en el servidor Splunk. & Actualizar a Splunk $\geq$ 9.2.2; aplicar controles RBAC estrictos en los roles de búsqueda. \\
+\hline
+\texttt{CVE-2023-4680} & 6.8 & Lectura no autorizada (CWE-200) & HashiCorp Vault 1.14 & Token de servicio Vault con política acotada puede leer secretos fuera de su namespace si existe un path de política mal configurado. & Actualizar a Vault $\geq$ 1.14.4; revisar y auditar todas las políticas de acceso. \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{Tecnología Vehicular Embebida}
+% ----------------------------------------------------------
+
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.3cm}|p{0.65cm}|p{1.9cm}|p{2.0cm}|p{3.9cm}|p{3.0cm}|}
+\hline
+\rowcolor{purple!18}
+\textbf{CVE} & \textbf{CVSS} & \textbf{Categoría} & \textbf{Tecnología} & \textbf{Descripción} & \textbf{Recomendación} \\
+\hline
+\texttt{CVE-2021-22156} & 9.8 & Desbordamiento de entero (CWE-190) & BlackBerry QNX RTOS 6.x / 7.x & BadAlloc: desbordamiento de entero en la función \texttt{calloc} del kernel QNX permite desbordamiento de heap y RCE en la ECU. Afecta sistemas ADAS y VCU con QNX. & Aplicar parches de BlackBerry; actualizar BSP del fabricante; aislar red in-vehicle. \\
+\hline
+\texttt{CVE-2024-33066} & 9.8 & Corrupción de memoria (CWE-787) & Qualcomm Snapdragon Auto (TCU / IVI) & Corrupción de memoria en el procesamiento de mensajes WLAN del firmware Snapdragon Automotive permite RCE remoto mediante Wi-Fi. & Actualizar firmware del SoC; deshabilitar Wi-Fi del IVI cuando no sea necesario. \\
+\hline
+\texttt{CVE-2022-21449} & 7.5 & Bypass de firma digital (CWE-347) & Java 15--17 / JWT (Bouncy Castle) & Psychic Signatures: firmas ECDSA con valor r o s igual a cero son aceptadas como válidas, permitiendo falsificar cualquier JWT firmado con ES256. Afecta la API de autenticación de la app VELOX Connect. & Actualizar Java $\geq$ 17.0.3 / 11.0.15; actualizar Bouncy Castle $\geq$ 1.71. \\
+\hline
+\texttt{CVE-2025-2765} & 7.8 & Credenciales embebidas (CWE-798) & Dongles CarPlay / Android Auto aftermarket & Credenciales Wi-Fi hardcodeadas en el firmware del dongle permiten acceso no autenticado a la interfaz de configuración y ejecución de código en el dispositivo conectado al puerto USB del IVI. & Prohibir dongles aftermarket en vehículos de la flota; usar solo accesorios certificados OEM. \\
+\hline
+\texttt{CVE-2023-27321} & 7.5 & Denegación de servicio (CWE-400) & OPC Foundation UA Stack (vehículo) & Consumo excesivo de recursos en el parsing de mensajes OPC-UA malformados permite DoS en el gateway de diagnóstico OBD-II que implementa OPC-UA Adaptive. & Actualizar UA Stack $\geq$ 1.04.362; implementar rate limiting en el gateway OBD-II. \\
+\hline
+\end{tabular}
+\endgroup
+
+% =========================================================
+\newpage
+\section{Actores de Amenaza Relevantes en el Sector Automotriz}
+% =========================================================
+
+El sector automotriz es uno de los objetivos preferidos por grupos de amenaza persistente avanzada (APT), grupos de ransomware y actores hacktivistas, debido al alto valor de su propiedad intelectual, la criticidad de sus cadenas de suministro y la creciente conectividad de sus vehículos y plantas de producción. El análisis que sigue se basa en inteligencia de amenazas publicada por MITRE ATT\&CK, CrowdStrike y Mandiant \autocite{crowdstrike-report-2024, mitre-lazarus, mandiant-apt41-report}.
+
+% ----------------------------------------------------------
+\subsection{Top 5 Actores de Amenaza en el Sector Automotriz}
+% ----------------------------------------------------------
+
+\vspace{0.2cm}
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{2.5cm}|p{1.5cm}|p{2.5cm}|p{3.8cm}|p{3.5cm}|}
+\hline
+\rowcolor{blue!22}
+\textbf{Actor / APT} & \textbf{Origen} & \textbf{Motivación} & \textbf{TTPs Principales} & \textbf{Víctimas en automotriz} \\
+\hline
+\textbf{Lazarus Group} (APT38) \autocite{mitre-lazarus} &
+  Corea del Norte (RGB) &
+  Espionaje tecnológico; robo de IP de EV, semiconductores y baterías para financiamiento estatal &
+  Spear-phishing dirigido a ingenieros; watering holes en foros de manufactura; supply chain compromise; malware destructivo (WannaCry, Hermes) &
+  Fabricantes de chips automotrices; proveedores Tier-2 de baterías EV; contratistas de OEMs coreanos y japoneses \\
+\hline
+\textbf{APT41} (Double Dragon) \autocite{mitre-apt41} &
+  China (MSS) &
+  Robo de propiedad intelectual: diseños ADAS, tecnología de baterías, secretos comerciales de OEMs &
+  Zero-days en VPN y software empresarial; living-off-the-land (LOtL); compromiso de cadena de suministro software; exfiltración silenciosa de largo plazo &
+  Toyota, General Motors, OEMs europeos; proveedores Tier-1 con patentes de ADAS y conducción autónoma \\
+\hline
+\textbf{BlackCat / ALPHV} \autocite{mitre-blackcat} &
+  Rusia / Europa del Este (RaaS) &
+  Extorsión económica mediante doble extorsión: cifrado de datos más amenaza de publicación &
+  Explotación de VPNs vulnerables (FortiGate CVE-2024-21762); uso de Initial Access Brokers (IABs); cifrado de alta velocidad con Rust &
+  \textbf{Continental AG} (2022): 40TB exfiltrados; múltiples proveedores Tier-1 de autopartes en EE.UU. y Europa \\
+\hline
+\textbf{Akira} \autocite{mitre-akira} &
+  Rusia / Europa del Este (RaaS) &
+  Extorsión económica; especializado en manufactura e infraestructura industrial crítica &
+  Explotación de Cisco AnyConnect VPN y FortiGate SSL-VPN; exfiltración previa al cifrado; publicación en Tor si no hay pago &
+  \textbf{Yanfeng Automotive Interiors} (2023): interrumpió producción de Stellantis (Jeep, RAM) en Norteamérica \\
+\hline
+\textbf{KillNet / NoName057(16)} \autocite{mitre-killnet} &
+  Rusia (hacktivista pro-kremlin) &
+  Disrupción política y económica en países que apoyan a Ucrania; daño reputacional a industrias occidentales &
+  DDoS volumétrico coordinado vía Telegram (botnets Mirai-based); ataques a portales web públicos; deface de páginas corporativas &
+  BMW Group, Stellantis, BYD portales europeos; sitios de concesionarios en Alemania, Francia y Polonia (2022--2023) \\
+\hline
+\end{tabular}
+\endgroup
+
+% ----------------------------------------------------------
+\subsection{5 Eventos Recientes de Ciberataques en el Sector Automotriz}
+% ----------------------------------------------------------
+
+Los siguientes incidentes son eventos documentados y públicamente reportados que ilustran el panorama real de ciberamenazas al que se enfrenta una empresa como VELOX Automotriz \autocite{upstream-security-report, enisa-automotive-2023}.
+
+\vspace{0.2cm}
+\begingroup\footnotesize
+\rowcolors{2}{gray!10}{white}
+\begin{tabular}{|p{1.2cm}|p{2.5cm}|p{2.0cm}|p{5.5cm}|p{2.3cm}|}
+\hline
+\rowcolor{red!20}
+\textbf{Año} & \textbf{Empresa víctima} & \textbf{Actor} & \textbf{Descripción del impacto} & \textbf{Fuentes} \\
+\hline
+Ago. 2022 &
+  Continental AG (Alemania) --- Proveedor Tier-1 global de sistemas ADAS, frenos y electrónica &
+  BlackCat / LockBit &
+  Exfiltración de más de 40~TB de datos confidenciales: proyectos de I+D de ADAS, datos de nómina y contratos con BMW, Ford y Mercedes-Benz. Continental rechazó el pago del rescate y los datos fueron publicados en dark web. La brecha afectó la confianza de múltiples OEMs en su cadena de suministro digital. &
+  \autocite{bleepingcomputer-continental, securityweek-continental} \\
+\hline
+Nov. 2023 &
+  Yanfeng Automotive Interiors (China / EE.UU.) --- Principal proveedor de interiores de Stellantis &
+  Akira Ransomware &
+  Ataque de ransomware que cifró sistemas IT de Yanfeng y exfiltró datos corporativos. Obligó a Stellantis a detener temporalmente líneas de producción de Jeep y RAM en Norteamérica durante varios días, causando pérdidas millonarias por interrupción de la cadena de suministro JIT. &
+  \autocite{bleepingcomputer-yanfeng, therecord-yanfeng} \\
+\hline
+May. 2023 &
+  Toyota Motor Corporation (Japón) --- OEM líder mundial &
+  Misconfigura-ción de nube (sin actor APT) &
+  Exposición de datos de ubicación GPS de 2.15~millones de clientes japoneses durante casi 10~años (noviembre 2013 -- abril 2023) por un bucket de AWS S3 con acceso público no intencional en la plataforma Toyota Connected. El incidente reveló la madurez operativa limitada en gestión de infraestructura cloud para datos de vehículos conectados. &
+  \autocite{toyota-disclosure-2023, reuters-toyota-2023} \\
+\hline
+Ene. 2024 &
+  Hyundai Motor Europe (Corea / Alemania) --- OEM con presencia en 26 países europeos &
+  Black Basta Ransomware &
+  Ataque de ransomware Black Basta contra la infraestructura IT de Hyundai en Europa. Los atacantes accedieron a sistemas internos, exfiltraron contratos, datos personales de empleados y clientes, e información legal. El grupo reclamó haber robado más de 3~TB de datos. &
+  \autocite{hyundai-blackbasta-2024} \\
+\hline
+Dic. 2024 &
+  Volkswagen / Cariad (Alemania) --- Subsidiary de software de VW Group (VW, Audi, SEAT, Škoda) &
+  Misconfigura-ción de nube (detectado por CCC) &
+  800{,}000 registros de propietarios de vehículos eléctricos del Grupo VW quedaron expuestos durante meses en un bucket de AWS S3 sin autenticación. Los datos incluían ubicación GPS precisa de los vehículos, datos de conducción e información de contacto. El Chaos Computer Club (CCC) alemán lo descubrió y notificó responsablemente a Volkswagen antes de la divulgación pública. &
+  \autocite{spiegel-vw-breach, securityweek-vw-breach} \\
+\hline
+\end{tabular}
+\endgroup
+
+\newpage
+\thispagestyle{empty}
+
+% Impresión Referencias
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Referencias}]
+\end{document}

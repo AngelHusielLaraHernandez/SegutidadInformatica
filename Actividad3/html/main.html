@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxonomía de Adversarios - Edición Pokémon</title>
+    <!-- Fuentes de Google para el look cibernético -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #050510;
+            --neon-green: #00ff66;
+            --cyber-blue: #00f0ff;
+            --hacker-purple: #9d00ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --glass-bg: rgba(15, 23, 42, 0.7);
+            --glass-border: rgba(0, 255, 102, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Fondo Animado de Cuadrícula Cibernética */
+        .cyber-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200vw;
+            height: 200vh;
+            background-image: 
+                linear-gradient(rgba(0, 255, 102, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 102, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: perspective(500px) rotateX(60deg) translateY(-100px) translateZ(-200px);
+            animation: gridMove 20s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0) translateZ(-200px); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(50px) translateZ(-200px); }
+        }
+
+        /* Contenedor del Slider */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0.95) translateY(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1) translateY(0);
+        }
+
+        /* Contenido Glassmorphism */
+        .glass-panel {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 1200px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 0 30px rgba(0, 255, 102, 0.05), inset 0 0 20px rgba(0, 255, 102, 0.02);
+            display: grid;
+            gap: 2rem;
+        }
+
+        .glass-panel::-webkit-scrollbar {
+            width: 8px;
+        }
+        .glass-panel::-webkit-scrollbar-thumb {
+            background: var(--neon-green);
+            border-radius: 10px;
+        }
+
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        /* Tipografía */
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 0 0 10px var(--neon-green);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        h1 span { color: var(--neon-green); }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--cyber-blue);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .highlight {
+            color: var(--neon-green);
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: var(--neon-green);
+            font-size: 1rem;
+            top: 4px;
+        }
+
+        /* Imágenes de Pokémon */
+        .pokemon-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .pokemon-img-container::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--neon-green) 0%, transparent 70%);
+            opacity: 0.15;
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: pulse 3s infinite;
+        }
+
+        .pokemon-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 450px;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 102, 0.4));
+            transition: transform 0.3s ease;
+        }
+
+        .pokemon-img:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.1); opacity: 0.25; }
+            100% { transform: scale(1); opacity: 0.15; }
+        }
+
+        /* Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background-color: rgba(0, 240, 255, 0.1);
+            color: var(--cyber-blue);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+        }
+
+        tr:hover td {
+            background-color: rgba(0, 255, 102, 0.05);
+        }
+
+        /* Controles de Navegación */
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 100;
+            background: rgba(0,0,0,0.5);
+            padding: 10px 30px;
+            border-radius: 50px;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(5px);
+        }
+
+        button.nav-btn {
+            background: transparent;
+            border: none;
+            color: var(--neon-green);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        button.nav-btn:hover {
+            color: var(--cyber-blue);
+            transform: scale(1.2);
+            text-shadow: 0 0 10px var(--cyber-blue);
+        }
+
+        .dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+            transform: scale(1.3);
+        }
+
+        /* Responsividad */
+        @media (max-width: 900px) {
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+            .pokemon-img {
+                max-height: 250px;
+            }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+
+    <div class="slider-container" id="slider">
+
+        <!-- Slide 1: Título -->
+        <div class="slide active">
+            <div class="glass-panel" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 60vh;">
+                <i class="fa-solid fa-book-journal-whills" style="font-size: 5rem; color: var(--neon-green); margin-bottom: 1rem;"></i>
+                <h1>Pokédex de<br><span>Amenazas Automotrices</span></h1>
+                <p style="font-size: 1.5rem; color: var(--text-muted); max-width: 800px; margin: 0 auto; margin-bottom: 1.5rem;">
+                    Taxonomía de Actores de Amenaza en el Sector Automotriz (VELOX)<br>
+                    <span style="font-size: 1.2rem; color: var(--cyber-blue);">Actividad 3 - Seguridad Informática Básica</span>
+                </p>
+                
+                <div style="background: rgba(0, 0, 0, 0.4); padding: 1.5rem 2.5rem; border-radius: 15px; border: 1px solid var(--cyber-blue); text-align: left; margin-bottom: 2rem; box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);">
+                    <h3 style="color: var(--cyber-blue); font-size: 1.2rem; margin-bottom: 1rem; text-align: center;"><i class="fa-solid fa-users" style="margin-right: 10px;"></i>EQUIPO</h3>
+                    <ul style="margin: 0; padding: 0;">
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Lara Hernandez Angel Husiel <span style="color: var(--text-muted); font-size: 0.9rem;">- 320060829</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Lugo Manzano Rodrigo <span style="color: var(--text-muted); font-size: 0.9rem;">- 320206968</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Flores Colin Victor Jaziel <span style="color: var(--text-muted); font-size: 0.9rem;">- 320266083</span></li>
+                        <li style="font-size: 1.1rem; color: var(--text-main);">Adolfo de Jesus Garcia Cortes</li>
+                    </ul>
+                </div>
+
+                <div style="padding: 10px 20px; border: 1px solid var(--neon-green); border-radius: 5px; color: var(--neon-green); display: inline-block;">
+                    INICIANDO SISTEMA DE DETECCIÓN...
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Introducción -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Un Ecosistema <span class="highlight">Bajo Asedio</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <p>El sector automotriz, al adoptar características de <strong>Software-Defined Vehicles (SDV)</strong>, atrae a múltiples actores maliciosos. Hemos diseñado una Taxonomía de Amenazas inspirada en los tipos de Pokémon para clasificar a los atacantes según su motivación y Tácticas, Técnicas y Procedimientos (TTPs).</p>
+                        <ul>
+                            <li><span class="highlight">Objetivos:</span> Propiedad intelectual (IP), cadenas de suministro y conectividad (OTA, Telemática).</li>
+                            <li><span class="highlight">Complejidad:</span> Desde cibercrimen financiero hasta Espionaje Estatal (APTs).</li>
+                        </ul>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <!-- Porygon-Z -->
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/474.png" alt="Porygon-Z" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.6));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Mewtwo (Estado-Nación) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Actores Patrocinados <span class="highlight">(Estado-Nación)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 style="color: gold; margin-bottom: 1rem;"><i class="fa-solid fa-crown"></i> Clase: Legendarios</h3>
+                        <p><strong>Perfil:</strong> Amenazas Persistentes Avanzadas (APT) financiadas por gobiernos. Buscan espionaje corporativo y robo de Propiedad Intelectual de alto nivel.</p>
+                        <div style="background: rgba(255, 215, 0, 0.1); padding: 1.5rem; border-left: 4px solid gold; border-radius: 5px; margin-top: 1rem;">
+                            <p style="margin-bottom: 0.8rem; color: gold;"><strong><i class="fa-solid fa-crosshairs"></i> GRUPOS REALES ASIGNADOS:</strong></p>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>Lazarus Group (APT38):</strong> Corea del Norte. Especialistas en robo de IP de baterías y semiconductores.</li>
+                                <li><strong>APT41 (Double Dragon):</strong> China. Expertos en robar diseños ADAS (conducción autónoma) y ejecutar ataques de cadena de suministro (Zero-Days).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png" alt="Mewtwo" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Gengar (Cibercrimen) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Sindicatos de Cibercrimen <span style="color: #a855f7;">(Motivación Financiera)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png" alt="Gengar" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #a855f7; margin-bottom: 1rem;"><i class="fa-solid fa-ghost"></i> Clase: Siniestro / Veneno</h3>
+                        <p><strong>Perfil:</strong> Grupos motivados puramente por el impacto económico y el lucro directo a expensas del negocio (Ransomware-as-a-Service, Doble Extorsión).</p>
+                        <div style="background: rgba(168, 85, 247, 0.1); padding: 1.5rem; border-left: 4px solid #a855f7; border-radius: 5px; margin-top: 1rem;">
+                            <p style="margin-bottom: 0.8rem; color: #a855f7;"><strong><i class="fa-solid fa-crosshairs"></i> GRUPOS REALES ASIGNADOS:</strong></p>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>BlackCat / ALPHV:</strong> Exfiltraron 40TB de proyectos de Investigación y Desarrollo de la empresa Continental AG.</li>
+                                <li><strong>Akira Ransomware:</strong> Impacto pesado (Tipo Acero). Especialistas en interrumpir infraestructura IT/OT de manufactura, afectando la producción de Stellantis (Yanfeng).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Electrode (Hacktivismo) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Operaciones de Hacktivismo <span style="color: #eab308;">(Disrupción)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 style="color: #eab308; margin-bottom: 1rem;"><i class="fa-solid fa-bolt"></i> Clase: Eléctrico / Enjambre</h3>
+                        <p><strong>Perfil:</strong> Grupos motivados por ideologías políticas o sociales, que buscan enviar un mensaje atacando a grandes marcas automotrices globales y causando daño reputacional.</p>
+                        <div style="background: rgba(234, 179, 8, 0.1); padding: 1.5rem; border-left: 4px solid #eab308; border-radius: 5px; margin-top: 1rem;">
+                            <p style="margin-bottom: 0.8rem; color: #eab308;"><strong><i class="fa-solid fa-crosshairs"></i> GRUPOS REALES ASIGNADOS:</strong></p>
+                            <ul style="margin-bottom: 0;">
+                                <li><strong>KillNet & NoName057(16):</strong> Hacktivistas prorrusos, extremadamente ruidosos y destructivos (Tipo Fuego/Eléctrico). Ejecutan ataques volumétricos DDoS contra portales web de BMW Group, Stellantis y BYD en Europa.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/101.png" alt="Electrode" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(234, 179, 8, 0.6));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Bisharp (Mercenarios) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Mercenarios e IABs <span style="color: #ef4444;">(Acceso Inicial)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/625.png" alt="Bisharp" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #ef4444; margin-bottom: 1rem;"><i class="fa-solid fa-khanda"></i> Clase: Acero / Lucha</h3>
+                        <p><strong>Perfil:</strong> Desarrolladores de exploits, actores ofensivos privados y corredores de acceso inicial (Initial Access Brokers).</p>
+                        <p><strong>Actividad en el Sector:</strong> Estos grupos no ejecutan el ataque final ni salen en las noticias. Se dedican a explotar accesos remotos (Ej. Cisco AnyConnect, FortiGate) en proveedores de autopartes para luego vender la puerta trasera en la Dark Web a clanes como BlackCat o Akira.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Ditto (Amenazas Internas) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Amenazas Internas <span style="color: #ec4899;">(Supply Chain)</span></h2>
+                <div class="two-columns">
+                    <div>
+                        <h3 style="color: #ec4899; margin-bottom: 1rem;"><i class="fa-solid fa-masks-theater"></i> Clase: Metamorfos</h3>
+                        <p><strong>Perfil:</strong> El infiltrado que parece 100% legítimo. Tienen acceso autorizado a la red (Insider Threats) o a la cadena de suministro (Proveedores Tier 1 y Tier 2 comprometidos).</p>
+                        <p><strong>Riesgo en VELOX:</strong> Es el vector más crítico para introducir malware sigilosamente en las actualizaciones de firmware de los vehículos (servidores OTA), o para que un empleado descontento robe IP directamente de los repositorios de ingeniería.</p>
+                    </div>
+                    <div class="pokemon-img-container">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png" alt="Ditto" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.6));">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Unown (No Categorizados) -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Clústeres Emergentes <span style="color: #cbd5e1;">(Lo Desconocido)</span></h2>
+                <div class="two-columns">
+                    <div class="pokemon-img-container" style="order: 2;">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/201.png" alt="Unown" class="pokemon-img" style="filter: drop-shadow(0 0 15px rgba(203, 213, 225, 0.6));">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 style="color: #cbd5e1; margin-bottom: 1rem;"><i class="fa-solid fa-question"></i> Clase: Unown / Huevos</h3>
+                        <p><strong>Perfil:</strong> Representa actividad maliciosa nueva y críptica, o brechas masivas originadas por errores internos que no han sido atribuidas a un grupo APT formal.</p>
+                        <div style="background: rgba(203, 213, 225, 0.1); padding: 1.5rem; border-left: 4px solid #cbd5e1; border-radius: 5px; margin-top: 1rem;">
+                            <p style="margin-bottom: 0.8rem; color: #cbd5e1;"><strong><i class="fa-solid fa-crosshairs"></i> INCIDENTES REALES EN ESTA CLASE:</strong></p>
+                            <p style="margin-bottom: 0; font-size: 1.1rem;"><strong>Toyota Motor Corp:</strong> Un error de misconfiguración en la nube (S3 bucket) expuso las ubicaciones GPS de 2.15 Millones de clientes durante 10 años, sin intervención aparente de un actor de amenaza.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Tabla de Batallas -->
+        <div class="slide">
+            <div class="glass-panel" style="max-width: 1100px;">
+                <h2 style="text-align: center;">Registro de Batallas <span class="highlight">(Incidentes Reales)</span></h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>VÍCTIMA (DEFENSOR)</th>
+                                <th>ATACANTE (ACTOR)</th>
+                                <th>TIPO (IMPACTO)</th>
+                                <th>RESULTADO CRÍTICO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Continental AG</strong> (Tier-1)</td>
+                                <td><span style="color: #cbd5e1;">BlackCat (Siniestro)</span></td>
+                                <td>Extorsión / Robo de IP</td>
+                                <td>Exfiltración de 40 TB (Proyectos ADAS). Publicado en Dark Web tras no pago.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Yanfeng</strong> (Stellantis)</td>
+                                <td><span style="color: #94a3b8;">Akira (Acero)</span></td>
+                                <td>Ransomware IT/OT</td>
+                                <td>Paro total de líneas de producción de Jeep y RAM. Pérdidas operativas masivas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Toyota Motor Corp.</strong></td>
+                                <td><span style="color: var(--text-muted);">Misconfiguración Nube (Normal)</span></td>
+                                <td>Exposición</td>
+                                <td>Exposición de ubicaciones GPS de 2.15M de usuarios durante 10 años.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hyundai Motor Europe</strong></td>
+                                <td><span style="color: #cbd5e1;">Black Basta (Siniestro)</span></td>
+                                <td>Ransomware IT</td>
+                                <td>Acceso y robo de +3 TB de información de empleados y clientes en Europa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Referencias -->
+        <div class="slide">
+            <div class="glass-panel">
+                <h2>Referencias <span class="highlight">(Inteligencia de Amenazas)</span></h2>
+                <ul style="margin-top: 1rem;">
+                    <li><strong>Base de Datos MITRE ATT&CK (2024):</strong> Clasificación y TTPs de grupos APT: Lazarus Group (G0032), APT41 (G0096), BlackCat (S1076) y Akira (S1129).</li>
+                    <li><strong>Reportes de Amenazas (CrowdStrike & Mandiant):</strong> Datos de la motivación y exfiltración de propiedad intelectual en el sector automotriz (CrowdStrike 2024 Global Threat Report).</li>
+                    <li><strong>Incidentes Públicos Reportados:</strong> Bleeping Computer, The Record y Security Week para los detalles operativos de ataques a Continental AG (2022), Yanfeng (2023) y Toyota (2023).</li>
+                    <li><strong>Alineación con VELOX Automotriz:</strong> Los actores listados representan amenazas directas a la infraestructura cloud, servidores OTA, y redes OT descritas en la Actividad 2 de Seguridad Informática Básica.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: Fin -->
+        <div class="slide">
+            <div class="glass-panel" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 60vh;">
+                <h1 style="font-size: 5rem; margin-bottom: 0;">Gotta Catch 'Em <span class="highlight">All!</span></h1>
+                <p style="font-size: 2rem; color: var(--cyber-blue); margin-top: 1rem;">(Antes de que vulneren nuestros sistemas)</p>
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); width: 100%;">
+                    <p style="color: var(--text-muted); font-family: 'Orbitron', sans-serif;">Centro de Operaciones de Seguridad (SOC) | VELOX Automotriz</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+        <button class="nav-btn" id="prevBtn" title="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="dots" id="dotsContainer">
+            <!-- Los puntos se generan con JS -->
+        </div>
+        <button class="nav-btn" id="nextBtn" title="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const dotsContainer = document.getElementById('dotsContainer');
+        let currentSlide = 0;
+
+        // Crear los puntos indicadores
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlide() {
+            // Remover clase active de todas las diapositivas y puntos
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Añadir clase active a la actual
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlide();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlide();
+        }
+
+        // Event Listeners para botones
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Event Listener para teclado (Flechas)
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if(e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
