@@ -207,9 +207,666 @@
 \setcounter{page}{1}
 \singlespacing
 
-\section{Semblanza de la charla}
+\section{Instalacion de debian 13 en Vnware workstation Pro}
+
+Al iniciar la instalacion de debian, primero es entrar a la pagina y descargar el iso como si fuera para 
+instalarlo en una computadora fisica, despues de descargar el iso,
+todo esto se hara sobre Linux-Ubuntu 20.04 LTS.
+
+\subsection{Descargar imagen ISO}
+
+\begin{figure}[H]
+  
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/Parte1/image1.png}
+    \caption{Descarga de la imagen ISO de Debian 13}
+\end{figure}
+
+\subsection{Instalacion de Vnware workstation Pro}
+Despues de esto, es necesario instalar el sofware de la maquina virtual, donde en este caso 
+primero se puso el archivo del instalador en 
+descargadas y se le asignaron permisos de ejecución, es por medio del comando 
+chmod .
+ 
+Despues de esto, 
+se ejecuta utilizando el comadno sudo, 
+para que se ejecute como admin y se pueda instalar.
+
+\begin{lstlisting}[language=bash]
+chmod +x VMware-Workstation-Full-26H1-25388281.x86_64.bundle
+sudo ./VMware-Workstation-Full-26H1-25388281.x86_64.bundle
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image2.png}
+  \caption{Instalación de VMware Workstation}
+\end{figure}
+
+\subsection{Creación y Configuración de la Máquina Virtual}
+
+Una vez teniendo la image ISO, en el archivero de la maquina orginal, toca abrir 
+la maquina virtual, donde en el panel superior izquierdo, dandole a crear nueva maquina virtual, donde se nos 
+desplegara el siguiente menu:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image3.png}
+  \caption{Creación de nueva máquina virtual}
+\end{figure}
+
+\newpage
+Como medio de instalación, se especificó la ruta local de la imagen ISO correspondiente a Debian 13 (\textit{netinst}), la cual fue detectada automáticamente por el hipervisor.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image4.png}
+  \caption{Selección de la imagen ISO de Debian 13}
+\end{figure}
+
+Despues de esto, se asignó el nombre ``Debian Seguridad'' a la máquina virtual para identificarla, y se definió su ruta de almacenamiento local:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image5.png}
+  \caption{Asignación de nombre y ruta de almacenamiento para la máquina virtual}
+\end{figure}
+
+\newpage
+
+Se configuró una capacida de 70 GB. 
+Como se menciono en el archivo de la tarea, se eligio 
+directamente la opcion de (\textit{Split virtual disk into multiple files}), 
+esto por que es para facilitar la transferencia de la máquina a otros equipos.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image6.png}
+  \caption{Configuración del disco virtual}
+\end{figure}
+
+Por ultimo, se cambio la configuracion de hardware, donde se le dieron los 4 nucleos de mi computadora, ademas de darle 6 gb de ram, 
+en cuestiones de red, se le asigno la opcion de adaptador puente,
+por ultimo se activo la opcion de que identificara usb 3.0.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image7.png}
+  \caption{Configuración de hardware Final}
+\end{figure}
+
+\newpage
+\subsection{Encendido de la maquina virtual}
+
+Al encender la máquina virtual desde la imagen ISO, el cargador de arranque desplegó el menú principal de instalación. Se seleccionó la opción ``Graphical install'' para realizar el proceso apoyándose de la interfaz gráfica.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image8.png}
+  \caption{Selección de la opción de instalación gráfica}
+\end{figure}
+
+El primer paso de la instalación fue el establecer el idioma para el sistema y el proceso de configuración, eligiendo la opción de Español.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image9.png}
+  \caption{Selección del idioma de instalación}
+\end{figure}
+
+\newpage
+
+Se definió la ubicación geográfica para configurar 
+correctamente la zona horaria esto seleccionando a México.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image10.png}
+  \caption{Selección de la ubicación geográfica}
+\end{figure}
+
+\subsubsection{Configuración de Red y Usuarios}
+
+Una vez finalizada la configuración inicial del idioma, 
+el instalador ya nos pidio la configuracion de 
+la interfaz de red, esto lo hacemos mediante  la 
+autoconfiguración, esgto para evitarnos de problemas.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image11.png}
+  \caption{Configuración de la interfaz de red}
+\end{figure}
+
+\newpage
+
+Para identificar el sistema de forma única 
+dentro de la red, se asignó el nombre de máquina cualquiera como se pidio en la tarea
+en mi caso lo elegir como LaraAngel.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image12.png}
+  \caption{Asignación del nombre de máquina}
+\end{figure}
+
+Despues de esto se estableció SeguridadEvil 
+como el nombre de dominio para la red local.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image13.png}
+  \caption{Asignación del nombre de dominio}
+\end{figure}
+
+\newpage
+
+Como medida de seguridad fundamental en entornos Linux, se creó una cuenta de usuario estándar sin privilegios administrativos para realizar tareas cotidianas. Se asignó ``LaraAngel'' como el nombre real para esta cuenta. (El instalador posteriormente solicitó una contraseña segura para este usuario y para la cuenta raíz \textit{root}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image14.png}
+  \caption{Creación de la cuenta de usuario estándar}
+\end{figure}
+
+Para sincronizar correctamente los registros, se configuró el reloj seleccionando la zona horaria a central en este caso.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image15.png}
+  \caption{Configuración de la zona horaria}
+\end{figure}
+
+\newpage
+
+\subsubsection{Particionado de Discos}
+
+Lo siguiente fue la asignar correctametne 
+la asignacion del medio de almacenamiento. 
+Se inició la herramienta de particionado del sistema operativo, como se nos recomendo por el documento.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image16.png}
+  \caption{Inicio de la herramienta de particionado}
+\end{figure}
+
+Se seleccionó el método de particionado ``Guiado - utilizar todo el disco''. Esta opción permite que el instalador calcule automáticamente los tamaños óptimos de las particiones.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image17.png}
+  \caption{Selección del método de particionado}
+\end{figure}
+\newpage
+
+Se seleccionó el disco virtual previamente creado en VMware, el cual fue como \texttt{SCSI33 (0,0,0) (sda)} con una capacidad aproximada de 75.2 GB.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image18.png}
+  \caption{Selección del disco virtual}
+\end{figure}
+
+En cuanto a la parte de la particionado, 
+se eligió la opción de 
+Todos los ficheros en una partición. 
+Esto monta los directorios principales como \texttt{/home}, \texttt{/var} y \texttt{/tmp} en la misma partición raíz (\texttt{/}).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image19.png}
+  \caption{Selección del esquema de particionado}
+\end{figure}
+
+\newpage
+
+Despues de esto, ya se puso el 
+resumen de toda la creación de una partición. 
+Ya por utlimo solo se le dio a finalizar para que puediera seguir ahora 
+ con el formateo y la copia de los archivos del sistema.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/Parte1/image20.png}
+  \caption{Resumen del particionado y confirmación de cambios}
+\end{figure}
+
+\subsubsection{Configuración del Gestor de Paquetes y Selección de Software}
+
+Para aplicar definitivamente el esquema 
+que se nos dio antes, 
+se hizo que ya se pudiera escribir en el disco.
+Esto hizo que se eliminara 
+la partición primaria con el sistema de archivos 
+y habilitó el área de intercambio  que es el swap.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image21.png}
+  \caption{Confirmación de escritura en el disco}
+\end{figure}
+
+\newpage
+
+Despues de que terminara, se inició la configuración del 
+gestor de paquetes APT, donde el software complementario se descargo directamente de Internet.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image22.png}
+  \caption{Configuración del gestor de paquetes APT}
+\end{figure}
 
 
+Como se dejo ver en las intrucciones de la tarea 
+en esta pantalla se configuro en estados unidos
+esto para poder tener acceso a los paquetes más recientes.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image23.png}
+  \caption{Selección del país para la descarga de paquetes}
+\end{figure}
+
+\newpage
+
+Despues, se estableció \texttt{deb.debian.org} como la dirección principal del servidor de réplica para la resolución y descarga de los paquetes de software.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image24.png}
+  \caption{Selección del servidor de réplica para la descarga de paquetes}
+\end{figure}
+
+Despues, esta pagina aunque en la tarea no se nos mostros, es la 
+ventana de selección de programas, donde 
+se personalizaron las características del sistema. 
+Para esto lo que hice fue dejar las que me veian por defecto seleccionadas
+y cololcar como extra el servidor SSH para permitir la administración remota segura.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image25.png}
+  \caption{Selección de programas y características del sistema}
+\end{figure}
+
+\newpage
+
+El instalador requirió definir un gestor de sesiones (\textit{Display Manager}) predeterminado para manejar los inicios de sesión. Se eligió \texttt{gdm3} (GNOME Display Manager).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/Parte1/image26.png}
+  \caption{Selección del gestor de sesiones predeterminado}
+\end{figure}
+
+\subsubsection{Instalación del Cargador de Arranque y Primer Inicio}
+
+Ya por ultimo, se instaló el cargador de arranque GRUB. 
+Al ser Debian el único sistema residente en el disco, 
+se confirmó su instalación en la unidad principal, esto tal cual como se nos puso en las intrucciones de la tarea.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image27.png}
+  \caption{Instalación del cargador de arranque GRUB}
+\end{figure}
+
+\newpage
+
+Se especificó manualmente la ruta del dispositivo raíz, seleccionando \texttt{/dev/sda}, asegurando que el MBR contenga las instrucciones correctas de inicio.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image28.png}
+  \caption{Selección del dispositivo raíz para la instalación de GRUB}
+\end{figure}
+
+Por ultimo el 
+asistente nos mostro la finalización exitosa del proceso, 
+indicando que era seguro reiniciar la máquina virtual.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte1/image29.png}
+  \caption{Finalización de la instalación y reinicio del sistema}
+\end{figure}
+
+\newpage
+
+Y ya por ultimo se nos muestra el usuario que se creo con el inicio de debian:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{image/Parte1/image30.png}
+  \caption{Pantalla de inicio de sesión de Debian 13}
+\end{figure}
+
+\section{Configuracion e instalacion de debian 13}
+
+\subsection{Agregue el usuario creado en el proceso de instalación al archivo de sudoers para
+asignar privilegios de administración y la capacidad de utilizar el comando sudo}
+
+Para administrar el sistema sin utilizar permanentemente la cuenta \textit{root}, se asignaron privilegios al usuario estándar agregándolo al grupo \texttt{sudo}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/Parte2/image1.png}
+    \caption{Asignación de privilegios administrativos al usuario.}
+\end{figure}
+
+\newpage
+\subsection{Utilice la utilería ping para validar la conectividad a internet de la máquina virtual.}
+
+A continuación, se validó la conectividad a Internet enviando paquetes de prueba (ICMP) hacia un servidor DNS externo, obteniendo respuestas exitosas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{image/Parte2/image2.png}
+    \caption{Validación de conectividad a Internet mediante ping.}
+\end{figure}
+
+\subsection{Utilice el comando apt para validar que el sistema está actualizado}
+
+Se ejecutó el comando \texttt{apt update} para actualizar la lista de paquetes disponibles y sus versiones, seguido de \texttt{apt upgrade} para instalar las actualizaciones pendientes.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte2/image3.png}
+  \caption{Actualización del sistema mediante apt.}
+\end{figure}
+
+\newpage
+\subsection{Instale las siguientes herramientas:}
+
+se procedió a instalar las utilerías base requeridas para la práctica (Vim, Git, Nmap y Hydra).
+
+\subsubsection{Vim, git, nmap, hydra:}
+
+\textbf{Vim} (editor de texto avanzado en terminal), \textbf{Git} (sistema de control de versiones), \textbf{Nmap} (escáner de red para descubrimiento de puertos y servicios) e \textbf{Hydra} (herramienta para realizar ataques de fuerza bruta a servicios de inicio de sesión).
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+sudo apt install -y vim git nmap hydra
+\end{lstlisting}
+
+\begin{itemize}
+    \item \texttt{apt install}: Invoca al gestor de paquetes de Debian para instalar software.
+    \item \texttt{-y}: Bandera que responde a las confirmaciones de espacio en disco, permitiendo una instalación fluida.
+    \item \texttt{vim git nmap hydra}: Los nombres exactos de los paquetes a descargar e instalar.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte2/image4.png}
+  \caption{Instalación de Vim, git, nmap y hydra.}
+\end{figure}
+
+\newpage
+
+\subsubsection{Tor Browser:}
+
+Herramienta que descarga, instala y actualiza automáticamente el navegador Tor, el cual permite la navegación web anónima y el acceso a la red Onion, enrutando el tráfico a través de múltiples nodos.
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+sudo apt install -y torbrowser-launcher
+\end{lstlisting}
+
+Al igual que el comando anterior, utiliza el gestor \texttt{apt} con privilegios de administrador (\texttt{sudo}) y confirmación automática (\texttt{-y}) para instalar el paquete \texttt{torbrowser-launcher}, el cual fue accesible gracias a la previa habilitación del repositorio \texttt{contrib}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/Parte2/image6.png}
+  \caption{Instalación de Tor Browser.}
+\end{figure}
+
+\newpage
+\textbf{Instalacion de go, como medio tercero:}
+
+Instalación del lenguaje de programación compilado Go. 
+Es un prerrequisito, que tuve que invetigar, esto debido, 
+a que las siguientes herramientas de ciberseguridad están escritas en este lenguaje 
+y deben ser compiladas desde su código fuente.
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+sudo apt install -y golang
+\end{lstlisting}
+
+Instala el paquete \texttt{golang} desde los repositorios de Debian, el cual incluye el compilador, las librerías estándar y el gestor de módulos de Go.
+
+\begin{enumerate}
+    \item Subfinder
+    \item HTTPX
+    \item Nuclei
+    \item Amass
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{image/Parte2/image7.png}
+  \caption{Instalación de go lang.}
+\end{figure}
+
+\newpage
+\subsubsection{subfinder:}
+
+\textbf{Subfinder} es una herramienta rápida de descubrimiento pasivo de subdominios. De hecho 
+antes de la instlacion, fue necesario agregar la ruta de binarios de Go a las variables de entorno del sistema operativo para poder ejecutar las herramientas sin escribir su ruta completa.
+
+\textbf{Comandos:}
+\begin{lstlisting}[language=bash]
+echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.bashrc
+source ~/.bashrc
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+\end{lstlisting}
+
+\begin{itemize}
+    \item \texttt{echo ... >> \textasciitilde{}/.bashrc}: Imprime la ruta de Go y la concatena (\texttt{>>}) al final del archivo oculto de configuración de la terminal del usuario.
+    \item \texttt{source \textasciitilde{}/.bashrc}: Recarga la configuración de la terminal inmediatamente.
+    \item \texttt{go install}: Instruye al compilador de Go a descargar y ensamblar un programa.
+    \item \texttt{-v}: Modo detallado (\textit{verbose}), muestra en la pantalla cada archivo que se está procesando.
+    \item \texttt{@latest}: Asegura que se descargue la versión más reciente del repositorio de GitHub.
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{image/Parte2/image8.png}
+  \caption{Instalación de subfinder.}
+\end{figure}
+
+\newpage
+\subsubsection{httpx:}
+
+\textbf{HTTPX} es un kit de herramientas multipropósito y rápido para interactuar con servidores web. Permite verificar si los subdominios descubiertos están activos y responden a peticiones HTTP.
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+\end{lstlisting}
+
+
+Descarga el código fuente de HTTPX desde el repositorio de \textit{projectdiscovery} en GitHub, lo compila de forma detallada (\texttt{-v}) y guarda el archivo ejecutable en la carpeta \texttt{/go/bin} del usuario.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/Parte2/image9.png}
+  \caption{Instalación de httpx.}
+\end{figure}
+
+\newpage
+\subsubsection{nuclei:}
+
+\textbf{Nuclei} es un motor de escaneo de vulnerabilidades altamente personalizable basado en plantillas YAML. Se utiliza para enviar peticiones a múltiples objetivos y detectar configuraciones erróneas o vulnerabilidades conocidas a gran escala.
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+\end{lstlisting}
+
+Obtiene, compila e instala la versión 3 (la más reciente) de Nuclei directamente desde su código fuente oficial en GitHub, mostrando el proceso completo en la terminal gracias al parámetro \texttt{-v}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/Parte2/image10.png}
+  \caption{Instalación de nuclei.}
+\end{figure}
+
+\newpage
+\subsubsection{amass:}
+
+\textbf{Amass} es un potente proyecto de código abierto desarrollado por OWASP. Su objetivo es la recopilación exhaustiva de información (reconocimiento), mapeo de red y descubrimiento de activos externos de una organización utilizando técnicas pasivas y activas.
+
+\textbf{Comando:}
+\begin{lstlisting}[language=bash]
+go install -v github.com/owasp-amass/amass/v4/...@latest
+\end{lstlisting}
+
+
+\begin{itemize}
+    \item \texttt{go install -v}: Comando de compilación detallada de Go.
+    \item \texttt{github.com/.../amass/v4/...}: La URL del código. Los tres puntos finales (\texttt{...}) son una sintaxis especial de Go que le indica al compilador que debe buscar, compilar e instalar \textbf{todos} los paquetes y subdirectorios ejecutables que se encuentren dentro de esa ruta.
+    \item \texttt{@latest}: Descarga la versión más actual disponible (v4).
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/Parte2/image11.png}
+  \caption{Instalación de amass.}
+\end{figure}
+
+\newpage
+\textbf{Imagen de comprobacion de todos los paquetes instalados:}
+
+Por ultimo, se 
+realizó una comprobación para verificar que todas 
+las utilerías base y las herramientas
+se instalaron correctamente en el sistema operativo. 
+En la captura se observa la consulta de la versión de cada programa 
+desde la terminal, 
+así como la ejecución del navegador Tor.
+
+\textbf{Comandos:}
+\begin{lstlisting}[language=bash]
+vim --version | head -n 1
+git --version
+nmap --version
+amass -version
+nuclei -version
+httpx -version
+subfinder -version
+hydra | head -n 1
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{image/Parte2/image14.png}
+  \caption{Comprobación de la instalación de todas las herramientas.}
+\end{figure}
+
+\newpage
+
+\subsubsection{Personalice su equipo cambiando el fondo de escritorio, la configuración visual de su
+terminal y la imagen de usuario.}
+
+Para la primera parte solo fue necesario entrar a configuraciones, y revisar mi usuario 
+y cambiar la foto por una de spiderman:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte2/image12.png}
+  \caption{Cambio de imagen de usuario.}
+\end{figure}
+
+Despues solo fue necesario ir a espectos de sistema y cambiar el fondo por uno de call
+of duty zombies y cambiarlo a tema oscuro:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{image/Parte2/image13.png}
+  \caption{Cambio de fondo de escritorio y tema oscuro.}
+\end{figure}
+
+\newpage
+\section{Cuestionario}
+
+\begin{enumerate}
+    \item \textbf{Agregue el usuario creado en el proceso de instalación al archivo de sudoers para asignar privilegios de administración y la capacidad de utilizar el comando sudo. ¿Cuál es la ruta donde se encuentra el archivo de sudoers?}
+    
+    La ruta exacta donde se encuentra el archivo de configuración para la administración de privilegios es \texttt{/etc/sudoers}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image1.png}
+        \caption{Asignación de privilegios al usuario mediante el comando usermod.}
+    \end{figure}
+
+    \item \textbf{Utilice la utilería ping para validar la conectividad a internet de la máquina virtual. ¿Cuál es el tamaño de la respuesta si utiliza el servidor DNS 8.8.8.8 para validar la conectividad de red?}
+    
+    El tamaño de la respuesta (carga útil por defecto en Linux) al enviar paquetes al servidor DNS 8.8.8.8 es de \textbf{64 bytes}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image2.png}
+        \caption{Respuesta del comando ping mostrando 64 bytes de datos.}
+    \end{figure}
+
+    \item \textbf{Utilice el comando apt para validar que el sistema está actualizado, ¿cuál es el comando necesario para esta tarea?}
+    
+    El comando principal y necesario para validar e indexar la lista de actualizaciones disponibles en los repositorios es \texttt{sudo apt update}. Posteriormente, para aplicar e instalar dichas actualizaciones en el sistema, se utiliza el comando \texttt{sudo apt upgrade}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image3.png}
+        \caption{Validación de actualizaciones mediante apt update.}
+    \end{figure}
+
+    \item \textbf{¿Cuál es la ruta del archivo de configuración que indica cuales son las fuentes (sources) de los paquetes que se pueden utilizar por el sistema operativo para instalar nuevo software o actualizar el existente?}
+    
+    La ruta principal de este archivo de configuración en Debian (y distribuciones derivadas) es \texttt{/etc/apt/sources.list}.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image15.png}
+        \caption{Consulta de las fuentes de paquetes en el archivo sources.list.}
+    \end{figure}
+
+    \item \textbf{Utilice el gestor de paquetes de su preferencia para instalar vim. Cree un nuevo documento con vim y describa el proceso para instalar nuevo software en el sistema. ¿Cuál es la secuencia de comandos necesaria para salir de vim y guardar los cambios realizados?}
+    
+    Para cumplir con este paso, se creó el documento ejecutando \texttt{vim instalacion.txt}, se presionó la tecla \texttt{i} para entrar en el modo de inserción (\texttt{-- INSERT --}) y se redactó la descripción solicitada. 
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image17.png}
+        \caption{Redacción del proceso de instalación dentro de Vim (Modo Inserción).}
+    \end{figure}
+
+    La secuencia de comandos exacta necesaria para salir del editor y guardar los cambios es la siguiente:
+    \begin{enumerate}
+        \item Presionar la tecla \textbf{\texttt{Esc}} (para abandonar el modo de inserción).
+        \item Escribir los caracteres \textbf{\texttt{:wq}} (donde `w` indica \textit{write} y `q` indica \textit{quit}).
+        \item Presionar la tecla \textbf{\texttt{Enter}}.
+    \end{enumerate}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image18.png}
+        \caption{Secuencia :wq ingresada para guardar y salir de Vim.}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{image/Parte2/image19.png}
+        \caption{Regreso exitoso a la terminal tras guardar el documento.}
+    \end{figure}
+
+\end{enumerate}
+
+
+\newpage
 
 % Impresión Referencias
 \nocite{*}
