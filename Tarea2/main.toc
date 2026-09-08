@@ -1,24 +1,9 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Instalacion de debian 13 en Vnware workstation Pro}{1}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Descargar imagen ISO}{1}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Instalacion de Vnware workstation Pro}{1}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Creación y Configuración de la Máquina Virtual}{2}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Encendido de la maquina virtual}{5}{subsection.1.4}%
-\contentsline {subsubsection}{\numberline {1.4.1}Configuración de Red y Usuarios}{6}{subsubsection.1.4.1}%
-\contentsline {subsubsection}{\numberline {1.4.2}Particionado de Discos}{9}{subsubsection.1.4.2}%
-\contentsline {subsubsection}{\numberline {1.4.3}Configuración del Gestor de Paquetes y Selección de Software}{11}{subsubsection.1.4.3}%
-\contentsline {subsubsection}{\numberline {1.4.4}Instalación del Cargador de Arranque y Primer Inicio}{14}{subsubsection.1.4.4}%
-\contentsline {section}{\numberline {2}Configuracion e instalacion de debian 13}{16}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Agregue el usuario creado en el proceso de instalación al archivo de sudoers para asignar privilegios de administración y la capacidad de utilizar el comando sudo}{16}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Utilice la utilería ping para validar la conectividad a internet de la máquina virtual.}{17}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Utilice el comando apt para validar que el sistema está actualizado}{17}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Instale las siguientes herramientas:}{18}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}Vim, git, nmap, hydra:}{18}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Tor Browser:}{19}{subsubsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.3}subfinder:}{21}{subsubsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.4}httpx:}{22}{subsubsection.2.4.4}%
-\contentsline {subsubsection}{\numberline {2.4.5}nuclei:}{23}{subsubsection.2.4.5}%
-\contentsline {subsubsection}{\numberline {2.4.6}amass:}{24}{subsubsection.2.4.6}%
-\contentsline {subsubsection}{\numberline {2.4.7}Personalice su equipo cambiando el fondo de escritorio, la configuración visual de su terminal y la imagen de usuario.}{26}{subsubsection.2.4.7}%
-\contentsline {section}{\numberline {3}Cuestionario}{27}{section.3}%
-\contentsline {section}{Referencias}{32}{section*.51}%
+\contentsline {section}{\numberline {1}¿Qué es una vulnerabilidad de día cero?}{1}{section.1}%
+\contentsline {section}{\numberline {2}Describa qué es un exploit.}{1}{section.2}%
+\contentsline {section}{\numberline {3} Explique en qué consiste el mercado gris de exploits. }{1}{section.3}%
+\contentsline {section}{\numberline {4}Explique en qué consiste el mercado negro de exploits. }{2}{section.4}%
+\contentsline {section}{\numberline {5}Explique quiénes son los participantes de los mercados de exploits. }{2}{section.5}%
+\contentsline {section}{\numberline {6}Explique cuáles son los objetivos típicos de los compradores de exploits en el mercado negro. }{3}{section.6}%
+\contentsline {section}{\numberline {7}Desde su punto de vista y experiencia, ¿cuál es el papel que juega la ética profesional en el ecosistema del mercado de “zero-days”? }{4}{section.7}%
+\contentsline {section}{Referencias}{4}{section*.1}%
