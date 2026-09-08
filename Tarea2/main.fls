@@ -468,6 +468,14 @@ INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
+INPUT ./portada_img/der.png
+INPUT ./portada_img/der.png
+INPUT ./portada_img/der.png
+INPUT ./portada_img/der.png
+INPUT ./portada_img/izq.png
+INPUT ./portada_img/izq.png
+INPUT ./portada_img/izq.png
+INPUT ./portada_img/izq.png
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
@@ -478,5 +486,4 @@ INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb

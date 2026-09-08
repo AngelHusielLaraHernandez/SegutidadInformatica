@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  7 SEP 2026 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  8 SEP 2026 11:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Tarea2/main.tex
-(/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Tarea2/main.tex
+**/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica1/main.tex
+(/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica1/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -1639,38 +1639,38 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 <image/Parte2/image18.png, id=459, 1927.2pt x 1084.05pt>
 File: image/Parte2/image18.png Graphic file (type png)
 <use image/Parte2/image18.png>
-Package pdftex.def Info: image/Parte2/image18.png  used on input line 873.
+Package pdftex.def Info: image/Parte2/image18.png  used on input line 874.
 (pdftex.def)             Requested size: 377.62634pt x 212.40619pt.
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 876.
+Package pdftex.def Info: portada_img/der.png  used on input line 877.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 876.
+Package pdftex.def Info: portada_img/izq.png  used on input line 877.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [29 <./image/Parte2/image17.png>]
 <image/Parte2/image19.png, id=471, 1927.2pt x 1084.05pt>
 File: image/Parte2/image19.png Graphic file (type png)
 <use image/Parte2/image19.png>
-Package pdftex.def Info: image/Parte2/image19.png  used on input line 879.
+Package pdftex.def Info: image/Parte2/image19.png  used on input line 880.
 (pdftex.def)             Requested size: 377.62634pt x 212.40619pt.
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 886.
+Package pdftex.def Info: portada_img/der.png  used on input line 887.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 886.
+Package pdftex.def Info: portada_img/izq.png  used on input line 887.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [30 <./image/Parte2/image18.png> <./image/Parte2/image19.png>]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 891.
+Package pdftex.def Info: portada_img/der.png  used on input line 892.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 891.
+Package pdftex.def Info: portada_img/izq.png  used on input line 892.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [31] (./main.aux
 LaTeX Info: Redefining \sptext on input line 9.
@@ -1689,14 +1689,14 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  38370 strings out of 467525
- 744165 string characters out of 5418982
+ 744174 string characters out of 5418982
  1784503 words of memory out of 5000000
  66573 multiletter control sequences out of 15000+600000
  635337 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,94p,1063b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,94p,1066b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (33 pages, 16365477 bytes).
+Output written on main.pdf (33 pages, 16366353 bytes).
 PDF statistics:
  576 PDF objects out of 1000 (max. 8388607)
  404 compressed objects within 5 object streams
