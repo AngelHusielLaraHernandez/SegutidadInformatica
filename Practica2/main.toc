@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Verficacion de las dependencias instaladas (sudfinder, nttpx, nuclei)}{1}{section.1}%
+\contentsline {section}{\numberline {2}Desarrollo}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Inicie una terminal en el equipo EvilBox y verifique que la herramienta subfinder está instalada en el equipo.}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Consultar los datos relacionados con subdominios de ingenieria.unam.mx}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Copie los dominios identificados a un archivo de texto TXT.}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Utilice la herramienta httpx para verificar cuales de los dominios identificados por subfinder corresponden a subdominios activos, es decir, que proporcionan algún servicio publicado en internet.}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Utilice la herramienta nuclei para enviar peticiones web a un subdominio y analizar su respuesta para identificar las características de la tecnología web usada.}{6}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Actividades:}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Actividad 1 (identificacion de API keys:)}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Subfinder para buscar en unam.mx:}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Actividad 3: Subdominios asociados a la Facultad de Ingeniería}{11}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Rangos de IP en formato CIDR:}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Realizar lista con httpx de las páginas fi-a, fi-b, fi-c y fi-p:}{16}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Análisis de los datos generados por la herramienta httpx}{17}{subsection.3.6}%
+\contentsline {section}{Referencias}{19}{section*.25}%
