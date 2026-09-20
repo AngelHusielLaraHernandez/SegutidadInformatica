@@ -1,0 +1,113 @@
+laraangel@LaraAngel:~$ awk '/fi-[abcp]\.unam\.mx$|\.(fi-[abcp])\.unam\.mx$/{print}' subdominiosunam.txt | sort -u | while read -r host; do ips=$(dig +short A "$host" | sort -u | tr '\n' ' '); [ -n "$ips" ] && echo "$host $ips"; done
+ael.dicyg.fi-c.unam.mx 132.248.139.130 ael.fi-c.unam.mx. 
+afrodita.fi-a.unam.mx 132.248.54.112 
+appfi.fi-b.unam.mx 132.248.59.223 
+aries.fi-b.unam.mx 132.248.59.1 
+atlantic.fi-p.unam.mx 132.248.52.21 
+ayaic.fi-a.unam.mx 132.248.54.20 
+basicas.fi-c.unam.mx 132.248.139.61 
+batman.fi-a.unam.mx 132.248.54.124 
+biomedicas.fi-b.unam.mx 132.248.59.22 dctrl.fi-b.unam.mx. 
+biorobotica.fi-p.unam.mx 132.248.52.42 mezcal.fi-p.unam.mx. 
+biorobotics.fi-p.unam.mx 132.248.52.42 mezcal.fi-p.unam.mx. 
+calli.fi-c.unam.mx 132.248.139.171 
+cibercultura.fi-b.unam.mx 132.248.59.80 lcomp80.fi-b.unam.mx. 
+computo.dicyg.fi-c.unam.mx 132.248.139.141 
+consejofi.fi-a.unam.mx 132.248.54.83 
+control.fi-b.unam.mx 132.248.59.22 dctrl.fi-b.unam.mx. 
+controlslidingmodes.fi-p.unam.mx 132.248.52.21 atlantic.fi-p.unam.mx. 
+coordinador.fi-a.unam.mx 132.248.54.102 
+copadi.fi-c.unam.mx 132.248.139.201 
+cosmeg.fi-a.unam.mx 132.248.54.106 
+cronos.fi-b.unam.mx 132.248.59.2 
+dctrl.fi-b.unam.mx 132.248.59.22 
+diplomadobd.fi-p.unam.mx 132.248.52.16 
+diplomados.dicyg.fi-c.unam.mx 132.248.139.126 
+dps.fi-p.unam.mx 132.248.52.23 verona.fi-p.unam.mx. 
+encuentro.fi-b.unam.mx 132.248.59.88 
+erisc.fi-a.unam.mx 132.248.54.9 
+estigia.fi-b.unam.mx 132.248.59.98 
+feuris.fi-b.unam.mx 132.248.59.9 
+fisher.fi-b.unam.mx 132.248.59.127 
+foro.fi-b.unam.mx 132.248.59.6 odin.fi-b.unam.mx. 
+geocampodigital.fi-a.unam.mx 132.248.54.153 sacbe3.fi-a.unam.mx. 
+gorgona.fi-c.unam.mx 132.248.139.87 
+hera.fi-b.unam.mx 132.248.59.11 
+huatulco.fi-a.unam.mx 132.248.54.22 
+indaabin.dicyg.fi-c.unam.mx 132.248.139.136 
+jdie134.fi-b.unam.mx 132.248.59.134 
+krilin.fi-a.unam.mx 132.248.54.128 
+labremotomd.fi-p.unam.mx 132.248.52.21 atlantic.fi-p.unam.mx. 
+lapi.fi-p.unam.mx 132.248.52.26 
+lcomp81.fi-b.unam.mx 132.248.59.81 
+lcomp89.fi-b.unam.mx 132.248.59.89 
+lcp02.fi-b.unam.mx 132.248.59.142 
+liapunov.fi-b.unam.mx 132.248.59.126 
+lidsol.fi-b.unam.mx 132.248.59.73 
+loki.fi-b.unam.mx 132.248.59.18 
+lvm2.fi-a.unam.mx 132.248.54.48 
+mail.fi-b.unam.mx 132.248.59.1 aries.fi-b.unam.mx. 
+malinche.fi-c.unam.mx 132.248.139.64 
+mmedia1.fi-b.unam.mx 132.248.59.36 
+odin.fi-b.unam.mx 132.248.59.6 
+pacific3.fi-p.unam.mx 132.248.52.18 
+perseo.fi-c.unam.mx 132.248.139.85 
+plataformarys.fi-b.unam.mx 132.248.59.80 lcomp80.fi-b.unam.mx. 
+proteco.fi-b.unam.mx 132.248.59.21 io.fi-b.unam.mx. 
+redes.fi-b.unam.mx 132.248.59.98 estigia.fi-b.unam.mx. 
+redyseguridad.fi-b.unam.mx 132.248.59.79 secure.fi-b.unam.mx. 
+repositorioacademico.fi-a.unam.mx 132.248.54.44 
+rha.fi-b.unam.mx 132.248.59.5 
+rocasigneas.fi-a.unam.mx 132.248.54.174 
+rompope.fi-b.unam.mx 132.248.59.72 
+selene.fi-c.unam.mx 132.248.139.88 
+sgeneral.fi-a.unam.mx 132.248.54.87 
+sites.fi-a.unam.mx 132.248.54.63 
+sitios2.fi-a.unam.mx 35.172.49.191 
+sitios.fi-a.unam.mx 132.248.54.220 
+spiderman.fi-a.unam.mx 132.248.54.129 
+thor.fi-a.unam.mx 132.248.54.121 
+thor.fi-b.unam.mx 132.248.59.17 
+tioracle.fi-b.unam.mx 132.248.59.14 atlas.fi-b.unam.mx. 
+tpr6.fi-c.unam.mx 132.248.139.76 
+verona.fi-p.unam.mx 132.248.52.23 
+www.fi-b.unam.mx 132.248.59.6 odin.fi-b.unam.mx. 
+laraangel@LaraAngel:~$ whois 132.248.54.121 | grep -iE 'cidr|route|inetnum'
+CIDR:           132.247.0.0/16, 132.248.0.0/16
+inetnum:     132.248.0.0/16
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+laraangel@LaraAngel:~$ whois 35.172.49.191 | grep -iE 'cidr|route|inetnum'
+CIDR:           35.176.0.0/13, 35.152.0.0/13, 35.160.0.0/12
+laraangel@LaraAngel:~$ for group in fi-a fi-b fi-c fi-p; do echo "== $group =="; awk -v g="$group" 'tolower($0) ~ g"\\.unam\\.mx$" || tolower($0) ~ "\\." g "\\.unam\\.mx$" {print}' subdominiosunam.txt | sort -u | while read -r host; do ip=$(dig +short A "$host" | head -n1); [ -n "$ip" ] && echo "$ip $host"; done | awk '{split($1,a,"."); print a[1]"."a[2]"."a[3]".0/24"}' | sort -u; done
+== fi-a ==
+132.248.54.0/24
+35.172.49.0/24
+sacbe3.fi-a.unam.0/24
+== fi-b ==
+132.248.59.0/24
+aries.fi-b.unam.0/24
+atlas.fi-b.unam.0/24
+dctrl.fi-b.unam.0/24
+estigia.fi-b.unam.0/24
+io.fi-b.unam.0/24
+lcomp80.fi-b.unam.0/24
+odin.fi-b.unam.0/24
+secure.fi-b.unam.0/24
+== fi-c ==
+132.248.139.0/24
+ael.fi-c.unam.0/24
+== fi-p ==
+132.248.52.0/24
+atlantic.fi-p.unam.0/24
+mezcal.fi-p.unam.0/24
+verona.fi-p.unam.0/24
+laraangel@LaraAngel:~$ for group in fi-a fi-b fi-c fi-p; do echo "== $group =="; awk -v g="$group" 'tolower($0) ~ g"\\.unam\\.mx$" || tolower($0) ~ "\\." g "\\.unam\\.mx$" {print}' subdominiosunam.txt | sort -u | while read -r host; do dig +short A "$host" | grep -E '^[0-9]+\.' | head -n1; done | awk '{split($1,a,"."); print a[1]"."a[2]"."a[3]".0/24"}' | sort -u; done== fi-a ==
+132.248.54.0/24
+35.172.49.0/24
+== fi-b ==
+132.248.59.0/24
+== fi-c ==
+132.248.139.0/24
+== fi-p ==
+132.248.52.0/24
+laraangel@LaraAngel:~$ 

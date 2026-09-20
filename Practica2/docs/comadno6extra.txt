@@ -1,0 +1,20 @@
+laraangel@LaraAngel:~$ whois 132.248.54.121 | grep -iE 'cidr|route|inetnum'
+CIDR:           132.247.0.0/16, 132.248.0.0/16
+inetnum:     132.248.0.0/16
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+laraangel@LaraAngel:~$ whois 132.248.59.1 | grep -iE 'cidr|route|inetnum'
+CIDR:           132.247.0.0/16, 132.248.0.0/16
+inetnum:     132.248.0.0/16
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+laraangel@LaraAngel:~$ whois 132.248.139.85 | grep -iE 'cidr|route|inetnum'
+CIDR:           132.248.0.0/16, 132.247.0.0/16
+inetnum:     132.248.0.0/16
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+laraangel@LaraAngel:~$ whois 132.248.52.26 | grep -iE 'cidr|route|inetnum'
+CIDR:           132.247.0.0/16, 132.248.0.0/16
+inetnum:     132.248.0.0/16
+% Types of queries are: POCs, ownerid, CIDR blocks, IP
+laraangel@LaraAngel:~$ whois 35.172.49.191 | grep -iE 'cidr|route|inetnum'
+CIDR:           35.152.0.0/13, 35.160.0.0/12, 35.176.0.0/13
+laraangel@LaraAngel:~$ 
+

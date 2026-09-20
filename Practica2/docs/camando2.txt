@@ -1,0 +1,70 @@
+laraangel@LaraAngel:~$ httpx -status-code -title -tech-detect -list subdominios.txt
+
+    __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+		projectdiscovery.io
+
+[INF] Current httpx version v1.11.0 (outdated)
+[WRN] UI Dashboard is disabled, Use -dashboard option to enable
+https://saludmental.ingenieria.unam.mx [200] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX]
+https://liese.ingenieria.unam.mx [301] [301 Moved Permanently] [Nginx:1.24.0,Ubuntu]
+https://aulacisco.ingenieria.unam.mx [200] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX]
+https://escolar-ti.ingenieria.unam.mx [302] [302 Found] [Nginx:1.20.1]
+https://sci.ingenieria.unam.mx [200] [Apache HTTP Server:2.4.41,OpenSSL:1.1.0i,PHP:7.4.3,UNIX]
+https://revision.ingenieria.unam.mx [302] [Solicitud de Revisi�n de Estudios] [Nginx,PHP]
+https://aldebaran.ingenieria.unam.mx [200] [IIS Windows Server] [IIS:10.0,Microsoft ASP.NET,Windows Server]
+https://cienciasbasicas.ingenieria.unam.mx [200] [DCB] [Apache HTTP Server]
+https://cursosenlineadcb.ingenieria.unam.mx [303] [Redireccionar] [Apache HTTP Server:2.4.68,Moodle,PHP]
+https://cygnus.ingenieria.unam.mx [302] [Python,Uvicorn]
+https://examenesenlineadcb.ingenieria.unam.mx [303] [Redireccionar] [Apache HTTP Server,Moodle,PHP]
+https://lvm.ingenieria.unam.mx [303] [Redireccionar] [Apache HTTP Server,Moodle,PHP]
+https://digital.ingenieria.unam.mx [503] [HTTP/3]
+https://computacion.ingenieria.unam.mx [200] [Departamento de Computación | 40 años] [Apache HTTP Server:2.4.46,Bootstrap,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jQuery]
+https://examenesenlineadcbfi.ingenieria.unam.mx [303] [Redireccionar] [Apache HTTP Server:2.4.68]
+https://deportes.ingenieria.unam.mx [302] [302 Found] [Nginx:1.20.1]
+https://bolsatrabajo.ingenieria.unam.mx [302] [302 Found] [Nginx:1.20.1]
+https://siaap.ingenieria.unam.mx [302] [Redirecting to https://siaap.ingenieria.unam.mx/login] [HSTS,Nginx:1.31.3,PHP:8.3.33]
+https://itpro.ingenieria.unam.mx [403] [403 Forbidden] [Apache HTTP Server:2.4.6,CentOS,PHP:7.0.33]
+https://titulacion.ingenieria.unam.mx [200] [Nginx]
+https://ssa.ingenieria.unam.mx [301] [301 Moved Permanently] [Cloudflare]
+https://ioslab.ingenieria.unam.mx [200] [iOS Development Lab. Facultad de Ingeniería UNAM] [Apache HTTP Server:2.4.46,Bootstrap,FancyBox,Google Hosted Libraries,Modernizr,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jQuery:1.11.2]
+https://ssaapi.ingenieria.unam.mx [302] [302 Found] [Nginx]
+https://sgeneral.ingenieria.unam.mx [200] [Secretaría General FI UNAM] [Nginx]
+https://ventanillas-ti.ingenieria.unam.mx [302] [302 Found] [Nginx:1.20.1]
+https://movilidad.ingenieria.unam.mx [200] [::Coord. de Internacionalización - FI UNAM::] [Apache HTTP Server:2.4.46,Bootstrap,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jQuery]
+https://posgradofest.ingenieria.unam.mx [200] [Posgradofest] [Apache HTTP Server:2.4.46,Bootstrap:5.3.2,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jsDelivr]
+https://bio.ingenieria.unam.mx [200] [Diplomados Ingeniería Biomédica] [Apache HTTP Server:2.4.46,Bootstrap,Fedora,OpenSSL:1.1.1k,PHP:7.4.19,Perl:5.30.3,jQuery,mod_perl:2.0.11]
+https://uigenero.ingenieria.unam.mx [200] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX]
+https://sigafi.ingenieria.unam.mx [200] [SIGAFI | Ingresar] [Apache HTTP Server,Bootstrap,Google Analytics,HSTS,jQuery:3.7.1]
+https://it-pro.ingenieria.unam.mx [403] [403 Forbidden] [Apache HTTP Server:2.4.6,CentOS,PHP:7.0.33]
+https://jovenesinvestigadores.ingenieria.unam.mx [200] [INGENIA 2026 - Facultad de Ingeniería - UNAM] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,YouTube]
+http://www.laboratorios.ingenieria.unam.mx [302] [Apache HTTP Server:2.4.52,Ubuntu]
+https://internacional.ingenieria.unam.mx [200] [::Coord. de Internacionalización - FI UNAM::] [Apache HTTP Server:2.4.46,Bootstrap,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jQuery]
+https://arquimedes.ingenieria.unam.mx [200] [Inicio | PI DCB FI] [Apache HTTP Server,Moodle,PHP,RequireJS]
+https://www.repositorioacademico.ingenieria.unam.mx [302] [Inicio] [Apache HTTP Server,Bootstrap,Google Hosted Libraries,PHP:7.4.33,jQuery:2.1.3]
+https://opinion.ingenieria.unam.mx [200] [Sistema de Opinión de la Facultad de Ingeniería] [Bootstrap:3,BootstrapCDN:4.3.1,Chart.js:4.3.0,Cloudflare,Google Analytics,Google Hosted Libraries,Nginx:1.20.1,PHP:8.0.30,Popper:1.12.9,cdnjs,jQuery:3.3.1]
+https://redid.ingenieria.unam.mx [200] [Inicio | ReDiD - Facultad de Ingeniería] [HTTP/3,Node.js,Nuxt.js,Vue.js]
+https://enlace.ingenieria.unam.mx [200] [Encuestas de la Facultad de Ingeniería] [Bootstrap:3,BootstrapCDN:4.3.1,Chart.js:4.3.0,Cloudflare,Google Analytics,Google Hosted Libraries,PHP:7.4.33,Popper:1.12.9,cdnjs,jQuery:3.3.1,jsDelivr,reCAPTCHA]
+https://www.ssa.ingenieria.unam.mx [200] [Secretaría de Servicios Académicos] [Bootstrap:4.0.0,BootstrapCDN:4.0.0,Cloudflare,Font Awesome,Google Hosted Libraries,Popper:1.12.9,YouTube,cdnjs,jQuery:3.3.1]
+https://www.egresados.ingenieria.unam.mx [200] [Oficina de Egresados, Facultad de Ingeniería, UNAM.] [Google Analytics,IIS:8.0,PHP:7.2.1,SweetAlert,Windows Server,jQuery]
+https://ventanillavirtual.ingenieria.unam.mx [200] [SERVICIOS ESCOLARES FACULTAD DE INGENIERÍA] [Bootstrap:4.0.0,BootstrapCDN:4.0.0,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.12.9,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://www.enlace.ingenieria.unam.mx [200] [Encuestas de la Facultad de Ingeniería] [Bootstrap:3,BootstrapCDN:4.3.1,Chart.js:4.3.0,Cloudflare,Google Analytics,Google Hosted Libraries,PHP:7.4.33,Popper:1.12.9,cdnjs,jQuery:3.3.1,jsDelivr,reCAPTCHA]
+https://dcb.ingenieria.unam.mx [200] [DCB – FI UNAM] [Apache HTTP Server,Bootstrap,Google Analytics,Modernizr,MySQL,PHP,UltimatelySocial,WordPress:7.1,jQuery,jQuery Migrate:3.4.1]
+https://www.ingenieria.unam.mx [200] [Facultad de Ingeniería | UNAM] [Apache HTTP Server:2.4.6,CentOS,PHP:5.4.16,jQuery,parallax.js]
+https://comunidad.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://inscripciones.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://agrupaciones.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://inscripcion.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://comunidad-ti.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://escolares.ingenieria.unam.mx [200] [Agrupaciones Estudiantiles FI] [Bootstrap:4.3.1,BootstrapCDN:4.3.1,Cloudflare,Google Hosted Libraries,Nginx:1.20.1,PHP,Popper:1.14.7,cdnjs,jQuery:3.3.1,reCAPTCHA]
+https://www.administracion.ingenieria.unam.mx [200] [Inicio] [Google Analytics,IIS:8.0,Microsoft ASP.NET,RequireJS,SweetAlert2:11,Windows Server,jsDelivr]
+https://bm-recharge.ingenieria.unam.mx [200] [Dash] [Bootstrap:2_0_4,Python,gunicorn]
+https://aquiparameter.ingenieria.unam.mx [200] [Aquifer Parameters] [Apache HTTP Server:2.4.46,Bootstrap:3,DataTables,OpenSSL:1.1.1s,PHP:7.4.30,SockJS,UNIX,jQuery]
+http://escolar.ingenieria.unam.mx [200] [EscolarFI Administraci�n Escolar] [Apache HTTP Server,Bootstrap:4.6.2,PHP,jQuery,jsDelivr]
+http://influye-h2o.ingenieria.unam.mx [200] [InFluye H<sub>2</sub>O: Fluye la información, fluye el agua] [Apache HTTP Server:2.4.46,Bootstrap:3.4.1,OpenSSL:1.1.1s,PHP:7.4.30,SockJS,UNIX,jQuery]
+laraangel@LaraAngel:~$ 

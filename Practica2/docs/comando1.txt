@@ -1,0 +1,415 @@
+laraangel@LaraAngel:~$ subfinder -d ingenieria.unam.mx -v
+
+               __    _____           __         
+   _______  __/ /_  / __(_)___  ____/ /__  _____
+  / ___/ / / / __ \/ /_/ / __ \/ __  / _ \/ ___/
+ (__  ) /_/ / /_/ / __/ / / / / /_/ /  __/ /    
+/____/\__,_/_.___/_/ /_/_/ /_/\__,_/\___/_/
+
+		projectdiscovery.io
+
+[INF] Current subfinder version v2.16.0 (latest)
+[INF] Loading provider config from /home/laraangel/.config/subfinder/provider-config.yaml
+[DBG] Selected source(s) for this search: alienvault, anubis, bevigil, bufferover, builtwith, c99, censys, certspotter, chaos, chinaz, crtsh, digitalyama, digitorus, dnsdumpster, dnsrepo, domainsproject, driftnet, fofa, fullhunt, hackertarget, intelx, leakix, onyphe, profundis, quake, reconeer, redhuntlabs, robtex, rsecloud, scanmalware, securitytrails, shodan, shodanct, submd, urlscan, virustotal, whoisxmlapi, windvane
+[INF] Enumerating subdomains for ingenieria.unam.mx
+[DBG] Cannot use the digitalyama source because there was no API key/secret defined for it.
+[DBG] Cannot use the bevigil source because there was no API key/secret defined for it.
+[DBG] Cannot use the urlscan source because there was no API key/secret defined for it.
+[DBG] Cannot use the whoisxmlapi source because there was no API key/secret defined for it.
+[DBG] Cannot use the rsecloud source because there was no API key/secret defined for it.
+[DBG] Cannot use the chaos source because there was no API key/secret defined for it.
+[DBG] Cannot use the driftnet source because there was no API key/secret defined for it.
+[DBG] Cannot use the virustotal source because there was no API key/secret defined for it.
+[DBG] Cannot use the shodan source because there was no API key/secret defined for it.
+[DBG] Cannot use the dnsrepo source because there was no API key/secret defined for it.
+[DBG] Cannot use the profundis source because there was no API key/secret defined for it.
+[DBG] Cannot use the c99 source because there was no API key/secret defined for it.
+[DBG] Cannot use the windvane source because there was no API key/secret defined for it.
+[DBG] Cannot use the driftnet source because there was no API key/secret defined for it.
+[DBG] Cannot use the driftnet source because there was no API key/secret defined for it.
+[DBG] Cannot use the chinaz source because there was no API key/secret defined for it.
+[DBG] Cannot use the censys source because there was no API key/secret defined for it.
+[DBG] Cannot use the alienvault source because there was no API key/secret defined for it.
+[DBG] Cannot use the bufferover source because there was no API key/secret defined for it.
+[DBG] Cannot use the intelx source because there was no API key/secret defined for it.
+[DBG] Cannot use the onyphe source because there was no API key/secret defined for it.
+[DBG] Cannot use the dnsdumpster source because there was no API key/secret defined for it.
+[DBG] Cannot use the redhuntlabs source because there was no API key/secret defined for it.
+[DBG] Cannot use the domainsproject source because there was no API key/secret defined for it.
+[DBG] Cannot use the securitytrails source because there was no API key/secret defined for it.
+[DBG] Cannot use the leakix source because there was no API key/secret defined for it.
+[DBG] Cannot use the quake source because there was no API key/secret defined for it.
+[DBG] Cannot use the robtex source because there was no API key/secret defined for it.
+[DBG] Cannot use the certspotter source because there was no API key/secret defined for it.
+[DBG] Cannot use the fullhunt source because there was no API key/secret defined for it.
+[DBG] Cannot use the hackertarget source because there was no API key/secret defined for it.
+[DBG] Cannot use the driftnet source because there was no API key/secret defined for it.
+[DBG] Cannot use the reconeer source because there was no API key/secret defined for it.
+[DBG] Cannot use the builtwith source because there was no API key/secret defined for it.
+[DBG] Cannot use the fofa source because there was no API key/secret defined for it.
+[shodanct] agrupaciones.ingenieria.unam.mx
+[shodanct] aldebaran.ingenieria.unam.mx
+[shodanct] aquiparameter.ingenieria.unam.mx
+[shodanct] arquimedes.ingenieria.unam.mx
+[shodanct] bio.ingenieria.unam.mx
+[shodanct] bm-recharge.ingenieria.unam.mx
+[shodanct] bolsatrabajo.ingenieria.unam.mx
+[shodanct] cienciasbasicas.ingenieria.unam.mx
+[shodanct] computacion.ingenieria.unam.mx
+[shodanct] cygnus.ingenieria.unam.mx
+[shodanct] dcb.ingenieria.unam.mx
+[shodanct] deportes.ingenieria.unam.mx
+[shodanct] egresados.ingenieria.unam.mx
+[shodanct] enlace.ingenieria.unam.mx
+[shodanct] escolar-ti.ingenieria.unam.mx
+[shodanct] examenesenlineadcb.ingenieria.unam.mx
+[shodanct] influye-h2o.ingenieria.unam.mx
+[shodanct] internacional.ingenieria.unam.mx
+[shodanct] ioslab.ingenieria.unam.mx
+[shodanct] it-pro.ingenieria.unam.mx
+[shodanct] itpro.ingenieria.unam.mx
+[shodanct] jovenesinvestigadores.ingenieria.unam.mx
+[shodanct] liese.ingenieria.unam.mx
+[shodanct] lvm.ingenieria.unam.mx
+[shodanct] movilidad.ingenieria.unam.mx
+[shodanct] opinion.ingenieria.unam.mx
+[shodanct] posgradofest.ingenieria.unam.mx
+[shodanct] redid.ingenieria.unam.mx
+[shodanct] revision.ingenieria.unam.mx
+[shodanct] salaa.ingenieria.unam.mx
+[shodanct] saludmental.ingenieria.unam.mx
+[shodanct] sci.ingenieria.unam.mx
+[shodanct] sgeneral.ingenieria.unam.mx
+[shodanct] siaap.ingenieria.unam.mx
+[shodanct] sigafi.ingenieria.unam.mx
+[shodanct] ssa.ingenieria.unam.mx
+[shodanct] ssaapi.ingenieria.unam.mx
+[shodanct] titulacion.ingenieria.unam.mx
+[shodanct] uigenero.ingenieria.unam.mx
+[shodanct] ventanillas-ti.ingenieria.unam.mx
+[shodanct] ventanillavirtual.ingenieria.unam.mx
+[shodanct] www.administracion.ingenieria.unam.mx
+[shodanct] www.egresados.ingenieria.unam.mx
+[shodanct] www.ingenieria.unam.mx
+[shodanct] www.repositorioacademico.ingenieria.unam.mx
+[shodanct] www.ssa.ingenieria.unam.mx
+[DBG] Response for failed request against https://api.driftnet.io/v1/ct/log?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000:
+{"code":401,"message":"this route requires authorization"}
+[WRN] Encountered an error with source driftnet: unexpected status code 401 received from https://api.driftnet.io/v1/ct/log?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000
+[DBG] Response for failed request against https://api.driftnet.io/v1/scan/protocols?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000:
+{"code":401,"message":"this route requires authorization"}
+[WRN] Encountered an error with source driftnet: unexpected status code 401 received from https://api.driftnet.io/v1/scan/protocols?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000
+[DBG] Response for failed request against https://api.driftnet.io/v1/scan/domains?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000:
+{"code":401,"message":"this route requires authorization"}
+[WRN] Encountered an error with source driftnet: unexpected status code 401 received from https://api.driftnet.io/v1/scan/domains?field=host:ingenieria.unam.mx&summarize=host&summary_context=cert-dns-name&summary_limit=10000
+[DBG] Response for failed request against https://api.driftnet.io/v1/domain/rdns?host=ingenieria.unam.mx&summarize=host&summary_context=dns-ptr&summary_limit=10000:
+{"code":401,"message":"this route requires authorization"}
+[WRN] Encountered an error with source driftnet: unexpected status code 401 received from https://api.driftnet.io/v1/domain/rdns?host=ingenieria.unam.mx&summarize=host&summary_context=dns-ptr&summary_limit=10000
+[DBG] Response for failed request against https://certificatedetails.com/ingenieria.unam.mx:
+<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="content-security-policy" content="default-src &#39;none&#39;; script-src &#39;nonce-0OhMjwimkqhVsWNWgc3Z1g&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-src-attr &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src &#39;self&#39; https://challenges.cloudflare.com; connect-src &#39;self&#39; https://challenges.cloudflare.com; frame-src &#39;self&#39; https://challenges.cloudflare.com blob:; child-src &#39;self&#39; https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri &#39;self&#39;"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script nonce="0OhMjwimkqhVsWNWgc3Z1g">(function(){window._cf_chl_opt = {cFPWv: 'g',cH: 'hlaiKf.r1pp8geFv8wP0FFHhiZxIRwcFmDlp59ta_90-1789863295-1.2.1.1-yRQdAGUYtndNXP2hch01Pe8_5inHNjLIDm2j2ErMWoNerzMaSzuy7pZkhfI5WPmB',cITimeS: '1789863295',cN: '0OhMjwimkqhVsWNWgc3Z1g',cRay: 'a3dca1fe2ddf699a',cTplB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:"/ingenieria.unam.mx?__cf_chl_tk=PjgfSThQhkJDHjVd5pHL3M1gpiSqkXJak8edWNSVUgI-1789863295-1.0.1.1-kC3BStThCbrA0OXZgdwlXP6WIQjQee7QF4UFazP0hRw",cvId: '3',cZone: 'certificatedetails.com',fa:"/ingenieria.unam.mx?__cf_chl_f_tk=PjgfSThQhkJDHjVd5pHL3M1gpiSqkXJak8edWNSVUgI-1789863295-1.0.1.1-kC3BStThCbrA0OXZgdwlXP6WIQjQee7QF4UFazP0hRw",md: '4j_e2suRcsqoDidUM4.nXBA1Awnw4BrQfBmGELH_Fac-1789863295-1.2.1.1-PCh2SjUbjnmDO.QR_9.e710KE0qAlk7Vq4JPGLndfkrolSz.RbuVqZjxMpvNT9hBhL4aS3aek8.xGnRU4S__dj8AEhNcB3ARXCCyck7HUGdoaazAOHlCEy9kzTsAiD7mnJDzMzBx.eJXvfnItNKft1ic89PHbaSuc1OYFf3XIcKjpCKii2XElfZXJeUO_rtJJQd_avtUBXUT.Z6E7DJ1tXNF9x83yOlJPnSKwCbqkiH3UvS6zITDpX_VNZJTsjeDfVGginrMLYYrAGwJytNGiYwNoFXGOiwPTjIgwNotOysm9kJrXhAlg5JSUEoCFIpGJh34MSj22xXmLYpALUKf83wcE.Pdp93Vm9IqdxdIjK5P7.T2wFv3KNayAHpUDqBb4.xmzE9_lOHi32vc4QoUIygNJAVvjDwO.iNsju1smErL4DgDHm7d4OyvmaQ9QJnpOKC1qpeXjdoX6yfExaSOTHy8gnQ8qhrB4oeBRJYR3uCHxnwea.T10Xrg1zqPdtUvE9VX0xrLmYNjFBhrnVmhPihKyF9HjFpnUWVqU2FpIhWBIRMHZ0fKvakDCbpl9gpjGqi8XQPZQy2J.zFHLGIqneBIMp.p8XZcqFTPz5Al8kdV6fyceNXWMn3kgEM8nYqEx9lyli2q8OIjUCFYTb7YqJuM__dzAkLyjFB2FbjO.qoQLeQD6.pi9NCsvKKG2.yUGti3HEs5b6zCmagy5aHjabmp4yaRxG1foCpe7Ub2FSk46BcVK6CHvQyQeIOUkXhDl_CpfrL3NsO1.FqozNEiaK.jyKicrwz2t5sTwsu45z09CPVHVC3uqe6DWefnhpRevEXNnNIf8t3mmzHsTx.LzxXy95keZfZIQtXCXBcgMq.3bWUV0euNEXEuvGAyfJsZ3V_iXUdVHBgiqIfQpuRnLNi5Q8zQjhfakZrhndS7W26EHxA1Ik64HDX3ey3E718Fs39ph6RI1_Do08kUa8Ri8tnflLgC1BRs.pyilyiOuoF_D57BFktmTzNx8z7zgSJ8S6qz_B9R1C8oXxVVNbZMrEO3EK4l4GtYl6Ts_xFxPolr7G5j6UL3i2L0koJfJrpmRPhRj60LopQ1CUC.XdsVExRCnB3L6e0c2zq1qYWxb0K67JCz_iwrgzsMz_ouopJv',mdrd: 'WzQXbNJggHvUDS1U3.joGhdsG.P4etyPTwIAR3FSxtI-1789863295-1.2.1.1-GxYHfVbOYYwYUJndQB4Rl_d5Q8_LZ3TfYGSpJM0zksFicRnG7dTH3JV09_qBV10t12MEjr5frVlQE_JCUwxywIrJKBfs8HiZY33wsOF73NQBFLbKHCeD8ycOXqgLZvirI9wx71LdWCzSPhddn3xueKUKbHHAQwHXuP3xX.Df3ZzbEUs0jm9rzJvl0.2Xr5E3AgDqZBZNrG6lZvA6cyNeuO2TgWMcA_5wlon5d_f_HQ7niXtsrSv.ZcPpipLbRQD_dJFa8RqmQbES5QczeCT_3Ga5B4G0USapkSFLFrwAAC10NeSJ8L.dap1McxD7ikTBQSa5hW8ZTRHZ8uD4d6facwxUBTpD6O0L9iZpNdVRGTWtzaIuGKydczW9CB98ytNayElwi6BLTAbLp0_e0rag9QiZApRHY.kaJtx5VirYIV.M0WpKhKBmKDIsAp7gJCME',};var a = document.createElement('script');a.nonce = '0OhMjwimkqhVsWNWgc3Z1g';a.src = '/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=a3dca1fe2ddf699a';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"/ingenieria.unam.mx?__cf_chl_rt_tk=PjgfSThQhkJDHjVd5pHL3M1gpiSqkXJak8edWNSVUgI-1789863295-1.0.1.1-kC3BStThCbrA0OXZgdwlXP6WIQjQee7QF4UFazP0hRw"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+[WRN] Encountered an error with source digitorus: unexpected status code 403 received from https://certificatedetails.com/ingenieria.unam.mx
+[scanmalware] agrupaciones.ingenieria.unam.mx
+[scanmalware] aldebaran.ingenieria.unam.mx
+[scanmalware] aquiparameter.ingenieria.unam.mx
+[scanmalware] arquimedes.ingenieria.unam.mx
+[scanmalware] bio.ingenieria.unam.mx
+[scanmalware] bm-recharge.ingenieria.unam.mx
+[scanmalware] cienciasbasicas.ingenieria.unam.mx
+[scanmalware] computacion.ingenieria.unam.mx
+[scanmalware] cursosenlineadcb.ingenieria.unam.mx
+[scanmalware] cygnus.ingenieria.unam.mx
+[scanmalware] dcb.ingenieria.unam.mx
+[scanmalware] deportes.ingenieria.unam.mx
+[scanmalware] enlace.ingenieria.unam.mx
+[scanmalware] escolar-ti.ingenieria.unam.mx
+[scanmalware] examenesenlineadcb.ingenieria.unam.mx
+[scanmalware] influye-h2o.ingenieria.unam.mx
+[scanmalware] internacional.ingenieria.unam.mx
+[scanmalware] ioslab.ingenieria.unam.mx
+[scanmalware] it-pro.ingenieria.unam.mx
+[scanmalware] itpro.ingenieria.unam.mx
+[scanmalware] jovenesinvestigadores.ingenieria.unam.mx
+[scanmalware] liese.ingenieria.unam.mx
+[scanmalware] lvm.ingenieria.unam.mx
+[scanmalware] movilidad.ingenieria.unam.mx
+[scanmalware] opinion.ingenieria.unam.mx
+[scanmalware] posgradofest.ingenieria.unam.mx
+[scanmalware] redid.ingenieria.unam.mx
+[scanmalware] revision.ingenieria.unam.mx
+[scanmalware] saludmental.ingenieria.unam.mx
+[scanmalware] sci.ingenieria.unam.mx
+[scanmalware] sgeneral.ingenieria.unam.mx
+[scanmalware] siaap.ingenieria.unam.mx
+[scanmalware] sigafi.ingenieria.unam.mx
+[scanmalware] ssa.ingenieria.unam.mx
+[scanmalware] ssaapi.ingenieria.unam.mx
+[scanmalware] titulacion.ingenieria.unam.mx
+[scanmalware] ventanillas-ti.ingenieria.unam.mx
+[scanmalware] ventanillavirtual.ingenieria.unam.mx
+[scanmalware] www.administracion.ingenieria.unam.mx
+[scanmalware] www.enlace.ingenieria.unam.mx
+[scanmalware] www.repositorioacademico.ingenieria.unam.mx
+[scanmalware] www.ssa.ingenieria.unam.mx
+[WRN] Encountered an error with source crtsh: pq: no more connections allowed (max_client_conn)
+[hackertarget] www.administracion.ingenieria.unam.mx
+[hackertarget] agrupaciones.ingenieria.unam.mx
+[hackertarget] aldebaran.ingenieria.unam.mx
+[hackertarget] aquiparameter.ingenieria.unam.mx
+[hackertarget] arquimedes.ingenieria.unam.mx
+[hackertarget] aulacisco.ingenieria.unam.mx
+[hackertarget] bio.ingenieria.unam.mx
+[hackertarget] bm-recharge.ingenieria.unam.mx
+[hackertarget] bolsatrabajo.ingenieria.unam.mx
+[hackertarget] cienciasbasicas.ingenieria.unam.mx
+[hackertarget] cimca.ingenieria.unam.mx
+[hackertarget] computacion.ingenieria.unam.mx
+[hackertarget] comunidad.ingenieria.unam.mx
+[hackertarget] comunidad-ti.ingenieria.unam.mx
+[hackertarget] cursosenlineadcb.ingenieria.unam.mx
+[hackertarget] cygnus.ingenieria.unam.mx
+[hackertarget] dcb.ingenieria.unam.mx
+[hackertarget] deportes.ingenieria.unam.mx
+[hackertarget] digital.ingenieria.unam.mx
+[hackertarget] www.egresados.ingenieria.unam.mx
+[hackertarget] enlace.ingenieria.unam.mx
+[hackertarget] www.enlace.ingenieria.unam.mx
+[hackertarget] escolar.ingenieria.unam.mx
+[hackertarget] escolar-ti.ingenieria.unam.mx
+[hackertarget] escolares.ingenieria.unam.mx
+[hackertarget] examenesenlineadcb.ingenieria.unam.mx
+[hackertarget] examenesenlineadcbfi.ingenieria.unam.mx
+[hackertarget] hasites.ingenieria.unam.mx
+[hackertarget] hasitess.ingenieria.unam.mx
+[hackertarget] influye-h2o.ingenieria.unam.mx
+[hackertarget] inscripcion.ingenieria.unam.mx
+[hackertarget] inscripciones.ingenieria.unam.mx
+[hackertarget] internacional.ingenieria.unam.mx
+[hackertarget] ioslab.ingenieria.unam.mx
+[hackertarget] it-pro.ingenieria.unam.mx
+[hackertarget] itpro.ingenieria.unam.mx
+[hackertarget] jovenesinvestigadores.ingenieria.unam.mx
+[hackertarget] www.laboratorios.ingenieria.unam.mx
+[hackertarget] liese.ingenieria.unam.mx
+[hackertarget] lvm.ingenieria.unam.mx
+[hackertarget] movilidad.ingenieria.unam.mx
+[hackertarget] opinion.ingenieria.unam.mx
+[hackertarget] posgradofest.ingenieria.unam.mx
+[hackertarget] redid.ingenieria.unam.mx
+[hackertarget] www.repositorioacademico.ingenieria.unam.mx
+[hackertarget] revision.ingenieria.unam.mx
+[hackertarget] sa.ingenieria.unam.mx
+[hackertarget] salaa.ingenieria.unam.mx
+[hackertarget] saludmental.ingenieria.unam.mx
+[hackertarget] sci.ingenieria.unam.mx
+[scanmalware] www.ingenieria.unam.mx
+[DBG] Response for failed request against https://www.reconeer.com/api/domain/ingenieria.unam.mx:
+{"error":"API key required. Sign up at reconeer.com/register"}
+[WRN] Encountered an error with source reconeer: unexpected status code 401 received from https://www.reconeer.com/api/domain/ingenieria.unam.mx
+[DBG] Response for failed request against https://leakix.net/api/subdomains/ingenieria.unam.mx:
+"Incorrect API Key"
+[WRN] Encountered an error with source leakix: unexpected status code 401 received from https://leakix.net/api/subdomains/ingenieria.unam.mx
+[DBG] Response for failed request against https://crt.sh/?q=%.ingenieria.unam.mx&output=json:
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+[WRN] Encountered an error with source crtsh: unexpected status code 502 received from https://crt.sh/?q=%.ingenieria.unam.mx&output=json
+[DBG] Response for failed request against https://api.sub.md/v1/search?apex=ingenieria.unam.mx:
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<title>sub.md | 523: Origin is unreachable</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/main.css" />
+</head>
+<body>
+<div id="cf-wrapper">
+    <div id="cf-error-details" class="p-0">
+        <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8">
+            <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2">
+                <span class="inline-block">Origin is unreachable</span>
+                <span class="code-label">Error code 523</span>
+            </h1>
+            <div>
+                Visit <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_523&utm_campaign=api.sub.md" target="_blank" rel="noopener noreferrer">cloudflare.com</a> for more information.
+            </div>
+            <div class="mt-3">2026-09-20 00:14:56 UTC</div>
+        </header>
+        <div class="my-8 bg-gradient-gray">
+            <div class="w-240 lg:w-full mx-auto">
+                <div class="clearfix md:px-8">
+                    <div id="cf-browser-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-browser block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">You</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Browser
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-cloudflare-status" class=" relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_523&#38;utm_campaign=api.sub.md" target="_blank" rel="noopener noreferrer">
+    <span class="cf-icon-cloud block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-ok w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    </a>
+  </div>
+  <span class="md:block w-full truncate">Dallas</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  <a href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_523&utm_campaign=api.sub.md" target="_blank" rel="noopener noreferrer">
+    Cloudflare
+  </a>
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-green-success">Working</span>
+  
+</div>
+                    <div id="cf-host-status" class="cf-error-source relative w-1/3 md:w-full py-15 md:p-0 md:py-8 md:text-left md:border-solid md:border-0 md:border-b md:border-gray-400 overflow-hidden float-left md:float-none text-center">
+  <div class="relative mb-10 md:m-0">
+    
+    <span class="cf-icon-server block md:hidden h-20 bg-center bg-no-repeat"></span>
+    <span class="cf-icon-error w-12 h-12 absolute left-1/2 md:left-auto md:right-0 md:top-0 -ml-6 -bottom-4"></span>
+    
+  </div>
+  <span class="md:block w-full truncate">api.sub.md</span>
+  <h3 class="md:inline-block mt-3 md:mt-0 text-2xl text-gray-600 font-light leading-1.3">
+  
+    Host
+  
+  </h3>
+  
+  <span class="leading-1.3 text-2xl text-red-error">Error</span>
+  
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-240 lg:w-full mx-auto mb-8 lg:px-8">
+            <div class="clearfix">
+                <div class="w-1/2 md:w-full float-left pr-6 md:pb-10 md:pr-0 leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What happened?</h2>
+                    <p>The origin web server is not reachable.</p>
+                </div>
+                <div class="w-1/2 md:w-full float-left leading-relaxed">
+                    <h2 class="text-3xl font-normal leading-1.3 mb-4">What can I do?</h2>
+                    
+                <h3 class="text-15 font-semibold mb-2">If you're a visitor of this website:</h3>
+                <p class="mb-6">Please try again in a few minutes.</p>
+
+                <h3 class="text-15 font-semibold mb-2">If you're the owner of this website:</h3>
+                <p><span>Check your DNS Settings. A 523 error means that Cloudflare could not reach your host web server. The most common cause is that your DNS settings are incorrect. Please contact your hosting provider to confirm your origin IP and then make sure the correct IP is listed for your A record in your Cloudflare DNS Settings page.</span> <a rel="noopener noreferrer" href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-523/">Additional    troubleshooting information here.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300">
+    <p class="text-13">
+      <span class="cf-footer-item sm:block sm:mb-1">Cloudflare Ray ID: <strong class="font-semibold">a3dca1fdfc3f1234</strong></span>
+      <span class="cf-footer-separator sm:hidden">&bull;</span>
+      <span id="cf-footer-item-ip" class="cf-footer-item hidden sm:block sm:mb-1">
+        Your IP:
+        <button type="button" id="cf-footer-ip-reveal" class="cf-footer-ip-reveal-btn">Click to reveal</button>
+        <span class="hidden" id="cf-footer-ip">201.102.167.182</span>
+        <span class="cf-footer-separator sm:hidden">&bull;</span>
+      </span>
+      <span class="cf-footer-item sm:block sm:mb-1"><span>Performance &amp; security by</span> <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing?utm_source=errorcode_523&#38;utm_campaign=api.sub.md" id="brand_link" target="_blank">Cloudflare</a></span>
+      
+    </p>
+    <script>(function(){function d(){var b=a.getElementById("cf-footer-item-ip"),c=a.getElementById("cf-footer-ip-reveal");b&&"classList"in b&&(b.classList.remove("hidden"),c.addEventListener("click",function(){c.classList.add("hidden");a.getElementById("cf-footer-ip").classList.remove("hidden")}))}var a=document;document.addEventListener&&a.addEventListener("DOMContentLoaded",d)})();</script>
+  </div><!-- /.error-footer -->
+
+    </div>
+</div>
+</body>
+</html>
+[WRN] Encountered an error with source submd: unexpected status code 523 received from https://api.sub.md/v1/search?apex=ingenieria.unam.mx
+ioslab.ingenieria.unam.mx
+www.administracion.ingenieria.unam.mx
+lvm.ingenieria.unam.mx
+examenesenlineadcbfi.ingenieria.unam.mx
+arquimedes.ingenieria.unam.mx
+itpro.ingenieria.unam.mx
+movilidad.ingenieria.unam.mx
+aulacisco.ingenieria.unam.mx
+inscripciones.ingenieria.unam.mx
+bio.ingenieria.unam.mx
+cygnus.ingenieria.unam.mx
+enlace.ingenieria.unam.mx
+www.enlace.ingenieria.unam.mx
+cimca.ingenieria.unam.mx
+www.egresados.ingenieria.unam.mx
+www.ingenieria.unam.mx
+cursosenlineadcb.ingenieria.unam.mx
+aquiparameter.ingenieria.unam.mx
+salaa.ingenieria.unam.mx
+siaap.ingenieria.unam.mx
+www.ssa.ingenieria.unam.mx
+agrupaciones.ingenieria.unam.mx
+egresados.ingenieria.unam.mx
+escolar-ti.ingenieria.unam.mx
+sci.ingenieria.unam.mx
+www.laboratorios.ingenieria.unam.mx
+opinion.ingenieria.unam.mx
+internacional.ingenieria.unam.mx
+ssa.ingenieria.unam.mx
+saludmental.ingenieria.unam.mx
+ssaapi.ingenieria.unam.mx
+comunidad-ti.ingenieria.unam.mx
+escolares.ingenieria.unam.mx
+hasitess.ingenieria.unam.mx
+dcb.ingenieria.unam.mx
+deportes.ingenieria.unam.mx
+examenesenlineadcb.ingenieria.unam.mx
+revision.ingenieria.unam.mx
+uigenero.ingenieria.unam.mx
+digital.ingenieria.unam.mx
+aldebaran.ingenieria.unam.mx
+liese.ingenieria.unam.mx
+sigafi.ingenieria.unam.mx
+bolsatrabajo.ingenieria.unam.mx
+sgeneral.ingenieria.unam.mx
+titulacion.ingenieria.unam.mx
+ventanillavirtual.ingenieria.unam.mx
+escolar.ingenieria.unam.mx
+inscripcion.ingenieria.unam.mx
+bm-recharge.ingenieria.unam.mx
+computacion.ingenieria.unam.mx
+influye-h2o.ingenieria.unam.mx
+redid.ingenieria.unam.mx
+ventanillas-ti.ingenieria.unam.mx
+cienciasbasicas.ingenieria.unam.mx
+it-pro.ingenieria.unam.mx
+jovenesinvestigadores.ingenieria.unam.mx
+comunidad.ingenieria.unam.mx
+posgradofest.ingenieria.unam.mx
+www.repositorioacademico.ingenieria.unam.mx
+hasites.ingenieria.unam.mx
+sa.ingenieria.unam.mx
+[INF] Found 62 subdomains for ingenieria.unam.mx in 1 second 414 milliseconds
+laraangel@LaraAngel:~$ 

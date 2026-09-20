@@ -1,0 +1,64 @@
+laraangel@LaraAngel:~$ grep -E '\.fi-[abcp]\.unam\.mx$|^fi-[abcp]\.unam\.mx$' subdominiosunam.txt > objetivos_fi.txt
+laraangel@LaraAngel:~$ httpx -status-code -title -tech-detect -list objetivos_fi.txt
+
+    __    __  __       _  __
+   / /_  / /_/ /_____ | |/ /
+  / __ \/ __/ __/ __ \|   /
+ / / / / /_/ /_/ /_/ /   |
+/_/ /_/\__/\__/ .___/_/|_|
+             /_/
+
+		projectdiscovery.io
+
+[INF] Current httpx version v1.11.0 (outdated)
+[WRN] UI Dashboard is disabled, Use -dashboard option to enable
+https://estigia.fi-b.unam.mx [200] [Apache HTTP Server:2.4.41,OpenSSL:1.1.0i,PHP:7.4.3,UNIX]
+https://coordinador.fi-a.unam.mx [302] [302 Found] [Nginx]
+https://aries.fi-b.unam.mx [200] [Apache HTTP Server:2.4.37,OpenSSL:1.1.0i,PHP:7.2.11,UNIX]
+https://lvm2.fi-a.unam.mx [303] [Redireccionar] [Apache HTTP Server]
+https://lidsol.fi-b.unam.mx [200] [LIDSoL Mirrors] [HSTS,Nginx]
+https://feuris.fi-b.unam.mx [403] [403 Forbidden] [HSTS,Nginx:1.31.3]
+https://computo.dicyg.fi-c.unam.mx [200] [Welcome to nginx!] [Nginx:1.22.1]
+https://biorobotica.fi-p.unam.mx [301] [301 Moved Permanently] [Nginx:1.14.0,Ubuntu]
+https://mail.fi-b.unam.mx [200] [Apache HTTP Server:2.4.37,OpenSSL:1.1.0i,PHP:7.2.11,UNIX]
+https://biomedicas.fi-b.unam.mx [200] [Diplomado de Gestión Médica] [Apache HTTP Server:2.4.46,Fedora,OpenSSL:1.1.1k,Perl:5.30.3,mod_perl:2.0.11]
+https://jdie134.fi-b.unam.mx [200] [Athena Facultad de Ingeniería] [Apache HTTP Server:2.4.57,Fedora,OpenSSL:3.0.9]
+https://basicas.fi-c.unam.mx [200] [Apache HTTP Server]
+https://odin.fi-b.unam.mx [200] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX]
+https://perseo.fi-c.unam.mx [200] [Apache HTTP Server]
+https://afrodita.fi-a.unam.mx [403] [403 Forbidden] [Nginx]
+http://pacific3.fi-p.unam.mx [200] [Apache2 Debian Default Page: It works] [Apache HTTP Server:2.4.67,Debian]
+https://foro.fi-b.unam.mx [200] [Apache HTTP Server:2.4.46,OpenSSL:1.1.1s,PHP:7.4.30,UNIX]
+https://plataformarys.fi-b.unam.mx [200] [Apache HTTP Server:2.4.41,Ubuntu]
+https://redyseguridad.fi-b.unam.mx [200] [Apache HTTP Server:2.4.25,Debian]
+https://dctrl.fi-b.unam.mx [200] [Departamento de Control y Robótica∫] [Apache HTTP Server:2.4.46,Bootstrap,Fedora,OpenSSL:1.1.1k,PHP:7.4.19,Perl:5.30.3,jQuery,mod_perl:2.0.11]
+https://cibercultura.fi-b.unam.mx [200] [Inicio - Cibercultura en Ciberseguridad] [Bootstrap:4.6.1,BootstrapCDN:3.4.1,Google Hosted Libraries,Kestrel,Microsoft ASP.NET,OWL Carousel,Popper,jQuery:3.5.1,jsDelivr]
+https://control.fi-b.unam.mx [200] [Departamento de Control y Robótica∫] [Apache HTTP Server:2.4.46,Bootstrap,Fedora,OpenSSL:1.1.1k,PHP:7.4.19,Perl:5.30.3,jQuery,mod_perl:2.0.11]
+https://rompope.fi-b.unam.mx [404]
+https://fisher.fi-b.unam.mx [200] [Campus Virtual Departamento de Control y Robótica] [Apache HTTP Server:2.4.46,Bootstrap,Fedora,OpenSSL:1.1.1k,PHP:7.4.19,jQuery]
+http://dps.fi-p.unam.mx [200] [Departamento de Procesamiento de Señales de la Facultad de Ingeniería] [Apache HTTP Server]
+https://diplomados.dicyg.fi-c.unam.mx [303] [Redireccionar] [Apache HTTP Server,Moodle,PHP]
+https://sgeneral.fi-a.unam.mx [200] [Secretaría General FI UNAM] [Nginx]
+https://repositorioacademico.fi-a.unam.mx [302] [Inicio] [Apache HTTP Server,Bootstrap,Google Hosted Libraries,PHP:7.4.33,jQuery:2.1.3]
+https://lcomp89.fi-b.unam.mx [200] [Facultad de Ingeniería] [Bootstrap,Nginx:1.24.0,Ubuntu,YouTube,jQuery]
+https://selene.fi-c.unam.mx [200] [DCB] [Apache HTTP Server]
+https://tioracle.fi-b.unam.mx [200] [Diplomado de Infraestructura en TI FI UNAM] [Apache HTTP Server:2.4.46,Bootstrap,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,jQuery:3.3.1]
+https://geocampodigital.fi-a.unam.mx [200] [Métodos Gráficos en Geología] [Apache HTTP Server:2.4.38,Bootstrap,DataTables,Debian,GSAP,Unpkg,jQuery BlockUI,jQuery:3.4.1]
+https://lapi.fi-p.unam.mx [200] [LAPI v2.0] [Apache HTTP Server:2.4.64,Bootstrap,Lightbox,Ubuntu]
+http://verona.fi-p.unam.mx [200] [DEPARTAMENTO DE PROCESAMIENTO DE SEÑALES - UNAM] [Apache HTTP Server]
+https://mmedia1.fi-b.unam.mx [200] [LMI] [Bootstrap,Django,HSTS,Nginx:1.18.0,Python,Ubuntu,jQuery]
+https://thor.fi-a.unam.mx [200] [Sistema de Opinión de la Facultad de Ingeniería] [Bootstrap:3,BootstrapCDN:4.3.1,Chart.js:4.3.0,Cloudflare,Google Analytics,Google Hosted Libraries,Nginx:1.20.1,PHP:8.0.30,Popper:1.12.9,cdnjs,jQuery:3.3.1]
+https://appfi.fi-b.unam.mx [200] [App FI — Facultad de Ingeniería UNAM] [HTTP/3,Node.js,Nuxt.js,Vue.js]
+https://lcomp81.fi-b.unam.mx [200] [LCAD-FI-UNAM - Laboratorio de Cómputo de Alto Desempeño] [Apache HTTP Server:2.4.58,Bootstrap:18,Chamilo:1,Chosen,Modernizr,PHP,Select2,Timeago,Ubuntu,jQuery,jQuery UI,timeago]
+https://consejofi.fi-a.unam.mx [200] [Portal del Consejo Técnico de la Facultad de Ingeniería] [Apache HTTP Server,HSTS,jQuery]
+https://www.fi-b.unam.mx [200] [División de Ingeniería Eléctrica] [Apache HTTP Server:2.4.46,Bootstrap,Google Analytics,OpenSSL:1.1.1s,PHP:7.4.30,UNIX,YouTube,jQuery]
+https://indaabin.dicyg.fi-c.unam.mx [200] [CIMCA] [CodeIgniter,Nginx:1.22.1,PHP,jQuery]
+https://redes.fi-b.unam.mx [200] [Site del Dr. Alejandro Velazquez Mena] [Apache HTTP Server:2.4.41,Bootstrap,OpenSSL:1.1.0i,PHP:7.4.3,Swiper,UNIX,WOW,jQuery,jQuery Migrate]
+https://copadi.fi-c.unam.mx [200] [COPADI] [Apache Tomcat,Bootstrap,Google Analytics,Java,jQuery]
+https://biorobotics.fi-p.unam.mx [200] [BioRobotics – UNAM] [Elementor:3.0.11,FitVids.JS:1.1,Magnific Popup:1.0.0,MySQL,Nginx:1.14.0,PHP,Polylang,Slick,Swiper,Ubuntu,WordPress:5.5.21,jQuery]
+https://ael.dicyg.fi-c.unam.mx [200] [Ambiente Educativo en Linea DICyG] [Apache HTTP Server,Moodle,PHP,RequireJS]
+https://sitios.fi-a.unam.mx [200] [Facultad de Ingeniería | UNAM] [Apache HTTP Server:2.4.6,CentOS,PHP:5.4.16,jQuery,parallax.js]
+http://sitios2.fi-a.unam.mx [502] [502 Bad Gateway] [Amazon ELB,Amazon Web Services]
+http://lcp02.fi-b.unam.mx [200] [Laboratorio Salas A y B] [Bootstrap,Cloudflare,Django,FancyBox,Nginx:1.31.4,Python,Select2,SweetAlert2:11,cdnjs,jQuery UI:1.10.4,jQuery:1.11.0,jsDelivr]
+http://rocasigneas.fi-a.unam.mx [200] [Colección ígnea] [Bootstrap,IIS:8.5,Lightbox,Magnific Popup,OWL Carousel,PHP:7.4.1,Popper,Slick,Swiper,Windows Server,jQuery:1.12.1]
+laraangel@LaraAngel:~$ 
