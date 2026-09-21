@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1789927885.87086 -1
-  "main.bcf" 1789927885.80514 134011 8218675f7551708631d3ce072e2da23f "pdflatex"
-  "referencias.bib" 1789905993.13645 1255 438f6581391b1e8c483955b60bd921cd ""
+["biber main"] 1790013295.05979 "main.bcf" "main.bbl" "main" 1790013309.10858 0
+  "main.bcf" 1790013308.99442 134011 8218675f7551708631d3ce072e2da23f "pdflatex"
+  "referencias.bib" 1790013292.67414 895 ca8dce6f8dda714b8580862c57caf3e9 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1789927883.35583 "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica2/main.tex" "main.pdf" "main" 1789927885.87109 0
-  "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica2/main.tex" 1789927883.1719 32860 363a2f5b394c4e86b1989611b588f809 ""
+["pdflatex"] 1790013304.71206 "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica2/main.tex" "main.pdf" "main" 1790013309.10899 0
+  "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica2/main.tex" 1790012735.4791 34048 9187e8ba128a1a129cdd59120d5283fe ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm" 1136768653 1536 bda3e6bf9784a4cc572c754e0c3eeb00 ""
@@ -248,12 +248,12 @@
   "img/imageingenieria.png" 1789924078.56194 96332 9587de9ca0ecf1aab81670f1d82edb37 ""
   "img/imagenuclei.png" 1789913418.16219 172885 9a88dfa5832fa8af3f9cb02978f30a1c ""
   "img/imagevirustotal.png" 1789916082.29005 161999 f8692e70c78f9f3bea0f6e7d55c0e43b ""
-  "main.aux" 1789927885.80289 8223 58f232bfc89c27fec0e5c84c57a40f4a "pdflatex"
-  "main.bbl" 1789927389.62301 17572 1d94c04ab62742802e0adf519633fff5 "biber main"
-  "main.out" 1789927885.80441 6137 1da27a881ee4aae0cd1d93bde2de529e "pdflatex"
-  "main.run.xml" 1789927885.80564 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
-  "main.tex" 1789927883.1719 32860 363a2f5b394c4e86b1989611b588f809 ""
-  "main.toc" 1789927885.80569 1962 315a87c517c2e620e539bd53c89e6433 "pdflatex"
+  "main.aux" 1790013308.9899 8065 f847cf3ab5752b14beef521eeb725152 "pdflatex"
+  "main.bbl" 1790013295.85577 12474 a5a5d456baffdadb853917ff4e35219f "biber main"
+  "main.out" 1790013308.99301 6402 3ed18f1c03731b90c9fde875db5418b8 "pdflatex"
+  "main.run.xml" 1790013308.99556 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
+  "main.tex" 1790012735.4791 34048 9187e8ba128a1a129cdd59120d5283fe ""
+  "main.toc" 1790013308.99564 2012 e680b222c9fe2892892a495522b65745 "pdflatex"
   "portada.tex" 1789906930.55274 1128 de17f50165bfa695e425c60c25d2a2cc ""
   "portada_img/der.png" 1789905146.75697 210257 6d0c4d2ce4cceedcb4c586a3b72b8bc2 ""
   "portada_img/izq.png" 1789905146.75793 32490 e04d7053102a8639b2d7b450d226ab82 ""

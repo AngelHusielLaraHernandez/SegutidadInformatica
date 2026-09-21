@@ -19,39 +19,45 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
-    \entry{amass_snapcraft}{online}{}{}
+    \entry{rfc4632_cidr}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=aacfea8cb27c1b8d0dd136a1aca2f0a4}{%
-           family={{Canonical Ltd.}},
-           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=21c721cd27ff84a6f05781b517af7e39}{%
+           family={AWS},
+           familyi={A\bibinitperiod},
+           given={Amazon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{fullhash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{fullhashraw}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{bibnamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorbibnamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authornamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorfullhash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorfullhashraw}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \list{institution}{1}{%
+        {AWS}%
+      }
+      \strng{namehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{fullhash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{fullhashraw}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{bibnamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorbibnamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authornamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorfullhash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorfullhashraw}{21c721cd27ff84a6f05781b517af7e39}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Install amass on Debian using the Snap Store}
-      \field{urlday}{7}
+      \field{title}{¿Qué es el CIDR?}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
-      \field{year}{2026}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://snapcraft.io/install/amass/debian
+      \verb https://aws.amazon.com/es/what-is/cidr/
       \endverb
       \verb{url}
-      \verb https://snapcraft.io/install/amass/debian
+      \verb https://aws.amazon.com/es/what-is/cidr/
       \endverb
     \endentry
     \entry{httpx_install}{online}{}{}
@@ -78,7 +84,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Install - httpx}
-      \field{urlday}{7}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
       \field{year}{2026}
@@ -91,7 +97,7 @@
       \verb https://docs.projectdiscovery.io/opensource/httpx/install
       \endverb
     \endentry
-    \entry{nuclei_install}{online}{}{}
+    \entry{subfinder_install}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4df6ac24144c1a4ef11a02595af6bdd9}{%
            family={{ProjectDiscovery}},
@@ -114,45 +120,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Install - Nuclei}
-      \field{urlday}{7}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://docs.projectdiscovery.io/opensource/nuclei/install
-      \endverb
-      \verb{url}
-      \verb https://docs.projectdiscovery.io/opensource/nuclei/install
-      \endverb
-    \endentry
-    \entry{subfinder_install}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4df6ac24144c1a4ef11a02595af6bdd9}{%
-           family={{ProjectDiscovery}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{fullhash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{fullhashraw}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{bibnamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorbibnamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authornamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorfullhash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorfullhashraw}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \field{extraname}{3}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
       \field{title}{Install - Subfinder}
-      \field{urlday}{7}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
       \field{year}{2026}
@@ -165,111 +134,85 @@
       \verb https://docs.projectdiscovery.io/opensource/subfinder/install
       \endverb
     \endentry
-    \entry{debian_distrib}{online}{}{}
+    \entry{gnu_awk}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1afb67d6a40d51b3d44186b68ac91062}{%
-           family={{The Debian Project}},
-           familyi={T\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=e97428ff6ae49c1c32bab11b21e14d63}{%
+           family={Robbins},
+           familyi={R\bibinitperiod},
+           given={Arnold\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{fullhash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{fullhashraw}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{bibnamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorbibnamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authornamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorfullhash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorfullhashraw}{1afb67d6a40d51b3d44186b68ac91062}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \strng{namehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{fullhash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{fullhashraw}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{bibnamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorbibnamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authornamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorfullhash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorfullhashraw}{e97428ff6ae49c1c32bab11b21e14d63}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Getting Debian}
-      \field{urlday}{7}
+      \field{title}{GNU Awk User's Guide}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
-      \field{year}{2026}
+      \field{year}{2009}
       \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://www.debian.org/distrib/
+      \verb https://www.gnu.org/software/gawk/manual/gawk.html#Regexp
       \endverb
       \verb{url}
-      \verb https://www.debian.org/distrib/
-      \endverb
-    \endentry
-    \entry{go_install}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fd8d286ba5df2d959dd78d365c991289}{%
-           family={{The Go Authors}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{fullhash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{fullhashraw}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{bibnamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorbibnamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authornamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorfullhash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorfullhashraw}{fd8d286ba5df2d959dd78d365c991289}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Download and install - The Go Programming Language}
-      \field{urlday}{7}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://go.dev/doc/install
-      \endverb
-      \verb{url}
-      \verb https://go.dev/doc/install
+      \verb https://www.gnu.org/software/gawk/manual/gawk.html#Regexp
       \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
-    \entry{amass_snapcraft}{online}{}{}
+    \entry{rfc4632_cidr}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=aacfea8cb27c1b8d0dd136a1aca2f0a4}{%
-           family={{Canonical Ltd.}},
-           familyi={C\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=21c721cd27ff84a6f05781b517af7e39}{%
+           family={AWS},
+           familyi={A\bibinitperiod},
+           given={Amazon},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{fullhash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{fullhashraw}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{bibnamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorbibnamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authornamehash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorfullhash}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \strng{authorfullhashraw}{aacfea8cb27c1b8d0dd136a1aca2f0a4}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \list{institution}{1}{%
+        {AWS}%
+      }
+      \strng{namehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{fullhash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{fullhashraw}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{bibnamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorbibnamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authornamehash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorfullhash}{21c721cd27ff84a6f05781b517af7e39}
+      \strng{authorfullhashraw}{21c721cd27ff84a6f05781b517af7e39}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Install amass on Debian using the Snap Store}
-      \field{urlday}{7}
+      \field{title}{¿Qué es el CIDR?}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
-      \field{year}{2026}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://snapcraft.io/install/amass/debian
+      \verb https://aws.amazon.com/es/what-is/cidr/
       \endverb
       \verb{url}
-      \verb https://snapcraft.io/install/amass/debian
+      \verb https://aws.amazon.com/es/what-is/cidr/
       \endverb
     \endentry
     \entry{httpx_install}{online}{}{}
@@ -296,7 +239,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Install - httpx}
-      \field{urlday}{7}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
       \field{year}{2026}
@@ -309,7 +252,7 @@
       \verb https://docs.projectdiscovery.io/opensource/httpx/install
       \endverb
     \endentry
-    \entry{nuclei_install}{online}{}{}
+    \entry{subfinder_install}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4df6ac24144c1a4ef11a02595af6bdd9}{%
            family={{ProjectDiscovery}},
@@ -332,45 +275,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Install - Nuclei}
-      \field{urlday}{7}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://docs.projectdiscovery.io/opensource/nuclei/install
-      \endverb
-      \verb{url}
-      \verb https://docs.projectdiscovery.io/opensource/nuclei/install
-      \endverb
-    \endentry
-    \entry{subfinder_install}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4df6ac24144c1a4ef11a02595af6bdd9}{%
-           family={{ProjectDiscovery}},
-           familyi={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{fullhash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{fullhashraw}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{bibnamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorbibnamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authornamehash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorfullhash}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \strng{authorfullhashraw}{4df6ac24144c1a4ef11a02595af6bdd9}
-      \field{extraname}{3}
-      \field{sortinit}{P}
-      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
       \field{title}{Install - Subfinder}
-      \field{urlday}{7}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
       \field{year}{2026}
@@ -383,74 +289,42 @@
       \verb https://docs.projectdiscovery.io/opensource/subfinder/install
       \endverb
     \endentry
-    \entry{debian_distrib}{online}{}{}
+    \entry{gnu_awk}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=1afb67d6a40d51b3d44186b68ac91062}{%
-           family={{The Debian Project}},
-           familyi={T\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=e97428ff6ae49c1c32bab11b21e14d63}{%
+           family={Robbins},
+           familyi={R\bibinitperiod},
+           given={Arnold\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
       }
-      \strng{namehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{fullhash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{fullhashraw}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{bibnamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorbibnamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authornamehash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorfullhash}{1afb67d6a40d51b3d44186b68ac91062}
-      \strng{authorfullhashraw}{1afb67d6a40d51b3d44186b68ac91062}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \strng{namehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{fullhash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{fullhashraw}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{bibnamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorbibnamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authornamehash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorfullhash}{e97428ff6ae49c1c32bab11b21e14d63}
+      \strng{authorfullhashraw}{e97428ff6ae49c1c32bab11b21e14d63}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Getting Debian}
-      \field{urlday}{7}
+      \field{title}{GNU Awk User's Guide}
+      \field{urlday}{20}
       \field{urlmonth}{9}
       \field{urlyear}{2026}
-      \field{year}{2026}
+      \field{year}{2009}
       \field{urldateera}{ce}
       \true{nocite}
       \verb{urlraw}
-      \verb https://www.debian.org/distrib/
+      \verb https://www.gnu.org/software/gawk/manual/gawk.html#Regexp
       \endverb
       \verb{url}
-      \verb https://www.debian.org/distrib/
-      \endverb
-    \endentry
-    \entry{go_install}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fd8d286ba5df2d959dd78d365c991289}{%
-           family={{The Go Authors}},
-           familyi={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{fullhash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{fullhashraw}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{bibnamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorbibnamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authornamehash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorfullhash}{fd8d286ba5df2d959dd78d365c991289}
-      \strng{authorfullhashraw}{fd8d286ba5df2d959dd78d365c991289}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Download and install - The Go Programming Language}
-      \field{urlday}{7}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{year}{2026}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://go.dev/doc/install
-      \endverb
-      \verb{url}
-      \verb https://go.dev/doc/install
+      \verb https://www.gnu.org/software/gawk/manual/gawk.html#Regexp
       \endverb
     \endentry
   \enddatalist

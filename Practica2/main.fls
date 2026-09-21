@@ -696,14 +696,6 @@ INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
 INPUT ./portada_img/izq.png
-INPUT ./portada_img/der.png
-INPUT ./portada_img/der.png
-INPUT ./portada_img/der.png
-INPUT ./portada_img/der.png
-INPUT ./portada_img/izq.png
-INPUT ./portada_img/izq.png
-INPUT ./portada_img/izq.png
-INPUT ./portada_img/izq.png
 INPUT /usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./portada_img/der.png
 INPUT ./portada_img/der.png

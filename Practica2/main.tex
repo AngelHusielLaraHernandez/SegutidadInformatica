@@ -468,7 +468,7 @@ Esto lo que podria provar en un futuro es que en caso de que el proveedor extern
 directamente en los navegadores de los usuarios de la facultad sin que el sitio pueda detectarlo
 
 \section{Actividades:}
-\subsection{Actividad 1 (identificacion de API keys:)}
+\subsection{Actividad 1: identificacion de API keys:}
 
 \textbf{Consulte la documentación de la herramienta subfinder y busque las instrucciones
 para la configuración después de la instalación. Identifique cuales son las distintas
@@ -550,7 +550,7 @@ En la línea de abajo debemos poner un guion y nuestra llave.
 \newpage
 Con esto configurado, guardamos el archivo en nano, lo que hace que la herramienta subfinder ya se encuentre lista para utilizar estas dos nuevas fuentes en los próximos escaneos de subdominios.
 
-\subsection{Subfinder para buscar en unam.mx:}
+\subsection{Actividad 2:Subfinder para buscar en unam.mx:}
 
 \textbf{Utilice la herramienta subfinder para recolectar toda la información disponible para
 el dominio “unam.mx”.}
@@ -637,7 +637,7 @@ que pertenecen a la FI.
 Ya sea con respecto al comando head, se deja ver como estos comandos son los correctos, por que se dejan ver los dominios de ingenieria o 
 de fi-a, fi-b, fi-c y fi-p, que son los que pertenecen a la facultad de ingenieria.
 
-\subsection{Rangos de IP en formato CIDR:}
+\subsection{Actividad 4: Rangos de IP en formato CIDR:}
 
 \textbf{Indique cuales son los rangos de direcciones IP, usando notación CIDR, que utilizan
 los siguientes subdominios:}
@@ -649,7 +649,7 @@ los siguientes subdominios:}
   \item fi-p*
 \end{enumerate}
 
-Ahora bien, antes de sacar los rangos completos, lo primero que hicimos fue ver qué dirección IP exacta tenía cada uno de los subdominios que filtramos de la facultad. Para esto armamos un comando en la terminal usando \texttt{awk} y \texttt{dig}, lo que hace que lea nuestra lista, consulte al servidor DNS y nos escupa el dominio junto con su IP en la misma línea.
+Ahora bien, antes de sacar los rangos completos, lo primero que hice fue ver qué dirección IP exacta tenía cada uno de los subdominios que filtramos de la facultad. Para esto armamos un comando en la terminal usando \texttt{awk} y \texttt{dig}, lo que hace que lea nuestra lista, consulte al servidor DNS y nos regrese el dominio junto con su IP en la misma línea.
 
 El comando utilizado fue el siguiente:
 
@@ -692,12 +692,14 @@ for group in fi-a fi-b fi-c fi-p; do echo "== $group =="; awk -v g="$group" 'tol
 Donde en este caso, al tener muchos subdominios aunque sea 
 de una sola dependencia es el caso de nuestra facultad 
 siguen siendo muchos, por lo que 
-se hace un ciclo for, donde lo que hace 
-es iterar sobre los cuatro grupos principales los cuales son 
-fi-a, fi-b, fi-c y fi-p. 
+se hace el ciclo inicial for group, este se va ejecutar 
+4 veces esto por que va ir deseconolando fi-a, fi-b, fi-c y fi-p, 
+y para cada uno de estos grupos va a ejecutar el comando awk que lo que 
+hace es filtrar los subdominios correspondientes a cada grupo.
 
 Adentro del ciclo, utilizamos awk que esta se usa mas que nada 
-para extraer los subdominios correspondientes a cada grupo. 
+para extraer los subdominios correspondientes a cada grupo, de hecho es por eso que cuando llamamos a echo, le estamos pasando 
+la bandera de group, por eso imprimi el grupo correspondiente. 
 Después, pasamos esa lista a un while read 
 que le ejecuta el comando dig +short A, donde 
 este comando de dig short ya lo utlizamos antes en clase, 
@@ -707,6 +709,18 @@ usamos otro awk y un sort -u
 para agrupar todas las IPs descubiertas en bloques de red con un prefijo de 24, 
 y esto hace que se eliminen los duplicados.
 
+De hecho lo que se hace con el primer comando es que de igual forma iniciar con el ciclo for, no obstante 
+lo que se intento fue hacer que todo lo que nos diera dig, se convirtiera en el bloques de 
+formato /24 para la notacion, pero el problema fue que si el servidor DNS no 
+respondia con una IP valida, el comando fallaba y que lo que nos regresaba era basura, por que lo 
+que salia era la direccion web junto con el ultimo octeto en 0 y prefijo 24 lo que hacia 
+es que se cortara, por lo que para solucionar el error, lo que e implemento 
+fue el grep que llevaba el rango de 0 a 9 
+que lo que hace es que solo tome 
+las lineas que empiecen con un numero y un punto, 
+esto por que todas las direcciones IP empiezan con un numero 
+y un punto son las direcciones reales.
+
 Por lo que la salida, de este comandos nos esta dando los siguientes rangos:
 
 \begin{itemize}
@@ -715,11 +729,7 @@ Por lo que la salida, de este comandos nos esta dando los siguientes rangos:
     \item \textbf{fi-c*:} 132.248.139.0/24
     \item \textbf{fi-p*:} 132.248.52.0/24
 \end{itemize}
-
-Por ultimo para poder ponerlos en la notacion 
-CIDR, que es la que se nos pide, 
-es necesario consultar la base de datos de asignación de IPs. 
-
+De esta forma tenfriamos las direcciones ip en formato CIDR, pero para poder confirmar que estas direcciones IP pertenecen a la red de la UNAM, es necesario hacer una consulta WHOIS para confirmar que estas direcciones IP pertenecen a la red de la UNAM.
 Para esto, tomamos una dirección IP representativa de nuestras redes descubiertas, donde en este caso la 132.248.54.121 de thor.fi-a y 
 le pasamos el comando whois, filtrando la salida con grep para que nos traiga directamente la línea del bloque CIDR.
 
@@ -739,9 +749,8 @@ en realidad pertenecen a una única de red asignada a
 la universidad, 
 que corresponde al bloque CIDR \textbf{132.248.0.0/16}.
 
-Ademas de que, si observamos bien los 
-resultados del grupo fi-a, 
-notamos una excepción con una IP que empieza con 
+Ademas de que, un punto importante, fue que para fi-a nos dieron dos rangos de ip, por lo que
+directamente se ve una excepción con la
 35.X.X.X. Si le aplicamos el mismo comando whois 
 a esa IP:
 
@@ -757,9 +766,8 @@ whois 35.172.49.191 | grep -iE 'cidr|route|inetnum'
 
 La consola nos arroja bloques distintos (como el \textbf{35.160.0.0/12}), lo que indica que ese servidor en específico (\texttt{sitios2.fi-a.unam.mx}) se encuentra alojado fuera de la red física de la facultad, en una infraestructura externa en la nube.
 
-\newpage
 
-\subsection{Realizar lista con httpx de las páginas fi-a, fi-b, fi-c y fi-p:}
+\subsection{Actividad 5: Realizar lista con httpx de las páginas fi-a, fi-b, fi-c y fi-p:}
 
 \textbf{Utilice la herramienta httpx y genere una lista con los servicios web activos
 asociados a todos los subdominios identificados en: fi-a*, fi-b*, fi-c* y fi-p*. Incluya en
@@ -791,7 +799,7 @@ httpx -status-code -title -tech-detect -list objetivos_fi.txt
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1.0\textwidth]{img/image13.png}
+  \includegraphics[width=0.9\textwidth]{img/image13.png}
   \caption{Inicio de la ejecución de httpx sobre los objetivos internos de la FI.}
 \end{figure}
 
@@ -809,7 +817,7 @@ qué está corriendo en cada equipo.
 \end{figure}
 
 
-\subsection{Análisis de los datos generados por la herramienta httpx}
+\subsection{Actividad 6: Análisis de los datos generados por la herramienta httpx}
 
 \textbf{Realice un análisis de los datos generados por la herramienta httpx, ¿qué puede
 concluir a partir de los datos?}
@@ -855,8 +863,6 @@ en sus servicios base (como Apache, PHP y OpenSSL)
 pueden llegar a exitir vulnerabilidad, lo que los vuelve 
 de facil acceso si se encuentran mas vulnerabilidades en esos sistemas antiguos. 
 
-
-\newpage
 
 % Impresión Referencias
 \nocite{*}
