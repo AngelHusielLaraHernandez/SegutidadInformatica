@@ -1,0 +1,20 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Desarrollo}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}instalacion y comprobacion de nmap}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Encendido de la maquina virtual secundaria webserver:}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Identificacion de la ip de EvilBox}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Utilizar nmap para iniciar las tareas de reconocimiento: }{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Escaneo rapido sobre los host identificado:}{3}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Analisis a profundidad del puerto 80 sobre la IP destino:}{4}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Actividades}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Actividad 1: (Utilizar bandera -A)}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Actividad 2: Identificar servicios publicados}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Actividad 3: Identificar versiones de software}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Actividad 4: Identificar puerto y versión de SSH}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Actividad 5: Instalación de Hydra}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Actividad 6: Verificacion de hydra}{7}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Actividad 7: Diccionario de contraseñas 100k millones:}{8}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Actividad 8: Ataque de diccionario con Hydra}{8}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Actividad 8: ¿Cuál es la cuenta vulnerable a un ataque de diccionario en el servidor web, cuál es su contraseña?}{9}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Actividad 9: Verificación de credenciales y acceso inicial}{10}{subsection.2.10}%
+\contentsline {section}{Referencias}{12}{section*.13}%

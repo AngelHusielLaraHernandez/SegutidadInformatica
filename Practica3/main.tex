@@ -1,0 +1,636 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS --
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing,babel}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE CÓDIGO ---
+\usepackage{listings}
+% Configuración del estilo de listings
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}   
+\definecolor{keyword}{rgb}{0.0,0.2,0.6}     
+\definecolor{comment}{rgb}{0.25,0.5,0.35}   
+\definecolor{string}{rgb}{0.6,0.0,0.0}      
+\definecolor{number}{rgb}{0.5,0.0,0.5}      
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+\definecolor{cmdblue}{RGB}{0, 114, 188}
+\definecolor{cmdred}{RGB}{204, 0, 0}       
+\definecolor{cmdgreen}{RGB}{13, 165, 13}   
+\definecolor{cmdgray}{RGB}{128, 128, 128} 
+\definecolor{bgcode}{RGB}{248, 248, 248}   
+
+
+\lstset{
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  literate={á}{{\'a}}1
+           {é}{{\'e}}1
+           {í}{{\'i}}1
+           {ó}{{\'o}}1
+           {ú}{{\'u}}1
+           {Á}{{\'A}}1
+           {É}{{\'E}}1
+           {Í}{{\'I}}1
+           {Ó}{{\'O}}1
+           {Ú}{{\'U}}1
+           {ñ}{{\~n}}1
+           {Ñ}{{\~N}}1
+           {¿}{{\textquestiondown}}1
+           {¡}{{\textexclamdown}}1
+}
+
+% Estilo para código en C
+\lstdefinestyle{cstyle}{
+  language=C,
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+    keywordstyle=[2]\color{yellow!70!orange}\bfseries,
+    morekeywords=[2]{MPI_Init,MPI_Comm_size,MPI_Comm_rank,MPI_Send,MPI_Recv,MPI_Scatter,MPI_Gather,MPI_Bcast,MPI_Reduce,MPI_Finalize},
+    emph={printf},
+    emphstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false
+}
+\lstdefinestyle{consolaSeguridad}{
+    language=bash,
+    basicstyle=\ttfamily\footnotesize,
+    backgroundcolor=\color{bgcode},
+    % Herramientas y comandos de la práctica
+    morekeywords={subfinder, httpx, hydra, ssh, id, nuclei, dig, whois, grep, awk, sort, cut, sed, tr, nano, wc, head, echo, sudo, nmap, wget, curl, ip},
+    keywordstyle=\color{cmdblue}\bfseries,
+    % Palabras reservadas de ciclos Bash
+    emph={for, in, do, done, while, read},
+    emphstyle=\color{cmdred}\bfseries,
+    stringstyle=\color{cmdgreen},
+    commentstyle=\color{cmdgray}\itshape,
+    showstringspaces=false,
+    breaklines=true,
+    breakatwhitespace=false,
+    frame=single,
+    rulecolor=\color{black!30},
+    numbers=none,
+    literate={-}{{\textcolor{black}{-}}}1 % Evita que los guiones de parámetros se coloreen
+}
+
+% Definición del lenguaje Python para listings
+\lstdefinelanguage[LAB]{Python}{
+    morekeywords={False, None, True, and, as, assert, async, await, break,
+                                class, continue, def, del, elif, else, except, finally,
+                                for, from, global, if, import, in, is, lambda, nonlocal,
+                                not, or, pass, raise, return, try, while, with, yield,
+                                machine, Pin, PWM, ADC, Timer, sleep_ms, sleep_us},
+    morecomment=[l]{\#},
+    morestring=[b]",
+    morestring=[b]',
+    sensitive=true
+}
+
+% Estilo para salidas de consola/terminal
+\lstdefinestyle{output}{
+  backgroundcolor=\color{black!5},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  frame=single,
+  rulecolor=\color{black!30},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  xleftmargin=0.5cm,
+  xrightmargin=0.5cm
+}
+
+% --- ESTILOS PARA DIAGRAMAS DE FLUJO (TIKZ) ---
+\tikzset{
+  startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30},
+  process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30},
+  decision/.style={diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30},
+  io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30},
+  arrow/.style={thick,->,>=stealth}
+}
+
+
+\definecolor{azulresultado}{HTML}{0072C6}
+\definecolor{rojoacarreo}{HTML}{FF0000}
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=25mm, 
+    right=25mm,
+    top=35mm,
+    bottom=30mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip} 
+\usepackage{lipsum}  
+
+% --- VARIABLES GLOBALES ---
+\newcommand{\materia}{}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+
+\fancypagestyle{estiloindice}{
+  \fancyhf{} 
+  \fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+  \fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+  \renewcommand{\headrulewidth}{0.4pt} 
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+
+{\hypersetup{linkcolor=black}\tableofcontents}
+\thispagestyle{estiloindice}
+
+
+\newpage
+
+\thispagestyle{fancy}
+\setcounter{page}{1}
+\singlespacing
+
+\section{Desarrollo}
+\subsection{instalacion y comprobacion de nmap}
+
+Para el caso de nmap, como en las anteriores practicas, ya se ha realizado esto 
+por loq eu ya no fue necesario la instalacion de la misma, no obstante, el comando para la instalacion en todo caso 
+fue este:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo apt-get install nmap
+\end{lstlisting}
+
+Por lo que, para comprobar que nmap este correctamente instalado 
+se ejecuto el comando con la bandera -h, que es el siguiente:
+\begin{lstlisting}[style=consolaSeguridad]
+  nmap -h
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/image2.png}
+  \caption{Comprobacion de nmap}
+\end{figure}
+
+La bandera -h, lo que nos trae de vuelta 
+es la ayuda de nmap, que es donde se nos muestra la sintaxis de los comandos 
+y las bandeeras que se pueden utilizar, por lo que 
+directamente nos indica que nmap esta instalacion, por que la consola fue lo que nos regreso.
+
+\subsection{Encendido de la maquina virtual secundaria webserver:}
+
+Para el encendido de la maquina virtual, como se vio en la clase, solo fue necesario descar el comprimido 
+y seleccionar en new virtual machine y seleccionar el archivo de la maquina virtual y revisar que el adaptador 
+este en modo NAT, esto por que 
+la maquina webserver tiene que estar en la misma red 
+que nuestra maquina atacante que es la evilbox, por lo que 
+al enceder la maquina virtual directamente nos manda a la pantalla de login que es la siguiente:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/image1.png}
+  \caption{Pantalla de login de la maquina virtual webserver}
+\end{figure}
+
+\subsection{Identificacion de la ip de EvilBox}
+
+Para poder ver la ip a la que pertenece nuestra maquina atacante 
+se utilizo el siguiente comando: 
+
+\begin{lstlisting}[style=consolaSeguridad]
+  ip a
+\end{lstlisting}
+
+La bandera a, lo que hace es mostrar todas las interfaces de red que tiene nuestra maquina, por lo que
+la ip que nos interesa es la que pertenece a la interfaz eth0, que es la que esta conectada 
+a la red NAT, esta ip fue la siguiente: 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/image4.png}
+  \caption{Identificacion de la ip de EvilBox}
+\end{figure}
+
+\textbf{IP de EvilBox: 192.168.177.128}
+
+\subsection{Utilizar nmap para iniciar las tareas de reconocimiento: }
+
+\textbf{Utilice la herramienta nmap instalada en el equipo evilbox para iniciar con las tareas
+de reconocimiento. Ejecute un escaneo rápido enviando un ping a todos los host del
+segmento de red al que pertenece la dirección IP del equipo evilbox. Ejecute el
+siguiente comando, ajustando el segmento de red según corresponda:}
+
+Para esto se utilizo el el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo nmap -sP 192.168.177.0/24
+\end{lstlisting}
+
+Donde la bandera -sP, lo que hace es que nos 
+muestre todos los host activos en nuestro segmento correspondiente 
+donde es por eso que se quita el utimo octeto y se remplzada por un 0 
+y se le agrega la barra y el numero 24, que es la mascara de subred, por lo que
+el resultado que nos arroja es el siguiente:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image5.png}
+  \caption{Resultado del escaneo de nmap}
+\end{figure}
+
+Donde en este caso el comando nos arroja que existen 5 host activos,
+donde se nos da las ip de cada uno de ellos, donde una de ellas somos nosotros, las
+otras son \texttt{192.168.177.2}, \texttt{192.168.177.129}, 
+\texttt{192.168.177.254} y \texttt{192.168.177.128}
+
+\subsection{Escaneo rapido sobre los host identificado:}
+
+Para poder ver cual es la ip que nos interesa, es necesario hacer un escaneo primero
+sobre cada uno de los host, esto quiere decir cada direccion IP
+que nos arrojo el comando anterior, para eso se va utilizar la bandera -F,
+donde esta bandera lo que hace es que nos hace un escaneo 
+rapido sobre los hosts, y la salidas que veremos sera los 
+puertos que estan abiertos y los servicios que estan corriendo en cada uno de ellos, por lo que se realizo el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo nmap -F 192.168.177.2 192.168.177.129 192.168.177.254 192.168.177.128
+\end{lstlisting}
+
+Con esta salida, s enos deja ver que la ip que nos interesa 
+es la 192.168.177.129, esto por que es la unica que tiene puerto 80 con http, ademas de eso 
+lo que nos da es que tiene 2 puertos abiertos y lo qeu esta corriendo en el puerto 111 es rpcbind, 
+pero como se nos puso en las intrucciones el objetivo es del puerto 80.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/image6.png}
+  \caption{Resultado del escaneo rápido sobre los host identificados}
+\end{figure}
+
+\subsection{Analisis a profundidad del puerto 80 sobre la IP destino:}
+
+\textbf{Realice un análisis a mayor profundidad sobre el host que presenta el servicio HTTP
+en el puerto 80. Utilice la bandera “-sV” para obtener la versión del software
+publicado en el puerto específico. Utilice la bandera “-p” para indicar el puerto de
+interés.}
+
+Para esto lo que hace el comando con la bandera -sV es que nos da la version del software que esta corriendo en el puerto 80, y con la bandera -p le indicamos el puerto de interes, por lo que se realizo el siguiente comando:
+
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo nmap -sV -p 80 192.168.177.129
+\end{lstlisting}
+
+Ahora bien, el por que del puerto 80 
+es por que nos interesa, ya que es el que tiene 
+el servicio http, y lo que nos arroja el comando es 
+la version del software que esta corriendo en ese puerto, 
+por lo que nos arroja la siguiente salida:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image7.png}
+  \caption{Resultado del analisis a profundidad del puerto 80 sobre la IP destino}
+\end{figure}
+
+La version que nos arroja es la de Apache httpdd 2.4.10 de debian, 
+lo cual nos indica que el servidor web esta corriendo con esta version.
+\newpage
+
+\section{Actividades}
+
+\subsection{Actividad 1: (Utilizar bandera -A)}
+
+\textbf{Utilice la bandera “-A” para escanear el servicio web publicado en el puerto 80,
+¿Cuál es el valor del campo “http-title” identificado por nmap?}
+
+Para esto se realizo el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo nmap -A -p 80 192.168.177.129
+\end{lstlisting}
+
+Lo que hace la bandera -A es que hace un escaneo pero mas agresivo, 
+por lo que nos arroja mas informacion, la forma 
+en que hace el esceneo es que hace un escaneo de version, un escaneo de sistema operativo, un escaneo de script y un escaneo traceroute, ahora bien 
+la bandera -p es para indicar el puerto de interes, que vuelve a hacer en este caso 
+el puerto 80, por lo que nos arroja la siguiente salida:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image8.png}
+  \caption{Resultado del escaneo agresivo sobre el puerto 80}
+\end{figure}
+
+En nuestra salida el valor de http-title es :
+\textbf{Apache2 Debian Default Page: It works}
+
+En nuestra salida el valor de http-server -header es: 
+\textbf{Apache/2.4.10 (Debian)}
+
+Esto lo que nos quiere decir es que 
+el servidor web esta corriendo con la version 
+de apache 2.4.10 de debian, y que la pagina web 
+que esta corriendo es la pagina por default de apache.
+\newpage
+
+\subsection{Actividad 2: Identificar servicios publicados}
+
+\textbf{Realice un escaneo para identificar todos los servicios publicados por el servidor.}
+
+Ahora bien, para esto 
+para poder los servicios que se tiene en webService, 
+se tiene que lanzar un escaneo completo pero esta vez en lugar de ser al puerto 80, sera 
+a todos los puertos de nuestro servidor. 
+
+El comando es el siguiente:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo nmap -sV -p- 192.168.177.129
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image9.png}
+  \caption{Escaneo completo de puertos y servicios con nmap}
+\end{figure}
+
+Lo que hace la bandera \texttt{-p-} es decirle a nmap que 
+no solo escanee los puertos comunes, sino que analice 
+los 65,535 puertos disponibles, osea todos los puertos. 
+
+\subsection{Actividad 3: Identificar versiones de software}
+
+\textbf{Utilice el switch correspondiente en nmap para identificar las versiones de software
+usadas por cada servicio. ¿Cuántos y cuáles servicios es posible identificar?}
+
+Para esto, el switch correspondiente que 
+utilizamos dentro del comando anterior para lograr esto
+fue con la bandera -sV, que lo que nos dice es la version del servicio, 
+la razon de esto, es por que pregunta a los puertos 
+abiertos que informacion tiene, esto para poder 
+ver la version del srvicio y el nombre.
+
+Ademas de esto, la salida de la consola, 
+nos da un total de 4 servicios activos:
+
+\begin{itemize}
+    \item \textbf{http} publicado en el puerto 80, utilizando la versión Apache httpd 2.4.10 ((Debian)).
+    \item \textbf{rpcbind} publicado en el puerto 111, utilizando la versión 2-4.
+    \item \textbf{ssh} publicado en el puerto 13337, utilizando la versión OpenSSH 6.7p1 Debian.
+    \item \textbf{status} publicado en el puerto 35281, utilizando la versión 1.
+\end{itemize}
+
+
+\subsection{Actividad 4: Identificar puerto y versión de SSH}
+
+\textbf{¿Cuál es el puerto en el que está publicado el servicio SSH?, ¿Cuál es la versión del servicio SSH?}
+
+Siguiendo de la captura anterior, 
+el puerto ssh que nos arrojo el comando nmap es el puerto 13337 y la versión exacta es OpenSSH 6.7p1 Debian.
+
+\subsection{Actividad 5: Instalación de Hydra}
+
+Ahora como bien se nos puso desde la practica 1, ya se instalo hydra, por lo que 
+no es necesario usar el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  sudo apt-get install hydra
+\end{lstlisting}
+
+\subsection{Actividad 6: Verificacion de hydra}
+
+No obstante, el comando que si se puede utilizar es el siguiente que utiliza la bandera -h, para 
+revisar que este instalado correctamente, y que nos muestre la ayuda de la herramienta, por lo que se realizo el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  hydra -h
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image11.png}
+  \caption{Comprobación de la instalación de hydra}
+\end{figure}
+
+\subsection{Actividad 7: Diccionario de contraseñas 100k millones:}
+
+\textbf{Descargue un diccionario con contraseñas comunes, por ejemplo el diccionario de
+10,000,000 de contraseñas comunes. Descargue el archivo en su máquina evilbox
+con el siguiente comando:}
+
+Para lo siguiente, como el link puesto esta obseleto, se tuvo que poner 
+el link para para descargar el diccionario de contraseñas, esto por medio del comando 
+wget, que lo que hace es descargar el archivo de la url que se le pasa, por lo que se realizo el siguiente comando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  wget https://github.com/danielmiessler/SecLists/blob/9d2f69ac5816c788233be2733aab24522477f13e/Passwords/Common-Credentials/100k-most-used-passwords-NCSC.txt
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image12.png}
+  \caption{Descarga del diccionario de contraseñas con wget}
+\end{figure}
+
+\subsection{Actividad 8: Ataque de diccionario con Hydra}
+
+\textbf{¿Cuál es la cuenta vulnerable a un ataque de diccionario en el servidor web, cuál es su contraseña? Utilice el formato cuenta::password}
+
+Ahora bien, para esto 
+el comando que se nos pide 
+es el siguiente:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  hydra -l <USER> -P 10-million-password-list-top.txt -s PORT ssh://IP
+\end{lstlisting}
+
+Donde lo que hace este comando directamtne es atacar 
+por medio del servicio SSH, ahora bien 
+en la variable PORT, se tiene que colocar el puerto que se obtuvo por medio de los comandos anteriores de nmap,
+que en este caso es el puerto 13337. 
+
+En el caso de la varaible USER, se tiene que colocar el usuario 
+que se obtuvo por medio de los comandos anteriores, 
+en este caso es webadmin. 
+
+Quedando el comando final de la siguiente manera:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  hydra -l webadmin -P 100k-most-used-passwords-NCSC.txt -t 4 -s 13337 ssh://192.168.177.129
+\end{lstlisting}
+
+Donde en este caso, la bandera -l indica el usuario objetivo que es webadmin, 
+-P le pasa nuestro diccionario descargado, -t 4 
+limita los hilos de conexión a 4 para no saturar y bloquear el servicio SSH.
+
+\textbf{Salida de la consola:}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image13.png}
+  \caption{Ejecución exitosa del ataque de diccionario con hydra}
+\end{figure}
+En este caso, se tuvo que intentar varias veces, por que ssh me bloqueo varias veces, ademas de que se tardo aproximadamente 1 hora en encontrar la contraseña.
+
+
+Este comando funciona de la siguiente manera, primero hace un intento de conexión con el usuario webadmin y la primera contraseña del diccionario, 
+si no es correcta, hace un segundo intento con 
+la segunda contraseña del diccionario, 
+y así sucesivamente hasta que encuentra la contraseña 
+correcta o se queda sin contraseñas en el diccionario.
+
+\subsection{Actividad 8: ¿Cuál es la cuenta vulnerable a un ataque de diccionario en el servidor web, cuál es
+su contraseña?}
+
+En la salida de la consola, despues de que paso
+una hora de ejecucion, hydra paro 
+y nos muestra la contraseña en la terminal y la forma que nos la muestra, es
+que la credencial valida, la marca en color verde. 
+
+La cuenta vulnerable y su contraseña es:
+
+\textbf{webadmin::toronto}
+
+\subsection{Actividad 9: Verificación de credenciales y acceso inicial}
+
+\textbf{Compruebe las credenciales identificadas estableciendo una conexión vía SSH al servidor web y ejecute el comando id ¿Cuál es la salida del comando?}
+
+
+Ahoea bien, por ultimo, despues de tener la contraseña
+se puede ingresar por medio de ssh, 
+para esto incidamos el usuario, la IP y el puerto especial:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  ssh webadmin@192.168.177.129 -p 13337
+\end{lstlisting}
+
+Una vez dentro, por ser la primera vez nos pide agregarlo a directorios seguros, 
+despues de aceptar nos pide la contraseña, donde 
+colocamos toronto y 
+ejecutamos el comando \texttt{id}, 
+el cual nos devuelve la identidad y 
+los grupos del usuario con el que estamos operando:
+
+\begin{lstlisting}[style=consolaSeguridad]
+  id
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/image14.png}
+  \caption{Conexión exitosa por SSH y ejecución del comando id}
+\end{figure}
+
+La salida de la terminal fue: 
+
+\textbf{uid=1000(webadmin) gid=1000(webadmin)}, donde 
+el uid es el que nos importa, por que se trata de el 
+identificador del usuario, y el gid es el identificador del grupo, ademas de que nos da los grupos a los que pertenece el usuario, que en este caso son:
+
+\newpage
+\begin{enumerate}
+  \item webadmin
+  \item cdrom
+  \item floppy
+  \item audio
+  \item dip
+  \item video
+  \item plugdev
+  \item netdev
+  \item lpadmin
+  \item scanner
+  \item bluetooth
+\end{enumerate}
+
+Esto confirma que se logro comprometer la máquina y obtuvimos acceso inicial al servidor webserver.
+
+\newpage
+% Impresión Referencias
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Referencias}]
+\end{document}
