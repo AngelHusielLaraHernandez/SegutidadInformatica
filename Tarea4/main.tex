@@ -1,0 +1,359 @@
+\documentclass[letterpaper,12pt]{article}
+
+% --- PAQUETES DE IDIOMA
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS --
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing,babel}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE CÓDIGO ---
+\usepackage{listings}
+% Configuración del estilo de listings
+\definecolor{codebg}{rgb}{0.95,0.95,0.95}   
+\definecolor{keyword}{rgb}{0.0,0.2,0.6}     
+\definecolor{comment}{rgb}{0.25,0.5,0.35}   
+\definecolor{string}{rgb}{0.6,0.0,0.0}      
+\definecolor{number}{rgb}{0.5,0.0,0.5}      
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+\lstset{
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  literate={á}{{\'a}}1
+           {é}{{\'e}}1
+           {í}{{\'i}}1
+           {ó}{{\'o}}1
+           {ú}{{\'u}}1
+           {Á}{{\'A}}1
+           {É}{{\'E}}1
+           {Í}{{\'I}}1
+           {Ó}{{\'O}}1
+           {Ú}{{\'U}}1
+           {ñ}{{\~n}}1
+           {Ñ}{{\~N}}1
+           {¿}{{\textquestiondown}}1
+           {¡}{{\textexclamdown}}1
+}
+
+
+% Estilo para código en C
+\lstdefinestyle{cstyle}{
+  language=C,
+  backgroundcolor=\color{backcolour},
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+    keywordstyle=[2]\color{yellow!70!orange}\bfseries,
+    morekeywords=[2]{MPI_Init,MPI_Comm_size,MPI_Comm_rank,MPI_Send,MPI_Recv,MPI_Scatter,MPI_Gather,MPI_Bcast,MPI_Reduce,MPI_Finalize},
+    emph={printf},
+    emphstyle=\color{blue}\bfseries,
+  stringstyle=\color{codepurple},
+  commentstyle=\color{codegray}\itshape,
+  numbers=left,
+  numberstyle=\tiny\color{codegray},
+  frame=single,
+  rulecolor=\color{black},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false
+}
+
+% Definición del lenguaje Python para listings
+\lstdefinelanguage[LAB]{Python}{
+    morekeywords={False, None, True, and, as, assert, async, await, break,
+                                class, continue, def, del, elif, else, except, finally,
+                                for, from, global, if, import, in, is, lambda, nonlocal,
+                                not, or, pass, raise, return, try, while, with, yield,
+                                machine, Pin, PWM, ADC, Timer, sleep_ms, sleep_us},
+    morecomment=[l]{\#},
+    morestring=[b]",
+    morestring=[b]',
+    sensitive=true
+}
+
+% Estilo para salidas de consola/terminal
+\lstdefinestyle{output}{
+  backgroundcolor=\color{black!5},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  frame=single,
+  rulecolor=\color{black!30},
+  breaklines=true,
+  tabsize=4,
+  showstringspaces=false,
+  xleftmargin=0.5cm,
+  xrightmargin=0.5cm
+}
+
+% --- ESTILOS PARA DIAGRAMAS DE FLUJO (TIKZ) ---
+\tikzset{
+  startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30},
+  process/.style={rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30},
+  decision/.style={diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30},
+  io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30},
+  arrow/.style={thick,->,>=stealth}
+}
+
+
+\definecolor{azulresultado}{HTML}{0072C6}
+\definecolor{rojoacarreo}{HTML}{FF0000}
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=25mm, 
+    right=25mm,
+    top=35mm,
+    bottom=30mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip} 
+\usepackage{lipsum}  
+
+% --- VARIABLES GLOBALES ---
+\newcommand{\materia}{}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+
+\fancypagestyle{estiloindice}{
+  \fancyhf{} 
+  \fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+  \fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+  \renewcommand{\headrulewidth}{0.4pt} 
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+
+{\hypersetup{linkcolor=black}\tableofcontents}
+\thispagestyle{estiloindice}
+
+
+\newpage
+
+\thispagestyle{fancy}
+\setcounter{page}{1}
+\singlespacing
+
+\section{Charlas asistidas}
+
+\begin{enumerate}
+  \item Perspectivas diferentes en la ciberseguridad. \textbf{Angel Samuel Resendiz Gonzales}
+  \item Del delito fisico al delito digital: como piensan los atacantes y como anticiparse a ellos. \textbf{Mauricio Alan Ilera Diaz}
+\end{enumerate}
+
+\section{Experiencia personal y elementos a destacar de las presentaciones}
+
+\subsection{Perspectivas diferentes en la ciberseguridad}
+
+Para esta primera ponencia, el expositor es un Shift Technology
+Officer, donde todo se centro en que sar las herramientas
+correctas no es lo mismo que saber explotar un sistema o una vulnerabilidad.
+Algo que cabe recalcar que me parecio curioso, fue la mencion de los 
+metaesploits para los principantes, que con un sudo rm -rf /
+se les engaña para que crean que estan haciendo cuando de la nada les borran todo 
+y esto en mas de alguna ocacion lo he visto con personas 
+que no conocen linux o que simplemente por la broma se les dice un rm es borras 
+espacio y es cierto lo que dice el ponente es para atrapa bobos.
+
+Despues paso a la parte de derecho informatico, donde lo que nos explico 
+fue por medio de una
+analogia de una casa con todo abierto abierto, donde lo que nos decia es que uno puede
+verla, reportarla a la policia, pero en el
+momento en que se mete un pie dentro de esa casa, ya se esta violando la ley, y esta 
+analogia si es muy precisa, por que directamente esto lo podemos ver 
+en el mundo del hacking etico, con lo que he llegado a ver de historias 
+donde multan al hacker por avisar que existe una brecha de seguridad, 
+esta analogia, tiene sentido, y ya aunque no tengo alguna experiencia 
+personal sobre eso, esto me hace sentido con lo que he llegado 
+a leer y ver.
+
+Con esto tambien hablo del bug bounty, aclarando que
+cada programa de recompensas tiene limites muy especificos, 
+y que pasarse de esos limites, ya es un delito.
+
+Por ultimo, el tema que mas me llamo la atencion fue el tema del 
+OSINT, donde el ponente nos dijo 
+que muchos de los que apenas inician 
+piensan que es nada mas meter un link a una pagina de IP logger
+y ya con eso se cree que tienen la ubicacion de alguien, 
+pero que en realidad solo lo que regresan es la 
+direccion del provedoor del internet, y esto 
+en lo personal si me paso, cuando recien empece a investigar 
+escuchaba que con la ip de alguien ya se tenia practicamente todo, 
+y al ponerme a investigar que la IP no coincidia con la ubicacion 
+de la persona, empece a leer mas sobre el mismo tema y si dije, 
+que era una gran mentira lo que todos decian, por que al final 
+de todo no esta completamente contado, por que 
+si bien es cierto que con la IP se puede llegar a una ubicacion aproximada,
+pero no es la ubicacion exacta de la persona, regresando 
+con la ponencia, el mismo Angel, nos dijo que llego a usar 
+OSINT combinado con  Have I Been Pwned y una pagina
+.onion para buscar contraseñas filtradas por dominio, incluso encontrando la
+suya propia filtrada, y esto me llamo mas la atencion 
+por que esto en mas d euna vez me ha pasado con Apple y malwarebytes que me avisan 
+tu contraseña se encontro en una filtracion de datos, 
+y luego luego voy a cambiarla, esto me hace hacer sentido con lo que decia 
+el ponente.
+
+Una cosa a recalcar, es que al final hablo de la etica que si a uno le confian una base de datos, 
+no se debe caer en lo no etico de vender los datos de esa base por dinero, 
+por que al final la libertad de una persona vale mas que
+cualquier sistema. Recomendo plataformas como Hack The Box y TryHackMe
+para practicar de forma legal.
+
+\subsection{Elementos a destacar}
+
+\begin{itemize}
+  \item El termino ``atlapabobos" para describir a la gente que ejecuta comandos sin entender
+  que hacen.
+  \item La analogia de la casa con las puertas y ventanas abiertas para explicar donde empieza el
+  delito informatico.
+  \item La explicacion de los limites legales de un programa de bug bounty, y de que pasarse de
+  esos limites ya es delito..
+  \item Diferenciar entre el OSINT superficial que son las paginas de IP
+  y el OSINT real con herramientas como Maltego.
+\end{itemize}
+
+\newpage
+\subsection{Del delito fisico al delito digital: como piensa los atacantes y como anticiparse a ellos.}
+
+En esta segunda charla, el expositor directamente empezo con la ponente Maurcio que se nos hablo que era Chief Security,
+empezando la presentacion, inicio explicando la formula que da resultado al riesgo, donde 
+lo importante para mi, fue que empezo diciendo que esta formula tiene dos variables 
+una es la amenza y la otra es la vulnerabilidad, donde sumadas dan el riesgo, el 
+ponente empezo diciendo que como empresas casi siempre se invierte mas 
+en los guardias hacinedo referencia a la administracion de amenzas, 
+no obstante se deja de lado a la vulnerabilidad, que en resumidas cuentas 
+somos nosotros o las personas que forman parte de la empresa, esto desde mi 
+perspectiva y de lo que he llegado a ver en mi familia y en otras personas, es que es cierto,
+simplemente el ejemplo que puso el ponente fue los correos 
+que engañan, esto mas de una vez lo he tenido que ver en mi familia
+donde sin saber da clic a enlaces que no son de confianza, 
+ahora bien, esto me dejo pensando 
+en que si bien esto pasa en mi familia donde ya trabajan, esto me deja diciendo 
+que Mauricio tiene razon, la empresa en las que estan no contratan 
+alguna empresa para solucionar estos problemas de vulnerabilidad 
+que facilmente se pueden solucionar con capacitaciones, o concientizacion.
+
+Ahora bien, la segunda formula fue la triada de delicuente, mercado y comprador,
+donde se explico que si se rompe cualquiera de los 3 no existe delito, esto 
+por que es un ciclo sin fin, el delicuenta 
+vende en el mercado y el comprador compra, y si esto se llega a romper 
+el ciclo se acaba, nuevamente esto desde que lo he llegado a ver en filtraciones de 
+juegos o hackeos a empresas de videojuegos, esto es cierto, mientras 
+el delcieunte vende el codigo del juego robado, existe un mercado por que 
+es un juego oculto, y eso hace que exista el comprado 
+pero en algunos casos que nadie lo compra, simplemente la mercancia 
+se queda estancada y ya no existe motivo para volver a atacar a la empresa.
+
+Despues de esto explico lo del SID que era la confidencialidad, integridad y
+disponibilidad, donde se nos dijo que era el pila de la seguridad, 
+por que era lo que nos protegia, asi que con esto el presento 3 modelos 
+para poder armar una matriz de riesgo, una fue VIVA, otro fue 
+CiberTac y el ultimo fue NIST, aunque anteriormente ya habia 
+escuchado de la matriz de riesgo, esto en planificaciones de proyectos 
+de software, no lo habia visto esto aplicado a la seguridad, 
+lo cual hace que sea de suma importancia, por que 
+si bien es cierto que cualquiera de los 3 es bueno, lo recomendable 
+es que se utilicen los 3 esto para llegar a un riesgo 
+inherente, y con esto poder llegar a un riesgo residual,
+y con esto poder llegar a un riesgo aceptable, donde el ponente
+nos dijo que el riesgo aceptable es aquel que la empresa esta dispuesta a aceptar en la mayoria 
+de los casos, por que lo ideal es que no exista riesgos en nada.
+
+Algo a recalcar que me parecio de suma importancia es que se nos dijo que esa matriz 
+se tiene que revisar de 3 a 6 meses, esto por que en lo digital 
+va evolucionando mas rapido, y esto es cierto, por que como lo vimos en la clase 
+con las vulnerabilidades, se encuentran un gran numero en tan pocos dias.
+
+Ahora bien, los elementos a destacar de todo esto fue:
+
+\begin{itemize}
+  \item La formula de riesgo = amenaza + vulnerabilidad, y la explicacion de por que como
+  organizaciones se invierte mas en controlar la amenaza que la vulnerabilidad.
+  \item La triada de delincuente, mercado y comprador.
+  \item Los tres modelos para armar una matriz de riesgo: VIVA, CiberTAC y NIST.
+  \item La recomendacion de revisar la matriz de riesgo cada 3 o 6 meses por la evolucion constante de los ataques.
+\end{itemize}
+
+
+\newpage
+
+% Impresión Referencias
+\nocite{*}
+\printbibliography[heading=bibintoc, title={Referencias}]
+\end{document}

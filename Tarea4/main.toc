@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Charlas asistidas}{1}{section.1}%
+\contentsline {section}{\numberline {2}Experiencia personal y elementos a destacar de las presentaciones}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Perspectivas diferentes en la ciberseguridad}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Elementos a destacar}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Del delito fisico al delito digital: como piensa los atacantes y como anticiparse a ellos.}{3}{subsection.2.3}%
+\contentsline {section}{Referencias}{5}{section*.1}%
