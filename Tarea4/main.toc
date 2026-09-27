@@ -4,4 +4,6 @@
 \contentsline {subsection}{\numberline {2.1}Perspectivas diferentes en la ciberseguridad}{1}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Elementos a destacar}{2}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Del delito fisico al delito digital: como piensa los atacantes y como anticiparse a ellos.}{3}{subsection.2.3}%
-\contentsline {section}{Referencias}{5}{section*.1}%
+\contentsline {subsection}{\numberline {2.4}Terraforming the kill chain: de codigo a control}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Elementos a destacar}{6}{subsection.2.5}%
+\contentsline {section}{Referencias}{7}{section*.8}%
