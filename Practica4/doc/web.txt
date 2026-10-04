@@ -1,0 +1,3 @@
+https://ine.com/blog/exploiting-pwnkit-cve-2021-4034-techniques-and-defensive-measures
+
+https://github.com/PwnFunction/CVE-2021-4034 
