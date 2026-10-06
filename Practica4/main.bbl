@@ -1,0 +1,975 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{exploitdb_34923}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0db3ff00c40f781fbb4c03028f134ce6}{%
+           family={{Exploit Database}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{fullhash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{fullhashraw}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{bibnamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorbibnamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authornamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorfullhash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorfullhashraw}{0db3ff00c40f781fbb4c03028f134ce6}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Kernel 3.1.5 - 'fuse\_suid' Local Privilege Escalation}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.exploit-db.com/exploits/34923
+      \endverb
+      \verb{url}
+      \verb https://www.exploit-db.com/exploits/34923
+      \endverb
+    \endentry
+    \entry{ine_pwnkit}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=265df8edb170d446929813934bdc223f}{%
+           family={{INE}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{265df8edb170d446929813934bdc223f}
+      \strng{fullhash}{265df8edb170d446929813934bdc223f}
+      \strng{fullhashraw}{265df8edb170d446929813934bdc223f}
+      \strng{bibnamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authorbibnamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authornamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authorfullhash}{265df8edb170d446929813934bdc223f}
+      \strng{authorfullhashraw}{265df8edb170d446929813934bdc223f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Exploiting {PwnKit} ({CVE-2021-4034}): Techniques and Defensive Measures}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://ine.com/blog/exploiting-pwnkit-cve-2021-4034-techniques-and-defensive-measures
+      \endverb
+      \verb{url}
+      \verb https://ine.com/blog/exploiting-pwnkit-cve-2021-4034-techniques-and-defensive-measures
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2015_1328}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2015-1328}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-1328
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-1328
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2015_8660}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2015-8660}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-8660
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-8660
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_0728}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-0728}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-0728
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-0728
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_2384}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{4}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-2384}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-2384
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-2384
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_5195}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-5195}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-5195
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-5195
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2021_22555}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{6}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2021-22555}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-22555
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-22555
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2021_27365}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{7}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2021-27365}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-27365
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-27365
+      \endverb
+    \endentry
+    \entry{jlsakuya_repo}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{8}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux-Privilege-Escalation-Exploits}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits
+      \endverb
+    \endentry
+    \entry{peass_ng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4ec576a735f0637c79f55882cb224583}{%
+           family={Polop},
+           familyi={P\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{fullhash}{4ec576a735f0637c79f55882cb224583}
+      \strng{fullhashraw}{4ec576a735f0637c79f55882cb224583}
+      \strng{bibnamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorbibnamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authornamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorfullhash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorfullhashraw}{4ec576a735f0637c79f55882cb224583}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{PEASS-ng: linPEAS}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+      \endverb
+      \verb{url}
+      \verb https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+      \endverb
+    \endentry
+    \entry{pwnfunction_pwnkit}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=43490490ec690b25e93cfb9a47e68087}{%
+           family={PwnFunction},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{fullhash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{fullhashraw}{43490490ec690b25e93cfb9a47e68087}
+      \strng{bibnamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorbibnamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authornamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorfullhash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorfullhashraw}{43490490ec690b25e93cfb9a47e68087}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CVE-2021-4034 (PwnKit)}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/PwnFunction/CVE-2021-4034
+      \endverb
+      \verb{url}
+      \verb https://github.com/PwnFunction/CVE-2021-4034
+      \endverb
+    \endentry
+    \entry{wangsafz_cve20170358}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1942b35d0cb845d0be4f35f826aad605}{%
+           family={Wangsafz},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{fullhash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{fullhashraw}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{bibnamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorbibnamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authornamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorfullhash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorfullhashraw}{1942b35d0cb845d0be4f35f826aad605}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{cve-2017-0358.sh}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/Wangsafz/cve-2017-0358.sh
+      \endverb
+      \verb{url}
+      \verb https://github.com/Wangsafz/cve-2017-0358.sh
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{exploitdb_34923}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0db3ff00c40f781fbb4c03028f134ce6}{%
+           family={{Exploit Database}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{fullhash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{fullhashraw}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{bibnamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorbibnamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authornamehash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorfullhash}{0db3ff00c40f781fbb4c03028f134ce6}
+      \strng{authorfullhashraw}{0db3ff00c40f781fbb4c03028f134ce6}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Kernel 3.1.5 - 'fuse\_suid' Local Privilege Escalation}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.exploit-db.com/exploits/34923
+      \endverb
+      \verb{url}
+      \verb https://www.exploit-db.com/exploits/34923
+      \endverb
+    \endentry
+    \entry{ine_pwnkit}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=265df8edb170d446929813934bdc223f}{%
+           family={{INE}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{265df8edb170d446929813934bdc223f}
+      \strng{fullhash}{265df8edb170d446929813934bdc223f}
+      \strng{fullhashraw}{265df8edb170d446929813934bdc223f}
+      \strng{bibnamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authorbibnamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authornamehash}{265df8edb170d446929813934bdc223f}
+      \strng{authorfullhash}{265df8edb170d446929813934bdc223f}
+      \strng{authorfullhashraw}{265df8edb170d446929813934bdc223f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Exploiting {PwnKit} ({CVE-2021-4034}): Techniques and Defensive Measures}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://ine.com/blog/exploiting-pwnkit-cve-2021-4034-techniques-and-defensive-measures
+      \endverb
+      \verb{url}
+      \verb https://ine.com/blog/exploiting-pwnkit-cve-2021-4034-techniques-and-defensive-measures
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2015_1328}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2015-1328}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-1328
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-1328
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2015_8660}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2015-8660}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-8660
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2015/CVE-2015-8660
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_0728}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{3}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-0728}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-0728
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-0728
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_2384}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{4}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-2384}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-2384
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-2384
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2016_5195}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2016-5195}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-5195
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2016/CVE-2016-5195
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2021_22555}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{6}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2021-22555}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-22555
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-22555
+      \endverb
+    \endentry
+    \entry{jlsakuya_cve2021_27365}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{7}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux Privilege Escalation Exploits: {CVE-2021-27365}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-27365
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits/tree/main/2021/CVE-2021-27365
+      \endverb
+    \endentry
+    \entry{jlsakuya_repo}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1aaf435146ee43c010587a925620f8a3}{%
+           family={JlSakuya},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{fullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \strng{bibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorbibnamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authornamehash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhash}{1aaf435146ee43c010587a925620f8a3}
+      \strng{authorfullhashraw}{1aaf435146ee43c010587a925620f8a3}
+      \field{extraname}{8}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux-Privilege-Escalation-Exploits}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits
+      \endverb
+      \verb{url}
+      \verb https://github.com/JlSakuya/Linux-Privilege-Escalation-Exploits
+      \endverb
+    \endentry
+    \entry{peass_ng}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4ec576a735f0637c79f55882cb224583}{%
+           family={Polop},
+           familyi={P\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{fullhash}{4ec576a735f0637c79f55882cb224583}
+      \strng{fullhashraw}{4ec576a735f0637c79f55882cb224583}
+      \strng{bibnamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorbibnamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authornamehash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorfullhash}{4ec576a735f0637c79f55882cb224583}
+      \strng{authorfullhashraw}{4ec576a735f0637c79f55882cb224583}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{PEASS-ng: linPEAS}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+      \endverb
+      \verb{url}
+      \verb https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS
+      \endverb
+    \endentry
+    \entry{pwnfunction_pwnkit}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=43490490ec690b25e93cfb9a47e68087}{%
+           family={PwnFunction},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{fullhash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{fullhashraw}{43490490ec690b25e93cfb9a47e68087}
+      \strng{bibnamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorbibnamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authornamehash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorfullhash}{43490490ec690b25e93cfb9a47e68087}
+      \strng{authorfullhashraw}{43490490ec690b25e93cfb9a47e68087}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CVE-2021-4034 (PwnKit)}}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/PwnFunction/CVE-2021-4034
+      \endverb
+      \verb{url}
+      \verb https://github.com/PwnFunction/CVE-2021-4034
+      \endverb
+    \endentry
+    \entry{wangsafz_cve20170358}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1942b35d0cb845d0be4f35f826aad605}{%
+           family={Wangsafz},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{fullhash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{fullhashraw}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{bibnamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorbibnamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authornamehash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorfullhash}{1942b35d0cb845d0be4f35f826aad605}
+      \strng{authorfullhashraw}{1942b35d0cb845d0be4f35f826aad605}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{cve-2017-0358.sh}
+      \field{urlday}{6}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://github.com/Wangsafz/cve-2017-0358.sh
+      \endverb
+      \verb{url}
+      \verb https://github.com/Wangsafz/cve-2017-0358.sh
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
