@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1791306702.43322 "main.bcf" "main.bbl" "main" 1791307233.86434 0
-  "main.bcf" 1791307233.79214 134011 8218675f7551708631d3ce072e2da23f "pdflatex"
+["biber main"] 1791306702.43322 "main.bcf" "main.bbl" "main" 1791465588.3585 0
+  "main.bcf" 1791465588.29327 134011 8218675f7551708631d3ce072e2da23f "pdflatex"
   "referencias.bib" 1791303706.06829 3170 5b614c27454ea1538cb09a1a3c795455 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1791307231.48898 "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica4/main.tex" "main.pdf" "main" 1791307233.86461 0
-  "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica4/main.tex" 1791306788.0174 40179 4b94992ee73293dba939f1dba4c6880d ""
+["pdflatex"] 1791465586.16499 "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica4/main.tex" "main.pdf" "main" 1791465588.35874 0
+  "/Users/angellara/Documents/NovenoSemestre/SegutidadInformatica/Practica4/main.tex" 1791465581.64359 40179 2078b7e3dca6a5f501ce6996db508612 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -22,6 +22,7 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr17.tfm" 1136768653 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -236,18 +237,18 @@
   "img/image3.png" 1791143131.76296 15528 37050482503ae657b675b170c79c11ed ""
   "img/image34.png" 1791143131.76488 301269 0ca1e569204bcf1a1f1f0029aadd81c4 ""
   "img/image35.png" 1791143131.76527 76929 c5de466a268de221e98299e496fbbd4f ""
-  "img/image36.png" 1791306222.72767 102014 e90ad123d6ddd80ca44cae0f30ce0c9f ""
+  "img/image36.png" 1791465450.09428 49722 55a107bd68f09c41570e17ea07cb6b8b ""
   "img/image4.png" 1791143131.76643 206450 fd9116ef46a1489288107f962b62e1b7 ""
   "img/image5.png" 1791143131.76677 33868 e16add2c78fbf3d87f734cb6864373d9 ""
   "img/image6.png" 1791228214.07211 127540 f314e8e77e9e5281c19832b4e9e0131c ""
   "img/image7.png" 1791143131.76809 331483 fae3b92e88cab6eaadada924f1c5d14e ""
   "img/image8.png" 1791230412.57379 133409 9ece1b4d0246b83a3516f1b653c5df1a ""
-  "main.aux" 1791307233.78978 6879 69d48b9b8ca93a870b9c210da3a0c6e9 "pdflatex"
+  "main.aux" 1791465588.29108 6879 69d48b9b8ca93a870b9c210da3a0c6e9 "pdflatex"
   "main.bbl" 1791306702.93332 39602 a3993df27149702ce5a4fc37aaf46c6a "biber main"
-  "main.out" 1791307233.79139 5827 0c927bdf84625409badcc1fb60d08f3f "pdflatex"
-  "main.run.xml" 1791307233.79267 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
-  "main.tex" 1791306788.0174 40179 4b94992ee73293dba939f1dba4c6880d ""
-  "main.toc" 1791307233.79273 1971 fd824a43a79e68ed537b56cc4b7a0944 "pdflatex"
+  "main.out" 1791465588.29256 5827 0c927bdf84625409badcc1fb60d08f3f "pdflatex"
+  "main.run.xml" 1791465588.29374 2360 e823dede0fdb354f7eff64774b1cfad0 "pdflatex"
+  "main.tex" 1791465581.64359 40179 2078b7e3dca6a5f501ce6996db508612 ""
+  "main.toc" 1791465588.29378 1971 fd824a43a79e68ed537b56cc4b7a0944 "pdflatex"
   "portada.tex" 1791223610.33758 1134 a232c9409f03862a6c29212f82c1622c ""
   "portada_img/der.png" 1791223482.08948 210257 6d0c4d2ce4cceedcb4c586a3b72b8bc2 ""
   "portada_img/izq.png" 1791223482.09156 32490 e04d7053102a8639b2d7b450d226ab82 ""

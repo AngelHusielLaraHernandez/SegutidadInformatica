@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  6 OCT 2026 11:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  8 OCT 2026 07:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1484,11 +1484,11 @@ File: portada_img/izq.png Graphic file (type png)
 Package pdftex.def Info: portada_img/izq.png  used on input line 566.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
 [9]
-<img/image36.png, id=279, 524.96124pt x 82.3075pt>
+<img/image36.png, id=279, 677.53125pt x 163.61125pt>
 File: img/image36.png Graphic file (type png)
 <use img/image36.png>
 Package pdftex.def Info: img/image36.png  used on input line 590.
-(pdftex.def)             Requested size: 236.01556pt x 37.0041pt.
+(pdftex.def)             Requested size: 236.01556pt x 56.99266pt.
 
 Overfull \hbox (195.40976pt too wide) in paragraph at lines 600--601
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
@@ -1496,36 +1496,37 @@ Overfull \hbox (195.40976pt too wide) in paragraph at lines 600--601
 
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 610.
+Package pdftex.def Info: portada_img/der.png  used on input line 607.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 610.
+Package pdftex.def Info: portada_img/izq.png  used on input line 607.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
 [10 <./img/image36.png>]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 650.
+Package pdftex.def Info: portada_img/der.png  used on input line 641.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 650.
+Package pdftex.def Info: portada_img/izq.png  used on input line 641.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [11]
-<img/image34.png, id=301, 2259.44125pt x 1303.87125pt>
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 701.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 701.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+ [12]
+<img/image34.png, id=312, 2259.44125pt x 1303.87125pt>
 File: img/image34.png Graphic file (type png)
 <use img/image34.png>
 Package pdftex.def Info: img/image34.png  used on input line 705.
 (pdftex.def)             Requested size: 377.62634pt x 217.91483pt.
-File: portada_img/der.png Graphic file (type png)
-<use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 708.
-(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
-File: portada_img/izq.png Graphic file (type png)
-<use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 708.
-(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [12] (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+ (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
@@ -1550,15 +1551,15 @@ File: portada_img/izq.png Graphic file (type png)
 Package pdftex.def Info: portada_img/izq.png  used on input line 795.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [14]
+File: img/image36.png Graphic file (type png)
+<use img/image36.png>
+Package pdftex.def Info: img/image36.png  used on input line 811.
+(pdftex.def)             Requested size: 377.62634pt x 91.19226pt.
 <img/image35.png, id=378, 1208.515pt x 429.605pt>
 File: img/image35.png Graphic file (type png)
 <use img/image35.png>
-Package pdftex.def Info: img/image35.png  used on input line 811.
+Package pdftex.def Info: img/image35.png  used on input line 835.
 (pdftex.def)             Requested size: 377.62634pt x 134.23811pt.
-File: img/image36.png Graphic file (type png)
-<use img/image36.png>
-Package pdftex.def Info: img/image36.png  used on input line 835.
-(pdftex.def)             Requested size: 377.62634pt x 59.20859pt.
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
 Package pdftex.def Info: portada_img/der.png  used on input line 841.
@@ -1592,15 +1593,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39349 strings out of 467525
- 751931 string characters out of 5418982
- 2028663 words of memory out of 5000000
- 67488 multiletter control sequences out of 15000+600000
- 635375 words of font info for 69 fonts, out of 8000000 for 9000
+ 39351 strings out of 467525
+ 751948 string characters out of 5418982
+ 2028662 words of memory out of 5000000
+ 67489 multiletter control sequences out of 15000+600000
+ 635674 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,94p,1068b,2811s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (18 pages, 1865538 bytes).
+Output written on main.pdf (18 pages, 1807170 bytes).
 PDF statistics:
  528 PDF objects out of 1000 (max. 8388607)
  435 compressed objects within 5 object streams
