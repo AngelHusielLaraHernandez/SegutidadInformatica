@@ -1,0 +1,123 @@
+root@webserver:/home/webadmin# ps aux awf
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         2  0.0  0.0      0     0 ?        S    14:27   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [rcu_bh]
+root         9  0.2  0.0      0     0 ?        S    14:27   0:00  \_ [migration/0]
+root        10  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [watchdog/0]
+root        11  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [watchdog/1]
+root        12  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [migration/1]
+root        13  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [ksoftirqd/1]
+root        15  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/1:0H]
+root        16  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [watchdog/2]
+root        17  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [migration/2]
+root        18  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [ksoftirqd/2]
+root        20  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/2:0H]
+root        21  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [khelper]
+root        22  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kdevtmpfs]
+root        23  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [netns]
+root        24  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [khungtaskd]
+root        25  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [writeback]
+root        26  0.0  0.0      0     0 ?        SN   14:27   0:00  \_ [ksmd]
+root        27  0.0  0.0      0     0 ?        SN   14:27   0:00  \_ [khugepaged]
+root        28  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [crypto]
+root        29  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kintegrityd]
+root        30  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [bioset]
+root        31  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kblockd]
+root        32  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/1:1]
+root        33  0.1  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/2:1]
+root        34  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kswapd0]
+root        35  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [vmstat]
+root        36  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [fsnotify_mark]
+root        42  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kthrotld]
+root        43  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/0:1]
+root        44  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [ipv6_addrconf]
+root        45  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [deferwq]
+root        46  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/u6:1]
+root        83  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [mpt_poll_0]
+root        84  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [mpt/0]
+root        85  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [ata_sff]
+root        86  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [khubd]
+root        87  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kpsmoused]
+root        89  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/0:2]
+root        90  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [scsi_eh_0]
+root        91  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [scsi_tmf_0]
+root        92  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [scsi_eh_1]
+root        93  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/u6:2]
+root        94  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [scsi_tmf_1]
+root        95  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [scsi_eh_2]
+root        96  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [scsi_tmf_2]
+root       101  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/0:1H]
+root       102  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/1:1H]
+root       103  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [kworker/2:1H]
+root       104  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/1:2]
+root       106  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kworker/2:2]
+root       127  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [jbd2/sda1-8]
+root       128  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [ext4-rsv-conver]
+root       160  0.0  0.0      0     0 ?        S    14:27   0:00  \_ [kauditd]
+root       200  0.0  0.0      0     0 ?        S<   14:27   0:00  \_ [ttm_swap]
+root       428  0.0  0.0      0     0 ?        S<   14:28   0:00  \_ [rpciod]
+root       430  0.0  0.0      0     0 ?        S<   14:28   0:00  \_ [nfsiod]
+root       469  0.0  0.0      0     0 ?        S<   14:28   0:00  \_ [cfg80211]
+root         1  0.4  0.1  22936  4264 ?        Ss   14:27   0:01 /sbin/init
+root       161  0.0  0.1  12388  4112 ?        Ss   14:27   0:00 /lib/systemd/systemd-journald
+root       177  0.0  0.1  13364  4016 ?        Ss   14:27   0:00 /lib/systemd/systemd-udevd
+root       414  0.0  0.0   4384  2576 ?        Ss   14:28   0:00 /sbin/rpcbind -w
+statd      423  0.0  0.0   4580  2784 ?        Ss   14:28   0:00 /sbin/rpc.statd
+root       437  0.0  0.0   2924   172 ?        Ss   14:28   0:00 /usr/sbin/rpc.idmapd
+root       439  0.0  0.1  37520  5724 ?        Ssl  14:28   0:00 /usr/lib/accountsservice/accounts-daemon
+root       440  0.0  0.0   3756  1940 ?        Ss   14:28   0:00 /usr/sbin/anacron -dsq
+daemon     443  0.0  0.0   2652  1672 ?        Ss   14:28   0:00 /usr/sbin/atd -f
+root       446  0.0  0.0   5016  2840 ?        Ss   14:28   0:00 /usr/sbin/cron -f
+root       447  0.0  0.1  41060  7484 ?        Ssl  14:28   0:00 /usr/sbin/ModemManager
+avahi      448  0.2  0.0   3696  2736 ?        Ss   14:28   0:00 avahi-daemon: running [webserver.local]
+avahi      458  0.0  0.0   3564   220 ?        S    14:28   0:00  \_ avahi-daemon: chroot helper
+root       449  0.0  0.0  32016  3264 ?        Ssl  14:28   0:00 /usr/sbin/rsyslogd -n
+root       450  0.3  0.3  56744 12144 ?        Ssl  14:28   0:01 /usr/sbin/NetworkManager --no-daemon
+root       801  0.0  0.2   9252  7744 ?        S    14:28   0:00  \_ /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /var/run/dhclient-eth0.pid -lf /var/lib/NetworkManager/dhclient-ace9dbe4-21d6-4530-a134-5e48f78503d8-eth0.lease
+message+   453  0.0  0.0   5704  3700 ?        Ss   14:28   0:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root       474  0.0  0.0   3768  2764 ?        Ss   14:28   0:00 /lib/systemd/systemd-logind
+root       479  0.0  0.0   2200  1696 ?        Ss   14:28   0:00 /usr/sbin/acpid
+root       482  0.0  0.1  11900  6108 ?        Ss   14:28   0:00 /usr/sbin/cupsd -f
+root       483  0.0  0.1  10028  4632 ?        Ss   14:28   0:00 /usr/sbin/cups-browsed
+root       486  0.0  0.1   8112  4848 ?        Ss   14:28   0:00 /usr/sbin/sshd -D
+root      1123  0.0  0.1  11620  6044 ?        Ss   14:29   0:00  \_ sshd: webadmin [priv]
+webadmin  1128  0.0  0.1  11620  4004 ?        S    14:29   0:00      \_ sshd: webadmin@pts/0
+webadmin  1129  0.0  0.1   6672  4740 pts/0    Ss   14:29   0:00          \_ -bash
+root      1139  0.0  0.0   5820  3340 pts/0    S    14:30   0:00              \_ su root
+root      1140  0.0  0.0   5448  3532 pts/0    S    14:30   0:00                  \_ bash
+root      1145  0.0  0.0   4932  2532 pts/0    R+   14:32   0:00                      \_ ps aux awf
+root       489  0.0  0.1  37296  6916 ?        Ssl  14:28   0:00 /usr/lib/policykit-1/polkitd --no-debug
+root       491  0.0  0.0   4180  1848 tty1     Ss+  14:28   0:00 /sbin/agetty --noclear tty1 linux
+root       509  0.0  0.0   2180    68 ?        Ss   14:28   0:00 /usr/sbin/minissdpd -i 0.0.0.0
+root       511  0.0  0.1  48800  7164 ?        Ssl  14:28   0:00 /usr/sbin/gdm3
+root       527  0.1  0.5 101612 21564 tty7     Ss+  14:28   0:00  \_ /usr/bin/Xorg :0 -novtswitch -background none -noreset -verbose 3 -auth /var/run/gdm3/auth-for-Debian-gdm-D06Ew3/database -seat seat0 -nolisten tcp vt7
+root       802  0.0  0.1  29580  6636 ?        Sl   14:28   0:00  \_ gdm-session-worker [pam/gdm-launch-environment]
+Debian-+   881  0.0  0.2  72068  9656 ?        Ssl  14:28   0:00  |   \_ /usr/bin/gnome-session --autostart /usr/share/gdm/greeter/autostart
+Debian-+   904  0.0  0.6 177016 24020 ?        Sl   14:28   0:00  |       \_ /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+Debian-+   946  0.4  2.0 366808 77880 ?        Sl   14:28   0:01  |       \_ gnome-shell --mode=gdm
+root      1117  0.0  0.1  29616  6376 ?        Sl   14:28   0:00  \_ gdm-session-worker [pam/gdm-password]
+Debian-+   793  0.0  0.0   9928  3024 ?        Ss   14:28   0:00 /usr/sbin/exim4 -bd -q30m
+root       808  0.0  0.1   6468  4368 ?        Ss   14:28   0:00 /usr/sbin/apache2 -k start
+www-data   810  0.0  0.0   6268  3828 ?        S    14:28   0:00  \_ /usr/sbin/apache2 -k start
+www-data   814  0.0  0.1 229100  4264 ?        Sl   14:28   0:00  \_ /usr/sbin/apache2 -k start
+www-data   815  0.0  0.1 229100  4264 ?        Sl   14:28   0:00  \_ /usr/sbin/apache2 -k start
+Debian-+   878  0.0  0.0   4856  3584 ?        Ss   14:28   0:00 /lib/systemd/systemd --user
+Debian-+   879  0.0  0.0   6404  1268 ?        S    14:28   0:00  \_ (sd-pam)  
+Debian-+   884  0.0  0.0   3980  1808 ?        S    14:28   0:00 /usr/bin/dbus-launch --exit-with-session /usr/bin/gnome-session --autostart /usr/share/gdm/greeter/autostart
+Debian-+   885  0.0  0.0   5352  2524 ?        Ss   14:28   0:00 /usr/bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+Debian-+   888  0.0  0.1  45352  5328 ?        Sl   14:28   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+Debian-+   892  0.0  0.0   5252  3260 ?        S    14:28   0:00  \_ /usr/bin/dbus-daemon --config-file=/etc/at-spi2/accessibility.conf --nofork --print-address 3
+Debian-+   895  0.0  0.1  18260  4772 ?        Sl   14:28   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+root       930  0.0  0.2  41644  7852 ?        Ssl  14:28   0:00 /usr/lib/upower/upowerd
+colord     944  0.0  0.2  43124 11368 ?        Ssl  14:28   0:00 /usr/lib/colord/colord
+Debian-+   952  0.0  0.2 100244  8104 ?        S<l  14:28   0:00 /usr/bin/pulseaudio --start --log-target=syslog
+rtkit      954  0.0  0.0  21396  2376 ?        SNsl 14:28   0:00 /usr/lib/rtkit/rtkit-daemon
+Debian-+   978  0.0  0.1  25008  4220 ?        Sl   14:28   0:00 /usr/lib/dconf/dconf-service
+root       997  0.0  0.1   7664  4264 ?        Ss   14:28   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       998  0.0  0.2  44008  9772 ?        Ssl  14:28   0:00 /usr/lib/packagekit/packagekitd
+webadmin  1125  0.0  0.0   4856  3664 ?        Ss   14:29   0:00 /lib/systemd/systemd --user
+webadmin  1126  0.0  0.0  23820  1308 ?        S    14:29   0:00  \_ (sd-pam)  
+root@webserver:/home/webadmin# 
