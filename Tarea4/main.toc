@@ -1,9 +1,13 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Charlas asistidas}{1}{section.1}%
-\contentsline {section}{\numberline {2}Experiencia personal y elementos a destacar de las presentaciones}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Perspectivas diferentes en la ciberseguridad}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Elementos a destacar}{2}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Del delito fisico al delito digital: como piensa los atacantes y como anticiparse a ellos.}{3}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Terraforming the kill chain: de codigo a control}{5}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Elementos a destacar}{6}{subsection.2.5}%
-\contentsline {section}{Referencias}{7}{section*.8}%
+\contentsline {section}{\numberline {2}Experiencia personal y presentaciones}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Obfuscated Tale: From ATT\&CK Origin to Detection Today}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Multi-Tenant Kill Chain Correlation en entornos SaaS}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Defensible Minimum}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}MITRE ATT\&CK Updates: Enterprise ATT\&CK}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Measuring ATT\&CK Coverage Through Real Malware Tradecraft}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Breaking the Defenders}{7}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Ejemplos del uso de ATT\&CK en la industria}{9}{section.3}%
+\contentsline {section}{\numberline {4}Experiencia general y relacion con la materia}{9}{section.4}%
+\contentsline {section}{\numberline {5}Evidencia de participacion en el evento}{10}{section.5}%
+\contentsline {section}{Referencias}{13}{section*.11}%

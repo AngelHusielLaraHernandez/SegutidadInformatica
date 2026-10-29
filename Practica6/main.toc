@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Desarrollo}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Identificacion de la direccion IP y revision de conectividad}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Conexion por SSH y cambio al usuario root}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Informacion del sistema}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Revision de los procesos en ejecucion}{4}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Revision de la configuracion de red}{6}{subsection.1.5}%
+\contentsline {subsubsection}{\numberline {1.5.1}Tabla de rutas}{6}{subsubsection.1.5.1}%
+\contentsline {subsubsection}{\numberline {1.5.2}Archivo hosts}{6}{subsubsection.1.5.2}%
+\contentsline {subsubsection}{\numberline {1.5.3}Interfaces del servidor}{6}{subsubsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.6}Busqueda de archivos y directorios}{8}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Busqueda por extensiones y nombres de archivo}{8}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}Busqueda de respaldos comprimidos}{11}{subsubsection.1.6.2}%
+\contentsline {subsubsection}{\numberline {1.6.3}Busqueda de nombres relacionados con contraseñas}{11}{subsubsection.1.6.3}%
+\contentsline {subsubsection}{\numberline {1.6.4}Revision de los respaldos y del archivo passwords.txt}{13}{subsubsection.1.6.4}%
+\contentsline {subsubsection}{\numberline {1.6.5}Busqueda de cadenas dentro de los archivos}{14}{subsubsection.1.6.5}%
+\contentsline {subsection}{\numberline {1.7}Construccion y transferencia del escaner de red}{14}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Equipos encontrados y revision de los servicios}{16}{subsection.1.8}%
+\contentsline {section}{\numberline {2}Actividades}{18}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Actividad 1: Version del kernel}{18}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Actividad 2: Valor de PRETTY\_NAME}{18}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Actividad 3: Comando del servicio SSH}{19}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Actividad 4: Comando del servicio Apache}{19}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Actividad 5: Interfaces de red configuradas}{19}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Actividad 6: Direccion de la interfaz eth1}{20}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Actividad 7: Ruta del archivo con contraseñas en claro}{20}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Actividad 8: Otro equipo en la red interna}{21}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Actividad 9: Puertos a la escucha del otro equipo}{22}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Actividad 10: Puerto para establecer una sesion remota}{22}{subsection.2.10}%
+\contentsline {section}{Referencias}{23}{section*.30}%

@@ -1,0 +1,299 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{debian_find}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6fe8b98c53e8d099686936732785d471}{%
+           family={{Debian}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \strng{bibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorbibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authornamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{find(1): findutils, Debian jessie}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://manpages.debian.org/jessie/findutils/find.1.en.html
+      \endverb
+      \verb{url}
+      \verb https://manpages.debian.org/jessie/findutils/find.1.en.html
+      \endverb
+    \endentry
+    \entry{debian_nc}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6fe8b98c53e8d099686936732785d471}{%
+           family={{Debian}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \strng{bibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorbibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authornamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{nc.traditional(1): netcat-traditional}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://manpages.debian.org/bookworm/netcat-traditional/nc.traditional.1.en.html
+      \endverb
+      \verb{url}
+      \verb https://manpages.debian.org/bookworm/netcat-traditional/nc.traditional.1.en.html
+      \endverb
+    \endentry
+    \entry{winrm}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Installation and configuration for Windows Remote Management}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management
+      \endverb
+    \endentry
+    \entry{nmap_referencia}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee6d50f56d2a0788635c237496a922b6}{%
+           family={{Nmap Project}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{fullhash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{fullhashraw}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{bibnamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorbibnamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authornamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorfullhash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorfullhashraw}{ee6d50f56d2a0788635c237496a922b6}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Port Specification and Scan Order}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nmap.org/book/man-port-specification.html
+      \endverb
+      \verb{url}
+      \verb https://nmap.org/book/man-port-specification.html
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{debian_find}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6fe8b98c53e8d099686936732785d471}{%
+           family={{Debian}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \strng{bibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorbibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authornamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{find(1): findutils, Debian jessie}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://manpages.debian.org/jessie/findutils/find.1.en.html
+      \endverb
+      \verb{url}
+      \verb https://manpages.debian.org/jessie/findutils/find.1.en.html
+      \endverb
+    \endentry
+    \entry{debian_nc}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6fe8b98c53e8d099686936732785d471}{%
+           family={{Debian}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{fullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \strng{bibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorbibnamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authornamehash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhash}{6fe8b98c53e8d099686936732785d471}
+      \strng{authorfullhashraw}{6fe8b98c53e8d099686936732785d471}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{nc.traditional(1): netcat-traditional}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://manpages.debian.org/bookworm/netcat-traditional/nc.traditional.1.en.html
+      \endverb
+      \verb{url}
+      \verb https://manpages.debian.org/bookworm/netcat-traditional/nc.traditional.1.en.html
+      \endverb
+    \endentry
+    \entry{winrm}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Installation and configuration for Windows Remote Management}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management
+      \endverb
+    \endentry
+    \entry{nmap_referencia}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee6d50f56d2a0788635c237496a922b6}{%
+           family={{Nmap Project}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{fullhash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{fullhashraw}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{bibnamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorbibnamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authornamehash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorfullhash}{ee6d50f56d2a0788635c237496a922b6}
+      \strng{authorfullhashraw}{ee6d50f56d2a0788635c237496a922b6}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Port Specification and Scan Order}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nmap.org/book/man-port-specification.html
+      \endverb
+      \verb{url}
+      \verb https://nmap.org/book/man-port-specification.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

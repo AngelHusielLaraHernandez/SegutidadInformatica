@@ -1,0 +1,52 @@
+TRANSCRIPCION DE FRAGMENTOS RELEVANTES DE LA PRACTICA 7
+Estos fragmentos proceden de las imagenes entregadas; no son salidas de una nueva ejecucion.
+
+[Imagen 1: descubrimiento de equipos]
+Nmap done: 256 IP addresses (5 hosts up) scanned in 2.01 seconds
+
+[Imagen 3: ping desde webserver]
+6 packets transmitted, 6 received, 0% packet loss, time 4998ms
+
+[Imagen 4: ping desde EvilBox]
+6 packets transmitted, 0 received, 100% packet loss, time 5109ms
+
+[Imagen 6: puerto del tunel]
+localhost [127.0.0.1] 3389 (ms-wbt-server) open
+
+[Imagen 10: cuenta configurada en el perfil]
+Servidor: 127.0.0.1
+Usuario: developer2024
+Contraseña: R0b0tRulz!
+
+[Imagen 14: version del sistema]
+OS Version: 6.3.9600 N/A Build 9600
+El nombre completo de la edicion tambien es visible en las imagenes 13 y 18:
+Windows Server 2012 R2 Standard Evaluation
+
+[Imagen 15: titulo del HTML]
+<title>Chatbot</title>
+
+[Imagen 16: archivos index.html]
+C:\inetpub\wwwroot\index.html
+C:\Users\developer2024\chat\index.html
+
+[Imagen 17: contenido de C:\inetpub\wwwroot\]
+bot.py
+configuracion.ini
+index.html
+script.js
+styles.css
+
+[Imagen 17: contenido de C:\Users\developer2024\chat\]
+index.html
+script.js
+styles.css
+
+[Imagen 18: certutil]
+SHA256 hash of file C:\inetpub\wwwroot\bot.py:
+b4 94 a0 d1 fc 37 d7 16 ab 00 69 4e da 6f 35 95 f6 4f e7 b9 75 91 a8 b5 f1 3e 9f
+90 a7 22 36 49
+CertUtil: -hashfile command completed successfully.
+
+SHA256 sin espacios:
+b494a0d1fc37d716ab00694eda6f3595f64fe7b97591a8b5f13e9f90a7223649

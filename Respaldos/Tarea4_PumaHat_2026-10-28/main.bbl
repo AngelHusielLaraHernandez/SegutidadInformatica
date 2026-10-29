@@ -1,0 +1,225 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{diegoconferencia3}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71ca75be051d84b368efa2d5edc4ff91}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{fullhash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{fullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{bibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorbibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authornamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorfullhash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorfullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Terraforming the kill chain : De codigo a Control}
+      \field{year}{25 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+    \entry{illeraDiaz2026delitoDigital}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f19e0a9a93a69e3dd234a6921b47e272}{%
+           family={Illera\bibnamedelima Díaz},
+           familyi={I\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Mauricio\bibnamedelima Alan},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{fullhash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{fullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{bibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorbibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authornamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorfullhash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorfullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Del delito físico al delito digital: {¿}Cómo piensan los atacantes y cómo anticiparse a ello?}
+      \field{year}{22 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+    \entry{ponente1PumaHat2026}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3bf13b2fea22266ab85a1738f37d266d}{%
+           family={Resendiz\bibnamedelima Gonzales},
+           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Angel\bibnamedelima Samuel},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{fullhash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{fullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{bibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorbibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authornamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorfullhash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorfullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Seguridad informática desde perspectivas diferentes}
+      \field{year}{22 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{diegoconferencia3}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=71ca75be051d84b368efa2d5edc4ff91}{%
+           family={Castro},
+           familyi={C\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{fullhash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{fullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{bibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorbibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authornamehash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorfullhash}{71ca75be051d84b368efa2d5edc4ff91}
+      \strng{authorfullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Terraforming the kill chain : De codigo a Control}
+      \field{year}{25 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+    \entry{illeraDiaz2026delitoDigital}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f19e0a9a93a69e3dd234a6921b47e272}{%
+           family={Illera\bibnamedelima Díaz},
+           familyi={I\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Mauricio\bibnamedelima Alan},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{fullhash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{fullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{bibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorbibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authornamehash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorfullhash}{f19e0a9a93a69e3dd234a6921b47e272}
+      \strng{authorfullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Del delito físico al delito digital: {¿}Cómo piensan los atacantes y cómo anticiparse a ello?}
+      \field{year}{22 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+    \entry{ponente1PumaHat2026}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3bf13b2fea22266ab85a1738f37d266d}{%
+           family={Resendiz\bibnamedelima Gonzales},
+           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Angel\bibnamedelima Samuel},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Ciudad de México, México}%
+      }
+      \strng{namehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{fullhash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{fullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{bibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorbibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authornamehash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorfullhash}{3bf13b2fea22266ab85a1738f37d266d}
+      \strng{authorfullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
+      \field{note}{Presentación de conferencia}
+      \field{title}{Seguridad informática desde perspectivas diferentes}
+      \field{year}{22 de Septiembre de 2026}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

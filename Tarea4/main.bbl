@@ -19,205 +19,287 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global/global}
-    \entry{diegoconferencia3}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=71ca75be051d84b368efa2d5edc4ff91}{%
-           family={Castro},
-           familyi={C\bibinitperiod},
-           given={D},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{fullhash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{fullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{bibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorbibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authornamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorfullhash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorfullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+    \entry{charla_defenders}{misc}{}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Terraforming the kill chain : De codigo a Control}
-      \field{year}{25 de Septiembre de 2026}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Breaking the Defenders: Measuring Defense Impairment at Scale Through MSP Telemetry}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \true{nocite}
     \endentry
-    \entry{illeraDiaz2026delitoDigital}{article}{}{}
+    \entry{charla_minimum}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f19e0a9a93a69e3dd234a6921b47e272}{%
-           family={Illera\bibnamedelima Díaz},
-           familyi={I\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Mauricio\bibnamedelima Alan},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+        {{un=0,uniquepart=base,hash=36cd3461c13225cc498ad283b9b4fbb8}{%
+           family={Hamaty},
+           familyi={H\bibinitperiod},
+           given={Robin\bibnamedelima Lee},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{fullhash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{fullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{bibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorbibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authornamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorfullhash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorfullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{fullhash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{fullhashraw}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{bibnamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorbibnamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authornamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorfullhash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorfullhashraw}{36cd3461c13225cc498ad283b9b4fbb8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Del delito físico al delito digital: {¿}Cómo piensan los atacantes y cómo anticiparse a ello?}
-      \field{year}{22 de Septiembre de 2026}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{The Defensible Minimum: Threat-Informed Defense When You Can't Afford the Matrix}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \true{nocite}
     \endentry
-    \entry{ponente1PumaHat2026}{article}{}{}
+    \entry{charla_malware}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Measuring ATT\&CK Coverage Through Real Malware Tradecraft: Beyond T1055}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_enterprise}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{MITRE ATT\&CK Updates: Enterprise ATT\&CK}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_saas}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Multi-Tenant Kill Chain Correlation: ATT\&CK-Stage Progression Scoring Across Identities and Organizations in SaaS Environments}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_obfuscated}{misc}{}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Obfuscated Tale: From ATT\&CK Origin to Detection Today}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{evento_mitre}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3bf13b2fea22266ab85a1738f37d266d}{%
-           family={Resendiz\bibnamedelima Gonzales},
-           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Angel\bibnamedelima Samuel},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=949b0970111d9a772f0458ebd4208987}{%
+           family={{The MITRE Corporation}},
+           familyi={T\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{fullhash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{fullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{bibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorbibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authornamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorfullhash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorfullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \strng{namehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \strng{bibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorbibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authornamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Seguridad informática desde perspectivas diferentes}
-      \field{year}{22 de Septiembre de 2026}
+      \field{day}{27}
+      \field{month}{10}
+      \field{title}{MITRE ATT\&CKcon 7.0}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mitre.org/events/mitre-attackcon-7
+      \endverb
+      \verb{url}
+      \verb https://www.mitre.org/events/mitre-attackcon-7
+      \endverb
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global/global}
-    \entry{diegoconferencia3}{article}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=71ca75be051d84b368efa2d5edc4ff91}{%
-           family={Castro},
-           familyi={C\bibinitperiod},
-           given={D},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{fullhash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{fullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{bibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorbibnamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authornamehash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorfullhash}{71ca75be051d84b368efa2d5edc4ff91}
-      \strng{authorfullhashraw}{71ca75be051d84b368efa2d5edc4ff91}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+    \entry{charla_defenders}{misc}{}{}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Terraforming the kill chain : De codigo a Control}
-      \field{year}{25 de Septiembre de 2026}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Breaking the Defenders: Measuring Defense Impairment at Scale Through MSP Telemetry}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \true{nocite}
     \endentry
-    \entry{illeraDiaz2026delitoDigital}{article}{}{}
+    \entry{charla_minimum}{misc}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=f19e0a9a93a69e3dd234a6921b47e272}{%
-           family={Illera\bibnamedelima Díaz},
-           familyi={I\bibinitperiod\bibinitdelim D\bibinitperiod},
-           given={Mauricio\bibnamedelima Alan},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+        {{un=0,uniquepart=base,hash=36cd3461c13225cc498ad283b9b4fbb8}{%
+           family={Hamaty},
+           familyi={H\bibinitperiod},
+           given={Robin\bibnamedelima Lee},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{fullhash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{fullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{bibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorbibnamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authornamehash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorfullhash}{f19e0a9a93a69e3dd234a6921b47e272}
-      \strng{authorfullhashraw}{f19e0a9a93a69e3dd234a6921b47e272}
-      \field{sortinit}{I}
-      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \strng{namehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{fullhash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{fullhashraw}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{bibnamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorbibnamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authornamehash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorfullhash}{36cd3461c13225cc498ad283b9b4fbb8}
+      \strng{authorfullhashraw}{36cd3461c13225cc498ad283b9b4fbb8}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Del delito físico al delito digital: {¿}Cómo piensan los atacantes y cómo anticiparse a ello?}
-      \field{year}{22 de Septiembre de 2026}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{The Defensible Minimum: Threat-Informed Defense When You Can't Afford the Matrix}
+      \field{year}{2026}
+      \field{dateera}{ce}
       \true{nocite}
     \endentry
-    \entry{ponente1PumaHat2026}{article}{}{}
+    \entry{charla_malware}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Measuring ATT\&CK Coverage Through Real Malware Tradecraft: Beyond T1055}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_enterprise}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{MITRE ATT\&CK Updates: Enterprise ATT\&CK}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_saas}{misc}{}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Multi-Tenant Kill Chain Correlation: ATT\&CK-Stage Progression Scoring Across Identities and Organizations in SaaS Environments}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{charla_obfuscated}{misc}{}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{howpublished}{ATT\&CKcon 7.0, presentacion de conferencia}
+      \field{month}{10}
+      \field{title}{Obfuscated Tale: From ATT\&CK Origin to Detection Today}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \true{nocite}
+    \endentry
+    \entry{evento_mitre}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=3bf13b2fea22266ab85a1738f37d266d}{%
-           family={Resendiz\bibnamedelima Gonzales},
-           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Angel\bibnamedelima Samuel},
-           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
+        {{un=0,uniquepart=base,hash=949b0970111d9a772f0458ebd4208987}{%
+           family={{The MITRE Corporation}},
+           familyi={T\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Ciudad de México, México}%
-      }
-      \strng{namehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{fullhash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{fullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{bibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorbibnamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authornamehash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorfullhash}{3bf13b2fea22266ab85a1738f37d266d}
-      \strng{authorfullhashraw}{3bf13b2fea22266ab85a1738f37d266d}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \strng{namehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \strng{bibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorbibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authornamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{PumaHat Cybersecurity Week 2026}
-      \field{note}{Presentación de conferencia}
-      \field{title}{Seguridad informática desde perspectivas diferentes}
-      \field{year}{22 de Septiembre de 2026}
+      \field{day}{27}
+      \field{month}{10}
+      \field{title}{MITRE ATT\&CKcon 7.0}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \true{nocite}
+      \verb{urlraw}
+      \verb https://www.mitre.org/events/mitre-attackcon-7
+      \endverb
+      \verb{url}
+      \verb https://www.mitre.org/events/mitre-attackcon-7
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

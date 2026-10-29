@@ -1,0 +1,369 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{certutil}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{certutil}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+      \endverb
+    \endentry
+    \entry{dir}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{dir}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir
+      \endverb
+    \endentry
+    \entry{findstr}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{findstr}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+      \endverb
+    \endentry
+    \entry{openssh}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=760be6e1c2192a5bf7c0df47cc5f71ca}{%
+           family={{OpenBSD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{fullhash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{fullhashraw}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{bibnamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorbibnamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authornamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorfullhash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorfullhashraw}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ssh(1): OpenSSH remote login client}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://man.openbsd.org/ssh
+      \endverb
+      \verb{url}
+      \verb https://man.openbsd.org/ssh
+      \endverb
+    \endentry
+    \entry{remmina}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=824ec7c46df8f3f7233a96430eb21d20}{%
+           family={{Remmina}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{fullhash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{fullhashraw}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{bibnamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorbibnamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authornamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorfullhash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorfullhashraw}{824ec7c46df8f3f7233a96430eb21d20}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to install Remmina}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://remmina.org/how-to-install-remmina/
+      \endverb
+      \verb{url}
+      \verb https://remmina.org/how-to-install-remmina/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{certutil}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{certutil}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/certutil
+      \endverb
+    \endentry
+    \entry{dir}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{dir}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir
+      \endverb
+    \endentry
+    \entry{findstr}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{extraname}{3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{findstr}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+      \endverb
+    \endentry
+    \entry{openssh}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=760be6e1c2192a5bf7c0df47cc5f71ca}{%
+           family={{OpenBSD}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{fullhash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{fullhashraw}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{bibnamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorbibnamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authornamehash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorfullhash}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \strng{authorfullhashraw}{760be6e1c2192a5bf7c0df47cc5f71ca}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ssh(1): OpenSSH remote login client}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://man.openbsd.org/ssh
+      \endverb
+      \verb{url}
+      \verb https://man.openbsd.org/ssh
+      \endverb
+    \endentry
+    \entry{remmina}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=824ec7c46df8f3f7233a96430eb21d20}{%
+           family={{Remmina}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{fullhash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{fullhashraw}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{bibnamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorbibnamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authornamehash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorfullhash}{824ec7c46df8f3f7233a96430eb21d20}
+      \strng{authorfullhashraw}{824ec7c46df8f3f7233a96430eb21d20}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to install Remmina}
+      \field{urlday}{17}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://remmina.org/how-to-install-remmina/
+      \endverb
+      \verb{url}
+      \verb https://remmina.org/how-to-install-remmina/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

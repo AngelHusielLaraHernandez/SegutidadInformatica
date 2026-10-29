@@ -2,6 +2,7 @@
 
 % --- PAQUETES DE IDIOMA
 \usepackage[spanish,mexico]{babel}
+\addto\captionsspanish{\renewcommand{\contentsname}{Indice}}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
 \usepackage{iftex}
@@ -17,6 +18,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{needspace}
 \usepackage{subcaption}
 \usepackage[table]{xcolor}
 \usepackage{makecell}
@@ -193,292 +195,395 @@
 }
 
 \begin{document}
-
-\input{portada.tex}
-
+\setlength{\emergencystretch}{1em}
+\hypersetup{pageanchor=false}
+\input{Portada.tex}
 \newpage
-
 {\hypersetup{linkcolor=black}\tableofcontents}
 \thispagestyle{estiloindice}
-
-
 \newpage
-
 \thispagestyle{fancy}
 \setcounter{page}{1}
+\hypersetup{pageanchor=true}
 \singlespacing
 
 \section{Charlas asistidas}
 
+Las charlas asistidas asistidias, fueron del dia 27 de octubre, siendo del primer dia 
+de las conferencias, asistiendo desde las 9 de la mañana hasta las 3 de la tarde.
+
+Para esto, se tuvieron 6 platicas, en las cuales entre medio de la 3 y 4, hubo un breve
+descanso.
+
+Las seis charlas son las siguientes: 
+
 \begin{enumerate}
-  \item Perspectivas diferentes en la ciberseguridad. \textbf{Angel Samuel Resendiz Gonzales}
-  \item Del delito fisico al delito digital: como piensan los atacantes y como anticiparse a ellos. \textbf{Mauricio Alan Ilera Diaz}
-  \item Terraforming the kill chain: de codigo a control. \textbf{Diego Castro}
+    \item Obfuscated Tale: From ATT\&CK Origin to Detection Today.
+    \item Multi-Tenant Kill Chain Correlation: ATT\&CK-Stage Progression Scoring Across Identities and Organizations in SaaS Environments.
+    \item The Defensible Minimum: Threat-Informed Defense When You Can't Afford the Matrix.
+    \item MITRE ATT\&CK Updates: Enterprise ATT\&CK.
+    \item Measuring ATT\&CK Coverage Through Real Malware Tradecraft: Beyond T1055.
+    \item Breaking the Defenders: Measuring Defense Impairment at Scale Through MSP Telemetry.
 \end{enumerate}
 
-\section{Experiencia personal y elementos a destacar de las presentaciones}
+En general, algo que se repitio en las distintas ponencias fue
+que tener una tecnica marcada en una matriz no demuestra que
+realmente se pueda detectar. Esto me parecio importante por que
+en las practicas hemos identificado las acciones que se realizan
+durante un ataque, pero aqui se mostro que tambien se tiene que
+comprobar que informacion recibe el defensor y que puede hacer
+con ella.
 
-\subsection{Perspectivas diferentes en la ciberseguridad}
+\section{Experiencia personal y presentaciones}
 
-Para esta primera ponencia, el expositor es un Shift Technology
-Officer, donde todo se centro en que sar las herramientas
-correctas no es lo mismo que saber explotar un sistema o una vulnerabilidad.
-Algo que cabe recalcar que me parecio curioso fue la mencion de los 
-metaesploits para los principantes, que con un sudo rm -rf /
-se les engaña para que crean que estan haciendo, cuando de la nada les borran todo;
-y esto en mas de alguna ocacion lo he visto con personas 
-que no conocen linux o que simplemente por la broma se les dice un rm es borras 
-espacio, y es cierto lo que dice el ponente: es para atrapa bobos.
+\subsection{Obfuscated Tale: From ATT\&CK Origin to Detection Today}
 
-Despues paso a la parte de derecho informatico, donde lo que nos explico 
-fue por medio de una
-analogia de una casa con todo abierto abierto, donde lo que nos decia es que uno puede
-verla, reportarla a la policia, pero, en el
-momento en que se mete un pie dentro de esa casa, ya se esta violando la ley; y esta 
-analogia si es muy precisa, por que directamente esto lo podemos ver 
-en el mundo del hacking etico, con lo que he llegado a ver de historias 
-donde multan al hacker por avisar que existe una brecha de seguridad.
-esta analogia tiene sentido, y ya, aunque no tengo alguna experiencia 
-personal sobre eso, esto me hace sentido con lo que he llegado 
-a leer y ver.
+Empezo con la explicacion de que los atacantes pueden
+cambiar la forma en la que escriben o preparan un archivo,
+mientras que varias de las acciones que necesitan realizar siguen
+siendo parecidas. 
 
-Con esto tambien hablo del bug bounty, aclarando que
-cada programa de recompensas tiene limites muy especificos 
-y que pasarse de esos limites ya es un delito.
+Para esto, se mencionaron ejemplos con PowerShell, contenido
+codificado en Base64, para este caso, se nos explico que en el caso 
+de Base64 sirve para
+representar informacion mediante otra codificacion y gzip para
+comprimirla.
 
-Por ultimo, el tema que mas me llamo la atencion fue el tema del 
-OSINT, donde el ponente nos dijo 
-que muchos de los que apenas inician 
-piensan que es nada mas meter un link a una pagina de IP logger
-y ya con eso se cree que tienen la ubicacion de alguien, 
-pero que en realidad solo lo que regresan es la 
-direccion del provedoor del internet, y esto, 
-en lo personal, si me paso cuando recien empece a investigar; 
-escuchaba que con la ip de alguien ya se tenia practicamente todo, 
-y al ponerme a investigar que la IP no coincidia con la ubicacion 
-de la persona, empece a leer mas sobre el mismo tema y si dije 
-que era una gran mentira lo que todos decian, por que al final 
-de todo no esta completamente contado, por que, 
-si bien es cierto que con la IP se puede llegar a una ubicacion aproximada,
-pero no es la ubicacion exacta de la persona. Regresando 
-con la ponencia, el mismo Angel nos dijo que llego a usar 
-OSINT combinado con  Have I Been Pwned y una pagina
-.onion para buscar contraseñas filtradas por dominio, incluso encontrando la
-suya propia filtrada, y esto me llamo mas la atencion 
-por que esto en mas d euna vez me ha pasado con Apple y malwarebytes, que me avisan: 
-tu contraseña se encontro en una filtracion de datos; 
-y luego luego voy a cambiarla. Esto me hace hacer sentido con lo que decia 
-el ponente.
+Ahora bien, el punto que me parecio mas importante fue la
+diferencia entre registrar una accion y detectarla. Se puede
+tener el comando dentro de algun archivo, esto empezo siendo la 
+parte principal, para poder ver desde donde inicia el ataque y aun asi no
+generar una alerta, por que todavia falta una regla que
+interprete lo que paso. Es donde entro el otro 
+tema a hablar, que fue el caso de la telemetria, que
+son los datos que se recolectan sobre la actividad del sistema,
+como los procesos que se crean, los scripts que se ejecutan y las
+conexiones que se realizan.
 
-Una cosa a recalcar es que al final hablo de la etica: que si a uno le confian una base de datos, 
-no se debe caer en lo no etico de vender los datos de esa base por dinero, 
-por que al final la libertad de una persona vale mas que
-cualquier sistema. Recomendo plataformas como Hack The Box y TryHackMe
-para practicar de forma legal.
+Despues de esto, se explico el uso de los eventos 4104 y 4103 de
+PowerShell, relacionados con el registro de bloques de script y
+de modulos. Tambien se menciono Sysmon, donde el evento 1 permite
+revisar la creacion de procesos, el 7 la carga de imagenes,
+incluyendo DLL, y el 17 la creacion de tuberias con nombre. Lo
+que se busca es relacionar los eventos para entender que programa
+inicio a otro y con que argumentos.
 
-\subsection{Elementos a destacar}
-
-\begin{itemize}
-  \item El termino ``atlapabobos" para describir a la gente que ejecuta comandos sin entender
-  que hacen.
-  \item La analogia de la casa con las puertas y ventanas abiertas, para explicar donde empieza el
-  delito informatico.
-  \item La explicacion de los limites legales de un programa de bug bounty y de que pasarse de
-  esos limites ya es delito.
-  \item Diferenciar entre el OSINT superficial, que son las paginas de IP,
-  y el OSINT real con herramientas como Maltego.
-\end{itemize}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{img/image1.png}
-  \caption{Inicio de la conferencia}
+    \centering
+    \includegraphics[width=\textwidth,trim=145.01bp 97.00bp 73.00bp 215.01bp,clip]{img/image3.png}
+    \caption{Recomendaciones sobre registros de PowerShell, Sysmon y validacion de la recepcion en el SIEM.}
 \end{figure}
 
+Elementos a destacar:
+
+\begin{itemize}
+    \item Diferenciar entre tener un evento registrado y tener una deteccion que lo utilice.
+    \item Revisar la relacion entre los procesos y no solamente una palabra dentro del comando.
+    \item Comprobar que los registros realmente llegan al SIEM, que es la plataforma que permite reunirlos y analizarlos.
+\end{itemize}
+
+\Needspace{10\baselineskip}
+\subsection{Multi-Tenant Kill Chain Correlation en entornos SaaS}
+
+En esta segunda presentacion se hablo de un problema distinto,
+pero relacionado con la misma idea: una alerta puede parecer poco
+importante si se revisa sola, mientras que al relacionarla con
+otras acciones puede mostrar una cadena de conexiones, lo que hace que 
+sea tanto mas peligrosa, como se revele el patron de comportamiento 
+de algun atacante o de los ataques. Se uso de ejemplo un SaaS, 
+que son aplicaciones que se
+utilizan como un servicio.
+
+Donde un tenant es el entorno de una organizacion dentro del
+servicio. La propuesta consistio en relacionar los eventos de una
+misma identidad a lo largo de un periodo y darles contexto segun
+las etapas de ATT\&CK. Para esto, se trato como punto principal
+revisar si las acciones tenian una relacion
+que ayudara a explicar lo que estaba ocurriendo.
+
+Algo a recalcar fue la diferencia entre una anomalia y una accion
+concreta. Por ejemplo, cambiar de proveedor de internet o de
+identificador del navegador puede ser algo extraño, pero no
+demuestra por si solo que una cuenta fue comprometida. Por otro
+lado, reutilizar un token de acceso, modificar la configuracion
+de autenticacion o cambiar una regla del correo son acciones que
+aportan otro tipo de evidencia. La anomalia ayuda a interpretar
+el caso, pero no debe reemplazar esa evidencia.
+
+En lo personal, la parte que mas me intereso fue la correlacion
+entre organizaciones. Una integracion o una aplicacion de
+terceros puede tocar varios entornos, por lo que una secuencia de
+intentos fallidos en una sola empresa no siempre cuenta toda la
+historia. Si se encuentra el mismo patron en varios entornos y se
+relaciona con una identidad de integracion compartida, se puede
+ampliar la investigacion. Esto no significa que compartir una IP
+sea suficiente para afirmar que existe un ataque.
+
+Elementos a destacar:
+
+\begin{itemize}
+    \item Usar las etapas de ATT\&CK para relacionar acciones de una misma identidad.
+    \item Distinguir el contexto de una anomalia de la evidencia concreta de una accion.
+    \item Combinar la correlacion entre organizaciones con las reglas y el conocimiento de los analistas.
+\end{itemize}
+
+\Needspace{10\baselineskip}
+\subsection{The Defensible Minimum}
+
+El problema que
+planteo fue que no todas las organizaciones pueden mantener un
+centro de operaciones de seguridad completo, una herramienta en
+cada equipo y todos los registros que se quisieran tener.
+
+Ahora bien, lo que me parecio importante fue que no se presento
+esto como una razon para dejar de defenderse. Se propuso
+identificar un minimo defendible, donde se toma lo que es
+importante para las amenazas de la organizacion y se compara con
+lo que realmente se puede implementar, mantener y comprobar. Lo
+que queda fuera se tiene que reconocer como riesgo pendiente, en
+lugar de marcarlo como cubierto solamente por que aparece en una
+herramienta.
+
+En lo personal, esto me hizo sentido con las practicas. Nosotros
+trabajamos con maquinas y herramientas especificas, por lo que
+cada resultado depende de lo que se configuro y de lo que se
+puede observar en ese entorno. Una herramienta instalada no
+demuestra por si misma que se este recibiendo toda la informacion
+necesaria. De igual forma, una organizacion pequeña puede empezar
+con sus accesos mas expuestos y con los registros que si tiene
+disponibles, sin fingir que ya resolvio todo lo demas.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/image4.png}
+    \caption{Uso de inteligencia artificial como apoyo y necesidad de detecciones comprobables.}
+\end{figure}
+
+
+Elementos a destacar:
+
+\begin{itemize}
+    \item Priorizar lo que es importante y se puede sostener con los recursos disponibles.
+    \item Reconocer el riesgo que queda pendiente y validar de forma continua los controles.
+\end{itemize}
 
 \newpage
-\subsection{Del delito fisico al delito digital: como piensa los atacantes y como anticiparse a ellos.}
+\subsection{MITRE ATT\&CK Updates: Enterprise ATT\&CK}
 
-En esta segunda charla, el expositor directamente empezo con la ponente Maurcio, que se nos hablo que era Chief Security;
-empezando la presentacion, inicio explicando la formula que da resultado al riesgo, donde 
-lo importante para mi fue que empezo diciendo que esta formula tiene dos variables:
-una es la amenza y la otra es la vulnerabilidad, donde sumadas dan el riesgo. El 
-ponente empezo diciendo que como empresas casi siempre se invierte mas 
-en los guardias, hacinedo referencia a la administracion de amenzas; 
-no obstante, se deja de lado a la vulnerabilidad, que en resumidas cuentas 
-somos nosotros o las personas que forman parte de la empresa. Esto, desde mi 
-perspectiva y de lo que he llegado a ver en mi familia y en otras personas, es que es cierto;
-simplemente el ejemplo que puso el ponente fue los correos 
-que engañan. Esto mas de una vez lo he tenido que ver en mi familia,
-donde sin saber da clic a enlaces que no son de confianza.
-Ahora bien, esto me dejo pensando 
-en que, si bien esto pasa en mi familia donde ya trabajan, esto me deja diciendo 
-que Mauricio tiene razon: la empresa en las que estan no contratan 
-alguna empresa para solucionar estos problemas de vulnerabilidad, 
-que facilmente se pueden solucionar con capacitaciones o concientizacion.
+En esta charla se hablo de lo que se estaba preparando para la
+version 21 de ATT\&CK, prevista para la primavera del 2027. Algo
+que me llamo la atencion fue que el contenido relacionado con
+inteligencia artificial, se
+explico que primero era necesario revisar su alcance y la
+evidencia del uso que le dan los adversarios.
 
-Ahora bien, la segunda formula fue la triada de delicuente, mercado y comprador,
-donde se explico que si se rompe cualquiera de los 3 no existe delito; esto 
-por que es un ciclo sin fin: el delicuenta 
-vende en el mercado y el comprador compra, y si esto se llega a romper, 
-el ciclo se acaba. nuevamente, esto, desde que lo he llegado a ver en filtraciones de 
-juegos o hackeos a empresas de videojuegos, esto es cierto: mientras 
-el delcieunte vende el codigo del juego robado, existe un mercado por que 
-es un juego oculto, y eso hace que exista el comprado; 
-pero en algunos casos que nadie lo compra, simplemente la mercancia 
-se queda estancada y ya no existe motivo para volver a atacar a la empresa.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{img/image5.png}
+    \caption{Presentacion de los planes para ATT\&CK v21 en la primavera del 2027.}
+\end{figure}
 
-Despues de esto explico lo del SID, que era la confidencialidad, integridad y
-disponibilidad, donde se nos dijo que era el pila de la seguridad, 
-por que era lo que nos protegia. Asi que, con esto, el presento 3 modelos 
-para poder armar una matriz de riesgo: una fue VIVA, otro fue 
-CiberTac y el ultimo fue NIST. aunque anteriormente ya habia 
-escuchado de la matriz de riesgo, esto en planificaciones de proyectos 
-de software, no lo habia visto esto aplicado a la seguridad, 
-lo cual hace que sea de suma importancia, por que 
-si bien es cierto que cualquiera de los 3 es bueno, lo recomendable 
-es que se utilicen los 3, esto para llegar a un riesgo 
-inherente, y con esto poder llegar a un riesgo residual,
-y con esto poder llegar a un riesgo aceptable, donde el ponente
-nos dijo que el riesgo aceptable es aquel que la empresa esta dispuesta a aceptar en la mayoria 
-de los casos, por que lo ideal es que no exista riesgos en nada.
+Para esto, se hablo de MITRE ATLAS, que organiza conocimiento
+sobre amenazas contra sistemas de inteligencia artificial. La
+propuesta era que los equipos de ATLAS y ATT\&CK revisaran que
+comportamientos podian incorporarse en Enterprise ATT\&CK. Donde
+en este caso, se aclaro que las demostraciones o pruebas de
+concepto no bastan por si solas para considerar que un
+comportamiento ya tiene uso adversario real.
 
-Algo a recalcar que me parecio de suma importancia es que se nos dijo que esa matriz 
-se tiene que revisar de 3 a 6 meses, esto por que en lo digital 
-va evolucionando mas rapido, y esto es cierto, por que como lo vimos en la clase, 
-con las vulnerabilidades, se encuentran un gran numero en tan pocos dias.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/image6.png}
+    \caption{Matriz de ATLAS utilizada para explicar la relacion con Enterprise ATT\&CK.}
+\end{figure}
 
-Por ultimo, la presentacion acabo con una conclusion particular, la cual 
-nos puso una frase en las diapositivas, donde se nos puso que ``La ciberseguridad no comienza cuando ocurre el ataque; comienza cuando somos capaces de anticiparlo''.
-esto me hizo mucho sentido, por que si durante el ataque empiezan 
-a vulnerar nuestros equipos o informacion, 
-y nosotros no somos capaces de antiiparlo,
-simplemente no vamos a poder hacer nada y, de cierta forma, la plabara 
-ciberseguridad en ese conexto no tiene sentido. Empieza a tomar sentido 
-cuando somos capaces tanto de anticipar el ataque como 
-cuando somos capaces de reaccionar a el, 
-por que una vez teniendo las capacidades de anticipar, 
-nosotros 
-ya no estamos protegiendo; ya estamos mas seguros de cierta manera. 
-esto pasa igual con la seguridad fisica, por que nosotros 
-sabemos que en algun momento nos pueden robar, lo que hace que 
-se pueda anticipar y minimo tener alguna medida de contigencia.
+Despues de esto se explicaron varias posibilidades. Parte del
+contenido podria añadirse a una tecnica que ya existe, otra parte
+podria necesitar una nueva subtecnica o una tecnica especifica, y
+algunos comportamientos podrian permanecer fuera mientras no
+cumplan los criterios.
 
-Ahora bien, los elementos a destacar de todo esto fue:
+Un ejemplo fue el AI Artifact Repository, donde un repositorio de
+artefactos de IA puede utilizarse como un canal para intercambiar
+instrucciones o resultados dentro de una operacion.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/image10.png}
+    \caption{Ejemplo de uso de un repositorio de artefactos de IA como canal de comunicacion.}
+\end{figure}
+
+Elementos a destacar:
 
 \begin{itemize}
-  \item La formula de riesgo = amenaza + vulnerabilidad, y la explicacion de por que, como
-  organizaciones se invierte mas en controlar la amenaza que la vulnerabilidad.
-  \item La triada de delincuente, mercado y comprador.
-  \item Los tres modelos para armar una matriz de riesgo: VIVA, CiberTAC y NIST.
-  \item La recomendacion de revisar la matriz de riesgo cada 3 o 6 meses por la evolucion constante de los ataques.
+    \item Revisar el uso adversario real antes de incorporar un comportamiento.
+    \item Distinguir lo que se puede integrar en una tecnica existente de lo que necesita otra clasificacion.
+    \item Considerar las conexiones del sistema de IA con otros recursos de la organizacion.
 \end{itemize}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{img/image4.jpg}
-  \caption{Inicio de la conferencia}
-  \label{fig:Inicio_presentacion}
-\end{figure}
+\newpage
+\subsection{Measuring ATT\&CK Coverage Through Real Malware Tradecraft}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{img/image5.jpg}
-  \caption{Matriz de riesgo}
-\end{figure}
+El ejemplo principal fue T1055, Process Injection,
+que se refiere a ejecutar codigo dentro del espacio de otro
+proceso. La idea que mas me llamo la atencion fue que decir que
+detectar este ataque puede significar cosas muy distintas,
+dependiendo de que procedimiento se probo y de que datos se
+recolectaron.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{img/image7.jpg}
-  \caption{Tabla periodica de la ciberseguridad}
-\end{figure}
+Para esto se separaron varios niveles: la tecnica que se quiere
+estudiar, el procedimiento con el que un programa la implementa,
+el comportamiento que se puede observar y la capacidad de
+deteccion del sensor. Donde en este caso, que un procedimiento
+exista no significa que nuestro equipo vaya a generar toda la
+informacion necesaria para reconocerlo.
 
-\subsection{Terraforming the kill chain: de codigo a control}
+Despues se comparo con T1059, relacionado con interpretes de
+comandos y scripts. En ese caso, una linea de comandos puede
+aportar evidencia importante sobre la ejecucion. No obstante,
+para varias formas de inyeccion es necesario revisar accesos
+entre procesos, cambios en la memoria, permisos o cargas de
+componentes. 
 
-En la ultima platica a la que pude asistir, fue dada por Diego Castro, en este caso su ponencia 
-fue de como optimizar las operaciones ofensivas mediante infraestructura automatizada, el empezo 
-hablando sobre las diferencias entre 
-pentest y un ejercicio de red team, donde
-se nos explico que en el caso de el 
-red team suele ser mucho mas confidencial, 
-con menos personal de la organizacion
-y donde como tal, el objetivo es evadir al Blue Team o al SOC, el empezo 
-a contar una anecdota de cuando empezo, donde el miedo principal era que lo
-detectaran, esto por que no se preocupaba
-lo suficiente por estar oculto, esto me recordo a lo que se vio en la primera conferencia 
-donde se se nos decia un poco de los principantes, aunque como tal aqui no era 
-poner solo comandos, esto me recordo a esta primera conferencia, donde como tal 
-al ser nuevos, tanto tenemos miedo, como es mas facil caer en engaños 
-y quedar mal, por que como el mismo Diego dijo, que el tambien tenia miedo a quedar mal 
-si es que lo llegaran a descubrir.
+Si se prueban
+ocho procedimientos y solamente se pueden validar cinco, eso
+representa el 62.5\% de esos ocho procedimientos. No significa
+que se pueda detectar el 62.5\% de todos los ataques que existen.
 
-Despues de esto, ya paso directamente a la parte central 
-de la presentacion, donde se nos empezo hablando sobre el concepto de Infrastructure as Code (IaC), con dos tecnologias principales: Terraform,
-donde esta utiliza principalmente pluggins y APIs de proveedores de nube
-permite declarar
-el estado que se quiere y levantarlo con un solo
-binario, ademas de esto explico tambien el concepto de 
-redirector como una maquina que actua de proxy, donde esta como tal 
-lo que hacia era el filtrado del
-trafico entrante, esto si la conexion trae un 
-user agent especifico y una llave configurados,
-se deja pasar como segura la conexion del C2, 
-y si no, se redirige a un sitio señuelo que
-puede ser cualquier cosa, hasta la pagina del clima, esto se hace para
-para despistar al equipo de deteccion.
 
-Ademas
-nos dio las diferencias entre esto y entre una infraestructura 
-de phishing, donde en vez de establecer conexion con un
-equipo, lo que hace es recolectar credenciales 
-directamente, y conto una anecdota de su 
-primer ejercicio de phishing, donde uso una plantilla
-pero puro html plano y puro, donde puso que se debia de 
-actualizar la conseña y en caso de que no se negaria el acceso 
-al edificio, y aun asi logro que cayera una persona,
-esto si nos damos cuenta se relaciona con la primera charla nuevamente 
-donde de nuevo es muy facil caer en engaños, con personas que 
-no tienen la capacitacion, donde con esto nos damos cuenta que el ponente 
-de la priemr acharla tenia razon, con que las empresas 
-noinvierten en capacitacion y concientizacion, y esto es un gran problema, por que
-si bien es cierto que se puede tener un gran sistema de seguridad,
-si no se tiene la capacitacion de las personas,
-simplemente no sirve de nada, por que al final, la vulnerabilidad
-principal es el personal, tal y como dijo Diego que puedo hacer lo mismo.
+Elementos destacods 
 
-\subsection{Elementos a destacar}
- 
 \begin{itemize}
-  \item Un ejercicio de red team, sobre todo en el nivel de
-  confidencialidad y en el objetivo de evadir al Blue Team o al SOC.
-  \item El uso de Infrastructure as Code (Terraform y Ansible) para automatizar el levantamiento,
-  configuracion y desecho de infraestructura ofensiva sin perder el control sobre ella.
-  \item El redirector como proxy que filtra conexiones por user-agent y llave, redirigiendo todo
-  lo demas a un sitio señuelo para despistar al equipo de deteccion.
+    \item Distinguir entre tecnica, procedimiento, evidencia observable y deteccion.
+    \item Medir la cobertura sobre los procedimientos que realmente se probaron.
+    \item Volver a validar las detecciones cuando cambian las implementaciones o el entorno.
 \end{itemize}
 
+\Needspace{10\baselineskip}
+\subsection{Breaking the Defenders}
+
+Ahora bien, la idea principal fue distinguir entre ocultar una
+accion y afectar la capacidad de las defensas. Se puede detener
+un servicio de seguridad, pero tambien se puede alterar lo que
+observa sin que el proceso desaparezca. Por lo que, ver un
+servicio en ejecucion no demuestra que siga entregando
+informacion util.
+
+Para esto, se mencionaron ejemplos de interferencia con
+mecanismos de Windows que ayudan a revisar scripts o generar
+eventos, como AMSI y ETW. Tambien se hablo del abuso de
+controladores vulnerables y de cambios en la carga de librerias.
+
+De igual forma, se revisaron casos de ransomware, donde borrar
+respaldos o impedir la recuperacion puede cambiar las
+posibilidades de respuesta de una organizacion. No obstante, se
+explico que no basta con esperar hasta el cifrado o hasta que
+aparezca la nota de rescate, por que para ese momento ya se
+perdieron varias oportunidades de detectar la preparacion del
+ataque.
+
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1.0\textwidth]{img/image10.jpg}
-  \caption{Manera de quemar infrestructura}
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/image13.png}
+    \caption{Mapeo del comportamiento, identificacion de falta de visibilidad y medicion de la cobertura real.}
+\end{figure}
+
+
+Por ultimo, se hablo de los MSP, que son proveedores que
+administran servicios para distintos clientes. Una configuracion
+que funciona para uno puede generar mucho ruido para otro, por lo
+que cada entorno necesita sus propios criterios. Con esto me
+quedo con que la cobertura tambien depende de comprobar que el
+defensor sigue pudiendo ver, no solamente de tener una lista de
+reglas configuradas.
+
+Los elementos a destacar fueron:
+
+\begin{itemize}
+    \item Revisar tanto los intentos de afectar una defensa como sus consecuencias.
+    \item Investigar la perdida de telemetria con otras fuentes y con el contexto del equipo.
+    \item Adaptar las detecciones a cada cliente y comprobar que los sensores siguen siendo utiles.
+\end{itemize}
+
+\newpage
+\section{Ejemplos del uso de ATT\&CK en la industria}
+
+\begin{enumerate}
+    \item \textbf{Ingenieria de deteccion en un SOC.} Relacionar una tecnica con los registros que se necesitan, revisar la cadena de procesos y comprobar si el SIEM genera una alerta con un caso de prueba. El SOC es el equipo que revisa y responde a este tipo de eventos.
+    \item \textbf{Investigacion de identidades en servicios SaaS.} Conectar accesos, cambios en cuentas y acciones dentro de las aplicaciones, para revisar la progresion de una posible intrusion y no solamente eventos aislados.
+    \item \textbf{Defensa de organizaciones con pocos recursos.} Priorizar las amenazas mas relevantes y los controles que se pueden mantener, dejando claro que riesgos siguen pendientes.
+    \item \textbf{Validacion de productos y sensores.} Probar varios procedimientos de una tecnica y revisar que evidencia se obtiene, antes de afirmar que existe cobertura.
+    \item \textbf{Monitoreo de las propias defensas.} Relacionar la perdida de registros con otros eventos para investigar si un control dejo de funcionar o fue afectado.
+    \item \textbf{Proteccion de sistemas de IA.} Utilizar el conocimiento de ATLAS y revisar su relacion con ATT\&CK, considerando tambien las integraciones que conectan esos sistemas con otros recursos.
+\end{enumerate}
+
+
+
+\section{Experiencia general y relacion con la materia}
+
+En la practica 5 se obtuvieron credenciales, en la 6 se revisaron el
+sistema y la red interna, y en la 7 se utilizo un tunel SSH para
+acceder a otro equipo. Ahora bien, durante el evento pude ver
+como esas acciones tambien se pueden estudiar desde lo que
+tendria que observar un defensor.
+
+Del otro lado se tendria
+que revisar si se registro el acceso, si se reconocio la cuenta,
+si aparecieron conexiones nuevas y si alguien relaciono esos
+datos. Esta relacion me ayudo a pensar en que registros serian
+necesarios para reconocer los procedimientos que realizamos
+durante las practicas.
+
+Otro elemento que me llamo la atencion dentro del evento fue un
+ejemplo de MalChela conectado con Claude por medio de MCP. Se
+mostro una integracion para que una interfaz de IA pudiera
+utilizar herramientas del proyecto. Esto se relaciona con las
+preguntas sobre las conexiones de la IA con otros recursos: entre
+mas herramientas puede utilizar, mas importante se vuelve
+entender a que puede acceder y que acciones se le permiten.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth,trim=130.01bp 92.00bp 100.01bp 235.01bp,clip]{img/image11.png}
+    \caption{Ejemplo de integracion de Claude con herramientas de MalChela mediante MCP.}
+\end{figure}
+
+
+Por ultimo, me parecio importante que varias presentaciones
+señalaran lo que todavia no estaba resuelto: el alcance de una
+futura plataforma de IA, los procedimientos que no se habian
+validado o las amenazas que una organizacion no puede cubrir
+todavia. Esto me hizo sentido por que reconocer esos limites
+permite saber que falta por mejorar, en lugar de asumir que todo
+esta completo.
+
+\section{Evidencia de participacion en el evento}
+
+Para participar me registre en la modalidad virtual de ATT\&CKcon
+7.0 y recibi el correo de confirmacion. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,trim=100.01bp 12.00bp 52.00bp 135.01bp,clip]{img/image1.png}
+    \caption{Confirmacion del registro a ATT\&CKcon 7.0 en modalidad virtual.}
 \end{figure}
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{img/image9.jpg}
-  \caption{Redirector y sitio señuelo}
+    \centering
+    \includegraphics[width=0.58\textwidth,trim=475.02bp 25.00bp 408.02bp 60.00bp,clip]{img/image2.png}
+    \caption{Informacion para el acceso virtual al evento.}
 \end{figure}
 
 
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{img/image8.jpg}
-  \caption{Final de la conferencia}
+    \centering
+    \includegraphics[width=0.63\textwidth,trim=425.02bp 262.01bp 350.02bp 270.01bp,clip]{img/image12.png}
+    \caption{Perfil de participante dentro de la plataforma del evento.}
 \end{figure}
 
-
-
-% Impresión Referencias
+\newpage
 \nocite{*}
-\printbibliography[heading=bibintoc, title={Referencias}]
+\printbibliography[heading=bibintoc,title={Referencias}]
 \end{document}
