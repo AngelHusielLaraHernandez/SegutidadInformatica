@@ -1,0 +1,310 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA ---
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS ---
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing, babel, fit, backgrounds}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE TABLAS ---
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% --- COLORES EXACTOS DEL EXCEL (Ejemplo - Análisis de Riesgos.xlsx) ---
+\definecolor{xlHeader}{HTML}{EFEFEF}    % Gris claro de encabezados de sección
+\definecolor{xlSelected}{HTML}{B7B7B7}  % Gris medio para celdas/opciones seleccionadas
+\definecolor{xlSummary}{HTML}{CFE2F3}   % Azul claro para calificaciones, estatus y actor
+\definecolor{xlComment}{HTML}{C9DAF8}   % Azul suave para comentarios, consecuencias y justificación
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=20mm, 
+    right=20mm,
+    top=32mm,
+    bottom=25mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+% Tipos de columna personalizados para la plantilla de Excel
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+{\hypersetup{linkcolor=black}\tableofcontents}
+
+\newpage
+\setcounter{page}{1}
+\singlespacing
+
+% =========================================================
+\section{Contexto del Escenario de Riesgo: Caso Grupo Groq (\texttt{RK-007 / RK-007a})}
+% =========================================================
+
+Retomando el registro de riesgos de \textbf{VELOX Automotriz S.A. de C.V.} desarrollado en la actividad previa \autocite{nist-sp800-30, sae-21434}, el presente documento traslada y desarrolla a detalle la plantilla completa de \textbf{Análisis de Riesgos} para el escenario del \textbf{Grupo Groq} (\texttt{RK-007} / \texttt{RK-007a}: \textit{ShadowAI --- Depuración de código y firmware en GroqCloud y servicios de IA no autorizados}) \autocite{owasp-llm-top10, wardsauto-upstream-2026}.
+
+\vspace{0.2cm}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|C{0.6cm}|C{1.4cm}|L{2.8cm}|L{5.5cm}|L{5.5cm}|}
+\hline
+\rowcolor{blue!20}
+\textbf{\#} & \textbf{ID} & \textbf{Nombre del Riesgo} & \textbf{Escenario --- Forma 1 (Orientado al Impacto y Proceso Operativo)} & \textbf{Escenario --- Forma 2 (Orientado al Actor / Adversario y Activo Comprometido)} \\
+\hline
+7 & \texttt{RK-007} & ShadowAI (Uso no autorizado de Groq, Claude, DeepSeek y navegadores con IA) & Un empleado utiliza en sus operaciones del día a día la IA de Groq, Claude, DeepSeek o navegadores con servicios de IA integrados sin autorización corporativa, provocando la filtración de código fuente automotriz, secretos de red y datos personales de clientes en servidores externos. & Un actor interno (\textit{Ditto}) o adversario externo que intercepta sesiones de terceros compromete la confidencialidad de las estaciones de ingeniería, Confluence, ServiceNow y el código del portal corporativo al procesar datos confidenciales en plataformas externas de IA (\texttt{CWE-200}, \texttt{OWASP LLM06}). \\
+\hline
+7.1 & \texttt{RK-007a} & ShadowAI --- Groq (Depuración de código y firmware en GroqCloud) & Un ingeniero pega bloques de código propietario de la ECU Principal (VCU) y microservicios Node.js en la plataforma de inferencia rápida Groq para resolver fallos del día a día, exponiendo algoritmos de control vehicular y llaves API de AWS/Vault. & Un colaborador con privilegios de desarrollo compromete la confidencialidad del repositorio de firmware Renesas RH850, los microservicios del portal corporativo y los secretos de HashiCorp Vault al enviarlos a los servidores externos de Groq. \\
+\hline
+\end{tabular}
+\endgroup
+
+% =========================================================
+\section{Plantilla Completa de Análisis de Riesgos (Hoja 1: Formato)}
+% =========================================================
+
+A continuación se presenta la tabla íntegra del análisis de riesgos elaborada en la primera hoja (\texttt{Formato}) del libro de Excel, siguiendo la estructura de cinco secciones (\textbf{Sección I --- Resumen}, \textbf{Sección II --- Descripción del riesgo}, \textbf{Sección III --- Análisis de Riesgo}, \textbf{Sección IV --- Respuesta al riesgo} y \textbf{Sección V --- Monitoreo}) y el código de colores del ejemplo de referencia (donde las casillas en \textbf{gris} indican el valor o categoría seleccionada).
+
+\vspace{0.2cm}
+
+% ---------------------------------------------------------
+\subsection{Secciones I, II y III: Resumen, Descripción y Evaluación Cuantitativa}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.28}
+\noindent
+\begin{longtable}{|L{3.5cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|}
+\hline
+% ==================== SECCIÓN I - RESUMEN ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección I - Resumen}} \\
+\hline
+\textbf{ID del riesgo} & \multicolumn{3}{l|}{\texttt{RK-007 (RK-007a)}} & \multicolumn{2}{l|}{\textbf{Nivel de Riesgo}} & \cellcolor{xlSummary}\textbf{ALTO} \\
+\hline
+\textbf{Nombre del riesgo} & \multicolumn{3}{p{6.0cm}|}{ShadowAI --- Groq (Depuración de código y firmware en GroqCloud)} & \multicolumn{2}{l|}{\textbf{Respuesta al riesgo}} & \cellcolor{xlSummary}\textbf{MITIGAR / EVITAR} \\
+\hline
+\textbf{Propietario del riesgo} & \multicolumn{3}{p{6.0cm}|}{CISO, Oficial de Privacidad (DPO) y Director de Ingeniería de Software} & \multicolumn{2}{l|}{\textbf{Estado del plan de acción}} & \cellcolor{xlSummary}\textbf{EN IMPLEMENTACIÓN (70\%)} \\
+\hline
+\textbf{Descripción del riesgo} & \multicolumn{3}{p{6.0cm}|}{Filtración de código fuente automotriz (VCU/Node.js), algoritmos y llaves API en GroqCloud por uso no autorizado de IA} & \multicolumn{2}{l|}{\textbf{Última evaluación del riesgo}} & \cellcolor{xlSummary}\textbf{29/08/2026} \\
+\hline
+
+% ==================== SECCIÓN II - DESCRIPCIÓN DEL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección II - Descripción del riesgo}} \\
+\hline
+\textbf{Nombre del riesgo} & \multicolumn{6}{p{12.8cm}|}{ShadowAI --- Groq (Uso no autorizado de GroqCloud, Claude, DeepSeek y navegadores con IA en operaciones diarias)} \\
+\hline
+\textbf{Categoría de riesgo} & Estratégico & Programa & Proyecto & \cellcolor{xlSelected}\textbf{Operativo} & Otro: & \\
+\hline
+\textbf{Escenario de alto nivel} & \multicolumn{6}{p{12.8cm}|}{Un ingeniero de desarrollo pega bloques de código propietario de la ECU Principal (VCU Renesas RH850) y microservicios Node.js en la plataforma externa de inferencia rápida GroqCloud para depurar fallos del día a día sin autorización corporativa. Esto compromete la confidencialidad del repositorio de firmware, algoritmos críticos de control vehicular y secretos de HashiCorp Vault / llaves API de AWS al procesarlos en servidores externos sin acuerdo TISAX, provocando pérdida de ventaja competitiva e incumplimiento con socios Tier 1.} \\
+\hline
+\textbf{Descripción detallada del riesgo} & \textbf{Evento} & \multicolumn{5}{p{10.5cm}|}{Exposición y filtración de código fuente propietario (VCU/Node.js) y llaves API en servidores externos de GroqCloud por uso de ShadowAI} \\
+\cline{2-7}
+ & \textbf{Activo / Recurso} & \multicolumn{5}{p{10.5cm}|}{Estaciones de ingeniería, repositorio de firmware Renesas RH850 (VCU), microservicios Node.js (\texttt{connect.veloxauto.mx}) y secretos de HashiCorp Vault / AWS} \\
+\cline{2-7}
+ & \textbf{Tipo de Amenaza} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}Amenaza Interna (Insider / Colaborador) e Interceptación en Plataformas Externas de IA (\texttt{CWE-200}, \texttt{OWASP LLM06})} \\
+\cline{2-7}
+ & \textbf{Actor} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}\textit{Ditto} (Colaborador con privilegios de desarrollo / Actor interno) o adversario externo que intercepta sesiones de terceros} \\
+\cline{2-7}
+ & \textbf{Probabilidad} & \multicolumn{5}{p{10.5cm}|}{Alta} \\
+\cline{2-7}
+ & \textbf{Consecuencias} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlComment}Exfiltración de algoritmos de control vehicular y propiedad intelectual ADAS/VCU, exposición de llaves API de AWS/Vault e incumplimiento con socios Tier 1} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Otra información del escenario}} & \multicolumn{5}{p{10.5cm}|}{Clasificado bajo \texttt{CWE-200} y \texttt{OWASP LLM06} (\textit{Sensitive Information Disclosure}). El caso general del grupo Groq (\texttt{RK-007}) abarca también la filtración de tickets ITSM/ERP en Claude (\texttt{RK-007b}) y lectura del DOM/SIEM en DeepSeek y navegadores IA (\texttt{RK-007c}).} \\
+\hline
+
+% ==================== SECCIÓN III - ANÁLISIS DE RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección III - Análisis de Riesgo}} \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Frecuencia}} \\
+\hline
+\textbf{Ocurrencia Anual} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
+\cline{2-7}
+ & $N \leq 0.01$ & $0.01 < N \leq 0.1$ & $0.1 < N \leq 1$ & $1 < N \leq 10$ & \cellcolor{xlSelected}\boldmath$10 < N \leq 100$ & $100 < N$ \\
+\hline
+\textbf{Comentarios sobre la frecuencia} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Considerando las 85 estaciones de trabajo de ingeniería y las 420 laptops corporativas de VELOX, el uso cotidiano de GroqCloud para depurar fallos de código VCU y microservicios Node.js genera entre 10 y 100 eventos de exposición de código o secretos al año ($10 < N \leq 100$).} \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Impacto}} \\
+\hline
+\textbf{Pérdida de ganancia anual} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
+\cline{2-7}
+ & $I \leq 0.1\%$ & $0.1\% < I \leq 1\%$ & $1\% < I \leq 3\%$ & $3\% < I \leq 5\%$ & \cellcolor{xlSelected}\boldmath$5\% < I \leq 10\%$ & $10\% < I$ \\
+\hline
+\textbf{Comentarios sobre la pérdida} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}La filtración de algoritmos propietarios de la VCU (Renesas RH850) y llaves API de AWS/Vault causaría pérdida de ventaja competitiva en vehículos eléctricos, costos de respuesta a incidentes en la nube y suspensión de contratos con socios Tier 1, representando entre el 5\% y el 10\% de la ganancia anual.} \\
+\hline
+\textbf{Costo de la respuesta al riesgo} & 0.0 & \cellcolor{xlSelected}\textbf{1.0} & 2.0 & 3.0 & 4.0 & 5.0 \\
+\cline{2-7}
+ & $I \leq \$10\text{k}$ & \cellcolor{xlSelected}\boldmath$\$10\text{k} < I \leq \$100\text{k}$ & $\$100\text{k} < I \leq \$1\text{M}$ & $\$1\text{M} < I \leq \$10\text{M}$ & $\$10\text{M} < I \leq \$100\text{M}$ & $\$100\text{M} < I$ \\
+\hline
+\textbf{Comentarios sobre el costo de la respuesta} & \multicolumn{6}{p{12.8cm}|}{La respuesta aprovecha controles ya existentes en VELOX (políticas GPO en Active Directory y módulo CASB en FortiGate 600F), requiriendo únicamente licenciamiento de Endpoint DLP para estaciones de ingeniería y el despliegue de IA privada empresarial en AWS Bedrock, con un costo anual estimado de \$45,000 USD ($\$10,000 < I \leq \$100,000$).} \\
+\hline
+\textbf{Impacto reputacional} & 0.0 & 1.0 & 2.0 & \cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
+\cline{2-7}
+ & $I \leq 0.5$ & $0.5 < I \leq 1$ & $1 < I \leq 1.5$ & \cellcolor{xlSelected}\boldmath$1.5 < I \leq 2$ & $2 < I \leq 2.5$ & $2.5 < I$ \\
+\hline
+\textbf{Comentarios sobre el impacto reputacional} & \multicolumn{6}{p{12.8cm}|}{En caso de materializarse la exposición de código de control vehicular (VCU), diseños ADAS o datos personales/VIN de clientes en plataformas de IA externas, VELOX Automotriz perdería entre 1.5 y 2.0 puntos de reputación ante clientes y fabricantes OEM/Tier 1.} \\
+\hline
+\textbf{Costo de multas por incumplimiento} & 0.0 & 1.0 & \cellcolor{xlSelected}\textbf{2.0} & 3.0 & 4.0 & 5.0 \\
+\cline{2-7}
+ & $\$0.00$ & $< \$1\text{M}$ & \cellcolor{xlSelected}\boldmath$< \$10\text{M}$ & $< \$100\text{M}$ & $< \$1\text{B}$ & $> \$1\text{B}$ \\
+\hline
+\textbf{Comentarios sobre el incumplimiento regulatorio} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}La transferencia de propiedad intelectual compartida y datos personales (PII/VIN) hacia servidores de IA sin acuerdo TISAX incumple convenios de confidencialidad (NDA) con socios Tier 1, normativas ISO/SAE 21434 y leyes de protección de datos, implicando multas y penalizaciones de hasta \$10M USD ($< \$10\text{M}$).} \\
+\hline
+\multicolumn{4}{|l|}{\textbf{Calificación general del impacto (promedio de los 4 aspectos)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{2.50}} \\
+\hline
+\multicolumn{4}{|l|}{\textbf{Calificación general del nivel de riesgo (Frecuencia $\times$ Impacto)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{10.00}} \\
+\hline
+\end{longtable}
+\endgroup
+
+\newpage
+
+% ---------------------------------------------------------
+\subsection{Secciones IV y V: Respuesta al Riesgo, Plan de Acción y Monitoreo}
+% ---------------------------------------------------------
+
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.35}
+\noindent
+\begin{longtable}{|C{0.8cm}|L{3.1cm}|C{1.9cm}|C{1.9cm}|C{1.9cm}|C{2.2cm}|C{2.2cm}|}
+\hline
+% ==================== SECCIÓN IV - RESPUESTA AL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección IV - Respuesta al riesgo}} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Respuesta seleccionada:}} & Aceptar & Transferir & \cellcolor{xlSelected}\textbf{Mitigar} & \cellcolor{xlSelected}\textbf{Evitar} \\
+\hline
+\multicolumn{2}{|c|}{\textbf{Justificación}} & \multicolumn{5}{p{10.9cm}|}{\cellcolor{xlComment}El riesgo presenta un nivel ALTO (calificación de 10.0) y no puede ser aceptado debido al impacto crítico que tendría la filtración del firmware de la VCU (Renesas RH850), los microservicios Node.js y los secretos de HashiCorp Vault/AWS en la seguridad operacional y competitividad de VELOX Automotriz. Dado que el costo de implementación es bajo en comparación con las pérdidas potenciales, se decide \textbf{MITIGAR} el riesgo mediante reglas DLP en endpoints, control CASB en FortiGate y el despliegue de IA privada en AWS Bedrock, así como \textbf{EVITAR} la exposición bloqueando navegadores/extensiones de IA no autorizados y dominios sin acuerdo TISAX.} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Estatus general del plan de acción}} & \multicolumn{4}{p{8.8cm}|}{En implementación (70\% completado: reglas DLP y política GPO activas)} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Problemas relevantes de las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Falsos positivos iniciales en reglas DLP al analizar fragmentos legítimos de código C/Node.js y resistencia al cambio por parte de desarrolladores acostumbrados a la baja latencia de GroqCloud.} \\
+\hline
+\multicolumn{3}{|l|}{\textbf{Hitos conseguidos en las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Reglas DLP activas en las 85 estaciones de ingeniería; política GPO desplegada en Active Directory bloqueando extensiones/navegadores IA no autorizados; bloqueo CASB activo en FortiGate 600F (70\% de avance).} \\
+\hline
+
+% ==================== PLAN DE ACCIÓN ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Plan de acción}} \\
+\hline
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Acción de respuesta}} & \textbf{Fecha compromiso} & \textbf{Estatus} \\
+\hline
+1.0 & \multicolumn{4}{p{9.2cm}|}{Aplicar política GPO en Active Directory para bloquear navegadores con IA integrada y extensiones no autorizadas en estaciones de ingeniería y laptops} & 10/08/2026 & Completado \\
+\hline
+2.0 & \multicolumn{4}{p{9.2cm}|}{Configurar e implementar reglas de Endpoint DLP para prevenir el pegado y envío de código fuente (VCU/Node.js), datos PII/VIN y llaves API de AWS/Vault} & 18/08/2026 & Completado \\
+\hline
+3.0 & \multicolumn{4}{p{9.2cm}|}{Activar control CASB e inspección SSL en el firewall FortiGate 600F para bloquear dominios de IA externos (GroqCloud, DeepSeek, Claude personal) sin acuerdo TISAX} & 25/08/2026 & Completado \\
+\hline
+4.0 & \multicolumn{4}{p{9.2cm}|}{Desplegar plataforma de asistencia de IA privada corporativa en AWS Bedrock con garantía de cero retención de datos para uso de los ingenieros de software y firmware} & 15/09/2026 & En progreso \\
+\hline
+5.0 & \multicolumn{4}{p{9.2cm}|}{Rotar secretos expuestos en HashiCorp Vault / AWS IAM y capacitar al personal técnico en la política corporativa de uso seguro de IA generativa} & 30/09/2026 & En progreso \\
+\hline
+
+% ==================== SECCIÓN V - MONITOREO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección V - Monitoreo}} \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Última evaluación del riesgo}} & \multicolumn{2}{c|}{29/08/2026} & \multicolumn{2}{l|}{\textbf{Siguiente evaluación}} & 29/09/2026 \\
+\hline
+\multicolumn{7}{|c|}{\textbf{Indicadores clave de riesgo (KRIs)}} \\
+\hline
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Indicador}} & \textbf{Medición} & \textbf{Fecha} \\
+\hline
+1.0 & \multicolumn{4}{p{9.2cm}|}{Intentos mensuales de envío de código fuente o llaves API a GroqCloud y dominios de IA bloqueados por DLP / FortiGate CASB} & 14 alertas/mes & 29/08/2026 \\
+\hline
+2.0 & \multicolumn{4}{p{9.2cm}|}{Porcentaje de estaciones de trabajo de ingeniería y laptops con política GPO anti-ShadowAI y agente DLP activos} & 100\% (505/505) & 29/08/2026 \\
+\hline
+3.0 & \multicolumn{4}{p{9.2cm}|}{Porcentaje de desarrolladores de firmware VCU y backend migrados al entorno privado autorizado en AWS Bedrock} & 70\% completado & 29/08/2026 \\
+\hline
+\end{longtable}
+\endgroup
+
+\vspace{0.4cm}
+
+% =========================================================
+\section{Síntesis Matemática del Cálculo de Riesgo}
+% =========================================================
+
+De acuerdo con la metodología cuantitativa empleada en la plantilla de análisis de riesgos \autocite{nist-sp800-30}:
+
+\begin{enumerate}[leftmargin=1.5cm]
+    \item \textbf{Frecuencia Anual ($F$):} Se asigna un valor de $F = 4.0$, correspondiente al rango $10 < N \leq 100$ eventos anuales de uso no autorizado de GroqCloud para depuración de código y firmware en las estaciones de ingeniería.
+    \item \textbf{Calificación General del Impacto ($I_{\text{prom}}$):} Se obtiene como la media aritmética de los cuatro rubros de impacto evaluados en escala de $0.0$ a $5.0$:
+    \[
+        I_{\text{prom}} = \frac{I_{\text{ganancia}} + I_{\text{costo\_respuesta}} + I_{\text{reputacional}} + I_{\text{multas}}}{4} = \frac{4.0 + 1.0 + 3.0 + 2.0}{4} = \frac{10.0}{4} = 2.50
+    \]
+    \item \textbf{Calificación General del Nivel de Riesgo ($R$):} Se calcula como el producto de la frecuencia por la calificación general del impacto:
+    \[
+        R = F \times I_{\text{prom}} = 4.0 \times 2.50 = 10.00 \quad \Longrightarrow \quad \textbf{Nivel de Riesgo: ALTO}
+    \]
+\end{enumerate}
+
+\newpage
+\printbibliography[heading=bibintoc, title={Referencias}]
+
+\end{document}

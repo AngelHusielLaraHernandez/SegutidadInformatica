@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Contexto del Escenario de Riesgo: Caso Grupo Groq (\texttt {RK-007 / RK-007a})}{1}{section.1}%
+\contentsline {section}{\numberline {2}Plantilla Completa de Análisis de Riesgos (Hoja 1: Formato)}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Secciones I, II y III: Resumen, Descripción y Evaluación Cuantitativa}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Secciones IV y V: Respuesta al Riesgo, Plan de Acción y Monitoreo}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Síntesis Matemática del Cálculo de Riesgo}{5}{section.3}%
+\contentsline {section}{Referencias}{6}{section*.1}%
