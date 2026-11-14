@@ -1,0 +1,1566 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA ---
+\usepackage[spanish,mexico,es-noshorthands]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+\usepackage{pdfpages}
+
+% --- PAQUETES MATEMÁTICOS ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{mathrsfs}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, shapes.multipart, positioning, arrows.meta, calc, shadows, decorations.pathreplacing, babel, fit, backgrounds}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE TABLAS ---
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% --- COLORES INSTITUCIONALES Y DEL CSF 2.0 ---
+\definecolor{xlHeader}{HTML}{EFEFEF}    % Gris claro de encabezados
+\definecolor{xlSelected}{HTML}{B7B7B7}  % Gris medio
+\definecolor{xlSummary}{HTML}{CFE2F3}   % Azul claro para resúmenes
+\definecolor{xlComment}{HTML}{C9DAF8}   % Azul suave
+\definecolor{armblue}{RGB}{0, 113, 188}
+
+% Colores oficiales aproximados de las 6 funciones del NIST CSF 2.0
+\definecolor{csfGV}{HTML}{FFF2CC}       % Govern - Amarillo suave
+\definecolor{csfID}{HTML}{D9E1F2}       % Identify - Azul suave
+\definecolor{csfPR}{HTML}{E2EFDA}       % Protect - Verde/Morado suave
+\definecolor{csfDE}{HTML}{FCE4D6}       % Detect - Naranja suave
+\definecolor{csfRS}{HTML}{F8CBAD}       % Respond - Coral suave
+\definecolor{csfRC}{HTML}{D0CECE}       % Recover - Gris/Verde suave
+
+\definecolor{badgePractica}{HTML}{D9EAD3} % Verde claro: Aplicado en Práctica / Lab
+\definecolor{badgeVelox}{HTML}{CFE2F3}    % Azul claro: Aplicado en Caso VELOX
+\definecolor{badgeTeorico}{HTML}{FFF2CC}  % Amarillo claro: Visto Teórico / Tarea / Planificado
+\definecolor{badgeNoVisto}{HTML}{F3F3F3}  % Gris claro: No cubierto directamente
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{img/}{portada_img/}}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=18mm, 
+    right=18mm,
+    top=30mm,
+    bottom=24mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+% Tipos de columna personalizados
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+{\hypersetup{linkcolor=black}\tableofcontents}
+
+\newpage
+\setcounter{page}{1}
+\singlespacing
+
+% =========================================================
+\section{Introducción y Estructura de The NIST Cybersecurity Framework (CSF) 2.0}
+% =========================================================
+
+El presente documento desarrolla la \textbf{Actividad 8} de la asignatura \textit{Seguridad Informática Básica}, cuyo objetivo es revisar de forma exhaustiva el marco de referencia \textbf{The NIST Cybersecurity Framework (CSF) 2.0} (\texttt{NIST CSWP 29} y la hoja de cálculo oficial \texttt{csf2.xlsx}) \autocite{nist-csf-20} y contrastar sus \textbf{Funciones, Categorías, Subcategorías y Ejemplos de Implementación (Actividades)} contra la totalidad del historial del proyecto desarrollado a lo largo del semestre: \textbf{Actividades de clase (1 a 7)}, \textbf{Prácticas de laboratorio (1 a 7)}, \textbf{Presentaciones interactivas (HTML)} y \textbf{Tareas de investigación y conferencias (1 a 4)}.
+
+En su versión 2.0 (publicada por el NIST en febrero de 2024), el \textit{CSF Core} organiza los resultados de ciberseguridad en una taxonomía jerárquica de \textbf{6 Funciones}, \textbf{22 Categorías activas} y \textbf{106 Subcategorías activas} (acompañadas en el archivo \texttt{csf2.xlsx} por sus respectivos \textit{Implementation Examples} e identificadores de referencias informativas, además de las 79 subcategorías retiradas de la versión 1.1 que fueron reubicadas):
+
+\begin{enumerate}[leftmargin=1.2cm, itemsep=2pt]
+    \item \textbf{GOVERN (\texttt{GV}) --- Gobernanza (6 categorías, 31 subcategorías):} Establece, comunica y monitorea la estrategia de gestión de riesgos de ciberseguridad de la organización, las expectativas y las políticas (incluyendo contexto organizacional, estrategia de riesgos, roles y responsabilidades, políticas, supervisión y gestión de riesgos en la cadena de suministro \textit{C-SCRM}). Es la función transversal incorporada en CSF 2.0 que informa a las otras cinco funciones.
+    \item \textbf{IDENTIFY (\texttt{ID}) --- Identificar (3 categorías, 21 subcategorías):} Permite comprender los riesgos actuales de ciberseguridad de la organización mediante la gestión e inventario de activos (\texttt{ID.AM}), la evaluación de riesgos, vulnerabilidades y amenazas (\texttt{ID.RA}), y la mejora continua de procesos y planes (\texttt{ID.IM}).
+    \item \textbf{PROTECT (\texttt{PR}) --- Proteger (5 categorías, 22 subcategorías):} Implementa salvaguardas técnicas y operativas para gestionar los riesgos de ciberseguridad: gestión de identidades, autenticación y control de acceso (\texttt{PR.AA}), concientización y capacitación (\texttt{PR.AT}), seguridad de los datos en reposo, tránsito, uso y respaldos (\texttt{PR.DS}), seguridad de plataformas (\texttt{PR.PS}) y resiliencia de la infraestructura tecnológica (\texttt{PR.IR}).
+    \item \textbf{DETECT (\texttt{DE}) --- Detectar (2 categorías, 11 subcategorías):} Permite descubrir y analizar posibles ataques y compromisos de ciberseguridad mediante el monitoreo continuo de redes, entornos físicos, personal, proveedores y plataformas (\texttt{DE.CM}), así como el análisis y correlación de eventos adversos (\texttt{DE.AE}).
+    \item \textbf{RESPOND (\texttt{RS}) --- Responder (4 categorías, 13 subcategorías):} Ejecuta acciones frente a un incidente de ciberseguridad detectado, abarcando la gestión de incidentes (\texttt{RS.MA}), el análisis forense y de causa raíz (\texttt{RS.AN}), la comunicación y reporte de respuesta (\texttt{RS.CO}) y la mitigación mediante contención y erradicación (\texttt{RS.MI}).
+    \item \textbf{RECOVER (\texttt{RC}) --- Recuperar (2 categorías, 8 subcategorías):} Restaura los activos y las operaciones afectadas por un incidente de ciberseguridad mediante la ejecución del plan de recuperación y verificación de integridad de respaldos (\texttt{RC.RP}) y la comunicación de recuperación (\texttt{RC.CO}).
+\end{enumerate}
+
+\subsection{Criterios de Clasificación de Aparición y Aplicación en el Curso}
+
+Para responder con precisión tanto a \textbf{dónde apareció} cada subcategoría/actividad como a \textbf{si se aplicó en algún momento}, este análisis clasifica la evidencia encontrada en el repositorio en tres niveles de aplicación:
+
+\begin{itemize}[leftmargin=1.0cm, itemsep=2pt]
+    \item \colorbox{badgePractica}{\textbf{SÍ --- Aplicación Práctica / Técnica en Laboratorio (Prácticas 1--7):}} La actividad o ejemplo de implementación del \texttt{csf2.xlsx} fue \textbf{ejecutado directamente con herramientas y comandos reales} dentro de las máquinas virtuales del laboratorio (\texttt{EvilBox} Debian 13, \texttt{webserver} Debian 8.11 \texttt{192.168.177.129}/\texttt{10.0.0.78} y \texttt{codeserver} Windows Server 2012 R2 \texttt{10.0.0.201}) o sobre dominios reales autorizados (\texttt{ingenieria.unam.mx} / \texttt{unam.mx}).
+    \item \colorbox{badgeVelox}{\textbf{SÍ --- Aplicación Metodológica / Documental en Caso de Estudio (Actividades 1--7):}} La actividad fue \textbf{aplicada formalmente mediante artefactos de ingeniería y gestión de riesgos} para el caso de estudio corporativo \textbf{VELOX Automotriz S.A. de C.V.} (perfiles de negocio, inventario de 12 activos críticos IT/OT/V2X, diagrama de segmentación en 4 zonas, matriz de 27 CVEs con CVSS v3.1, taxonomía de actores de amenaza Edición Pokémon en documento y presentación HTML, registro de 10 escenarios de riesgo \texttt{RSK-01}..\texttt{RSK-10}, y modelo cuantitativo/cualitativo con Plan de Acción y KRIs para el Caso Grupo Groq \texttt{RK-007}).
+    \item \colorbox{badgeTeorico}{\textbf{Enfoque Teórico / Analítico / Planificado (Tareas 1--4 y Planes de Mitigación):}} La subcategoría fue estudiada conceptualmente en clase o en las tareas de investigación (\textit{Deception/Honeypots} en Tarea 1, \textit{Zero-Days y ética de divulgación} en Tarea 2, telemetría y operaciones SOC en \textit{MITRE ATT\&CKcon 7.0} en Tarea 4) o bien quedó \textbf{propuesta/planificada con fechas compromiso} (diciembre 2026 -- marzo 2027) dentro de los planes de acción de VELOX Automotriz sin ejecutarse físicamente en una planta automotriz real.
+\end{itemize}
+
+% =========================================================
+\section{Inventario Completo del Historial del Proyecto Revisado}
+% =========================================================
+
+Se realizó la inspección íntegra de todas las carpetas del repositorio del curso (\texttt{Actividad 1}, \texttt{Actividad2}, \texttt{Actividad3}, \texttt{Actividad3/html}, \texttt{Actividad4}, \texttt{Actividad7}, \texttt{Practica1} a \texttt{Practica7}, y \texttt{Tarea1} a \texttt{Tarea4}). En la Tabla~\ref{tab:inventario-proyecto} se sintetiza el alcance técnico y documental de cada entregable revisado.
+
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{longtable}{|L{2.8cm}|L{3.5cm}|L{6.2cm}|C{3.8cm}|}
+\caption{Inventario general de carpetas y documentos revisados en el historial del proyecto.}
+\label{tab:inventario-proyecto} \\
+\hline
+\rowcolor{blue!20}
+\textbf{Carpeta / Entregable} & \textbf{Título / Tema Principal} & \textbf{Contenido Técnico y Actividades Realizadas} & \textbf{Funciones CSF 2.0 Relacionadas} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{blue!20}
+\textbf{Carpeta / Entregable} & \textbf{Título / Tema Principal} & \textbf{Contenido Técnico y Actividades Realizadas} & \textbf{Funciones CSF 2.0 Relacionadas} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\textbf{Actividad 1}\newline (\texttt{Actividad 1/main.tex}) &
+Diferencias entre Seguridad de la Información y Ciberseguridad &
+Análisis de la tríada CIA (Confidencialidad, Integridad, Disponibilidad), diferencia entre gobierno documental/políticas y defensa técnica de activos digitales, y contraste entre enfoque táctico defensivo (\textit{Blue Team}) y ofensivo (\textit{Red Team} / Ciberinteligencia). &
+\texttt{GV.OC}, \texttt{GV.PO}, \texttt{ID.RA}, \texttt{PR.DS} \\
+\hline
+
+\textbf{Actividad 2}\newline (\texttt{Actividad2/main.tex} y \texttt{Actividad3/main.tex} Sec. 2--3) &
+Contexto Organizacional y Perfil de VELOX Automotriz S.A. de C.V. &
+Estudio del sector automotriz moderno (``Cuatro Ces'', vehículos definidos por software SDV, relación OEM--Tier 1/Tier 2--Concesionarios--Nube). Definición de la misión, visión, objetivos estratégicos y dependencias críticas de \textbf{VELOX Automotriz S.A. de C.V.} en Guanajuato, México. &
+\texttt{GV.OC-01} a \texttt{GV.OC-05}, \texttt{GV.SC-01}, \texttt{GV.SC-04} \\
+\hline
+
+\textbf{Actividad 3}\newline (\texttt{Actividad3/main.tex} Sec. 4--7) &
+Inventario de Activos Tecnológicos y Arquitectura de Red (VELOX) &
+Inventario de 12 activos críticos (Telemetría AWS, Servidor OTA, Portal Web, FortiGate 600F, SAP S/4HANA, FactoryTalk MES, SCADA WinCC, Active Directory, App Móvil, Gateway OBD-II, ECU VCU Renesas, Sensores ADAS NVIDIA Orin). Catálogo tecnológico por categorías, inventario de endpoints (IT, OT, In-Vehicle), servidores web/APIs y diagrama TikZ de arquitectura en 4 zonas lógicas. &
+\texttt{ID.AM-01} a \texttt{ID.AM-05}, \texttt{ID.AM-07}, \texttt{ID.AM-08}, \texttt{PR.AA-01}, \texttt{PR.IR-01} \\
+\hline
+
+\textbf{Actividad 4}\newline (\texttt{Actividad3/main.tex} Sec. 8) &
+Análisis de Vulnerabilidades en el Stack Tecnológico (VELOX) &
+Metodología de severidad CVSS v3.1 \autocite{first-cvss} y mapeo detallado de \textbf{27 vulnerabilidades reales (CVEs)} con su debilidad \texttt{CWE}, activo afectado, puntaje CVSS y recomendación técnica de mitigación en 7 dominios: IT/OS, Web, ERP/BD, Cloud/K8s, OT/SCADA/PLC, Perimetral/SOC y Vehicular Embebido. &
+\texttt{ID.RA-01}, \texttt{ID.RA-02}, \texttt{ID.IM-04}, \texttt{PR.PS-01}, \texttt{PR.PS-02}, \texttt{PR.PS-06} \\
+\hline
+
+\textbf{Actividad 5 y Presentación HTML}\newline (\texttt{Actividad3/main.tex} Sec. 9--10 y \texttt{Actividad3/html/index.html}) &
+Inteligencia de Amenazas y Taxonomía Propietaria Edición Pokémon &
+Análisis del Top 5 de actores de amenaza automotrices (\textit{Lazarus}, \textit{APT41}, \textit{BlackCat/ALPHV}, \textit{Akira}, \textit{KillNet}), 5 incidentes reales (Continental, Yanfeng, Toyota S3, Hyundai Black Basta, VW Cariad) y creación de la \textbf{Taxonomía de Adversarios Edición Pokémon} (\textit{Mewtwo}, \textit{Gengar}, \textit{Electrode}, \textit{Bisharp}, \textit{Ditto/Rotom}, \textit{Unown}) expuesta en presentación web interactiva HTML/CSS/JS. &
+\texttt{ID.RA-02}, \texttt{ID.RA-03}, \texttt{GV.SC-07}, \texttt{DE.AE-07} \\
+\hline
+
+\textbf{Actividad 6}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}) &
+Plantilla y Registro de Riesgos Corporativo (VELOX Automotriz) &
+Construcción de 10 escenarios de riesgo (\texttt{RSK-01} a \texttt{RSK-10}) redactados en \textbf{Forma 1} (orientado al impacto y proceso operativo) y \textbf{Forma 2} (orientado al actor/adversario y activo comprometido). Plantilla completa del Registro de Riesgos (propietario, nivel de riesgo, respuesta Mitigar/Transferir/Evitar/Aceptar, estado del plan) y desglose del Caso Grupo Groq (\texttt{RK-007}, \texttt{RK-007a/b/c}). &
+\texttt{GV.RM-01} a \texttt{GV.RM-06}, \texttt{GV.RR-02}, \texttt{ID.RA-04} a \texttt{ID.RA-06} \\
+\hline
+
+\textbf{Actividad 7}\newline (\texttt{Actividad7/main.tex} y Excel \texttt{320060829\_Actividad07.xlsx}) &
+Análisis Cuantitativo y Cualitativo de Riesgos: Caso Grupo Groq (\texttt{RK-007 / RK-007a}) &
+Evaluación integral de \textit{ShadowAI} en VELOX Automotriz: Sección I (Resumen ejecutivo), Sección II (Categoría Operativo, \texttt{CWE-200}, \texttt{OWASP LLM06}, actor \textit{Ditto}), Sección III (Frecuencia $F=4.0$/año, Impacto promedio $I_{\text{prom}}=2.50$ sobre pérdida de ganancia, costo de respuesta \$45k USD, reputación y multas TISAX/ISO 21434; Nivel $R=10.00$ ALTO), Sección IV (Respuesta Mitigar/Evitar, hitos al 70\%, Plan de Acción de 5 puntos con fechas) y Sección V (3 KRIs de monitoreo continuo). &
+\texttt{GV.RM-02} a \texttt{GV.RM-06}, \texttt{GV.PO-01}, \texttt{GV.PO-02}, \texttt{GV.OV-03}, \texttt{ID.AM-08}, \texttt{ID.RA-04} a \texttt{ID.RA-06}, \texttt{PR.AT-01}, \texttt{PR.DS-02}, \texttt{PR.PS-05}, \texttt{DE.CM-03}, \texttt{DE.CM-09} \\
+\hline
+
+\textbf{Práctica 1}\newline (\texttt{Practica1/main.tex}) &
+Instalación de Debian 13, Permisos Sudo y Herramientas de Seguridad &
+Despliegue de la VM \texttt{EvilBox} (Debian 13) en VMware Workstation Pro, particionado, gestión de cuentas y privilegios (\texttt{usermod -aG sudo}, \texttt{/etc/sudoers}), prueba de red (\texttt{ping}), actualización del sistema (\texttt{apt update \&\& apt upgrade}, \texttt{/etc/apt/sources.list}) e instalación/verificación de herramientas (\texttt{nmap}, \texttt{hydra}, \texttt{subfinder}, \texttt{httpx}, \texttt{nuclei}, \texttt{amass}, \texttt{torbrowser}). &
+\texttt{ID.AM-08}, \texttt{PR.AA-01}, \texttt{PR.AA-05}, \texttt{PR.PS-01}, \texttt{PR.PS-02}, \texttt{PR.PS-05} \\
+\hline
+
+\textbf{Práctica 2}\newline (\texttt{Practica2/main.tex}) &
+Reconocimiento Pasivo y Activo Externo (OSINT y Superficie de Ataque) &
+Configuración de API keys (\texttt{provider-config.yaml}), enumeración de subdominios de \texttt{ingenieria.unam.mx} (62) y \texttt{unam.mx} (4,984; 143 filtrados) con \texttt{subfinder}, mapeo de bloques CIDR \texttt{/24} y \texttt{/16} con \texttt{dig} y \texttt{whois} (identificando IP externa en AWS \texttt{35.172.49.191}), perfilado de servidores web con \texttt{httpx} (versiones EOL de Apache/PHP) y auditoría con \texttt{nuclei} sobre \texttt{ssa.ingenieria.unam.mx} (Cloudflare WAF, TLS 1.0/1.1 obsoletos, suites CBC débiles, falta de SRI). &
+\texttt{GV.OC-05}, \texttt{ID.AM-01}, \texttt{ID.AM-02}, \texttt{ID.AM-04}, \texttt{ID.RA-01}, \texttt{PR.DS-02}, \texttt{PR.PS-02} \\
+\hline
+
+\textbf{Práctica 3}\newline (\texttt{Practica3/main.tex}) &
+Escaneo de Red Local con Nmap y Auditoría de Credenciales con Hydra &
+Descubrimiento de hosts activos en \texttt{192.168.177.0/24} (\texttt{nmap -sP}), escaneo de puertos rápido (\texttt{-F}) y completo (\texttt{-p-}), detección de versiones y OS (\texttt{-sV}, \texttt{-A}) sobre \texttt{webserver} (\texttt{192.168.177.129}: Apache 2.4.10 en puerto 80, OpenSSH 6.7p1 en puerto 13337). Ataque de diccionario con \texttt{Hydra} (lista NCSC 100k) obteniendo \texttt{webadmin:toronto} y acceso por SSH. &
+\texttt{ID.AM-01} a \texttt{ID.AM-03}, \texttt{ID.RA-01}, \texttt{ID.IM-02}, \texttt{PR.AA-03} \\
+\hline
+
+\textbf{Práctica 4}\newline (\texttt{Practica4/main.tex}) &
+Auditoría de Configuración Local con LinPEAS y Escalación de Privilegios &
+Transferencia de \texttt{linpeas.sh} vía \texttt{scp} a \texttt{webserver}, ejecución y análisis del reporte: Debian 8.11 (jessie) con kernel \texttt{3.16.0-6-686-pae}, 13 CVEs de escalación (incluyendo \texttt{DirtyCow} \texttt{CVE-2016-5195} y \texttt{PwnKit} \texttt{CVE-2021-4034} en binario SUID \texttt{/usr/bin/pkexec}), y permisos inseguros en sockets. Compilación y ejecución del exploit \texttt{CVE-2021-4034} obteniendo \texttt{root} (\texttt{uid=0}) y limpieza de rastros (\texttt{make clean}). &
+\texttt{ID.RA-01}, \texttt{ID.IM-02}, \texttt{PR.AA-05}, \texttt{PR.PS-01}, \texttt{PR.PS-02} \\
+\hline
+
+\textbf{Práctica 5}\newline (\texttt{Practica5/main.tex}) &
+Extracción de Hashes, Verificación SHA-256 y Cracking con John the Ripper &
+Extracción de \texttt{/etc/passwd} y \texttt{/etc/shadow} como \texttt{root}, cálculo de hashes \texttt{sha256sum} antes y después de la transferencia por \texttt{scp} para comprobar integridad de la evidencia, análisis de estructura \texttt{SHA512-crypt} (\texttt{\$6\$}) y sales, combinación con \texttt{unshadow} y auditoría offline con \texttt{John the Ripper} obteniendo \texttt{webadmin:toronto} y \texttt{root:Maverick}. &
+\texttt{PR.AA-01}, \texttt{PR.AA-03}, \texttt{PR.DS-01}, \texttt{PR.DS-02}, \texttt{RS.AN-07} \\
+\hline
+
+\textbf{Práctica 6}\newline (\texttt{Practica6/main.tex}) &
+Auditoría Post-Explotación, Procesos, Respaldos y Descubrimiento de Red Interna &
+Inspección de sistema (\texttt{uname -v}, \texttt{/etc/*release}), procesos (\texttt{ps aux awf}), rutas y redes (\texttt{route -n}, \texttt{ifconfig -a} descubriendo red interna \texttt{10.0.0.78/24}). Búsqueda de respaldos (\texttt{find}, \texttt{tar -ztvf} en \texttt{/root/respaldo.tar.gz} y \texttt{Project.old.tar.gz}) y credenciales en texto claro con \texttt{grep -rnI} (\texttt{passwords.txt}: \texttt{developer2024: R0b0tRulz!}). Creación del script \texttt{escaner.sh} (\texttt{ping} + \texttt{nc -zv}) descubriendo \texttt{10.0.0.201} (puertos 5985 WinRM y 3389 RDP). &
+\texttt{ID.AM-01} a \texttt{ID.AM-03}, \texttt{ID.AM-07}, \texttt{ID.RA-01}, \texttt{PR.DS-01}, \texttt{PR.DS-11}, \texttt{PR.IR-01} \\
+\hline
+
+\textbf{Práctica 7}\newline (\texttt{Practica7/main.tex}) &
+Pivoteo (SSH Local Port Forwarding), Acceso RDP y Verificación de Integridad &
+Verificación de segmentación entre redes (\texttt{192.168.177.0/24} y \texttt{10.0.0.0/24}), creación de túnel SSH (\texttt{ssh -p 13337 -L 3389:10.0.0.201:3389}), acceso remoto RDP con \texttt{Remmina} a \texttt{codeserver} (Windows Server 2012 R2), inventario con \texttt{systeminfo}, inspección del servidor web IIS (\texttt{C:\textbackslash inetpub\textbackslash wwwroot}) y cálculo de hash \texttt{SHA256} con \texttt{certutil -hashfile} sobre \texttt{bot.py}. &
+\texttt{ID.AM-01}, \texttt{ID.AM-02}, \texttt{PR.AA-03}, \texttt{PR.DS-01}, \texttt{PR.IR-01}, \texttt{RC.RP-03} \\
+\hline
+
+\textbf{Tarea 1}\newline (\texttt{Tarea1/main.tex}) &
+Estrategias de Deception y Honeypots en Ciberseguridad Defensiva &
+Análisis de la ponencia del UNAM-CERT sobre reducción de falsos positivos en el SOC mediante ciberengaño (\textit{Deception}): características de un señuelo efectivo, despliegue de \textit{Honey files} (\texttt{passwords.docx}), \textit{Honey tokens} (llaves API en repositorios, credenciales VPN), cuentas señuelo en Active Directory contra \textit{Kerberoasting} y alertamiento vía \texttt{syslog}/webhooks. &
+\texttt{DE.CM-03}, \texttt{DE.AE-02}, \texttt{DE.AE-06}, \texttt{DE.AE-08}, \texttt{RS.AN-03} \\
+\hline
+
+\textbf{Tarea 2}\newline (\texttt{Tarea2/main.tex}) &
+Vulnerabilidades Zero-Day, Mercados de Exploits y Ética Profesional &
+Estudio de vulnerabilidades de Día Cero y mercados blanco, gris y negro. Análisis de incidentes reales: \texttt{CVE-2023-41990} (\textit{Operation Triangulation} en iOS), extorsión masiva en \textit{MOVEit Transfer}, y filtración de \textit{EternalBlue} por \textit{The Shadow Brokers} que originó el ransomware global \textit{WannaCry}. Rol de los \textit{Zero-Day Brokers} (\textit{Escrow}) y ética en la divulgación responsable (\textit{Bug Bounty}). &
+\texttt{GV.RR-01}, \texttt{ID.RA-01}, \texttt{ID.RA-02}, \texttt{ID.RA-08}, \texttt{RS.MA-03} \\
+\hline
+
+\textbf{Tarea 4 (Reporte Tarea 3)}\newline (\texttt{Tarea4/main.tex} y \texttt{320060829\_Tarea3.pdf}) &
+Análisis de 6 Conferencias en MITRE ATT\&CKcon 7.0 &
+1) \textit{Obfuscated Tale}: telemetría de PowerShell (Eventos 4103/4104) y Sysmon (Eventos 1, 7, 17) hacia el SIEM; 2) \textit{Multi-Tenant Kill Chain Correlation}: correlación en entornos SaaS multi-inquilino; 3) \textit{The Defensible Minimum}: priorización de controles y aceptación consciente de riesgo residual en PyMEs; 4) \textit{ATT\&CK v21 \& ATLAS}: amenazas a sistemas de IA y uso de MCP (\textit{MalChela}); 5) \textit{Measuring ATT\&CK Coverage Beyond T1055}: validación de sensores ante inyección de procesos; 6) \textit{Breaking the Defenders}: evasión de AMSI/ETW/BYOVD y borrado de respaldos por ransomware. &
+\texttt{GV.RM-02}, \texttt{ID.RA-02}, \texttt{ID.RA-03}, \texttt{ID.IM-01}, \texttt{ID.IM-02}, \texttt{PR.PS-04}, \texttt{DE.CM-06}, \texttt{DE.CM-09}, \texttt{DE.AE-02}, \texttt{DE.AE-03}, \texttt{DE.AE-07} \\
+\hline
+\end{longtable}
+\endgroup
+
+% =========================================================
+\section{Resumen Estadístico de Cobertura y Aplicación del NIST CSF 2.0}
+% =========================================================
+
+Antes de presentar el desglose pormenorizado de cada subcategoría y sus actividades (\textit{Implementation Examples} de \texttt{csf2.xlsx}), la Tabla~\ref{tab:resumen-cobertura} sintetiza cuántas de las \textbf{106 subcategorías activas} del NIST CSF 2.0 aparecieron en el curso y bajo qué modalidad de aplicación fueron trabajadas.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.28}
+\caption{Estadística general de cobertura y aplicación del NIST CSF 2.0 a lo largo del semestre.}
+\label{tab:resumen-cobertura}
+\begin{tabular}{|L{3.6cm}|C{1.4cm}|C{1.6cm}|C{2.4cm}|C{2.4cm}|C{2.4cm}|C{1.8cm}|}
+\hline
+\rowcolor{blue!20}
+\textbf{Función del NIST CSF 2.0} & \textbf{Categorías} & \textbf{Total Subcat. (\texttt{csf2.xlsx})} & \textbf{Aplicadas en Práctica / Lab (Prácticas 1--7)} & \textbf{Aplicadas en Caso VELOX (Act. 1--7)} & \textbf{Vistas en Clase / Tareas / Planificadas} & \textbf{Total Cubiertas en el Curso} \\
+\hline
+\rowcolor{csfGV}
+\textbf{1. GOVERN (\texttt{GV})} & 6 & 31 & 2 & 19 & 6 & \textbf{25 / 31} (80.6\%) \\
+\hline
+\rowcolor{csfID}
+\textbf{2. IDENTIFY (\texttt{ID})} & 3 & 21 & 10 & 14 & 5 & \textbf{19 / 21} (90.5\%) \\
+\hline
+\rowcolor{csfPR}
+\textbf{3. PROTECT (\texttt{PR})} & 5 & 22 & 12 & 14 & 5 & \textbf{19 / 22} (86.4\%) \\
+\hline
+\rowcolor{csfDE}
+\textbf{4. DETECT (\texttt{DE})} & 2 & 11 & 3 & 5 & 9 & \textbf{10 / 11} (90.9\%) \\
+\hline
+\rowcolor{csfRS}
+\textbf{5. RESPOND (\texttt{RS})} & 4 & 13 & 2 & 4 & 8 & \textbf{10 / 13} (76.9\%) \\
+\hline
+\rowcolor{csfRC}
+\textbf{6. RECOVER (\texttt{RC})} & 2 & 8 & 1 & 3 & 4 & \textbf{6 / 8} (75.0\%) \\
+\hline
+\rowcolor{xlSummary}
+\textbf{TOTAL GLOBAL CSF 2.0} & \textbf{22} & \textbf{106} & \textbf{30} & \textbf{59} & \textbf{37} & \textbf{89 / 106 (84.0\%)} \\
+\hline
+\end{tabular}
+\vspace{0.15cm}
+\par\noindent{\scriptsize \textit{Nota:} Una misma subcategoría puede haberse aplicado tanto de forma metodológica en el caso VELOX Automotriz como de forma técnica en las Prácticas 1--7 o analítica en las Tareas 1--4; la columna final indica el número de subcategorías únicas abordadas en al menos una modalidad (89 de 106 subcategorías, equivalente al 84.0\% del framework completo).}
+\end{table}
+
+% =========================================================
+\section{Mapeo Detallado de Subcategorías y Actividades de The NIST CSF 2.0}
+% =========================================================
+
+A continuación se presenta el listado exhaustivo, organizado por cada una de las \textbf{6 Funciones} del archivo \texttt{csf2.xlsx}, detallando: (1) la \textbf{Subcategoría} y las \textbf{Actividades / Ejemplos de Implementación (\texttt{Ex\#})} del Excel oficial, (2) \textbf{dónde apareció} dentro del historial del curso (clases/actividades, prácticas, presentación HTML, tareas) y (3) \textbf{si se aplicó en algún momento} y de qué manera.
+
+% ---------------------------------------------------------
+\subsection{Función 1: GOVERN (GV) --- Gobernanza de Ciberseguridad}
+% ---------------------------------------------------------
+
+La función \textbf{GOVERN (\texttt{GV})} tuvo una presencia central en las \textbf{Actividades 1, 2, 5, 6 y 7} (modelado organizacional, estrategia de gestión de riesgos, registro de riesgos, políticas ante IA y cadena de suministro automotriz de \textbf{VELOX Automotriz S.A. de C.V.}), así como en la \textbf{Práctica 2} (identificación de dependencias en nube externa), \textbf{Tarea 2} (cultura ética ante vulnerabilidades) y \textbf{Tarea 4} (\textit{The Defensible Minimum}).
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{GOVERN (GV)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-gv} \\
+\hline
+\rowcolor{csfGV}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfGV}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{GV.OC-01} &
+\textbf{La misión organizacional se comprende e informa la gestión de riesgos.}\newline
+$\bullet$ \texttt{Ex1}: Compartir la misión, visión y estrategias de servicio de la organización como base para identificar riesgos que puedan impedir esa misión. &
+\textbf{Actividad 2 y Actividad 3}\newline (\texttt{Actividad2/main.tex} Sec. 3; \texttt{Actividad3/main.tex} Sec. 3 ``Objetivo de Negocio de la Organización''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se definió formalmente el perfil, misión y objetivos estratégicos de \textbf{VELOX Automotriz S.A. de C.V.} (ensamblaje automatizado de SUVs eléctricos y vehículos definidos por software SDV en Guanajuato), usando dicha misión como base para derivar todos los riesgos operativos e industriales (\texttt{RSK-01} a \texttt{RSK-10}). \\
+\hline
+
+\texttt{GV.OC-02} &
+\textbf{Las partes interesadas internas y externas y sus expectativas de ciberseguridad se comprenden.}\newline
+$\bullet$ \texttt{Ex1}: Identificar partes interesadas internas (directivos, empleados).\newline
+$\bullet$ \texttt{Ex2}: Identificar partes interesadas externas (privacidad de clientes, socios, reguladores). &
+\textbf{Actividad 2, 3, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 2--3; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex} Sec. II y III). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se identificaron los stakeholders internos (Ingeniería de Software/Firmware, Planta OT, Finanzas, SOC/TI) y externos (clientes propietarios de vehículos conectados, red de 85 concesionarios, proveedores Tier 1/Tier 2 y reguladores automotrices). \\
+\hline
+
+\texttt{GV.OC-03} &
+\textbf{Los requisitos legales, regulatorios y contractuales (incluyendo privacidad) se comprenden y gestionan.}\newline
+$\bullet$ \texttt{Ex1}: Gestionar requisitos legales y regulatorios de protección de datos.\newline
+$\bullet$ \texttt{Ex2}: Gestionar requisitos contractuales de proveedores, clientes y socios.\newline
+$\bullet$ \texttt{Ex3}: Alinear la estrategia con requisitos legales y regulatorios. &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad7/main.tex} Sec. III ``Riesgo de Cumplimiento o Regulatorio'' y Sec. IV). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se integraron y evaluaron las obligaciones de las normas automotrices \textbf{ISO/SAE 21434}, \textbf{TISAX} (protección de prototipos), la \textbf{LFPDPPP} (datos personales de clientes en México) y los acuerdos de confidencialidad (\textbf{NDA}) con proveedores Tier 1, cuantificando en \texttt{RK-007} un impacto regulatorio de nivel 3 (Moderado). \\
+\hline
+
+\texttt{GV.OC-04} &
+\textbf{Los objetivos, capacidades y servicios críticos de los que dependen los stakeholders externos se comprenden.}\newline
+$\bullet$ \texttt{Ex1}: Establecer criterios de criticidad de servicios.\newline
+$\bullet$ \texttt{Ex2}: Determinar activos y operaciones vitales (análisis de impacto al negocio BIA) y el impacto de su pérdida. &
+\textbf{Actividad 3, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 3--4; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-01}, \texttt{RSK-02}, \texttt{RSK-04}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se determinaron las operaciones vitales de VELOX: líneas robotizadas de ensamblaje en Bajío (cuya detención impide entregar 120,000 unidades/año), plataforma de telemetría V2X (\texttt{ACT-01}) y servidor de actualizaciones OTA (\texttt{ACT-02}) de los que dependen los conductores. \\
+\hline
+
+\texttt{GV.OC-05} &
+\textbf{Los resultados, capacidades y servicios de los que depende la organización se comprenden y comunican.}\newline
+$\bullet$ \texttt{Ex1}: Crear un inventario de dependencias en recursos externos (nube, proveedores) y su relación con los activos.\newline
+$\bullet$ \texttt{Ex2}: Documentar dependencias externas que sean posibles puntos de falla. &
+\textbf{Actividad 2, 3, 5, 6 y Práctica 2}\newline (\texttt{Actividad3/main.tex} Sec. 2.2, Sec. 4--5; \texttt{Practica2/main.tex} Sec. 3 ``Análisis de bloques IP y ASN''). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 2 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 2:} Mediante \texttt{dig} y \texttt{whois} se descubrió que \texttt{unam.mx} depende de infraestructura externa en \textbf{Amazon.com, Inc. (AWS)} en el bloque \texttt{35.168.0.0/13} (IP \texttt{35.172.49.191}).\newline
+$\bullet$ \textbf{En VELOX (Act. 3 y 6):} Se documentó la dependencia crítica en AWS IoT Core/EKS/S3, enlaces dedicados B2B con proveedores Tier 1 (\texttt{RSK-09}) y servicios de IA externos (\texttt{RK-007}). \\
+\hline
+
+\texttt{GV.RM-01} &
+\textbf{Los objetivos de gestión de riesgos se establecen y acuerdan con las partes interesadas.}\newline
+$\bullet$ \texttt{Ex2}: Establecer objetivos medibles para la gestión de riesgos (p. ej., calidad de capacitación, protección adecuada de sistemas de control industrial ICS). &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad7/main.tex} Sec. IV ``Respuesta al Riesgo'' y ``Plan de Acción''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 7 se establecieron objetivos medibles de reducción de riesgo: alcanzar al menos el \textbf{70\% de los hitos} del plan de mitigación antes del 31/03/2027 y capacitar al \textbf{95\% de la plantilla de ingeniería} con evaluación aprobatoria $\ge 85\%$. \\
+\hline
+
+\texttt{GV.RM-02} &
+\textbf{Las declaraciones de apetito y tolerancia al riesgo se establecen, comunican y mantienen.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Traducir el apetito de riesgo en declaraciones de tolerancia medibles.\newline
+$\bullet$ \texttt{Ex3}: Refinar objetivos según exposición conocida y riesgo residual. &
+\textbf{Actividad 6, Actividad 7 y Tarea 4}\newline (\texttt{Actividad7/main.tex} Sec. IV y V; \texttt{Tarea4/main.tex} Conf. 3 ``The Defensible Minimum''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Analizado en Tarea 4):}\newline
+$\bullet$ \textbf{En VELOX (Act. 7):} Se definieron umbrales explícitos de tolerancia en los 3 KRIs (p. ej., 0 incidentes trimestrales de llaves/secretos expuestos en IA pública; máximo $<50$ intentos bloqueados/semana en FortiGate).\newline
+$\bullet$ \textbf{En Tarea 4:} Se analizó el concepto de \textit{riesgo residual aceptado conscientemente} cuando existen limitaciones presupuestales. \\
+\hline
+
+\texttt{GV.RM-03} &
+\textbf{Las actividades y resultados de gestión de riesgos de ciberseguridad se incluyen en la gestión de riesgos empresariales (ERM).}\newline
+$\bullet$ \texttt{Ex1}: Agregar y gestionar riesgos de ciberseguridad junto con otros riesgos empresariales (cumplimiento, financieros, operativos, regulatorios, reputacionales, seguridad física/safety). &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad7/main.tex} Sec. II ``Categoría del Riesgo'' y Sec. III ``Impacto''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la plantilla de Análisis de Riesgos de la Actividad 7 se integró el riesgo cibernético dentro de las categorías empresariales (\textit{Estratégico, Operativo, Financiero, Cumplimiento, Tecnológico}) y se evaluó simultáneamente el impacto en \textbf{pérdida de ganancia}, \textbf{costo de respuesta}, \textbf{reputación} y \textbf{cumplimiento regulatorio}. \\
+\hline
+
+\texttt{GV.RM-04} &
+\textbf{Se establece y comunica la dirección estratégica que describe las opciones apropiadas de respuesta al riesgo.}\newline
+$\bullet$ \texttt{Ex1}: Especificar criterios para aceptar y evitar riesgos según clasificación de datos.\newline
+$\bullet$ \texttt{Ex2}: Determinar si se adquiere ciberseguro (transferencia).\newline
+$\bullet$ \texttt{Ex3}: Documentar condiciones de responsabilidad compartida (nube pública). &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} Sec. 2; \texttt{Actividad7/main.tex} Sec. IV ``Respuesta al Riesgo''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se aplicaron las cuatro opciones estratégicas de respuesta en el registro de VELOX: \textbf{Mitigar} (\texttt{RSK-01} a \texttt{RSK-10}), \textbf{Transferir} (\texttt{RSK-09} vía cláusulas contractuales y seguros ante fallas de proveedores Tier 1) y la combinación \textbf{Mitigar + Evitar} en \texttt{RK-007} (prohibiendo el uso de chatbots públicos gratuitos para propiedad intelectual automotriz). \\
+\hline
+
+\texttt{GV.RM-05} &
+\textbf{Se establecen líneas de comunicación en toda la organización para los riesgos de ciberseguridad.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Determinar cómo informar a la dirección y comunicar riesgos entre departamentos (operaciones, legal, TI, RR.HH.). &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex} Sec. I, IV y V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En el Registro de Riesgos y en la ficha de \texttt{RK-007} se establecieron los flujos de reporte mensual y quincenal entre el CISO, el Director de Ingeniería Automotriz, Planta OT, Legal y el Comité de Riesgos de VELOX. \\
+\hline
+
+\texttt{GV.RM-06} &
+\textbf{Se establece un método estandarizado para calcular, documentar, categorizar y priorizar los riesgos de ciberseguridad.}\newline
+$\bullet$ \texttt{Ex1}: Establecer criterios cuantitativos y especificar fórmulas de probabilidad y exposición.\newline
+$\bullet$ \texttt{Ex2}: Crear y usar plantillas (registro de riesgos) para documentar descripción, exposición, tratamiento y propietario.\newline
+$\bullet$ \texttt{Ex3--Ex4}: Establecer criterios de priorización y lista consistente de categorías. &
+\textbf{Actividad 4, Actividad 6 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 8 CVSS v3.1; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex} Sec. I--V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica Completa en Caso VELOX):}\newline
+Es una de las subcategorías con aplicación más directa en el curso:\newline
+1) En \textbf{Actividad 4} se usó el estándar \textbf{CVSS v3.1} (0.0 a 10.0).\newline
+2) En \textbf{Actividad 6} se creó la plantilla formal del \textbf{Registro de Riesgos} (Forma 1 y Forma 2, propietario, nivel, respuesta, estado).\newline
+3) En \textbf{Actividad 7} se aplicó el método cuantitativo: Frecuencia anual $F=4.0$, Impacto promedio $I_{\text{prom}} = \frac{3+2+2+3}{4} = 2.50$ y fórmula de Nivel de Riesgo $R = F \times I_{\text{prom}} = 10.00$ (\textbf{ALTO}). \\
+\hline
+
+\texttt{GV.RR-01} &
+\textbf{El liderazgo organizacional es responsable del riesgo de ciberseguridad y fomenta una cultura consciente del riesgo y ética.}\newline
+$\bullet$ \texttt{Ex2}: Compartir expectativas de una cultura segura y ética.\newline
+$\bullet$ \texttt{Ex3}: Dirigir al CISO para mantener y revisar la estrategia de riesgos. &
+\textbf{Actividad 6, Actividad 7 y Tarea 2}\newline (\texttt{Actividad7/main.tex} Sec. IV; \texttt{Tarea2/main.tex} Sec. ``El Papel de la Ética''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Analizado en Tarea 2):}\newline
+En \textbf{Tarea 2} se analizó la responsabilidad ética de investigadores y organizaciones frente al mercado de exploits y la divulgación responsable (\textit{Bug Bounty}). En \textbf{Actividad 6 y 7} se asignó responsabilidad directa al CISO y Directores de área en VELOX. \\
+\hline
+
+\texttt{GV.RR-02} &
+\textbf{Los roles, responsabilidades y autoridades relacionados con la gestión de riesgos se establecen y comunican.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Documentar quién es responsable y rinde cuentas (\textit{Owner}) de las actividades de gestión de riesgos.\newline
+$\bullet$ \texttt{Ex5}: Articular responsabilidades entre operaciones, riesgos y auditoría. &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} Columna ``Propietario del Riesgo''; \texttt{Actividad7/main.tex} Sec. I y IV). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 6 se asignó un \textbf{Propietario del Riesgo} específico a cada uno de los 10 escenarios (Director de Operaciones OT, Gerente de Ingeniería V2X/OTA, Gerente de Seguridad en la Nube, Administrador de Sistemas TI, Director de Cadena de Suministro, CISO) y en la Actividad 7 se asignaron responsables por cada acción del POA\&M. \\
+\hline
+
+\texttt{GV.RR-03} &
+\textbf{Se asignan recursos adecuados acordes con la estrategia de riesgo de ciberseguridad.}\newline
+$\bullet$ \texttt{Ex2--Ex3}: Identificar asignación de recursos e inversión alineada con la tolerancia y respuesta al riesgo; proveer recursos técnicos y humanos. &
+\textbf{Actividad 7 y Tarea 4}\newline (\texttt{Actividad7/main.tex} Sec. III--IV; \texttt{Tarea4/main.tex} Conf. 3 ``The Defensible Minimum''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Analizado en Tarea 4):}\newline
+En la Actividad 7 se justificó la inversión en licenciamiento empresarial aislado (\textbf{AWS Bedrock / Azure OpenAI Privado}), agentes DLP en endpoints y reglas CASB en FortiGate frente a pérdidas potenciales de \$100k--\$500k USD y costos de respuesta de \$45,000 USD. \\
+\hline
+
+\texttt{GV.RR-04} &
+\textbf{La ciberseguridad se incluye en las prácticas de recursos humanos.}\newline
+$\bullet$ \texttt{Ex1}: Integrar consideraciones de ciberseguridad en procesos de RR.HH.\newline
+$\bullet$ \texttt{Ex4}: Definir y hacer cumplir las obligaciones del personal de conocer y respetar las políticas de seguridad según su rol. &
+\textbf{Actividad 5, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 10.2 Categoría 5 ``Amenaza Interna / Ditto''; \texttt{Actividad7/main.tex} Sec. IV Acción 5). &
+\cellcolor{badgeTeorico}\textbf{Planificado en Caso VELOX / Analizado en Clase:}\newline
+En la Actividad 7 (Acción 5 del Plan de Acción) se estableció como requisito obligatorio la firma de la \textit{Política de Uso Aceptable de IA Generativa} y la aprobación de la capacitación anual ($\ge 85\%$) para todo el personal de ingeniería y planta. \\
+\hline
+
+\texttt{GV.PO-01} &
+\textbf{La política para gestionar riesgos de ciberseguridad se establece según el contexto organizacional, se comunica y se hace cumplir.}\newline
+$\bullet$ \texttt{Ex1}: Crear y difundir una política de gestión de riesgos comprensible.\newline
+$\bullet$ \texttt{Ex4--Ex5}: Comunicar la política y requerir acuse de recibo del personal. &
+\textbf{Actividad 1 y Actividad 7}\newline (\texttt{Actividad 1/main.tex} Sec. 1; \texttt{Actividad7/main.tex} Sec. IV Acción 5). &
+\cellcolor{badgeVelox}\textbf{SÍ (Analizado en Act. 1 y Aplicado/Planificado en Act. 7):}\newline
+En la Actividad 1 se estudió el papel normativo de las políticas de Seguridad de la Información (ISO 27001). En la Actividad 7 se diseñó el mandato de la \textbf{Política Corporativa de Uso Aceptable de IA Generativa y Manejo de Código Fuente} para VELOX Automotriz (fecha compromiso: 31/03/2027). \\
+\hline
+
+\texttt{GV.PO-02} &
+\textbf{La política de riesgos de ciberseguridad se revisa y actualiza para reflejar cambios en requisitos, amenazas y tecnología.}\newline
+$\bullet$ \texttt{Ex4}: Actualizar la política para reflejar cambios en la tecnología (p. ej., \textbf{adopción de inteligencia artificial}) y cambios en el negocio. &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} Caso Groq \texttt{RK-007}; \texttt{Actividad7/main.tex} Sec. I--V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Directa en Caso Grupo Groq \texttt{RK-007}):}\newline
+El ejemplo \texttt{Ex4} de \texttt{GV.PO-02} en \texttt{csf2.xlsx} menciona literalmente \textit{``adoption of artificial intelligence''}. Toda la \textbf{Actividad 7} desarrolla la actualización de políticas y controles de VELOX Automotriz ante la adopción emergente de herramientas de IA generativa (GroqCloud, Claude, DeepSeek y navegadores con IA). \\
+\hline
+
+\texttt{GV.OV-01}\newline \texttt{GV.OV-02} &
+\textbf{Los resultados y la estrategia de gestión de riesgos se revisan y ajustan para asegurar cobertura de requisitos e incidentes.}\newline
+$\bullet$ \texttt{Ex1--Ex3}: Revisar hallazgos de auditoría y ajustar la estrategia a la luz de incidentes de ciberseguridad. &
+\textbf{Actividad 5, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 ``Eventos recientes en el sector''; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 5 se analizaron 5 incidentes reales del sector automotriz (Continental, Yanfeng, Toyota S3, Hyundai, VW Cariad) para ajustar la estrategia y el registro de riesgos de VELOX en la Actividad 6 (fechas de última evaluación de febrero 2026). \\
+\hline
+
+\texttt{GV.OV-03} &
+\textbf{El desempeño de la gestión de riesgos de ciberseguridad organizacional se evalúa y revisa.}\newline
+$\bullet$ \texttt{Ex1}: Revisar indicadores clave de desempeño (\textbf{KPIs}).\newline
+$\bullet$ \texttt{Ex2}: Revisar indicadores clave de riesgo (\textbf{KRIs}) para identificar riesgos, probabilidad e impacto.\newline
+$\bullet$ \texttt{Ex3}: Recopilar y comunicar métricas a la alta dirección. &
+\textbf{Actividad 7}\newline (\texttt{Actividad7/main.tex} Sec. V ``Monitoreo: Indicadores Clave de Riesgo (KRIs)''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica Completa en Actividad 7):}\newline
+En la Sección V de la Actividad 7 se diseñaron, documentaron y parametrizaron \textbf{3 KRIs específicos} para VELOX Automotriz:\newline
+$\bullet$ \textbf{KRI 1:} Solicitudes salientes bloqueadas hacia dominios de IA no autorizados en FortiGate/CASB (umbral $<50$/semana).\newline
+$\bullet$ \textbf{KRI 2:} Alertas de Endpoint DLP por intento de copia/subida de código fuente o \texttt{CAN DBC} en navegadores (umbral $\le 2$/mes).\newline
+$\bullet$ \textbf{KRI 3:} Secretos corporativos detectados en prompts o repositorios externos (tolerancia \textbf{0 incidentes/trimestre}). \\
+\hline
+
+\texttt{GV.SC-01}\newline \texttt{GV.SC-02}\newline \texttt{GV.SC-03} &
+\textbf{Programa, roles e integración de la Gestión de Riesgos de la Cadena de Suministro de Ciberseguridad (C-SCRM).}\newline
+$\bullet$ \texttt{Ex1--Ex4}: Establecer estrategia y controles integrados para riesgos de cadena de suministro y escalar riesgos materiales a la dirección. &
+\textbf{Actividad 2, 3, 5 y 6}\newline (\texttt{Actividad3/main.tex} Sec. 2.2 ``OEMs, Tier 1/Tier 2'', Sec. 10.2 ``Ditto/Rotom''; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-09}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se integró el riesgo de la cadena de suministro automotriz en el registro corporativo (\texttt{RSK-09}: \textit{Compromiso en cadena de suministro por proveedor Tier 1}, nivel ALTO, asignado al Director de Cadena de Suministro y TI) y se modeló la categoría de adversario \textit{Ditto / Rotom (Supply Chain)}. \\
+\hline
+
+\texttt{GV.SC-04} &
+\textbf{Los proveedores se conocen y priorizan por criticidad.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Desarrollar criterios de criticidad de proveedores según sensibilidad de datos, grado de acceso a sistemas e importancia de los componentes (ECUs, sensores, nube). &
+\textbf{Actividad 2 y Actividad 3}\newline (\texttt{Actividad3/main.tex} Sec. 2.2 y Sec. 4--5: proveedores Tier 1 de ECUs Renesas, ADAS NVIDIA Orin, Siemens, Rockwell, AWS). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En las Actividades 2 y 3 se identificaron y priorizaron los proveedores críticos de hardware/software de VELOX: proveedores Tier 1 de módulos electrónicos (VCU, ADAS, telemetría), proveedores OT (Siemens, Rockwell) y proveedores Cloud/Seguridad (AWS, Fortinet, CrowdStrike, Splunk, Upstream). \\
+\hline
+
+\texttt{GV.SC-05}\newline \texttt{GV.SC-07} &
+\textbf{Requisitos de seguridad en contratos con proveedores (\texttt{GV.SC-05}) y evaluación/monitoreo continuo de riesgos de terceros (\texttt{GV.SC-07}).}\newline
+$\bullet$ \texttt{GV.SC-05 Ex2, Ex7, Ex9}: Incluir requisitos en contratos, requerir inventario de componentes (SBOM) y certificaciones.\newline
+$\bullet$ \texttt{GV.SC-07 Ex5}: Planificar ante interrupciones inesperadas en la cadena de suministro para asegurar continuidad del negocio. &
+\textbf{Actividad 5, Actividad 6 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 Caso Yanfeng \textit{Just-In-Time}; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-09}; \texttt{Actividad7/main.tex} Sec. III--IV). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Se analizó el caso real del ciberataque a \textbf{Yanfeng Automotive Interiors} (noviembre 2023) que detuvo las plantas de Stellantis bajo el esquema \textit{Just-In-Time}, y se reflejó en \texttt{RSK-09} (respuesta: Mitigar y Transferir mediante acuerdos contractuales, segmentación de enlaces B2B y cumplimiento TISAX/NDA). \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{GOVERN (GV)} no cubiertas directamente en el curso (6 de 31):} \texttt{GV.RM-07} (oportunidades estratégicas / riesgos positivos tipo SWOT), \texttt{GV.SC-06} (debida diligencia formal previa a la contratación), \texttt{GV.SC-08} (ejercicios conjuntos de respuesta a incidentes con proveedores), \texttt{GV.SC-09} (registros formales de procedencia/\textit{provenance} de hardware) y \texttt{GV.SC-10} (planes de terminación de contratos y devolución de activos de proveedores).
+
+% ---------------------------------------------------------
+\subsection{Función 2: IDENTIFY (ID) --- Identificación de Activos y Riesgos}
+% ---------------------------------------------------------
+
+La función \textbf{IDENTIFY (\texttt{ID})} es la función con mayor cobertura integral en el semestre (\textbf{90.5\%}), ya que fue ejecutada tanto de manera \textbf{práctica y técnica} en las \textbf{Prácticas 2, 3, 4, 6 y 7} (descubrimiento de activos externos e internos, mapeo de flujos de red, escaneo de vulnerabilidades y pruebas de penetración) como de manera \textbf{metodológica exhaustiva} en las \textbf{Actividades 3, 4, 5, 6 y 7} y en las \textbf{Tareas 2 y 4}.
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{IDENTIFY (ID)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-id} \\
+\hline
+\rowcolor{csfID}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfID}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{ID.AM-01} &
+\textbf{Se mantienen inventarios de hardware gestionados por la organización.}\newline
+$\bullet$ \texttt{Ex1}: Mantener inventarios de todo tipo de hardware, incluyendo dispositivos \textbf{IT, IoT, OT y móviles}.\newline
+$\bullet$ \texttt{Ex2}: Monitorear redes para detectar nuevo hardware en la red. &
+\textbf{Actividad 3 y Prácticas 2, 3, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 4 y Sec. 6 ``Inventario de Endpoints IT, OT e In-Vehicle''; \texttt{Practica3/main.tex}; \texttt{Practica6/main.tex}; \texttt{Practica7/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 3, 6, 7 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Laboratorio (Prácticas 3, 6 y 7):} Se ejecutó descubrimiento activo de hosts en la red local con \texttt{nmap -sP 192.168.177.0/24} (detectando \texttt{192.168.177.129}) y en la red interna oculta \texttt{10.0.0.0/24} mediante el script \texttt{escaner.sh} (descubriendo el host \texttt{10.0.0.201} \texttt{codeserver}).\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3):} Se construyó el inventario formal de hardware abarcando IT (estaciones Dell/MacBook, FortiGate 600F), OT (PLCs Siemens S7-1500, Allen-Bradley ControlLogix, robots KUKA/FANUC) e In-Vehicle (VCU Renesas RH850, ADAS NVIDIA Drive Orin, TCU 5G). \\
+\hline
+
+\texttt{ID.AM-02} &
+\textbf{Se mantienen inventarios de software, servicios y sistemas gestionados por la organización.}\newline
+$\bullet$ \texttt{Ex1}: Mantener inventarios de todo tipo de software y servicios (comerciales, open-source, aplicaciones a medida, servicios API y aplicaciones en la nube).\newline
+$\bullet$ \texttt{Ex2--Ex3}: Monitorear plataformas (contenedores y VMs) y mantener inventario de sistemas. &
+\textbf{Actividad 3 y Prácticas 1, 2, 3, 4, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 4, 5 y 6.2 ``Servidores Web y APIs''; \texttt{Practica2/main.tex} Sec. 4 \texttt{httpx}; \texttt{Practica3/main.tex} \texttt{nmap -sV}; \texttt{Practica6/main.tex}; \texttt{Practica7/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 2, 3, 6, 7 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Laboratorio:} En \textbf{Práctica 2} se inventariaron 62 subdominios de \texttt{ingenieria.unam.mx} y 143 de \texttt{unam.mx} con \texttt{subfinder} y se perfilaron sus servidores web y tecnologías (Apache, Nginx, PHP, IIS) con \texttt{httpx}. En \textbf{Práctica 3 y 6} se identificaron servicios y versiones con \texttt{nmap -sV} y \texttt{ps aux awf} (Apache 2.4.10, OpenSSH 6.7p1, WinRM 5985, RDP 3389). En \textbf{Práctica 7} se inventarió Windows Server 2012 R2 (\texttt{systeminfo}) y la app \texttt{bot.py}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3):} Se documentó el catálogo completo de sistemas (SAP S/4HANA, FactoryTalk MES, WinCC OA, Active Directory, Kong API Gateway, PostgreSQL, Redis, MongoDB, InfluxDB). \\
+\hline
+
+\texttt{ID.AM-03} &
+\textbf{Se mantienen representaciones de la comunicación de red autorizada y de los flujos de datos de red internos y externos.}\newline
+$\bullet$ \texttt{Ex1--Ex3}: Mantener líneas base de flujos de comunicación en redes cableadas/inalámbricas, con terceros y en IaaS.\newline
+$\bullet$ \texttt{Ex4}: Mantener documentación de puertos, protocolos y servicios de red esperados entre sistemas autorizados. &
+\textbf{Actividad 3 y Prácticas 3, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 5 Cat. 1 ``Redes y Protocolos'' y Sec. 7 ``Diagrama de Conectividad de Activos''; \texttt{Practica6/main.tex} \texttt{route -n}, \texttt{ifconfig -a}; \texttt{Practica7/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 6--7 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 Sec. 7):} Se diseñó en \texttt{TikZ} el \textbf{Diagrama de Conectividad de Activos Tecnológicos} dividido en 4 zonas de seguridad (Zona Nube/Externa, Seguridad Perimetral, Zona Corporativa/Planta y Zona Vehículo) especificando protocolos exactos (\texttt{MQTT/TLS 1.3}, \texttt{HTTPS/REST}, \texttt{OPC-UA/Modbus TCP}, \texttt{CAN-FD/DoIP}).\newline
+$\bullet$ \textbf{En Laboratorio (Prácticas 6 y 7):} Se mapearon las tablas de ruteo (\texttt{route -n}), interfaces dual-homed (\texttt{eth0} \texttt{192.168.177.129} y \texttt{eth1} \texttt{10.0.0.78}) y puertos autorizados entre segmentos. \\
+\hline
+
+\texttt{ID.AM-04} &
+\textbf{Se mantienen inventarios de servicios proporcionados por proveedores.}\newline
+$\bullet$ \texttt{Ex1}: Inventariar todos los servicios externos utilizados (IaaS, PaaS, SaaS, APIs y servicios alojados externamente).\newline
+$\bullet$ \texttt{Ex2}: Actualizar el inventario cuando se utilice un nuevo servicio externo. &
+\textbf{Actividad 3, Actividad 6, Actividad 7 y Práctica 2}\newline (\texttt{Actividad3/main.tex} Sec. 5 Cat. 3 ``Cloud y Virtualización''; \texttt{Actividad7/main.tex} Caso Groq; \texttt{Practica2/main.tex} Cloudflare/AWS). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 2 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 2:} Se identificaron servicios externos de terceros utilizados por la UNAM (AWS \texttt{35.172.49.191}, WAF/CDN Cloudflare en \texttt{ssa.ingenieria.unam.mx} y scripts CDN de Bootstrap/jQuery).\newline
+$\bullet$ \textbf{En VELOX (Act. 3 y 7):} Se inventariaron los servicios Cloud/SaaS autorizados (AWS IoT Core, EKS, S3, DigiCert PKI, GitHub Enterprise, Confluence, ServiceNow) y se contrastaron contra servicios de IA externos no autorizados (GroqCloud, Claude, DeepSeek). \\
+\hline
+
+\texttt{ID.AM-05} &
+\textbf{Los activos se priorizan según su clasificación, criticidad, recursos e impacto en la misión.}\newline
+$\bullet$ \texttt{Ex1--Ex3}: Definir y aplicar criterios de priorización para cada clase de activos según su impacto en la misión. &
+\textbf{Actividad 3, 4 y 6}\newline (\texttt{Actividad3/main.tex} Sec. 4 ``Listado de 12 Activos Tecnológicos''; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 3 se seleccionaron y priorizaron los 12 activos más críticos de VELOX explicando para cada uno el impacto operativo, financiero y de seguridad física (\textit{safety}) en caso de compromiso. \\
+\hline
+
+\texttt{ID.AM-07} &
+\textbf{Se mantienen inventarios de datos y metadatos correspondientes para los tipos de datos designados.}\newline
+$\bullet$ \texttt{Ex1}: Mantener una lista de tipos de datos de interés (\textbf{PII, propiedad intelectual de la organización, datos OT, financieros}).\newline
+$\bullet$ \texttt{Ex3}: Asignar clasificaciones de datos mediante etiquetas. &
+\textbf{Actividad 3, Actividad 6, Actividad 7 y Práctica 6}\newline (\texttt{Actividad3/main.tex} Sec. 5 Cat. 6 ``Bases de Datos''; \texttt{Actividad7/main.tex} Sec. II--IV; \texttt{Practica6/main.tex} Sec. ``Búsqueda de respaldos y archivos sensibles''). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 6 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 6:} Se ejecutó descubrimiento de archivos sensibles en el sistema de archivos mediante \texttt{find / -name "*backup*"} y \texttt{grep -rnI "password"}, localizando \texttt{passwords.txt} dentro de \texttt{Project.old.tar.gz}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 7):} Se inventariaron los tipos de datos críticos: propiedad intelectual automotriz (código C/C++ de ECUs, tablas \texttt{CAN DBC}), secretos criptográficos (llaves OTA, tokens AWS IAM) y datos personales PII de clientes en PostgreSQL/SAP HANA, definiendo etiquetas de clasificación en la Acción 2 del POA\&M. \\
+\hline
+
+\texttt{ID.AM-08} &
+\textbf{Los sistemas, hardware, software, servicios y datos se gestionan a lo largo de su ciclo de vida.}\newline
+$\bullet$ \texttt{Ex3}: \textbf{Identificar usos no oficiales de tecnología para cumplir objetivos de la misión (es decir, Shadow IT / Shadow AI)}.\newline
+$\bullet$ \texttt{Ex4}: Identificar periódicamente sistemas y software redundantes o fuera de soporte que incrementan la superficie de ataque.\newline
+$\bullet$ \texttt{Ex5}: Configurar y asegurar adecuadamente los sistemas antes de su despliegue. &
+\textbf{Actividad 6, Actividad 7 y Prácticas 1, 2, 4 y 6}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RK-007}; \texttt{Actividad7/main.tex} \textit{ShadowAI}; \texttt{Practica1/main.tex}; \texttt{Practica2/main.tex}; \texttt{Practica4/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicación Directa en Caso Groq \texttt{RK-007} y Prácticas 1, 2, 4):}\newline
+$\bullet$ \textbf{En Actividad 6 y 7 (\texttt{Ex3}):} El ejemplo \texttt{Ex3} de \texttt{ID.AM-08} trata exactamente sobre identificar usos no oficiales de tecnología (\textbf{Shadow IT / Shadow AI}). Todo el Caso Grupo Groq (\texttt{RK-007 / RK-007a}) analiza y controla el uso no autorizado de GroqCloud, Claude y DeepSeek por ingenieros para depurar código.\newline
+$\bullet$ \textbf{En Prácticas 2 y 4 (\texttt{Ex4}):} Se identificaron sistemas obsoletos en producción: PHP 5.3.3/5.4.16 y Apache 2.2.15 en subdominios de la UNAM (Práctica 2) y Debian 8.11 Jessie EOL en \texttt{webserver} (Práctica 4).\newline
+$\bullet$ \textbf{En Práctica 1 (\texttt{Ex5}):} Se configuró y actualizó Debian 13 desde su instalación inicial. \\
+\hline
+
+\texttt{ID.RA-01} &
+\textbf{Las vulnerabilidades en los activos se identifican, validan y registran.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Usar tecnologías de gestión/escaneo de vulnerabilidades para identificar software sin parches y mal configurado}.\newline
+$\bullet$ \texttt{Ex2}: Evaluar arquitecturas de red y sistemas en busca de debilidades.\newline
+$\bullet$ \texttt{Ex3}: Revisar o probar software para identificar vulnerabilidades.\newline
+$\bullet$ \texttt{Ex5}: Monitorear fuentes de ciberinteligencia sobre nuevas vulnerabilidades (NVD/CVE). &
+\textbf{Actividad 4 y Prácticas 2, 3, 4, 5 y 6, y Tarea 2}\newline (\texttt{Actividad3/main.tex} Sec. 8 ``Análisis de Vulnerabilidades en el Stack Tecnológico''; \texttt{Practica2/main.tex} Sec. 5 \texttt{nuclei}; \texttt{Practica3/main.tex}; \texttt{Practica4/main.tex} \texttt{LinPEAS}; \texttt{Tarea2/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicación Práctica en Laboratorio y Metodológica en VELOX):}\newline
+$\bullet$ \textbf{En Práctica 2:} Se ejecutó \texttt{nuclei} sobre \texttt{ssa.ingenieria.unam.mx}, identificando y validando protocolos obsoletos (\texttt{TLS 1.0/1.1}), suites de cifrado débiles (\texttt{TLS\_ECDHE\_RSA\_WITH\_AES\_128\_CBC\_SHA}) y falta de \textit{Subresource Integrity} (SRI).\newline
+$\bullet$ \textbf{En Práctica 4:} Se ejecutó \texttt{linpeas.sh} en \texttt{webserver}, identificando y validando \textbf{13 CVEs} (incluyendo \texttt{CVE-2021-4034} \textit{PwnKit} y \texttt{CVE-2016-5195} \textit{DirtyCow}) y permisos inseguros \texttt{666}/\texttt{777} en sockets de root.\newline
+$\bullet$ \textbf{En Actividad 4 (VELOX):} Se identificaron y registraron \textbf{27 CVEs reales} (NVD) con su vector CVSS v3.1 y \texttt{CWE} en las 7 capas del stack automotriz. \\
+\hline
+
+\texttt{ID.RA-02} &
+\textbf{Se recibe inteligencia de amenazas cibernéticas (CTI) de foros y fuentes de intercambio de información.}\newline
+$\bullet$ \texttt{Ex1}: Configurar herramientas para ingerir feeds de inteligencia de amenazas.\newline
+$\bullet$ \texttt{Ex2}: Recibir y revisar avisos de terceros confiables sobre actores de amenaza actuales y sus \textbf{TTPs}.\newline
+$\bullet$ \texttt{Ex3}: Monitorear fuentes de CTI sobre vulnerabilidades en tecnologías emergentes. &
+\textbf{Actividad 4, 5, 7, Práctica 2 y Tareas 2 y 4}\newline (\texttt{Actividad3/main.tex} Sec. 9--10; \texttt{Actividad7/main.tex} OWASP LLM Top 10 / Upstream 2026; \texttt{Practica2/main.tex} VirusTotal API; \texttt{Tarea4/main.tex} MITRE ATT\&CK v21 y ATLAS). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 2, Caso VELOX y Tarea 4):}\newline
+$\bullet$ \textbf{En Práctica 2 (\texttt{Ex1}):} Se integró la API de \textbf{VirusTotal} y \textbf{GitHub} en \texttt{provider-config.yaml} de \texttt{subfinder} para enriquecer el descubrimiento con fuentes de inteligencia.\newline
+$\bullet$ \textbf{En Actividad 5 y 7 (\texttt{Ex2, Ex3}):} Se utilizaron reportes de inteligencia automotriz (\textit{Upstream Global Automotive Cybersecurity Report 2024/2026}, \textit{NVD}, \textit{OWASP Top 10 for LLM 2025}) para documentar TTPs y riesgos en tecnologías emergentes (IA generativa y vehículos SDV).\newline
+$\bullet$ \textbf{En Tarea 4:} Se analizaron las actualizaciones de \textbf{MITRE ATT\&CK v21} y \textbf{MITRE ATLAS} (amenazas contra sistemas de IA). \\
+\hline
+
+\texttt{ID.RA-03} &
+\textbf{Las amenazas internas y externas a la organización se identifican y registran.}\newline
+$\bullet$ \texttt{Ex1}: Usar ciberinteligencia para mantener conocimiento de los tipos de actores de amenaza que probablemente ataquen a la organización y sus TTPs.\newline
+$\bullet$ \texttt{Ex2}: Realizar \textit{threat hunting}.\newline
+$\bullet$ \texttt{Ex3}: Implementar procesos para identificar actores de amenaza internos (\textit{insider threats}). &
+\textbf{Actividad 5, Presentación HTML, Actividad 6, Actividad 7 y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 9--10; \texttt{Actividad3/html/index.html}; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX y Presentación HTML):}\newline
+$\bullet$ \textbf{En Actividad 5 y Presentación HTML:} Se perfiló el Top 5 de actores de amenaza del sector (\textit{Lazarus}, \textit{APT41}, \textit{BlackCat/ALPHV}, \textit{Akira}, \textit{KillNet}) y se creó la \textbf{Taxonomía Propietaria Edición Pokémon} que clasifica tanto amenazas externas (\textit{Mewtwo} Estado-Nación, \textit{Gengar} Ransomware, \textit{Electrode} Hacktivismo, \textit{Bisharp} Mercenarios) como \textbf{amenazas internas y de cadena de suministro} (\textit{Ditto / Rotom}).\newline
+$\bullet$ \textbf{En Actividad 6 y 7:} Se registró al actor interno \textit{Ditto} en \texttt{RSK-10} y en el Caso Grupo Groq (\texttt{RK-007}). \\
+\hline
+
+\texttt{ID.RA-04} &
+\textbf{Se identifican y registran los impactos potenciales y las probabilidades de que las amenazas exploten vulnerabilidades.}\newline
+$\bullet$ \texttt{Ex1}: Estimar la probabilidad e impacto de los escenarios de riesgo y registrarlos en registros de riesgos (\textit{risk registers}).\newline
+$\bullet$ \texttt{Ex2}: Enumerar los posibles impactos de negocio del acceso no autorizado.\newline
+$\bullet$ \texttt{Ex3}: Contabilizar los impactos de fallas en cascada en sistemas de sistemas. &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} Sec. 1--3; \texttt{Actividad7/main.tex} Sec. III ``Análisis del Riesgo''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica Completa en Actividades 6 y 7):}\newline
+$\bullet$ En la \textbf{Actividad 6} se documentaron 10 escenarios de riesgo en el Registro de Riesgos corporativo evaluando su impacto operativo y nivel de riesgo.\newline
+$\bullet$ En la \textbf{Actividad 7} se cuantificó la frecuencia esperada ($F=4.0$ veces/año) y se desglosó el impacto en 4 dimensiones empresariales (pérdida de ganancia nivel 3, costo de respuesta nivel 2 = \$45k USD, reputación nivel 2, regulatorio nivel 3), además de analizar fallas en cascada hacia la flota de vehículos vía llaves OTA o tramas CAN filtradas. \\
+\hline
+
+\texttt{ID.RA-05} &
+\textbf{Las amenazas, vulnerabilidades, probabilidades e impactos se utilizan para comprender el riesgo inherente e informar la priorización de la respuesta.}\newline
+$\bullet$ \texttt{Ex1}: Desarrollar modelos de amenazas para comprender los riesgos a los datos e identificar respuestas apropiadas.\newline
+$\bullet$ \texttt{Ex2}: Priorizar asignaciones de recursos según probabilidades e impactos estimados. &
+\textbf{Actividad 4, 5, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 8--10; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex} Sec. I--IV). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+Combinando las vulnerabilidades reales (Actividad 4) y la taxonomía de actores de amenaza (Actividad 5), en las Actividades 6 y 7 se calculó el nivel de riesgo inherente (CRÍTICO y ALTO) para priorizar las inversiones y los controles técnicos de mitigación. \\
+\hline
+
+\texttt{ID.RA-06} &
+\textbf{Las respuestas al riesgo se eligen, priorizan, planifican, rastrean y comunican.}\newline
+$\bullet$ \texttt{Ex1}: Aplicar criterios para decidir si aceptar, transferir, mitigar o evitar el riesgo.\newline
+$\bullet$ \texttt{Ex2}: Seleccionar controles compensatorios para mitigar el riesgo.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Rastrear el progreso de la implementación de la respuesta al riesgo (p. ej., plan de acción e hitos [POA\&M], registro de riesgos, reporte detallado de riesgo)}. &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} Sec. 2; \texttt{Actividad7/main.tex} Sec. IV ``Respuesta al Riesgo y Plan de Acción''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica Exacta en Actividades 6 y 7):}\newline
+El ejemplo \texttt{Ex3} de \texttt{ID.RA-06} menciona explícitamente: \textit{``plan of action and milestones [POA\&M], risk register, risk detail report''}. En la \textbf{Actividad 6} se construyó el \textit{Risk Register} (con columna ``Estado del Plan de Acción'': En ejecución, En diseño, En validación) y en la \textbf{Actividad 7} se elaboró el \textit{Risk Detail Report} completo con su \textbf{Plan de Acción e Hitos (POA\&M)} de 5 acciones numeradas, responsables y fechas compromiso (15/12/2026 al 31/03/2027). \\
+\hline
+
+\texttt{ID.RA-07} &
+\textbf{Los cambios y excepciones se gestionan, evalúan por su impacto en el riesgo, registran y rastrean.}\newline
+$\bullet$ \texttt{Ex1--Ex4}: Implementar procedimientos para documentar, revisar y aprobar cambios y excepciones solicitadas, y revisar periódicamente riesgos aceptados. &
+\textbf{Actividad 7 y Tarea 4}\newline (\texttt{Actividad7/main.tex} Sec. IV Acción 4; \texttt{Tarea4/main.tex} Conf. 3 ``The Defensible Minimum''). &
+\cellcolor{badgeTeorico}\textbf{Planificado en Caso VELOX / Analizado en Tarea 4:}\newline
+En la Actividad 7 se estableció que cualquier uso de modelos de IA externos requiere autorización formal y que los desarrolladores sólo pueden usar el tenant corporativo aprobado en AWS Bedrock. En la Tarea 4 se analizó la revisión periódica de riesgos aceptados/pendientes. \\
+\hline
+
+\texttt{ID.RA-08} &
+\textbf{Se establecen procesos para recibir, analizar y responder a divulgaciones de vulnerabilidades.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Compartir información de vulnerabilidades con proveedores y ejecutar procedimientos para procesar, analizar el impacto y responder a divulgaciones de vulnerabilidades (\textit{vulnerability disclosures}). &
+\textbf{Tarea 2 y Actividad 4}\newline (\texttt{Tarea2/main.tex} Sec. ``Mercados de Exploits'' y ``El Papel de la Ética''; \texttt{Actividad3/main.tex} Sec. 8). &
+\cellcolor{badgeTeorico}\textbf{Analizado en Tarea 2 y Aplicado Documentalmente en Act. 4:}\newline
+En la \textbf{Tarea 2} se estudió a fondo el flujo de divulgación responsable de vulnerabilidades (\textit{Responsible Vulnerability Disclosure} y programas de \textit{Bug Bounty} en el mercado blanco) frente a los mercados gris y negro. En la \textbf{Actividad 4} se procesaron avisos públicos de CVE/NVD de proveedores (Fortinet, SAP, Siemens, Rockwell, OpenSSL) para definir parches en VELOX. \\
+\hline
+
+\texttt{ID.IM-01} &
+\textbf{Se identifican mejoras a partir de evaluaciones.}\newline
+$\bullet$ \texttt{Ex1}: Realizar autoevaluaciones de servicios críticos considerando amenazas y TTPs actuales.\newline
+$\bullet$ \texttt{Ex2}: Invertir en evaluaciones de terceros o auditorías independientes. &
+\textbf{Actividad 4, 6, 7, Prácticas 2--7 y Tarea 4}\newline (\texttt{Actividad7/main.tex}; \texttt{Practica2/main.tex} a \texttt{Practica7/main.tex}; \texttt{Tarea4/main.tex} Conf. 5 ``Measuring ATT\&CK Coverage''). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Laboratorio, Caso VELOX y Tarea 4):}\newline
+Las Prácticas 2 a 7 constituyen una auditoría técnica integral de autoevaluación sobre los servidores del laboratorio, mientras que la Actividad 8 (este mismo documento) evalúa la madurez del proyecto frente al estándar NIST CSF 2.0. \\
+\hline
+
+\texttt{ID.IM-02} &
+\textbf{Se identifican mejoras a partir de pruebas y ejercicios de seguridad.}\newline
+$\bullet$ \texttt{Ex4}: \textbf{Realizar pruebas de penetración (\textit{penetration testing}) para identificar oportunidades de mejorar la postura de seguridad de sistemas seleccionados}.\newline
+$\bullet$ \texttt{Ex6}: Recopilar y analizar métricas de desempeño usando herramientas de seguridad. &
+\textbf{Prácticas 2, 3, 4, 5, 6 y 7, Actividad 6 y Tarea 4}\newline (\texttt{Practica2/main.tex} a \texttt{Practica7/main.tex}; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-03}; \texttt{Tarea4/main.tex} Conf. 5). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicación Práctica Completa en Prácticas 2 a 7):}\newline
+A lo largo de las \textbf{Prácticas 2 a 7} se ejecutó un ejercicio completo de \textbf{Penetration Testing} controlado: reconocimiento externo (\texttt{subfinder}, \texttt{httpx}, \texttt{nuclei}), escaneo de red (\texttt{nmap}), fuerza bruta (\texttt{Hydra}), enumeración y explotación local (\texttt{LinPEAS} + \texttt{CVE-2021-4034}), cracking de hashes (\texttt{John the Ripper}), post-explotación de respaldos y pivoteo por túnel SSH hacia \texttt{codeserver}, identificando todas las mejoras requeridas en la postura de seguridad. \\
+\hline
+
+\texttt{ID.IM-03}\newline \texttt{ID.IM-04} &
+\textbf{Mejoras identificadas de procesos operativos (\texttt{ID.IM-03}) y establecimiento/mejora de planes de respuesta a incidentes y gestión de vulnerabilidades (\texttt{ID.IM-04}).}\newline
+$\bullet$ \texttt{ID.IM-04 Ex1}: Establecer planes de contingencia (respuesta a incidentes, continuidad de negocio, recuperación ante desastres).\newline
+$\bullet$ \texttt{ID.IM-04 Ex3}: \textbf{Crear un plan de gestión de vulnerabilidades para identificar y evaluar vulnerabilidades y priorizar respuestas}. &
+\textbf{Actividad 4, Actividad 6 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 8; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Actividad7/main.tex} Sec. IV--V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la \textbf{Actividad 4} se estructuró el plan de mitigación de vulnerabilidades para los 27 CVEs identificados (priorizados por CVSS v3.1) y en las \textbf{Actividades 6 y 7} se establecieron los planes de tratamiento y monitoreo continuo para los riesgos críticos y altos de VELOX. \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{IDENTIFY (ID)} no cubiertas directamente en el curso (2 de 21):} \texttt{ID.RA-09} (evaluación previa a la adquisición de la autenticidad de hardware/software) e \texttt{ID.RA-10} (evaluación formal previa a la adquisición de proveedores críticos).
+
+% ---------------------------------------------------------
+\subsection{Función 3: PROTECT (PR) --- Salvaguardas y Controles de Protección}
+% ---------------------------------------------------------
+
+La función \textbf{PROTECT (\texttt{PR})} fue ampliamente trabajada en dos frentes complementarios: (1) en las \textbf{Prácticas 1, 2, 3, 4, 5, 6 y 7} tanto implementando controles reales (configuración de \texttt{sudoers}, actualización de paquetes con \texttt{apt}, túneles cifrados SSH, verificación de integridad criptográfica con \texttt{sha256sum} y \texttt{certutil}) como auditando fallas de protección (contraseñas débiles, protocolos TLS 1.0/1.1 obsoletos, binarios SUID sin parchear, respaldos con contraseñas en texto claro), y (2) en las \textbf{Actividades 3, 4, 6 y 7} diseñando la arquitectura defensiva de \textbf{VELOX Automotriz S.A. de C.V.}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{PROTECT (PR)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-pr} \\
+\hline
+\rowcolor{csfPR}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfPR}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{PR.AA-01} &
+\textbf{Las identidades y credenciales para usuarios, servicios y hardware autorizados son gestionadas por la organización.}\newline
+$\bullet$ \texttt{Ex1}: Gestionar solicitudes de acceso para empleados y contratistas.\newline
+$\bullet$ \texttt{Ex2}: \textbf{Emitir, gestionar y revocar certificados criptográficos, tokens de identidad, llaves criptográficas y otras credenciales}. &
+\textbf{Actividad 3, 6, 7 y Prácticas 1, 2, 5 y 6}\newline (\texttt{Actividad3/main.tex} Sec. 4 \texttt{ACT-08} Active Directory, Sec. 5 DigiCert PKI y HashiCorp Vault; \texttt{Actividad7/main.tex} Sec. IV Acción 5; \texttt{Practica1/main.tex}; \texttt{Practica2/main.tex}; \texttt{Practica5/main.tex}; \texttt{Practica6/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 1, 2, 5, 6 y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 1 y 2:} Se crearon cuentas de usuario estándar en Debian 13 y se gestionaron credenciales/tokens de API (\texttt{GitHub}, \texttt{VirusTotal}) en \texttt{provider-config.yaml}.\newline
+$\bullet$ \textbf{En Práctica 5 y 6:} Se auditaron los almacenes de credenciales \texttt{/etc/passwd}, \texttt{/etc/shadow} y archivos de configuración en respaldos (\texttt{passwords.txt}).\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 7):} Se diseñó la gestión de identidades con Active Directory + Azure AD (Entra ID), certificados mutuos \texttt{X.509} (DigiCert PKI) para vehículos y rotación automática de secretos en \textbf{HashiCorp Vault} (Acción 5 del POA\&M). \\
+\hline
+
+\texttt{PR.AA-02} &
+\textbf{Las identidades se verifican y vinculan a credenciales según el contexto de las interacciones.}\newline
+$\bullet$ \texttt{Ex2}: Emitir una credencial diferente para cada persona (sin compartir credenciales). &
+\textbf{Actividad 3, 6, 7 y Prácticas 1, 3 y 6}\newline (\texttt{Practica1/main.tex}; \texttt{Practica3/main.tex}; \texttt{Practica6/main.tex} cuenta \texttt{developer2024}). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 1 y Auditado en Prácticas 3--6):}\newline
+En la Práctica 1 se creó una cuenta individual (\texttt{angel}) separada de \texttt{root}, mientras que en las Prácticas 3, 5 y 6 se demostró el riesgo de cuentas genéricas compartidas (\texttt{webadmin}, \texttt{developer2024}). \\
+\hline
+
+\texttt{PR.AA-03} &
+\textbf{Los usuarios, servicios y hardware son autenticados.}\newline
+$\bullet$ \texttt{Ex1}: Requerir autenticación multifactor (\textbf{MFA}).\newline
+$\bullet$ \texttt{Ex2}: \textbf{Hacer cumplir políticas de fortaleza mínima de contraseñas, PINs y autenticadores similares}.\newline
+$\bullet$ \texttt{Ex3}: Reautenticar periódicamente usuarios, servicios y hardware según el riesgo (Zero Trust). &
+\textbf{Prácticas 3, 5, 6 y 7, y Actividades 3, 4, 6 y 7}\newline (\texttt{Practica3/main.tex} auditoría Hydra; \texttt{Practica5/main.tex} auditoría John the Ripper; \texttt{Practica6/main.tex}; \texttt{Practica7/main.tex}; \texttt{Actividad3/main.tex} Sec. 4 y 8). &
+\cellcolor{badgePractica}\textbf{SÍ (Auditado Prácticamente en Prácticas 3, 5, 6, 7 y Diseñado en VELOX):}\newline
+$\bullet$ \textbf{En Prácticas 3 y 5 (\texttt{Ex2}):} Se comprobó experimentalmente el impacto de no aplicar políticas de fortaleza de contraseñas al comprometer \texttt{webadmin:toronto} con \texttt{Hydra} y \texttt{root:Maverick} con \texttt{John the Ripper} usando diccionarios de contraseñas comunes.\newline
+$\bullet$ \textbf{En Práctica 7:} Se realizó autenticación remota por SSH y RDP hacia \texttt{codeserver}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3, 6 y 7):} Se definió autenticación con \textbf{Okta MFA}, OAuth 2.0/OIDC en APIs y mTLS \texttt{X.509} en telemetría vehicular. \\
+\hline
+
+\texttt{PR.AA-04} &
+\textbf{Las aserciones de identidad se protegen, transmiten y verifican.}\newline
+$\bullet$ \texttt{Ex1--Ex3}: Proteger aserciones de identidad en sistemas Single Sign-On (SSO) y federados mediante firma digital y validación criptográfica (SAML, OIDC, JWT). &
+\textbf{Actividad 3, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 4 \texttt{ACT-08}, \texttt{ACT-09} y Sec. 6.2 Kong API Gateway con OAuth 2.0; \texttt{Actividad7/main.tex} Sec. IV Acción 4 SSO con Entra ID). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 3 se especificó el uso de tokens \textbf{OAuth 2.0 / OIDC} en el API Gateway Kong (\texttt{api.velox-auto.mx}) y federación SAML/OIDC con Azure AD (Entra ID), y en la Actividad 7 (Acción 4) se integró el acceso a AWS Bedrock mediante SSO corporativo. \\
+\hline
+
+\texttt{PR.AA-05} &
+\textbf{Los permisos de acceso, derechos y autorizaciones se definen en políticas, se gestionan y aplican incorporando los principios de mínimo privilegio y separación de funciones.}\newline
+$\bullet$ \texttt{Ex1}: Revisar privilegios de acceso lógico y revocar los que no se necesiten.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Restringir el acceso y los privilegios al mínimo necesario (principio de mínimo privilegio)}. &
+\textbf{Práctica 1 y Práctica 4, y Actividades 3, 4, 6 y 7}\newline (\texttt{Practica1/main.tex} Sec. ``Configuración de Sudoers''; \texttt{Practica4/main.tex} auditoría de SUID/permisos con \texttt{LinPEAS}; \texttt{Actividad3/main.tex} Sec. 8). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 1, Auditado en Práctica 4 y Diseñado en VELOX):}\newline
+$\bullet$ \textbf{En Práctica 1:} Se configuró el acceso administrativo delegado en Debian 13 agregando al usuario al grupo \texttt{sudo} (\texttt{usermod -aG sudo}) y verificando \texttt{/etc/sudoers} para evitar operar permanentemente como \texttt{root}.\newline
+$\bullet$ \textbf{En Práctica 4:} Con \texttt{LinPEAS} se auditaron violaciones al principio de mínimo privilegio: binarios SUID de root vulnerables (\texttt{/usr/bin/pkexec}) y sockets Unix con permisos \texttt{666}/\texttt{777}, explotando \texttt{CVE-2021-4034} para demostrar cómo la falta de control de privilegios deriva en compromiso total (\texttt{uid=0}). \\
+\hline
+
+\texttt{PR.AT-01}\newline \texttt{PR.AT-02} &
+\textbf{El personal general (\texttt{PR.AT-01}) y en roles especializados (\texttt{PR.AT-02}) recibe concientización y capacitación en ciberseguridad.}\newline
+$\bullet$ \texttt{PR.AT-01 Ex1--Ex5}: Capacitar sobre ingeniería social, cumplimiento de políticas de uso aceptable, higiene de contraseñas, consecuencias de violaciones y evaluaciones periódicas.\newline
+$\bullet$ \texttt{PR.AT-02 Ex1--Ex4}: Capacitación basada en roles para personal especializado (ingeniería, seguridad, liderazgo). &
+\textbf{Actividad 6 y Actividad 7}\newline (\texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-10}, \texttt{RK-007}; \texttt{Actividad7/main.tex} Sec. IV Acción 5). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado/Planificado en Caso VELOX):}\newline
+En la Actividad 7 (Acción 5 del Plan de Acción) se diseñó el programa de capacitación obligatoria para los ingenieros de software, firmware y planta de VELOX sobre riesgos de \textit{ShadowAI}, protección de propiedad intelectual automotriz y manejo seguro de credenciales, exigiendo una cobertura $\ge 95\%$ y calificación aprobatoria $\ge 85\%$. \\
+\hline
+
+\texttt{PR.DS-01} &
+\textbf{Se protege la confidencialidad, integridad y disponibilidad de los datos en reposo (\textit{data-at-rest}).}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Usar cifrado, firmas digitales y hashes criptográficos para proteger la confidencialidad e integridad de los datos almacenados en archivos, bases de datos e imágenes}.\newline
+$\bullet$ \texttt{Ex3}: Confirmar la integridad del software validando firmas o hashes. &
+\textbf{Prácticas 5, 6 y 7, y Actividades 1, 3, 4, 6 y 7}\newline (\texttt{Practica5/main.tex} \texttt{sha256sum} y \texttt{SHA512-crypt}; \texttt{Practica6/main.tex} auditoría de \texttt{passwords.txt}; \texttt{Practica7/main.tex} \texttt{certutil -hashfile SHA256}; \texttt{Actividad3/main.tex} Sec. 4 \texttt{ACT-02} HSM/firmas OTA). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicación Práctica en Prácticas 5, 6 y 7, y en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 5:} Se calcularon hashes criptográficos \textbf{SHA-256} (\texttt{sha256sum}) sobre los archivos \texttt{passwd} y \texttt{shadow} y se analizó el almacenamiento de contraseñas con \texttt{SHA512-crypt} (\texttt{\$6\$}) y sales aleatorias.\newline
+$\bullet$ \textbf{En Práctica 6:} Se evidenció la violación de \texttt{PR.DS-01} al encontrar credenciales en texto claro (\texttt{passwords.txt}) dentro de respaldos sin cifrar.\newline
+$\bullet$ \textbf{En Práctica 7:} Se verificó la integridad criptográfica del código fuente en reposo (\texttt{bot.py}) en Windows Server 2012 R2 ejecutando \texttt{certutil -hashfile bot.py SHA256}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 6):} Se especificó la firma criptográfica de paquetes de firmware OTA en módulos \textbf{HSM} y cifrado de cubetas AWS S3. \\
+\hline
+
+\texttt{PR.DS-02} &
+\textbf{Se protege la confidencialidad, integridad y disponibilidad de los datos en tránsito (\textit{data-in-transit}).}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Usar cifrado, firmas digitales y hashes criptográficos para proteger las comunicaciones de red}.\newline
+$\bullet$ \texttt{Ex2}: Cifrar o bloquear automáticamente comunicaciones salientes que contengan datos sensibles (DLP).\newline
+$\bullet$ \texttt{Ex3}: \textbf{Bloquear el acceso a servicios externos no autorizados desde los sistemas y redes de la organización}. &
+\textbf{Prácticas 2, 5 y 7, y Actividades 3, 4, 6 y 7}\newline (\texttt{Practica2/main.tex} auditoría TLS con \texttt{nuclei}; \texttt{Practica5/main.tex} transferencia \texttt{scp} + \texttt{sha256sum}; \texttt{Practica7/main.tex} túnel SSH; \texttt{Actividad7/main.tex} Sec. IV Acciones 1, 2 y 3). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 2, 5, 7 y en Caso VELOX \texttt{RK-007}):}\newline
+$\bullet$ \textbf{En Práctica 2 (\texttt{Ex1}):} Se auditaron los protocolos de cifrado en tránsito de \texttt{ssa.ingenieria.unam.mx} con \texttt{nuclei}, detectando versiones inseguras \texttt{TLS 1.0/1.1} y cifrados CBC débiles, recomendando migrar a \texttt{TLS 1.2/1.3} con suites AEAD (\texttt{GCM}/\texttt{ChaCha20}).\newline
+$\bullet$ \textbf{En Práctica 5 y 7 (\texttt{Ex1}):} Se utilizó transferencia cifrada \texttt{scp} comprobando integridad extremo a extremo con \texttt{sha256sum}, y se encapsuló el protocolo RDP dentro de un túnel cifrado SSH (\texttt{ssh -L 3389:10.0.0.201:3389}).\newline
+$\bullet$ \textbf{En Actividad 7 (\texttt{Ex2, Ex3}):} Las Acciones 1, 2 y 3 del Plan de Acción de VELOX aplican directamente \texttt{Ex2} y \texttt{Ex3}: bloqueo de dominios de IA no autorizados (\texttt{api.groq.com}, \texttt{claude.ai}, \texttt{chat.deepseek.com}) mediante inspección SSL/TLS y CASB en el FortiGate 600F y bloqueo de exfiltración con Endpoint DLP. \\
+\hline
+
+\texttt{PR.DS-10} &
+\textbf{Se protege la confidencialidad, integridad y disponibilidad de los datos en uso (\textit{data-in-use}).}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Eliminar datos confidenciales de memoria cuando no se necesiten y proteger datos en uso contra acceso de otros procesos o entornos multi-tenant. &
+\textbf{Actividad 4, Actividad 7 y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 8 CVEs de corrupción de memoria; \texttt{Actividad7/main.tex} aislamiento de prompts en AWS Bedrock; \texttt{Tarea4/main.tex} Conf. 5 \texttt{T1055} Process Injection). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Analizado en Tarea 4):}\newline
+En la Actividad 7 (Acción 4) se estableció el uso de instancias privadas de IA con garantía de \textit{Zero-Data Retention} (donde los datos en uso durante la inferencia no son retenidos ni accesibles por terceros), y en la Tarea 4 se analizó la protección y detección ante inyección de procesos en memoria (\texttt{T1055}). \\
+\hline
+
+\texttt{PR.DS-11} &
+\textbf{Se crean, protegen, mantienen y prueban copias de seguridad (respaldos) de los datos.}\newline
+$\bullet$ \texttt{Ex1}: Respaldar continuamente los datos críticos.\newline
+$\bullet$ \texttt{Ex2}: Probar respaldos y restauraciones al menos anualmente.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Almacenar de forma segura respaldos (offline/offsite y cifrados) para que un incidente o atacante no los comprometa o destruya}. &
+\textbf{Práctica 6, Actividad 3, Actividad 6 y Tarea 4}\newline (\texttt{Practica6/main.tex} auditoría de \texttt{/root/respaldo.tar.gz} y \texttt{Project.old.tar.gz}; \texttt{Actividad3/main.tex} Sec. 5 Veeam Backup; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-01}; \texttt{Tarea4/main.tex} Conf. 6). &
+\cellcolor{badgePractica}\textbf{SÍ (Auditado Prácticamente en Práctica 6, Diseñado en VELOX y Visto en Tarea 4):}\newline
+$\bullet$ \textbf{En Práctica 6:} Se inspeccionaron los archivos de respaldo \texttt{/root/respaldo.tar.gz} y \texttt{/var/backups/Project.old.tar.gz} mediante \texttt{tar -ztvf}, demostrando cómo un respaldo mal protegido y sin cifrar permite a un atacante extraer el código fuente y las credenciales de producción (\texttt{passwords.txt}).\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 6):} Se incluyó \textbf{Veeam Backup \& Replication} con respaldos inmutables para mitigar el escenario \texttt{RSK-01} (Ransomware \textit{Gengar} en servidores MES/SCADA).\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 6):} Se analizó cómo los grupos de ransomware modernos buscan eliminar los respaldos antes de iniciar el cifrado. \\
+\hline
+
+\texttt{PR.PS-01} &
+\textbf{Se establecen y aplican prácticas de gestión de configuración.}\newline
+$\bullet$ \texttt{Ex1}: Establecer y mantener líneas base endurecidas (\textit{hardened baselines}) bajo el principio de mínima funcionalidad.\newline
+$\bullet$ \texttt{Ex2}: \textbf{Revisar todas las configuraciones predeterminadas que puedan impactar la ciberseguridad al instalar o actualizar software}. &
+\textbf{Prácticas 1, 2, 3, 4 y 6, y Actividades 4 y 7}\newline (\texttt{Practica1/main.tex}; \texttt{Practica2/main.tex}; \texttt{Practica3/main.tex} puerto SSH 13337; \texttt{Practica4/main.tex} \texttt{LinPEAS}; \texttt{Actividad7/main.tex} Sec. IV Acción 1 GPOs). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 1, Auditado en Prácticas 2--4 y Diseñado en VELOX):}\newline
+$\bullet$ \textbf{En Prácticas 1, 3 y 4:} Se configuró el sistema base Debian 13 (Práctica 1) y se auditaron las configuraciones de \texttt{webserver} con \texttt{nmap} y \texttt{LinPEAS} (identificando SSH movido al puerto 13337 pero permitiendo autenticación por contraseña débil, sockets con permisos \texttt{666} y variables de entorno explotables).\newline
+$\bullet$ \textbf{En Actividad 7 (Acción 1):} Se diseñó la aplicación de políticas de grupo (\textbf{GPO}) en Active Directory e Intune para endurecer los navegadores corporativos (bloqueo de extensiones de IA y desactivación de asistentes integrados). \\
+\hline
+
+\texttt{PR.PS-02} &
+\textbf{El software se mantiene, reemplaza y elimina de forma acorde con el riesgo.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Realizar parches de rutina y de emergencia}.\newline
+$\bullet$ \texttt{Ex2}: Actualizar imágenes de contenedores.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Reemplazar versiones de software y servicios al final de su vida útil (EOL) por versiones soportadas y mantenidas}.\newline
+$\bullet$ \texttt{Ex4}: Desinstalar software no autorizado que represente riesgos. &
+\textbf{Prácticas 1, 2 y 4, y Actividades 4, 6 y 7}\newline (\texttt{Practica1/main.tex} Sec. ``Mantenimiento y Actualización del Sistema''; \texttt{Practica2/main.tex} Sec. 4; \texttt{Practica4/main.tex}; \texttt{Actividad3/main.tex} Sec. 8). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 1, Auditado en Prácticas 2 y 4, y en VELOX):}\newline
+$\bullet$ \textbf{En Práctica 1 (\texttt{Ex1}):} Se ejecutó el mantenimiento y actualización real de repositorios y paquetes del sistema operativo en Debian 13 mediante \texttt{apt update \&\& apt upgrade} verificando \texttt{/etc/apt/sources.list}.\newline
+$\bullet$ \textbf{En Prácticas 2 y 4 (\texttt{Ex3}):} Se identificaron versiones EOL críticas en producción (PHP 5.3.3/5.4.16 en subdominios UNAM y Debian 8.11 Jessie con kernel 3.16 y \texttt{pkexec} sin parchear en \texttt{webserver}, explotado con \texttt{CVE-2021-4034}).\newline
+$\bullet$ \textbf{En Actividad 4 (VELOX):} Se especificaron las actualizaciones de parcheo para las 27 vulnerabilidades CVE del stack automotriz. \\
+\hline
+
+\texttt{PR.PS-04} &
+\textbf{Los registros de auditoría (logs) se generan y ponen a disposición para el monitoreo continuo.}\newline
+$\bullet$ \texttt{Ex1}: Configurar sistemas operativos, aplicaciones y servicios (incluyendo nube) para generar registros de log.\newline
+$\bullet$ \texttt{Ex2}: Configurar generadores de logs para compartir de forma segura sus registros con la infraestructura central de logging (SIEM). &
+\textbf{Actividad 3, Actividad 6, Actividad 7, Tarea 1 y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 5 Splunk Enterprise SIEM y AWS CloudTrail; \texttt{Tarea1/main.tex} \texttt{syslog}; \texttt{Tarea4/main.tex} Conf. 1 PowerShell 4103/4104 y Sysmon 1, 7, 17). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado Metodológicamente en VELOX y Analizado a Profundidad en Tarea 4):}\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 1 ``Obfuscated Tale''):} Se estudió la configuración específica de generación de logs en endpoints Windows mediante \textbf{PowerShell Event IDs 4103 y 4104} (\textit{Script Block Logging}) y \textbf{Sysmon Event IDs 1, 7 y 17}, y su envío al SIEM.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 7):} Se diseñó la recolección centralizada de logs de FortiGate 600F, CrowdStrike Falcon, AWS CloudTrail y Active Directory hacia \textbf{Splunk Enterprise SIEM}. \\
+\hline
+
+\texttt{PR.PS-05} &
+\textbf{Se previene la instalación y ejecución de software no autorizado.}\newline
+$\bullet$ \texttt{Ex1}: Restringir la ejecución de software sólo a productos permitidos o denegar software prohibido.\newline
+$\bullet$ \texttt{Ex2}: Verificar la fuente e integridad del software nuevo antes de instalarlo.\newline
+$\bullet$ \texttt{Ex3}: Configurar plataformas para bloquear acceso a dominios no aprobados o riesgosos. &
+\textbf{Práctica 1 y Actividad 7}\newline (\texttt{Practica1/main.tex} configuración de repositorios oficiales en \texttt{/etc/apt/sources.list} y paquetes Go; \texttt{Actividad7/main.tex} Sec. IV Acciones 1 y 3). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 1 y Diseñado en Caso VELOX \texttt{RK-007}):}\newline
+$\bullet$ \textbf{En Práctica 1 (\texttt{Ex2}):} Se verificaron las fuentes oficiales de Debian (\texttt{/etc/apt/sources.list}) y repositorios oficiales de ProjectDiscovery antes de instalar las herramientas de auditoría.\newline
+$\bullet$ \textbf{En Actividad 7 (\texttt{Ex1, Ex3, Ex4}):} Se definieron controles técnicos (GPOs + bloqueo DNS/HTTPS en FortiGate) para impedir la instalación de extensiones de navegador no autorizadas y navegadores alternativos con IA integrada (Opera One, Arc). \\
+\hline
+
+\texttt{PR.PS-06} &
+\textbf{Las prácticas de desarrollo seguro de software se integran y monitorean a lo largo del ciclo de vida de desarrollo (SDLC).}\newline
+$\bullet$ \texttt{Ex1}: Proteger todos los componentes del software desarrollado por la organización contra manipulación y acceso no autorizado.\newline
+$\bullet$ \texttt{Ex2}: Asegurar el software producido por la organización con mínimas vulnerabilidades. &
+\textbf{Actividad 3, 4, 6, 7 y Prácticas 2, 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 5 GitHub Enterprise, Sec. 8 CVEs Web/Embidos; \texttt{Actividad7/main.tex} Sec. IV Acción 5 escaneo pre-commit; \texttt{Practica2/main.tex} falta de SRI; \texttt{Practica6/main.tex}; \texttt{Practica7/main.tex}). &
+\cellcolor{badgePractica}\textbf{SÍ (Auditado en Prácticas 2, 6, 7 y Aplicado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Prácticas 2, 6 y 7:} Se auditó el código HTML de \texttt{ssa.ingenieria.unam.mx} (detectando falta de \textit{Subresource Integrity} en scripts externos), respaldos de código en \texttt{webserver} (credenciales hardcodeadas en \texttt{config/passwords.txt}) y el código fuente de \texttt{bot.py} en \texttt{codeserver} (\texttt{SHA256}).\newline
+$\bullet$ \textbf{En Actividad 7 (VELOX):} Se integró el escaneo automático \textit{pre-commit} de secretos en \textbf{GitHub Enterprise} y el uso de un asistente de programación privado en AWS Bedrock para evitar fugas de código en el SDLC. \\
+\hline
+
+\texttt{PR.IR-01} &
+\textbf{Las redes y los entornos están protegidos contra el acceso y uso lógico no autorizado.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Segmentar lógicamente las redes de la organización y plataformas en la nube según límites de confianza y tipos de plataforma (IT, IoT, OT, móvil, invitados), permitiendo sólo comunicaciones requeridas entre segmentos}.\newline
+$\bullet$ \texttt{Ex2}: Segmentar las redes de la organización de las redes externas.\newline
+$\bullet$ \texttt{Ex3}: Implementar arquitecturas Zero Trust. &
+\textbf{Actividad 3, 4, 6 y 7, y Prácticas 6 y 7}\newline (\texttt{Actividad3/main.tex} Sec. 4 \texttt{ACT-04} FortiGate 600F y Sec. 7 ``Diagrama de Conectividad de Activos en 4 Zonas''; \texttt{Practica6/main.tex}; \texttt{Practica7/main.tex} pivoteo entre redes segmentadas). &
+\cellcolor{badgePractica}\textbf{SÍ (Comprobado en Prácticas 6--7 y Diseñado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Prácticas 6 y 7:} Se verificó prácticamente la segmentación de red entre el segmento externo/DMZ (\texttt{192.168.177.0/24}) y la red interna aislada (\texttt{10.0.0.0/24}): un \texttt{ping} directo desde \texttt{EvilBox} hacia \texttt{10.0.0.201} tuvo \textbf{100\% de pérdida de paquetes}, demostrando el aislamiento de red, pero también evidenciando que el host dual-homed \texttt{webserver} (\texttt{192.168.177.129} / \texttt{10.0.0.78}) carecía de filtrado interno, lo que permitió hacer pivoteo con \texttt{ssh -L}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 Sec. 7):} Se diseñó la segmentación lógica mediante el firewall perimetral \textbf{FortiGate 600F} separando Zona Nube, Seguridad Perimetral, Zona Corporativa IT, Planta Industrial OT (modelo Purdue) y Zona Vehículo. \\
+\hline
+
+\texttt{PR.IR-03}\newline \texttt{PR.IR-04} &
+\textbf{Se implementan mecanismos de resiliencia (\texttt{PR.IR-03}) y capacidad adecuada de recursos para asegurar la disponibilidad (\texttt{PR.IR-04}).}\newline
+$\bullet$ \texttt{PR.IR-03 Ex1--Ex3}: Evitar puntos únicos de falla, usar balanceo de carga y alta disponibilidad.\newline
+$\bullet$ \texttt{PR.IR-04 Ex1--Ex2}: Escalar recursos ante picos de demanda o ataques DDoS. &
+\textbf{Actividad 3, 5, 6 y Práctica 2}\newline (\texttt{Actividad3/main.tex} Sec. 4 \texttt{ACT-04} FortiGate en Alta Disponibilidad HA, Sec. 5 Kubernetes EKS, Sec. 10.2 \textit{Electrode} DDoS; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-03}; \texttt{Practica2/main.tex} Cloudflare WAF/CDN). &
+\cellcolor{badgePractica}\textbf{SÍ (Verificado en Práctica 2 y Diseñado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Práctica 2:} Con \texttt{nuclei} se verificó que \texttt{ssa.ingenieria.unam.mx} se encuentra protegido detrás de la red de distribución y mitigación DDoS de \textbf{Cloudflare}.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 6):} Se diseñó el clúster \textbf{FortiGate 600F en Alta Disponibilidad (HA)}, orquestación elástica en \textbf{AWS EKS} y protección anti-DDoS ante actores hacktivistas (\textit{Electrode}, escenario \texttt{RSK-03}). \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{PROTECT (PR)} no cubiertas directamente en el curso (3 de 22):} \texttt{PR.AA-06} (controles de acceso físico con guardias, cámaras y gafetes), \texttt{PR.PS-03} (reemplazo y desecho físico auditable de hardware) y \texttt{PR.IR-02} (protección contra amenazas ambientales como inundaciones, incendios o humedad).
+
+% ---------------------------------------------------------
+\subsection{Función 4: DETECT (DE) --- Monitoreo Continuo y Análisis de Eventos Adversos}
+% ---------------------------------------------------------
+
+La función \textbf{DETECT (\texttt{DE})} tuvo un desarrollo sobresaliente gracias a tres pilares del curso: (1) la \textbf{Tarea 1} sobre \textbf{Estrategias de Deception y Honeypots} (que mapea de forma exacta a \texttt{DE.CM-03 Ex3}), (2) la \textbf{Tarea 4} sobre \textbf{MITRE ATT\&CKcon 7.0} (telemetría de PowerShell/Sysmon, correlación multi-tenant en SIEM y validación de coberturas de detección más allá de \texttt{T1055}), y (3) la \textbf{Actividad 3, 6 y 7} (monitoreo con Splunk SIEM, CrowdStrike EDR, Upstream C4 V-SOC y los 3 KRIs del Caso Grupo Groq).
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{DETECT (DE)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-de} \\
+\hline
+\rowcolor{csfDE}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfDE}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{DE.CM-01} &
+\textbf{Las redes y los servicios de red se monitorean para encontrar eventos potencialmente adversos.}\newline
+$\bullet$ \texttt{Ex1}: Monitorear DNS, BGP y otros servicios de red.\newline
+$\bullet$ \texttt{Ex2}: Monitorear redes cableadas e inalámbricas en busca de conexiones no autorizadas.\newline
+$\bullet$ \texttt{Ex4}: Comparar flujos de red reales contra líneas base para detectar desviaciones. &
+\textbf{Actividad 3, 6, 7 y Prácticas 2, 3 y 6}\newline (\texttt{Actividad3/main.tex} Sec. 5 FortiGate IPS, Upstream Security C4 V-SOC; \texttt{Actividad7/main.tex} Sec. IV--V KRI 1; \texttt{Practica2/main.tex} DNS; \texttt{Practica3/main.tex}; \texttt{Practica6/main.tex}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Auditado en Prácticas 2, 3 y 6):}\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 7):} Se diseñó el monitoreo continuo de tráfico DNS/HTTPS en el FortiGate 600F (KRI 1: conteo semanal de conexiones salientes hacia APIs de IA no autorizadas) y el monitoreo de telemetría vehicular V2X/MQTT mediante \textbf{Upstream C4 V-SOC}.\newline
+$\bullet$ \textbf{En Prácticas 2, 3 y 6:} Se analizaron registros DNS (\texttt{dig}) y conexiones activas en red local e interna. \\
+\hline
+
+\texttt{DE.CM-03} &
+\textbf{La actividad del personal y el uso de la tecnología se monitorean para encontrar eventos potencialmente adversos.}\newline
+$\bullet$ \texttt{Ex1}: Usar software de análisis de comportamiento para detectar actividad anómala de usuarios y mitigar amenazas internas (\textit{insider threats}).\newline
+$\bullet$ \texttt{Ex2}: Monitorear logs de sistemas de control de acceso lógico para encontrar patrones inusuales e intentos fallidos.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Monitorear continuamente la tecnología de ciberengaño (\textit{deception technology}), incluyendo cuentas de usuario señuelo, ante cualquier uso}. &
+\textbf{Tarea 1, Actividad 6 y Actividad 7}\newline (\texttt{Tarea1/main.tex} ``Estrategias de Deception y Honeypots''; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-10}, \texttt{RK-007}; \texttt{Actividad7/main.tex} Sec. IV--V). &
+\cellcolor{badgeTeorico}\textbf{SÍ (Estudiado a Fondo en Tarea 1 y Aplicado Metodológicamente en Act. 7):}\newline
+$\bullet$ \textbf{En Tarea 1 (\texttt{Ex3}):} El ejemplo \texttt{Ex3} de \texttt{DE.CM-03} en \texttt{csf2.xlsx} describe literalmente el tema central de la \textbf{Tarea 1}: desplegar y monitorear continuamente tecnología de \textbf{Deception} (cuentas señuelo en Active Directory contra \textit{Kerberoasting}, \textit{Honey files} \texttt{passwords.docx} y \textit{Honey tokens} de API/VPN), donde cualquier interacción constituye una señal de alta fidelidad de un intruso o actor interno.\newline
+$\bullet$ \textbf{En Actividad 7 (\texttt{Ex1, Ex2}):} Se diseñó el monitoreo de actividad de usuarios con Endpoint DLP y CASB para detectar uso de \textit{ShadowAI} por actores internos (\textit{Ditto}). \\
+\hline
+
+\texttt{DE.CM-06} &
+\textbf{Las actividades y servicios de proveedores externos se monitorean para encontrar eventos potencialmente adversos.}\newline
+$\bullet$ \texttt{Ex1}: Monitorear actividades de administración y mantenimiento remoto de proveedores.\newline
+$\bullet$ \texttt{Ex2}: \textbf{Monitorear la actividad de servicios basados en la nube e integraciones de terceros para detectar desviaciones del comportamiento esperado}. &
+\textbf{Tarea 4, Actividad 3, Actividad 6 y Actividad 7}\newline (\texttt{Tarea4/main.tex} Conf. 2 ``Multi-Tenant Kill Chain Correlation en entornos SaaS''; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-09}; \texttt{Actividad7/main.tex}). &
+\cellcolor{badgeTeorico}\textbf{SÍ (Analizado en Tarea 4 y Aplicado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 2):} Se estudió cómo los atacantes abusan de integraciones de terceros y proveedores SaaS/MSP para moverse entre organizaciones, y cómo monitorear dichas integraciones.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 6 y 7):} Se definió el monitoreo de enlaces B2B de proveedores Tier 1 (\texttt{RSK-09}) y de llamadas a APIs externas de IA (\texttt{RK-007}). \\
+\hline
+
+\texttt{DE.CM-09} &
+\textbf{El hardware y software de cómputo, los entornos de ejecución (\textit{runtime}) y sus datos se monitorean para encontrar eventos potencialmente adversos.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Monitorear correo, web, servicios de colaboración y otros vectores comunes para detectar malware, phishing, fugas y exfiltración de datos}.\newline
+$\bullet$ \texttt{Ex2}: Monitorear intentos de autenticación contra credenciales.\newline
+$\bullet$ \texttt{Ex3--Ex5}: Monitorear configuraciones, manipulación de software y salud de endpoints (EDR). &
+\textbf{Actividad 3, 6, 7, Práctica 6 y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 5 CrowdStrike Falcon EDR; \texttt{Actividad7/main.tex} Sec. IV Acción 2 Endpoint DLP y KRI 2; \texttt{Practica6/main.tex} \texttt{ps aux awf}; \texttt{Tarea4/main.tex} Conf. 1, 5 y 6). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Práctica 6, Caso VELOX y Analizado en Tarea 4):}\newline
+$\bullet$ \textbf{En Práctica 6:} Se inspeccionó manualmente el entorno de ejecución (\texttt{ps aux awf}) en \texttt{webserver} para identificar demonios y procesos activos.\newline
+$\bullet$ \textbf{En Actividad 7 (\texttt{Ex1}):} Se especificó la configuración de agentes \textbf{Endpoint DLP} (CrowdStrike Falcon / Purview) para monitorear y bloquear en tiempo real la copia o carga web de código fuente y tablas \texttt{CAN DBC} (KRI 2).\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 1, 5 y 6):} Se analizó el monitoreo de procesos en ejecución con Sysmon/EDR ante inyección de procesos (\texttt{T1055}) y desactivación de defensas (AMSI/ETW/BYOVD). \\
+\hline
+
+\texttt{DE.AE-02} &
+\textbf{Los eventos potencialmente adversos se analizan para comprender mejor las actividades asociadas.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Usar herramientas SIEM u otras para monitorear continuamente eventos de log en busca de actividad maliciosa o sospechosa}.\newline
+$\bullet$ \texttt{Ex2}: Utilizar ciberinteligencia actualizada en el análisis de logs.\newline
+$\bullet$ \texttt{Ex3}: Realizar revisiones manuales de eventos de log. &
+\textbf{Tarea 1, Tarea 4, Actividad 3, 6 y 7}\newline (\texttt{Tarea4/main.tex} Conf. 1 ``Obfuscated Tale: registrar eventos vs. detectarlos en el SIEM''; \texttt{Tarea1/main.tex}; \texttt{Actividad3/main.tex} Sec. 5 Splunk SIEM; \texttt{Actividad7/main.tex} Sec. V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Analizado en Tareas 1 y 4, y Aplicado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 1):} Se estudió la diferencia crítica entre simplemente almacenar logs y construir reglas de detección analíticas en el \textbf{SIEM} sobre eventos de PowerShell ofuscado (4103/4104) y Sysmon.\newline
+$\bullet$ \textbf{En Caso VELOX (Act. 3 y 7):} Se definió el análisis continuo de eventos en \textbf{Splunk Enterprise SIEM} y \textbf{Upstream V-SOC}. \\
+\hline
+
+\texttt{DE.AE-03} &
+\textbf{Se correlaciona información de múltiples fuentes.}\newline
+$\bullet$ \texttt{Ex1}: Transferir constantemente datos de log de múltiples fuentes a servidores centrales.\newline
+$\bullet$ \texttt{Ex2}: \textbf{Usar tecnología de correlación de eventos (SIEM) para recolectar y cruzar información capturada por múltiples fuentes}.\newline
+$\bullet$ \texttt{Ex3}: Utilizar ciberinteligencia para ayudar a correlacionar eventos. &
+\textbf{Tarea 4, Actividad 3 y Actividad 7}\newline (\texttt{Tarea4/main.tex} Conf. 1 y Conf. 2 ``Multi-Tenant Kill Chain Correlation''; \texttt{Actividad3/main.tex} Sec. 5; \texttt{Actividad7/main.tex} Sec. V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Analizado en Tarea 4 y Aplicado en Caso VELOX):}\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 2):} Se analizó específicamente la \textbf{correlación de cadenas de ataque (\textit{Kill Chain Correlation})} cruzando eventos de identidad, sesiones SaaS e integraciones entre múltiples fuentes.\newline
+$\bullet$ \textbf{En Actividad 7 (Sec. V):} Se correlacionaron tres fuentes distintas en el SIEM de VELOX: (1) logs de proxy/CASB en FortiGate, (2) alertas de Endpoint DLP en estaciones de trabajo y (3) escaneos de secretos en GitHub Enterprise / HashiCorp Vault. \\
+\hline
+
+\texttt{DE.AE-04} &
+\textbf{Se comprende el impacto y alcance estimados de los eventos adversos.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Usar herramientas SIEM o análisis experto para estimar el impacto y alcance de un evento adverso. &
+\textbf{Actividad 5, 6 y 7, y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 9.2; \texttt{Actividad7/main.tex} Sec. III ``Análisis Cuantitativo y Cualitativo del Impacto''). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+En la Actividad 7 se estimó con precisión el alcance e impacto de un evento de filtración en servicios de IA no autorizados sobre la flota vehicular, las finanzas (\$45k USD de respuesta y \$100k--\$500k USD de pérdida de ganancia) y el cumplimiento normativo. \\
+\hline
+
+\texttt{DE.AE-06} &
+\textbf{La información sobre eventos adversos se proporciona al personal y herramientas autorizados.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Usar software de ciberseguridad para generar alertas y proporcionarlas al SOC y a los respondedores de incidentes}.\newline
+$\bullet$ \texttt{Ex3--Ex4}: Crear y asignar tickets en el sistema de gestión de tickets cuando ocurren alertas o se descubren IoCs. &
+\textbf{Tarea 1, Actividad 3 y Actividad 7}\newline (\texttt{Tarea1/main.tex} Sec. ``Operación y Alertamiento: syslog y webhooks hacia el SOC''; \texttt{Actividad3/main.tex}; \texttt{Actividad7/main.tex} ServiceNow). &
+\cellcolor{badgeTeorico}\textbf{SÍ (Estudiado en Tarea 1 y Diseñado en Caso VELOX):}\newline
+En la \textbf{Tarea 1} se documentó el envío automático de alertas de alta fidelidad desde los señuelos (\textit{Honeypots / Honey tokens}) mediante \texttt{syslog} o \textit{webhooks} hacia la consola del SOC. En la \textbf{Actividad 7} se contempló la gestión de alertas y tickets en \textbf{ServiceNow} y \textbf{Splunk}. \\
+\hline
+
+\texttt{DE.AE-07} &
+\textbf{La inteligencia de amenazas cibernéticas (CTI) y otra información contextual se integran en el análisis.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Proveer feeds de CTI e información de inventarios de activos a las tecnologías y personal de detección.\newline
+$\bullet$ \texttt{Ex3}: Adquirir y analizar rápidamente divulgaciones de vulnerabilidades de proveedores. &
+\textbf{Actividad 3, 4, 5, 6 y 7, y Tareas 2 y 4}\newline (\texttt{Actividad3/main.tex} Sec. 4--10; \texttt{Tarea2/main.tex}; \texttt{Tarea4/main.tex} ATT\&CK v21 / ATLAS). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX y Tarea 4):}\newline
+En el proyecto de VELOX Automotriz se vinculó directamente el inventario de activos (Actividad 3), las vulnerabilidades CVE (Actividad 4) y la taxonomía de actores de amenaza Pokémon (Actividad 5) para contextualizar cada escenario de riesgo y alerta en las Actividades 6 y 7. \\
+\hline
+
+\texttt{DE.AE-08} &
+\textbf{Se declaran incidentes cuando los eventos adversos cumplen los criterios de incidente definidos.}\newline
+$\bullet$ \texttt{Ex1}: Aplicar criterios de incidente para determinar si debe declararse un incidente.\newline
+$\bullet$ \texttt{Ex2}: \textbf{Tomar en cuenta los falsos positivos conocidos al aplicar los criterios de incidente}. &
+\textbf{Tarea 1, Tarea 4 y Actividad 7}\newline (\texttt{Tarea1/main.tex} Sec. ``El Problema del Ruido en el SOC y Falsos Positivos''; \texttt{Tarea4/main.tex} Conf. 2 ``Anomalía vs. Evidencia de Compromiso''; \texttt{Actividad7/main.tex} Sec. V KRIs). &
+\cellcolor{badgeTeorico}\textbf{SÍ (Analizado en Tareas 1 y 4, y Parametrizado en Actividad 7):}\newline
+$\bullet$ \textbf{En Tarea 1 (\texttt{Ex2}):} Se analizó cómo la fatiga de alertas y el exceso de falsos positivos saturan al SOC, y cómo los señuelos de \textit{Deception} reducen los falsos positivos a casi cero.\newline
+$\bullet$ \textbf{En Tarea 4 (Conf. 2):} Se distinguió entre una simple anomalía estadística y evidencia real de compromiso para declarar un incidente.\newline
+$\bullet$ \textbf{En Actividad 7 (KRI 3):} Se estableció que la detección de $\ge 1$ llave criptográfica o token corporativo expuesto declara automáticamente un incidente de seguridad con respuesta inmediata ($<4$ horas). \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{DETECT (DE)} no cubiertas directamente en el curso (1 de 11):} \texttt{DE.CM-02} (monitoreo del entorno físico mediante lectores de gafetes, registros de visitantes, cerraduras y cámaras físicas).
+
+% ---------------------------------------------------------
+\subsection{Función 5: RESPOND (RS) --- Respuesta y Mitigación de Incidentes}
+% ---------------------------------------------------------
+
+La función \textbf{RESPOND (\texttt{RS})} se abordó en el análisis de casos reales de incidentes automotrices y globales (\textbf{Actividad 5} y \textbf{Tarea 2}), en el análisis forense e integridad de evidencias (\textbf{Práctica 5} y \textbf{Práctica 7}), en el uso de tecnología de ciberengaño para observar al atacante (\textbf{Tarea 1}), en el análisis de respuesta en entornos MSP/SaaS (\textbf{Tarea 4}) y en los procedimientos de contención, revocación de secretos y notificación regulatoria de \textbf{VELOX Automotriz} (\textbf{Actividades 6 y 7}).
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{RESPOND (RS)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-rs} \\
+\hline
+\rowcolor{csfRS}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfRS}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{RS.MA-01}\newline \texttt{RS.MA-02} &
+\textbf{Ejecución del plan de respuesta a incidentes (\texttt{RS.MA-01}) y triaje/validación de reportes de incidentes (\texttt{RS.MA-02}).}\newline
+$\bullet$ \texttt{RS.MA-01 Ex1--Ex2}: Reporte automático de incidentes confirmados y asistencia de respuesta externa.\newline
+$\bullet$ \texttt{RS.MA-02 Ex1--Ex2}: Revisar reportes y estimar la severidad de un incidente. &
+\textbf{Actividad 6, Actividad 7, Tarea 1 y Tarea 4}\newline (\texttt{Actividad7/main.tex} Sec. III ``Costo de Respuesta: \$45,000 USD'' y Sec. V; \texttt{Tarea1/main.tex}; \texttt{Tarea4/main.tex} Conf. 6). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado Metodológicamente en Caso VELOX y Visto en Tareas 1 y 4):}\newline
+En la Actividad 7 (Sección III) se modeló y presupuestó la ejecución del proceso de respuesta a incidentes ante una filtración por \textit{ShadowAI} (\$45,000 USD por evento, cubriendo triaje del SOC, auditoría forense externa de sesiones y remediación). \\
+\hline
+
+\texttt{RS.MA-03} &
+\textbf{Los incidentes se categorizan y priorizan.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Categorizar incidentes según su tipo (fuga de datos / \textit{data breach}, ransomware, DDoS, compromiso de cuenta)}.\newline
+$\bullet$ \texttt{Ex2}: Priorizar incidentes según alcance e impacto.\newline
+$\bullet$ \texttt{Ex3}: \textbf{Seleccionar estrategias de respuesta balanceando la necesidad de recuperarse rápido con la necesidad de observar al atacante o investigar más a fondo}. &
+\textbf{Actividad 5, Actividad 6, Tarea 1 y Tarea 2}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 y Sec. 10.2; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf}; \texttt{Tarea1/main.tex} Honeypots; \texttt{Tarea2/main.tex} MOVEit y WannaCry). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Analizado en Tarea 1):}\newline
+$\bullet$ \textbf{En Actividad 5 y 6 (\texttt{Ex1, Ex2}):} Se categorizaron y priorizaron los incidentes automotrices por tipo: Ransomware (\textit{Gengar}, \texttt{RSK-01}), DDoS (\textit{Electrode}, \texttt{RSK-03}), Fuga de datos/exfiltración en la nube (\texttt{RSK-07}, \texttt{RK-007}) y Compromiso de credenciales/accesos (\textit{Bisharp}, \texttt{RSK-05}).\newline
+$\bullet$ \textbf{En Tarea 1 (\texttt{Ex3}):} Se analizó específicamente el balance de \texttt{Ex3}: desviar o mantener al atacante interactuando dentro de un \textbf{Honeypot} controlado para observar sus técnicas antes de bloquearlo. \\
+\hline
+
+\texttt{RS.AN-03} &
+\textbf{Se realiza un análisis para establecer qué ocurrió durante un incidente y su causa raíz.}\newline
+$\bullet$ \texttt{Ex1--Ex3}: Determinar la secuencia de eventos, activos involucrados, vulnerabilidades, actores de amenaza y causas raíz sistémicas.\newline
+$\bullet$ \texttt{Ex4}: \textbf{Revisar cualquier tecnología de ciberengaño (\textit{cyber deception technology}) para obtener información adicional sobre el comportamiento del atacante}. &
+\textbf{Actividad 5, Tarea 1, Tarea 2 y Tarea 4}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 análisis de 5 ataques automotrices; \texttt{Tarea1/main.tex} \textit{Deception}; \texttt{Tarea2/main.tex} análisis de \textit{Operation Triangulation}, \textit{MOVEit} y \textit{WannaCry}; \texttt{Tarea4/main.tex}). &
+\cellcolor{badgeTeorico}\textbf{SÍ (Aplicado Analíticamente en Actividad 5 y Tareas 1, 2 y 4):}\newline
+$\bullet$ \textbf{En Actividad 5 y Tarea 2 (\texttt{Ex1--Ex3}):} Se realizó el análisis de causa raíz de 5 ciberataques automotrices reales (p. ej., mala configuración de cubetas AWS S3 en Toyota y VW Cariad que expusieron datos de millones de vehículos durante años) y de los casos \textit{Operation Triangulation} (\texttt{CVE-2023-41990}), \textit{MOVEit} y \textit{WannaCry}.\newline
+$\bullet$ \textbf{En Tarea 1 (\texttt{Ex4}):} Se estudió el ejemplo \texttt{Ex4} de forma directa: analizar la interacción del adversario con señuelos (\textit{Honeypots}) para perfilar su comportamiento y TTPs. \\
+\hline
+
+\texttt{RS.AN-06}\newline \texttt{RS.AN-07} &
+\textbf{Registro de acciones durante una investigación (\texttt{RS.AN-06}) y recolección y preservación de la integridad y procedencia de los datos y evidencias (\texttt{RS.AN-07}).}\newline
+$\bullet$ \texttt{RS.AN-07 Ex1}: \textbf{Recolectar, preservar y salvaguardar la integridad de todos los datos y metadatos pertinentes mediante procedimientos de preservación de evidencia (hashes criptográficos)}. &
+\textbf{Práctica 5 y Práctica 7}\newline (\texttt{Practica5/main.tex} Sec. ``Verificación de integridad con sha256sum''; \texttt{Practica7/main.tex} Sec. ``Verificación de integridad con certutil SHA256''). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicación Práctica en Laboratorio en Prácticas 5 y 7):}\newline
+$\bullet$ \textbf{En Práctica 5:} Al recolectar los archivos críticos \texttt{/etc/passwd} y \texttt{/etc/shadow} de \texttt{webserver}, se calculó su hash criptográfico con \texttt{sha256sum} en el servidor origen y nuevamente en la máquina de auditoría (\texttt{EvilBox}) tras la transferencia por \texttt{scp}, preservando y demostrando que la evidencia no sufrió alteración alguna.\newline
+$\bullet$ \textbf{En Práctica 7:} Se documentó y preservó el hash \texttt{SHA256} del código fuente recolectado (\texttt{bot.py}) mediante \texttt{certutil -hashfile}. \\
+\hline
+
+\texttt{RS.AN-08} &
+\textbf{Se estima y valida la magnitud de un incidente.}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Revisar otros objetivos potenciales del incidente y ejecutar herramientas para buscar indicadores de compromiso y evidencia de persistencia. &
+\textbf{Práctica 4, Práctica 6 y Actividad 7}\newline (\texttt{Practica4/main.tex} ejecución de \texttt{LinPEAS}; \texttt{Practica6/main.tex} auditoría de procesos, red y respaldos; \texttt{Actividad7/main.tex} Sec. III y V). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado en Prácticas 4 y 6, y en Caso VELOX):}\newline
+En las Prácticas 4 y 6 se ejecutaron scripts automatizados (\texttt{linpeas.sh}, \texttt{escaner.sh}) y búsquedas en el sistema (\texttt{find}, \texttt{ps aux awf}) para dimensionar el alcance del compromiso en el servidor y descubrir otros hosts afectados en la red interna (\texttt{10.0.0.201}). \\
+\hline
+
+\texttt{RS.CO-02}\newline \texttt{RS.CO-03} &
+\textbf{Notificación de incidentes a partes interesadas internas y externas (\texttt{RS.CO-02}) e intercambio de información (\texttt{RS.CO-03}).}\newline
+$\bullet$ \texttt{RS.CO-02 Ex1--Ex3}: Seguir procedimientos de notificación de brechas de datos (\textit{breach notification}) a clientes, socios, autoridades y reguladores.\newline
+$\bullet$ \texttt{RS.CO-03 Ex3--Ex4}: Notificar a RR.HH. ante actividad interna maliciosa y actualizar a la alta dirección. &
+\textbf{Actividad 5, Actividad 6 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 notificaciones públicas de Toyota, Continental y VW; \texttt{Actividad7/main.tex} Sec. III costos de notificación legal LFPDPPP/TISAX y Sec. V). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado Metodológicamente en Caso VELOX):}\newline
+En la Actividad 7 (Sección III) se incluyeron explícitamente los procedimientos y costos de notificación legal a clientes y reguladores bajo la \textbf{LFPDPPP}, notificación a armadoras asociadas bajo contratos \textbf{NDA/TISAX} y reporte al Comité de Riesgos y RR.HH. ante incidentes de \textit{ShadowAI}. \\
+\hline
+
+\texttt{RS.MI-01}\newline \texttt{RS.MI-02} &
+\textbf{Los incidentes son contenidos (\texttt{RS.MI-01}) y erradicados (\texttt{RS.MI-02}).}\newline
+$\bullet$ \texttt{RS.MI-01 Ex1--Ex2}: Tecnologías de ciberseguridad (EDR, firewalls) y respondedores realizan acciones de contención manuales o automáticas.\newline
+$\bullet$ \texttt{RS.MI-02 Ex1--Ex2}: Ejecutar acciones de erradicación (revocación de credenciales/llaves comprometidas, eliminación de artefactos). &
+\textbf{Actividad 3, Actividad 6, Actividad 7 y Práctica 4}\newline (\texttt{Actividad3/main.tex} Sec. 5 CrowdStrike EDR y FortiGate IPS; \texttt{Actividad7/main.tex} Sec. III--V revocación en $<4$ horas de llaves en Vault/AWS IAM; \texttt{Practica4/main.tex} \texttt{make clean}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado en Caso VELOX y Ejercitado en Práctica 4):}\newline
+$\bullet$ \textbf{En Actividad 7 (VELOX):} Se definió el protocolo de contención y erradicación inmediata ante fuga de secretos en IA: bloqueo de sesiones en el firewall FortiGate 600F y \textbf{rotación/revocación de emergencia ($<4$ horas)} de llaves criptográficas OTA, tokens de AWS IAM y secretos en HashiCorp Vault.\newline
+$\bullet$ \textbf{En Práctica 4:} Tras la prueba de concepto del exploit \texttt{CVE-2021-4034}, se ejecutó \texttt{make clean} y eliminación de binarios compilados para erradicar los artefactos de explotación del sistema auditado. \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{RESPOND (RS)} no cubiertas directamente en el curso (3 de 13):} \texttt{RS.MA-04} (protocolos formales de escalamiento jerárquico durante crisis activas), \texttt{RS.MA-05} (criterios formales de transición entre respuesta y recuperación) y el detalle operativo de cadena de custodia legal en \texttt{RS.AN-06}.
+
+% ---------------------------------------------------------
+\subsection{Función 6: RECOVER (RC) --- Recuperación y Restauración Operativa}
+% ---------------------------------------------------------
+
+La función \textbf{RECOVER (\texttt{RC})} fue abordada a través de la inspección y verificación de integridad de archivos de respaldo y activos en las \textbf{Prácticas 6 y 7}, el análisis de recuperación ante ataques de ransomware y paros de planta en el sector automotriz (\textbf{Actividad 5 y 6}: casos Continental, Yanfeng y Hyundai; escenarios \texttt{RSK-01} y \texttt{RSK-09}) y el análisis de protección de respaldos frente a ransomware en \textbf{Tarea 4}.
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|C{1.5cm}|L{5.3cm}|L{4.3cm}|L{5.8cm}|}
+\caption{Mapeo de subcategorías y actividades de la función \textbf{RECOVER (RC)} vistas y aplicadas en el curso.}
+\label{tab:mapeo-rc} \\
+\hline
+\rowcolor{csfRC}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfRC}
+\textbf{Subcat. CSF 2.0} & \textbf{Descripción y Actividad / Ejemplo de Implementación (\texttt{csf2.xlsx})} & \textbf{¿Dónde apareció en el curso? (Carpeta, Documento y Sección)} & \textbf{¿Se aplicó en algún momento? (Estado y Evidencia de Aplicación)} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+\texttt{RC.RP-01}\newline \texttt{RC.RP-02} &
+\textbf{Ejecución de la parte de recuperación del plan de respuesta a incidentes (\texttt{RC.RP-01}) y selección/priorización de acciones de recuperación (\texttt{RC.RP-02}).}\newline
+$\bullet$ \texttt{Ex1--Ex2}: Iniciar procedimientos de recuperación y seleccionar acciones de restauración según recursos disponibles y criticidad. &
+\textbf{Actividad 3, Actividad 5 y Actividad 6}\newline (\texttt{Actividad3/main.tex} Sec. 5 Veeam Backup \& Replication, Sec. 9.2 casos Yanfeng y Hyundai; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-01}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicado Metodológicamente en Caso VELOX):}\newline
+En la Actividad 3 y 6 (\texttt{RSK-01}: Ransomware en servidores MES/SCADA de planta) se estableció la estrategia de recuperación operativa de las líneas de ensamblaje mediante \textbf{Veeam Backup \& Replication} y segmentación OT para restaurar la producción sin pagar rescate. \\
+\hline
+
+\texttt{RC.RP-03} &
+\textbf{La integridad de las copias de seguridad (respaldos) y otros activos de restauración se verifica antes de usarlos para la restauración.}\newline
+$\bullet$ \texttt{Ex1}: \textbf{Revisar los activos de restauración en busca de indicadores de compromiso, corrupción de archivos y otros problemas de integridad antes de su uso}. &
+\textbf{Práctica 5, Práctica 6, Práctica 7 y Tarea 4}\newline (\texttt{Practica5/main.tex} \texttt{sha256sum}; \texttt{Practica6/main.tex} inspección de \texttt{respaldo.tar.gz} y \texttt{Project.old.tar.gz}; \texttt{Practica7/main.tex} \texttt{certutil -hashfile SHA256}; \texttt{Tarea4/main.tex} Conf. 6). &
+\cellcolor{badgePractica}\textbf{SÍ (Aplicado Prácticamente en Prácticas 5, 6 y 7):}\newline
+En la \textbf{Práctica 6} se inspeccionó la integridad y contenido de los respaldos comprimidos (\texttt{tar -ztvf}) y en las \textbf{Prácticas 5 y 7} se ejecutó validación criptográfica de integridad de archivos mediante \textbf{SHA-256} (\texttt{sha256sum} en Linux y \texttt{certutil -hashfile ... SHA256} en Windows Server 2012 R2) para garantizar que los archivos y el código fuente (\texttt{bot.py}) no estuvieran corruptos ni alterados. \\
+\hline
+
+\texttt{RC.RP-04}\newline \texttt{RC.RP-05} &
+\textbf{Consideración de funciones críticas de misión para establecer normas operativas post-incidente (\texttt{RC.RP-04}) y verificación de integridad de activos restaurados (\texttt{RC.RP-05}).}\newline
+$\bullet$ \texttt{RC.RP-04 Ex1}: Validar que los servicios esenciales se restauren en el orden apropiado (planta OT, telemetría, OTA, ERP). &
+\textbf{Actividad 3, Actividad 6 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 3--4; \texttt{Actividad4/\allowbreak 320206968\_Actividad6 (1).pdf} \texttt{RSK-01}, \texttt{RSK-02}, \texttt{RSK-04}). &
+\cellcolor{badgeVelox}\textbf{SÍ (Aplicación Metodológica en Caso VELOX):}\newline
+A partir de la priorización de los 12 activos críticos de VELOX Automotriz, se priorizó la continuidad y restauración de los sistemas que afectan la seguridad física vehicular (OTA \texttt{ACT-02}, VCU \texttt{ACT-11}, ADAS \texttt{ACT-12}) y la línea de manufactura (MES \texttt{ACT-06}, SCADA \texttt{ACT-07}). \\
+\hline
+
+\texttt{RC.CO-03}\newline \texttt{RC.CO-04} &
+\textbf{Comunicación del progreso de recuperación a partes interesadas internas y externas (\texttt{RC.CO-03}) y actualizaciones públicas aprobadas (\texttt{RC.CO-04}).}\newline
+$\bullet$ \texttt{RC.CO-04 Ex1--Ex2}: Seguir procedimientos de notificación de recuperación tras una brecha de datos y explicar los pasos tomados para prevenir su recurrencia. &
+\textbf{Actividad 5 y Actividad 7}\newline (\texttt{Actividad3/main.tex} Sec. 9.2 comunicados públicos de Toyota, Continental y VW Cariad tras la remediación; \texttt{Actividad7/main.tex} Sec. III impacto reputacional y comunicación a clientes). &
+\cellcolor{badgeTeorico}\textbf{Analizado en Actividad 5 y Contemplado en Actividad 7:}\newline
+En la Actividad 5 se revisaron los comunicados públicos emitidos por Toyota, Continental y Volkswagen tras recuperar y asegurar sus plataformas, y en la Actividad 7 se evaluó el manejo comunicacional ante prensa y clientes para mitigar el impacto reputacional de VELOX. \\
+\hline
+\end{longtable}
+\endgroup
+
+\noindent\textbf{Subcategorías de \texttt{RECOVER (RC)} no cubiertas directamente en el curso (2 de 8):} \texttt{RC.RP-06} (declaración formal de fin de recuperación y redacción del reporte post-incidente \textit{After-Action Report}) y la ejecución en vivo de una restauración completa de servidor desde cinta/imagen tras un ataque destructivo.
+
+% =========================================================
+\section{Matriz Maestra de las 106 Subcategorías de \texttt{csf2.xlsx} y Nivel de Aplicación}
+% =========================================================
+
+Con el propósito de brindar trazabilidad total respecto al archivo Excel de la Actividad 8 (\texttt{csf2.xlsx}), la Tabla~\ref{tab:matriz-106} lista las \textbf{106 subcategorías activas} del NIST CSF 2.0 indicando de un vistazo:
+\begin{itemize}[leftmargin=1.0cm, itemsep=1pt]
+    \item \textbf{¿Se vio en el curso?} (\textbf{SÍ} = 89 subcategorías; \textbf{NO} = 17 subcategorías).
+    \item \textbf{¿Dónde apareció?} (Actividades 1--7, Prácticas 1--7, Presentación HTML, Tareas 1--4).
+    \item \textbf{¿Se aplicó?} Distinguiendo entre: \textbf{Aplicado Práctico (Lab)}, \textbf{Aplicado Metodológico (Caso VELOX)}, \textbf{Teórico / Analítico / Planificado}, o \textbf{No cubierto}.
+\end{itemize}
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{longtable}{|C{1.4cm}|L{5.4cm}|C{1.3cm}|L{4.3cm}|C{4.2cm}|}
+\caption{Matriz completa de las 106 subcategorías del archivo \texttt{csf2.xlsx} frente al historial del curso.}
+\label{tab:matriz-106} \\
+\hline
+\rowcolor{blue!20}
+\textbf{Código} & \textbf{Subcategoría NIST CSF 2.0 (\texttt{csf2.xlsx})} & \textbf{¿Visto?} & \textbf{¿Dónde apareció en el proyecto?} & \textbf{Nivel de Aplicación} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{blue!20}
+\textbf{Código} & \textbf{Subcategoría NIST CSF 2.0 (\texttt{csf2.xlsx})} & \textbf{¿Visto?} & \textbf{¿Dónde apareció en el proyecto?} & \textbf{Nivel de Aplicación} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- GOVERN ---
+\multicolumn{5}{|l|}{\cellcolor{csfGV}\textbf{FUNCIÓN 1: GOVERN (GV) --- 31 Subcategorías}} \\
+\hline
+\texttt{GV.OC-01} & Misión organizacional comprendida e informa riesgos & \textbf{SÍ} & Actividad 2, Actividad 3 (Sec. 3) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OC-02} & Stakeholders internos y externos comprendidos & \textbf{SÍ} & Actividad 2, 3, 6 y 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OC-03} & Requisitos legales, regulatorios y contractuales (TISAX, ISO 21434, LFPDPPP) & \textbf{SÍ} & Actividad 6, Actividad 7 (Sec. III--IV) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OC-04} & Objetivos y servicios críticos para stakeholders externos & \textbf{SÍ} & Actividad 3 (Sec. 3--4), Actividad 6 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OC-05} & Dependencias externas comprendidas y comunicadas & \textbf{SÍ} & Práctica 2 (ASN/AWS), Actividad 2, 3, 6 y 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{GV.RM-01} & Objetivos de gestión de riesgos establecidos y acordados & \textbf{SÍ} & Actividad 6, Actividad 7 (Sec. IV) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-02} & Declaraciones de apetito y tolerancia al riesgo & \textbf{SÍ} & Actividad 7 (Sec. V KRIs), Tarea 4 (Conf. 3) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-03} & Riesgos cibernéticos incluidos en ERM empresarial & \textbf{SÍ} & Actividad 6, Actividad 7 (Sec. II--III) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-04} & Dirección estratégica de opciones de respuesta (Mitigar/Transferir/Evitar/Aceptar) & \textbf{SÍ} & Actividad 6 (Sec. 2), Actividad 7 (Sec. IV) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-05} & Líneas de comunicación de riesgos en la organización & \textbf{SÍ} & Actividad 6, Actividad 7 (Sec. I, IV, V) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-06} & Método estandarizado para calcular, documentar y priorizar riesgos & \textbf{SÍ} & Actividad 4 (CVSS), Act. 6 (Registro), Act. 7 ($R=F\times I$) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RM-07} & Oportunidades estratégicas (riesgos positivos / SWOT) & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{GV.RR-01} & Liderazgo responsable y cultura ética consciente del riesgo & \textbf{SÍ} & Tarea 2 (Ética), Actividad 6 y 7 & \cellcolor{badgeVelox}Aplicado en VELOX / Tarea 2 \\
+\hline
+\texttt{GV.RR-02} & Roles, responsabilidades y propietarios de riesgo establecidos & \textbf{SÍ} & Actividad 6 (Propietarios), Actividad 7 (POA\&M) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RR-03} & Recursos adecuados asignados según estrategia de riesgo & \textbf{SÍ} & Actividad 7 (Sec. III--IV), Tarea 4 (Conf. 3) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.RR-04} & Ciberseguridad incluida en prácticas de Recursos Humanos & \textbf{SÍ} & Actividad 5 (\textit{Ditto}), Actividad 7 (Acción 5) & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{GV.PO-01} & Política de gestión de riesgos establecida y comunicada & \textbf{SÍ} & Actividad 1, Actividad 7 (Acción 5) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.PO-02} & Política actualizada ante cambios tecnológicos (adopción de IA) & \textbf{SÍ} & Actividad 6 (\texttt{RK-007}), Actividad 7 (Caso Groq) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OV-01} & Resultados de la estrategia revisados para ajustar dirección & \textbf{SÍ} & Actividad 6, Actividad 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OV-02} & Estrategia revisada y ajustada a la luz de incidentes & \textbf{SÍ} & Actividad 5 (Sec. 9.2), Actividad 6 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.OV-03} & Evaluación del desempeño mediante KPIs y KRIs & \textbf{SÍ} & Actividad 7 (Sec. V: 3 KRIs cuantitativos) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.SC-01} & Programa y estrategia de cadena de suministro (C-SCRM) & \textbf{SÍ} & Actividad 2, 3 y 6 (\texttt{RSK-09}) & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{GV.SC-02} & Roles de ciberseguridad para proveedores y socios & \textbf{SÍ} & Actividad 2, 6 (\texttt{RSK-09}) y 7 & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{GV.SC-03} & C-SCRM integrado en la gestión de riesgos empresarial & \textbf{SÍ} & Actividad 5 (\textit{Ditto/Rotom}), Actividad 6 (\texttt{RSK-09}) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.SC-04} & Proveedores conocidos y priorizados por criticidad (Tier 1/2, Cloud) & \textbf{SÍ} & Actividad 2 (Sec. 2.2), Actividad 3 (Sec. 4--5), Práctica 2 & \cellcolor{badgePractica}Aplicado en VELOX y Práctica 2 \\
+\hline
+\texttt{GV.SC-05} & Requisitos de seguridad en contratos y acuerdos con proveedores (NDA/TISAX) & \textbf{SÍ} & Actividad 6 (\texttt{RSK-09}), Actividad 7 (Sec. III--IV) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.SC-06} & Debida diligencia previa a relaciones formales con proveedores & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{GV.SC-07} & Riesgos de proveedores evaluados y monitoreados (caso Yanfeng) & \textbf{SÍ} & Actividad 5 (Sec. 9.2), Actividad 6 (\texttt{RSK-09}), Act. 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{GV.SC-08} & Proveedores relevantes incluidos en ejercicios de incidentes & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{GV.SC-09} & Prácticas de procedencia (\textit{provenance}) en ciclo de vida & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{GV.SC-10} & Planes para conclusión o terminación de contratos con proveedores & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+
+% --- IDENTIFY ---
+\multicolumn{5}{|l|}{\cellcolor{csfID}\textbf{FUNCIÓN 2: IDENTIFY (ID) --- 21 Subcategorías}} \\
+\hline
+\texttt{ID.AM-01} & Inventarios de hardware mantenidos (IT, IoT, OT, móvil) & \textbf{SÍ} & Prácticas 3, 6 y 7 (\texttt{nmap}/\texttt{escaner.sh}); Act. 3 (Sec. 4 y 6) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.AM-02} & Inventarios de software, servicios y sistemas mantenidos & \textbf{SÍ} & Prácticas 2 (\texttt{subfinder}/\texttt{httpx}), 3, 6, 7; Act. 3 (Sec. 5 y 6.2) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.AM-03} & Representaciones de comunicación de red y flujos de datos & \textbf{SÍ} & Act. 3 (Sec. 7 Diagrama TikZ 4 zonas); Prácticas 3, 6 y 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.AM-04} & Inventarios de servicios provistos por proveedores externos & \textbf{SÍ} & Práctica 2 (AWS/Cloudflare); Act. 3 (Sec. 5), Act. 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.AM-05} & Activos priorizados por clasificación, criticidad e impacto & \textbf{SÍ} & Actividad 3 (Sec. 4: 12 activos críticos), Actividad 6 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{ID.AM-07} & Inventarios de datos y metadatos para tipos de datos designados & \textbf{SÍ} & Práctica 6 (\texttt{find}/\texttt{grep}); Act. 3 (Sec. 5 Cat. 6), Act. 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.AM-08} & Gestión de ciclo de vida e identificación de \textbf{Shadow IT / Shadow AI} & \textbf{SÍ} & Act. 6 y 7 (Caso Groq \texttt{RK-007}); Prácticas 1, 2 y 4 (EOL) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.RA-01} & Vulnerabilidades en activos identificadas, validadas y registradas & \textbf{SÍ} & Práctica 2 (\texttt{nuclei}), Práctica 4 (\texttt{LinPEAS}); Act. 4 (27 CVEs) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.RA-02} & Ciberinteligencia (CTI) recibida de fuentes y foros & \textbf{SÍ} & Práctica 2 (VirusTotal API); Act. 5 y 7; Tarea 4 (ATT\&CK/ATLAS) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.RA-03} & Amenazas internas y externas identificadas y registradas & \textbf{SÍ} & Act. 5 y Presentación HTML (Taxonomía Pokémon); Act. 6 y 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX/HTML) \\
+\hline
+\texttt{ID.RA-04} & Impactos potenciales y probabilidades identificados y registrados & \textbf{SÍ} & Actividad 6 (10 escenarios), Actividad 7 (Sec. III cuantitativo) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{ID.RA-05} & Amenazas, vulnerabilidades, probabilidades e impactos informan priorización & \textbf{SÍ} & Actividad 4, 5, 6 y 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{ID.RA-06} & Respuestas al riesgo elegidas, planificadas y rastreadas (POA\&M / Registro) & \textbf{SÍ} & Actividad 6 (Registro de Riesgos), Actividad 7 (Sec. IV POA\&M) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{ID.RA-07} & Cambios y excepciones gestionados y evaluados por riesgo & \textbf{SÍ} & Actividad 7 (Sec. IV), Tarea 4 (Conf. 3) & \cellcolor{badgeTeorico}Planificado en VELOX / Tarea 4 \\
+\hline
+\texttt{ID.RA-08} & Procesos para recibir y analizar divulgaciones de vulnerabilidades & \textbf{SÍ} & Tarea 2 (Zero-Days y Bug Bounty), Actividad 4 (CVEs) & \cellcolor{badgeTeorico}Analizado en Tarea 2 y Act. 4 \\
+\hline
+\texttt{ID.RA-09} & Autenticidad e integridad de hardware/software evaluada antes de adquirir & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{ID.RA-10} & Proveedores críticos evaluados antes de la adquisición & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{ID.IM-01} & Mejoras identificadas a partir de evaluaciones & \textbf{SÍ} & Prácticas 2--7, Actividad 7, Actividad 8, Tarea 4 (Conf. 5) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{ID.IM-02} & Mejoras identificadas a partir de pruebas de seguridad y \textbf{Penetration Testing} & \textbf{SÍ} & Prácticas 2 a 7 (Pentesting completo), Tarea 4 (Conf. 5) & \cellcolor{badgePractica}Aplicado Práctico (Lab Prácticas 2--7) \\
+\hline
+\texttt{ID.IM-03} & Mejoras identificadas de la ejecución de procesos operativos & \textbf{SÍ} & Actividad 5, 6 y 7; Tarea 4 & \cellcolor{badgeTeorico}Analizado en VELOX y Tarea 4 \\
+\hline
+\texttt{ID.IM-04} & Planes de respuesta a incidentes y gestión de vulnerabilidades establecidos & \textbf{SÍ} & Actividad 4 (Plan de mitigación CVE), Actividad 6 y 7 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+
+% --- PROTECT ---
+\multicolumn{5}{|l|}{\cellcolor{csfPR}\textbf{FUNCIÓN 3: PROTECT (PR) --- 22 Subcategorías}} \\
+\hline
+\texttt{PR.AA-01} & Identidades y credenciales gestionadas para usuarios, servicios y hardware & \textbf{SÍ} & Práctica 1, 2 (API keys), 5 y 6; Act. 3 (AD, PKI, Vault) y Act. 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{PR.AA-02} & Identidades verificadas y vinculadas a credenciales individuales & \textbf{SÍ} & Práctica 1, 3 y 6; Actividad 3 y 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{PR.AA-03} & Usuarios, servicios y hardware autenticados (MFA, fortaleza de contraseñas) & \textbf{SÍ} & Práctica 3 (\texttt{Hydra}), Práctica 5 (\texttt{John}), Práctica 7; Act. 3, 6 y 7 & \cellcolor{badgePractica}Auditado Práctico (Lab) y VELOX \\
+\hline
+\texttt{PR.AA-04} & Aserciones de identidad protegidas y verificadas (SSO, OAuth 2.0, OIDC) & \textbf{SÍ} & Actividad 3 (Sec. 4 y 6.2 Kong/Entra ID), Actividad 7 (Acción 4) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{PR.AA-05} & Permisos de acceso y principio de mínimo privilegio (\texttt{sudoers}, SUID) & \textbf{SÍ} & Práctica 1 (\texttt{/etc/sudoers}), Práctica 4 (\texttt{LinPEAS} + \texttt{CVE-2021-4034}) & \cellcolor{badgePractica}Aplicado y Auditado en Lab (Prác. 1 y 4) \\
+\hline
+\texttt{PR.AA-06} & Acceso físico a los activos gestionado y monitoreado & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{PR.AT-01} & Concientización y capacitación general al personal & \textbf{SÍ} & Actividad 6 (\texttt{RSK-10}), Actividad 7 (Sec. IV Acción 5) & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{PR.AT-02} & Capacitación a individuos en roles especializados (ingeniería/seguridad) & \textbf{SÍ} & Actividad 7 (Sec. IV Acción 5: 95\% plantilla ingeniería) & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{PR.DS-01} & Protección de datos en reposo (hashes SHA-256, cifrado, firmas) & \textbf{SÍ} & Práctica 5 (\texttt{sha256sum}), Práctica 6, Práctica 7 (\texttt{certutil}); Act. 3 y 6 & \cellcolor{badgePractica}Aplicado Práctico (Lab Prác. 5--7) y VELOX \\
+\hline
+\texttt{PR.DS-02} & Protección de datos en tránsito (TLS, SSH, DLP, bloqueo de servicios externos) & \textbf{SÍ} & Práctica 2 (\texttt{nuclei} TLS), Práctica 5 (\texttt{scp}), Práctica 7 (\texttt{ssh -L}); Act. 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{PR.DS-10} & Protección de datos en uso (memoria y aislamiento de inferencia IA) & \textbf{SÍ} & Actividad 7 (Acción 4 AWS Bedrock Zero-Retention), Tarea 4 (\texttt{T1055}) & \cellcolor{badgeVelox}Aplicado en VELOX / Tarea 4 \\
+\hline
+\texttt{PR.DS-11} & Copias de seguridad (respaldos) creadas, protegidas y probadas & \textbf{SÍ} & Práctica 6 (\texttt{respaldo.tar.gz}); Act. 3 y 6 (Veeam); Tarea 4 (Conf. 6) & \cellcolor{badgePractica}Auditado Práctico (Prác. 6) y VELOX \\
+\hline
+\texttt{PR.PS-01} & Prácticas de gestión de configuración y endurecimiento (\textit{hardening}) & \textbf{SÍ} & Prácticas 1, 3 y 4 (\texttt{LinPEAS}); Actividad 7 (Acción 1 GPOs) & \cellcolor{badgePractica}Aplicado Práctico (Lab) y VELOX \\
+\hline
+\texttt{PR.PS-02} & Software mantenido, parcheado y reemplazo de versiones EOL & \textbf{SÍ} & Práctica 1 (\texttt{apt upgrade}), Práctica 2 (PHP EOL), Práctica 4; Act. 4 & \cellcolor{badgePractica}Aplicado Práctico (Prác. 1, 2, 4) y VELOX \\
+\hline
+\texttt{PR.PS-03} & Hardware mantenido, reemplazado y desechado de forma segura & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{PR.PS-04} & Registros de log generados y disponibles para monitoreo continuo & \textbf{SÍ} & Tarea 4 (PowerShell 4103/4104, Sysmon 1,7,17); Tarea 1; Act. 3 y 7 & \cellcolor{badgeVelox}Analizado en Tarea 4 y Diseñado en VELOX \\
+\hline
+\texttt{PR.PS-05} & Prevención de instalación y ejecución de software no autorizado & \textbf{SÍ} & Práctica 1 (\texttt{sources.list}); Actividad 7 (Acciones 1 y 3) & \cellcolor{badgePractica}Aplicado en Práctica 1 y VELOX \\
+\hline
+\texttt{PR.PS-06} & Prácticas de desarrollo seguro de software (SDLC, SRI, pre-commit) & \textbf{SÍ} & Práctica 2 (SRI), Práctica 6 y 7 (\texttt{bot.py}); Act. 3, 4 y 7 (Acción 5) & \cellcolor{badgePractica}Auditado en Lab y Aplicado en VELOX \\
+\hline
+\texttt{PR.IR-01} & Redes y entornos protegidos y segmentados lógicamente (IT/OT/DMZ/V2X) & \textbf{SÍ} & Prácticas 6 y 7 (aislamiento \texttt{10.0.0.0/24} y pivoteo); Act. 3 (Sec. 7) & \cellcolor{badgePractica}Comprobado en Lab (Prác. 6--7) y VELOX \\
+\hline
+\texttt{PR.IR-02} & Activos tecnológicos protegidos contra amenazas ambientales & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{PR.IR-03} & Mecanismos de resiliencia (Alta Disponibilidad HA, balanceo de carga) & \textbf{SÍ} & Práctica 2 (Cloudflare); Actividad 3 (\texttt{ACT-04} FortiGate HA, EKS) & \cellcolor{badgePractica}Verificado en Prác. 2 y Diseñado en VELOX \\
+\hline
+\texttt{PR.IR-04} & Capacidad adecuada de recursos para asegurar disponibilidad (anti-DDoS) & \textbf{SÍ} & Actividad 3, 5 (\textit{Electrode}) y 6 (\texttt{RSK-03}); Práctica 2 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+
+% --- DETECT ---
+\multicolumn{5}{|l|}{\cellcolor{csfDE}\textbf{FUNCIÓN 4: DETECT (DE) --- 11 Subcategorías}} \\
+\hline
+\texttt{DE.CM-01} & Redes y servicios de red monitoreados ante eventos adversos & \textbf{SÍ} & Actividad 3 (Upstream V-SOC, FortiGate), Act. 7 (KRI 1); Prác. 2, 3, 6 & \cellcolor{badgeVelox}Aplicado en VELOX y Prácticas \\
+\hline
+\texttt{DE.CM-02} & Entorno físico monitoreado ante eventos adversos & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{DE.CM-03} & Monitoreo de actividad del personal y \textbf{tecnología de Deception / Honeypots} & \textbf{SÍ} & \textbf{Tarea 1 (Honeypots y Honey tokens)}, Actividad 6 y 7 (DLP/CASB) & \cellcolor{badgeTeorico}Estudiado a Fondo en Tarea 1 y VELOX \\
+\hline
+\texttt{DE.CM-06} & Actividades y servicios de proveedores externos monitoreados & \textbf{SÍ} & Tarea 4 (Conf. 2 SaaS/MSP), Actividad 6 (\texttt{RSK-09}) y Act. 7 & \cellcolor{badgeTeorico}Analizado en Tarea 4 y VELOX \\
+\hline
+\texttt{DE.CM-09} & Hardware, software, runtime y datos monitoreados (EDR, DLP, procesos) & \textbf{SÍ} & Práctica 6 (\texttt{ps aux awf}); Act. 3 y 7 (CrowdStrike/DLP); Tarea 4 & \cellcolor{badgePractica}Aplicado en Práctica 6, VELOX y Tarea 4 \\
+\hline
+\texttt{DE.AE-02} & Eventos potencialmente adversos analizados con SIEM & \textbf{SÍ} & Tarea 4 (Conf. 1 SIEM), Tarea 1; Actividad 3 y 7 (Splunk SIEM) & \cellcolor{badgeVelox}Analizado en Tarea 4 y Diseñado en VELOX \\
+\hline
+\texttt{DE.AE-03} & Información correlacionada de múltiples fuentes & \textbf{SÍ} & Tarea 4 (Conf. 2 Kill Chain Correlation); Actividad 7 (Sec. V) & \cellcolor{badgeVelox}Analizado en Tarea 4 y Diseñado en VELOX \\
+\hline
+\texttt{DE.AE-04} & Impacto y alcance estimados de eventos adversos comprendidos & \textbf{SÍ} & Actividad 5, 6 y 7 (Sec. III); Tarea 4 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{DE.AE-06} & Información de eventos adversos provista al SOC y sistemas de tickets & \textbf{SÍ} & Tarea 1 (\texttt{syslog}/webhooks al SOC); Actividad 3 y 7 (ServiceNow) & \cellcolor{badgeTeorico}Analizado en Tarea 1 y VELOX \\
+\hline
+\texttt{DE.AE-07} & Inteligencia de amenazas (CTI) y contexto integrados en el análisis & \textbf{SÍ} & Actividad 3, 4, 5, 6 y 7; Tarea 2 y Tarea 4 (ATT\&CK/ATLAS) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{DE.AE-08} & Incidentes declarados según criterios y reducción de falsos positivos & \textbf{SÍ} & Tarea 1 (Reducción de falsos positivos), Tarea 4 (Conf. 2), Act. 7 (KRI 3) & \cellcolor{badgeTeorico}Analizado en Tareas 1, 4 y Act. 7 \\
+\hline
+
+% --- RESPOND ---
+\multicolumn{5}{|l|}{\cellcolor{csfRS}\textbf{FUNCIÓN 5: RESPOND (RS) --- 13 Subcategorías}} \\
+\hline
+\texttt{RS.MA-01} & Plan de respuesta a incidentes ejecutado con terceros relevantes & \textbf{SÍ} & Actividad 7 (Sec. III Costo de respuesta \$45k USD), Tarea 4 (Conf. 6) & \cellcolor{badgeTeorico}Modelado en VELOX / Tarea 4 \\
+\hline
+\texttt{RS.MA-02} & Reportes de incidentes clasificados (triaje) y validados & \textbf{SÍ} & Tarea 1, Tarea 4 (Conf. 1 y 2), Actividad 7 (Sec. V) & \cellcolor{badgeTeorico}Analizado en Tareas 1, 4 y Act. 7 \\
+\hline
+\texttt{RS.MA-03} & Incidentes categorizados, priorizados y balance con observación en Honeypot & \textbf{SÍ} & Actividad 5 y 6; \textbf{Tarea 1 (Observación en Honeypot)}; Tarea 2 & \cellcolor{badgeVelox}Aplicado en VELOX y Tarea 1 \\
+\hline
+\texttt{RS.MA-04} & Incidentes escalados o elevados según sea necesario & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{RS.MA-05} & Aplicación de criterios para iniciar la recuperación de incidentes & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{RS.AN-03} & Análisis de causa raíz de incidentes y revisión de tecnología Deception & \textbf{SÍ} & Actividad 5 (Sec. 9.2: 5 casos), Tarea 1 (\textit{Deception}), Tarea 2 (3 casos) & \cellcolor{badgeTeorico}Aplicado Analíticamente (Act. 5, Tareas 1--2) \\
+\hline
+\texttt{RS.AN-06} & Acciones realizadas durante la investigación registradas de forma inmutable & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{RS.AN-07} & Datos y metadatos del incidente recolectados preservando su integridad & \textbf{SÍ} & Práctica 5 (\texttt{sha256sum} sobre evidencia), Práctica 7 (\texttt{certutil SHA256}) & \cellcolor{badgePractica}Aplicado Práctico (Lab Prácticas 5 y 7) \\
+\hline
+\texttt{RS.AN-08} & Magnitud del incidente estimada y validada en otros objetivos & \textbf{SÍ} & Práctica 4 (\texttt{LinPEAS}), Práctica 6 (\texttt{escaner.sh}); Actividad 7 & \cellcolor{badgePractica}Aplicado Práctico (Lab Prácticas 4 y 6) \\
+\hline
+\texttt{RS.CO-02} & Stakeholders internos y externos notificados (clientes, LFPDPPP, TISAX) & \textbf{SÍ} & Actividad 5 (Sec. 9.2), Actividad 7 (Sec. III notificación legal) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{RS.CO-03} & Información compartida con partes designadas (dirección, RR.HH., socios) & \textbf{SÍ} & Actividad 6 y Actividad 7 (Sec. III--V) & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{RS.MI-01} & Incidentes contenidos (aislamiento en firewall/EDR) & \textbf{SÍ} & Actividad 3, 6 y 7 (bloqueo FortiGate/CrowdStrike) & \cellcolor{badgeVelox}Diseñado en Caso VELOX \\
+\hline
+\texttt{RS.MI-02} & Incidentes erradicados (rotación de llaves $<4$h y limpieza de artefactos) & \textbf{SÍ} & Actividad 7 (rotación Vault/AWS IAM); Práctica 4 (\texttt{make clean}) & \cellcolor{badgePractica}Aplicado en Práctica 4 y Caso VELOX \\
+\hline
+
+% --- RECOVER ---
+\multicolumn{5}{|l|}{\cellcolor{csfRC}\textbf{FUNCIÓN 6: RECOVER (RC) --- 8 Subcategorías}} \\
+\hline
+\texttt{RC.RP-01} & Ejecución del plan de recuperación de incidentes & \textbf{SÍ} & Actividad 3 y 6 (\texttt{RSK-01} Veeam Backup), Actividad 5 (Yanfeng/Hyundai) & \cellcolor{badgeTeorico}Planificado en VELOX / Act. 5 \\
+\hline
+\texttt{RC.RP-02} & Acciones de recuperación seleccionadas, acotadas y priorizadas & \textbf{SÍ} & Actividad 6 (\texttt{RSK-01}, \texttt{RSK-04}, \texttt{RSK-09}) & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{RC.RP-03} & Integridad de respaldos y activos verificada antes de restaurar & \textbf{SÍ} & Práctica 5 (\texttt{sha256sum}), Práctica 6 (\texttt{tar -ztvf}), Práctica 7 (\texttt{certutil}) & \cellcolor{badgePractica}Aplicado Práctico (Lab Prácticas 5--7) \\
+\hline
+\texttt{RC.RP-04} & Funciones críticas de misión consideradas post-incidente & \textbf{SÍ} & Actividad 3 (Sec. 3--4) y Actividad 6 & \cellcolor{badgeVelox}Aplicado Metodológico (VELOX) \\
+\hline
+\texttt{RC.RP-05} & Integridad de activos restaurados verificada y retorno a operación & \textbf{SÍ} & Actividad 6 y 7; Práctica 7 & \cellcolor{badgeTeorico}Planificado en VELOX \\
+\hline
+\texttt{RC.RP-06} & Fin de recuperación declarado y reporte post-incidente (\textit{After-Action}) & NO & No abordado directamente & \cellcolor{badgeNoVisto}No cubierto \\
+\hline
+\texttt{RC.CO-03} & Progreso de recuperación comunicado a stakeholders internos y externos & \textbf{SÍ} & Actividad 5 (Sec. 9.2), Actividad 7 (Sec. III) & \cellcolor{badgeTeorico}Analizado en Act. 5 y 7 \\
+\hline
+\texttt{RC.CO-04} & Actualizaciones públicas sobre recuperación compartidas por métodos aprobados & NO & Sólo revisado en casos históricos (Act. 5) & \cellcolor{badgeNoVisto}No cubierto operativamente \\
+\hline
+\end{longtable}
+\endgroup
+
+% =========================================================
+\section{Síntesis Comparativa de Aplicación y Conclusiones}
+% =========================================================
+
+Del cruce exhaustivo entre la hoja de cálculo oficial \texttt{csf2.xlsx} (\textit{The NIST Cybersecurity Framework 2.0}) y la totalidad de las carpetas del repositorio del curso se desprenden tres conclusiones fundamentales sobre \textbf{cómo y cuándo se aplicó} el framework a lo largo del semestre:
+
+\begin{enumerate}[leftmargin=1.1cm, itemsep=4pt]
+    \item \textbf{Aplicación Práctica y Técnica Real en Laboratorio (\textbf{30 subcategorías} ejecutadas en las Prácticas 1 a 7):}
+    Las prácticas de laboratorio permitieron ejecutar de forma tangible las funciones técnicas de \textbf{IDENTIFY (\texttt{ID})}, \textbf{PROTECT (\texttt{PR})}, \textbf{DETECT (\texttt{DE})}, \textbf{RESPOND (\texttt{RS})} y \textbf{RECOVER (\texttt{RC})}. En particular:
+    \begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+        \item \textbf{Descubrimiento e inventario de activos y flujos (\texttt{ID.AM-01} a \texttt{ID.AM-04}, \texttt{ID.AM-07}, \texttt{GV.OC-05}):} Se aplicó directamente usando \texttt{subfinder}, \texttt{dig}, \texttt{whois}, \texttt{httpx}, \texttt{nmap}, \texttt{ps aux awf}, \texttt{route -n}, \texttt{ifconfig -a}, \texttt{systeminfo} y el script propio \texttt{escaner.sh}.
+        \item \textbf{Identificación, validación de vulnerabilidades y Penetration Testing (\texttt{ID.RA-01}, \texttt{ID.IM-01}, \texttt{ID.IM-02}):} Se aplicó en vivo con \texttt{nuclei} sobre \texttt{ssa.ingenieria.unam.mx} y con \texttt{LinPEAS} + compilación del exploit \texttt{CVE-2021-4034} (\textit{PwnKit}) en \texttt{webserver}.
+        \item \textbf{Auditoría de autenticación, privilegios y mantenimiento (\texttt{PR.AA-01} a \texttt{PR.AA-05}, \texttt{PR.PS-01}, \texttt{PR.PS-02}, \texttt{PR.IR-01}):} Se configuró \texttt{/etc/sudoers} y \texttt{apt update \&\& apt upgrade} en Debian 13 (Práctica 1), se auditaron contraseñas débiles con \texttt{Hydra} (Práctica 3) y \texttt{John the Ripper} (Práctica 5), y se comprobó el aislamiento de red y pivoteo mediante túneles cifrados SSH (\texttt{ssh -L 3389:10.0.0.201:3389}) y RDP en la Práctica 7.
+        \item \textbf{Protección de datos e integridad criptográfica de evidencias y respaldos (\texttt{PR.DS-01}, \texttt{PR.DS-02}, \texttt{PR.DS-11}, \texttt{RS.AN-07}, \texttt{RC.RP-03}):} Se ejecutó la validación criptográfica mediante \texttt{sha256sum} en Linux y \texttt{certutil -hashfile ... SHA256} en Windows Server 2012 R2, además de auditar respaldos comprimidos (\texttt{tar -ztvf}) en la Práctica 6.
+    \end{itemize}
+
+    \item \textbf{Aplicación Metodológica y Documental Completa en el Caso de Estudio VELOX Automotriz S.A. de C.V. (\textbf{59 subcategorías} aplicadas en las Actividades 1 a 7 y Presentación HTML):}
+    El proyecto integrador de \textbf{VELOX Automotriz} permitió aplicar de principio a fin las funciones de \textbf{GOVERN (\texttt{GV})} e \textbf{IDENTIFY (\texttt{ID})}, así como la arquitectura de \textbf{PROTECT (\texttt{PR})} y \textbf{DETECT (\texttt{DE})}:
+    \begin{itemize}[leftmargin=0.8cm, itemsep=2pt]
+        \item Se definió el contexto organizacional, cadena de suministro automotriz Tier 1/Tier 2 y marco regulatorio (\textbf{ISO/SAE 21434, TISAX, LFPDPPP}) (\texttt{GV.OC-01} a \texttt{GV.OC-05}, \texttt{GV.SC-01} a \texttt{GV.SC-07}).
+        \item Se construyó el inventario de 12 activos críticos, el catálogo tecnológico y el diagrama de segmentación en 4 zonas lógicas (\texttt{ID.AM-01} a \texttt{ID.AM-05}, \texttt{PR.IR-01}).
+        \item Se mapeó el registro de 27 CVEs con CVSS v3.1 (\texttt{ID.RA-01}) y se creó la \textbf{Taxonomía Propietaria de Adversarios Edición Pokémon} tanto en reporte como en la presentación interactiva \texttt{Actividad3/html/index.html} (\texttt{ID.RA-02}, \texttt{ID.RA-03}).
+        \item Se estandarizó el cálculo y priorización de riesgos en el \textbf{Registro de Riesgos} (\texttt{RSK-01} a \texttt{RSK-10}) y en el análisis cuantitativo del \textbf{Caso Grupo Groq (\texttt{RK-007}: ShadowAI)} con frecuencia $F=4.0$, impacto promedio $I_{\text{prom}}=2.50$, nivel de riesgo $R=10.00$ (ALTO), Plan de Acción e Hitos (\textbf{POA\&M}) de 5 puntos y \textbf{3 Indicadores Clave de Riesgo (KRIs)} (\texttt{GV.RM-01} a \texttt{GV.RM-06}, \texttt{GV.PO-02}, \texttt{GV.OV-03}, \texttt{ID.AM-08}, \texttt{ID.RA-04} a \texttt{ID.RA-06}).
+    \end{itemize}
+
+    \item \textbf{Profundización Analítica y de Operaciones SOC en las Tareas 1, 2 y 4 (\textbf{37 subcategorías} reforzadas):}
+    Las tareas complementaron aquellas subcategorías de \textbf{DETECT (\texttt{DE})} y \textbf{RESPOND (\texttt{RS})} que en un curso semestral no suelen desplegarse en una infraestructura empresarial real pero cuyo dominio conceptual es indispensable: el despliegue de \textbf{Honeypots, Honey files y Honey tokens} para reducir falsos positivos en el SOC (\textbf{Tarea 1} $\rightarrow$ \texttt{DE.CM-03 Ex3}, \texttt{DE.AE-08}, \texttt{RS.MA-03 Ex3}, \texttt{RS.AN-03 Ex4}), la gestión ética de \textbf{Vulnerabilidades Zero-Day y Divulgación Responsable} (\textbf{Tarea 2} $\rightarrow$ \texttt{GV.RR-01}, \texttt{ID.RA-08}) y la ingeniería de detección con \textbf{PowerShell, Sysmon, correlación SaaS multi-tenant y MITRE ATT\&CK v21 / ATLAS} (\textbf{Tarea 4} $\rightarrow$ \texttt{PR.PS-04}, \texttt{DE.CM-06}, \texttt{DE.CM-09}, \texttt{DE.AE-02}, \texttt{DE.AE-03}).
+\end{enumerate}
+
+% =========================================================
+\newpage
+\printbibliography[title={Referencias Bibliográficas}]
+% =========================================================
+
+\end{document}

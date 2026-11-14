@@ -1,0 +1,715 @@
+\documentclass[letterpaper,11pt]{article}
+
+% --- PAQUETES DE IDIOMA ---
+\usepackage[spanish,mexico,es-noshorthands]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{iftex}
+
+% --- PAQUETES MATEMÁTICOS ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- PAQUETES GRÁFICOS Y DE DISEÑO ---
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+
+% --- LISTAS ---
+\usepackage{enumitem}
+
+% --- PAQUETES DE TABLAS ---
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% --- COLORES POR FUNCIÓN DEL NIST CSF 2.0 ---
+\definecolor{csfGV}{HTML}{FFF2CC}       % Govern - Amarillo suave
+\definecolor{csfID}{HTML}{D9E1F2}       % Identify - Azul suave
+\definecolor{csfPR}{HTML}{E2EFDA}       % Protect - Verde suave
+\definecolor{csfDE}{HTML}{FCE4D6}       % Detect - Naranja suave
+\definecolor{csfRS}{HTML}{F8CBAD}       % Respond - Coral suave
+\definecolor{csfRC}{HTML}{D0CECE}       % Recover - Gris suave
+\definecolor{xlSummary}{HTML}{CFE2F3}   % Azul claro para encabezados
+
+% --- RUTAS DE IMÁGENES ---
+\graphicspath{{portada_img/}{../portada_img/}}
+
+% --- ÍNDICE CON PUNTOS ---
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- CONFIGURACIÓN DE PÁGINA (GEOMETRÍA) ---
+\usepackage[
+    left=18mm, 
+    right=18mm,
+    top=30mm,
+    bottom=24mm,
+    headheight=77pt, 
+    papersize={21.59cm,27.94cm}
+]{geometry}
+
+% --- FORMATO DE TEXTO ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% --- ENCABEZADOS Y PIES DE PÁGINA ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[L]{\includegraphics[height=1.5cm]{portada_img/der.png}}
+\fancyhead[R]{\includegraphics[height=1.5cm]{portada_img/izq.png}}
+\fancyfoot[C]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0pt}  
+
+% --- BIBLIOGRAFÍA ---
+\usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\addbibresource{referencias.bib}
+
+% --- HIPERVÍNCULOS ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+% Tipos de columna personalizados
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+
+\input{portada.tex}
+
+\newpage
+{\hypersetup{linkcolor=black}\tableofcontents}
+
+\newpage
+\setcounter{page}{1}
+\singlespacing
+
+% =========================================================
+\section{Categorías y Subcategorías por Función Core de The NIST CSF 2.0}
+% =========================================================
+
+El núcleo (\textit{Core}) de \textbf{The NIST Cybersecurity Framework (CSF) 2.0} \autocite{nist-csf-20} organiza la gestión de riesgos de ciberseguridad en \textbf{6 Funciones Core}, las cuales se dividen en \textbf{22 Categorías} y \textbf{106 Subcategorías}. En la Tabla~\ref{tab:estructura-csf} se presentan las categorías y subcategorías consideradas para cada función del framework.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.24}
+\caption{Funciones Core, Categorías y Subcategorías consideradas en The NIST CSF 2.0.}
+\label{tab:estructura-csf}
+\begin{tabular}{|L{3.0cm}|L{7.2cm}|C{5.8cm}|}
+\hline
+\rowcolor{blue!20}
+\textbf{Función Core} & \textbf{Categorías Consideradas (22)} & \textbf{Subcategorías Consideradas (106)} \\
+\hline
+
+\textbf{1. GOVERN (\texttt{GV})}\newline (Gobernanza) &
+\textbf{GV.OC}: Contexto Organizacional\newline
+\textbf{GV.RM}: Estrategia de Gestión de Riesgos\newline
+\textbf{GV.RR}: Roles, Responsabilidades y Autoridades\newline
+\textbf{GV.PO}: Políticas\newline
+\textbf{GV.OV}: Supervisión (\textit{Oversight})\newline
+\textbf{GV.SC}: Gestión de Riesgos en Cadena de Suministro &
+\texttt{GV.OC-01} a \texttt{GV.OC-05} (5 subcategorías)\newline
+\texttt{GV.RM-01} a \texttt{GV.RM-07} (7 subcategorías)\newline
+\texttt{GV.RR-01} a \texttt{GV.RR-04} (4 subcategorías)\newline
+\texttt{GV.PO-01} a \texttt{GV.PO-02} (2 subcategorías)\newline
+\texttt{GV.OV-01} a \texttt{GV.OV-03} (3 subcategorías)\newline
+\texttt{GV.SC-01} a \texttt{GV.SC-10} (10 subcategorías) \\
+\hline
+
+\textbf{2. IDENTIFY (\texttt{ID})}\newline (Identificar) &
+\textbf{ID.AM}: Gestión de Activos (\textit{Asset Management})\newline
+\textbf{ID.RA}: Evaluación de Riesgos (\textit{Risk Assessment})\newline
+\textbf{ID.IM}: Mejora (\textit{Improvement}) &
+\texttt{ID.AM-01} a \texttt{ID.AM-08} (7 subcategorías)\newline
+\texttt{ID.RA-01} a \texttt{ID.RA-10} (10 subcategorías)\newline
+\texttt{ID.IM-01} a \texttt{ID.IM-04} (4 subcategorías) \\
+\hline
+
+\textbf{3. PROTECT (\texttt{PR})}\newline (Proteger) &
+\textbf{PR.AA}: Gestión de Identidad, Autenticación y Acceso\newline
+\textbf{PR.AT}: Concientización y Capacitación\newline
+\textbf{PR.DS}: Seguridad de los Datos (\textit{Data Security})\newline
+\textbf{PR.PS}: Seguridad de Plataformas\newline
+\textbf{PR.IR}: Resiliencia de la Infraestructura Tecnológica &
+\texttt{PR.AA-01} a \texttt{PR.AA-06} (6 subcategorías)\newline
+\texttt{PR.AT-01} a \texttt{PR.AT-02} (2 subcategorías)\newline
+\texttt{PR.DS-01}, \texttt{02}, \texttt{10}, \texttt{11} (4 subcategorías)\newline
+\texttt{PR.PS-01} a \texttt{PR.PS-06} (6 subcategorías)\newline
+\texttt{PR.IR-01} a \texttt{PR.IR-04} (4 subcategorías) \\
+\hline
+
+\textbf{4. DETECT (\texttt{DE})}\newline (Detectar) &
+\textbf{DE.CM}: Monitoreo Continuo\newline
+\textbf{DE.AE}: Análisis de Eventos Adversos &
+\texttt{DE.CM-01}, \texttt{02}, \texttt{03}, \texttt{06}, \texttt{09} (5 subcategorías)\newline
+\texttt{DE.AE-02} a \texttt{DE.AE-08} (6 subcategorías) \\
+\hline
+
+\textbf{5. RESPOND (\texttt{RS})}\newline (Responder) &
+\textbf{RS.MA}: Gestión de Incidentes\newline
+\textbf{RS.AN}: Análisis de Incidentes\newline
+\textbf{RS.CO}: Reporte y Comunicación de Respuesta\newline
+\textbf{RS.MI}: Mitigación de Incidentes &
+\texttt{RS.MA-01} a \texttt{RS.MA-05} (5 subcategorías)\newline
+\texttt{RS.AN-03}, \texttt{06}, \texttt{07}, \texttt{08} (4 subcategorías)\newline
+\texttt{RS.CO-02} a \texttt{RS.CO-03} (2 subcategorías)\newline
+\texttt{RS.MI-01} a \texttt{RS.MI-02} (2 subcategorías) \\
+\hline
+
+\textbf{6. RECOVER (\texttt{RC})}\newline (Recuperar) &
+\textbf{RC.RP}: Ejecución del Plan de Recuperación\newline
+\textbf{RC.CO}: Comunicación de Recuperación &
+\texttt{RC.RP-01} a \texttt{RC.RP-06} (6 subcategorías)\newline
+\texttt{RC.CO-03} a \texttt{RC.CO-04} (2 subcategorías) \\
+\hline
+\end{tabular}
+\end{table}
+
+% =========================================================
+\section{Mapeo de Categorías, Subcategorías y Actividades Realizadas en el Semestre}
+% =========================================================
+
+A continuación se presenta la identificación y el mapeo de las categorías y subcategorías del \textbf{NIST CSF 2.0} que se relacionan con los temas explicados en clase, las \textbf{Actividades 1 a 7}, las \textbf{Prácticas 1 a 7}, la \textbf{Presentación en clase} y las \textbf{Tareas 1 a 3} desarrolladas durante el semestre. Las filas que pertenecen a una misma categoría se encuentran unificadas bajo una sola celda en la primera columna.
+
+% ---------------------------------------------------------
+\subsection{Función 1: GOVERN (GV) --- Gobernanza}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{GOVERN (GV)} con las actividades del semestre.}
+\label{tab:mapeo-gv} \\
+\hline
+\rowcolor{csfGV}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfGV}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- GV.OC (Unificada en 1 sola categoría) ---
+\textbf{GV.OC}\newline Contexto Organizacional &
+\textbf{\texttt{GV.OC-01}}: La misión organizacional se comprende e informa la gestión de riesgos. &
+\textbf{Clase y Actividad 2} &
+Se analizó el giro de negocio, misión, visión y objetivos estratégicos de una organización para comprender qué procesos operativos deben protegerse prioritariamente. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.OC-02}}: Las partes interesadas internas y externas y sus expectativas de ciberseguridad se comprenden. &
+\textbf{Actividad 2, Actividad 6, Actividad 7 y Tarea 2} &
+Se identificaron las áreas internas (ingeniería, operaciones, TI, finanzas) y externas (clientes, socios comerciales, reguladores), así como las expectativas éticas de la sociedad en la \textbf{Tarea 2}. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.OC-03}}: Los requisitos legales, regulatorios y contractuales (incluyendo privacidad) se comprenden y gestionan. &
+\textbf{Clase, Actividad 1, Actividad 6 y Actividad 7} &
+En clase y en la \textbf{Actividad 1} se revisaron normativas como ISO/IEC 27001, y en las \textbf{Actividades 6 y 7} se evaluó el cumplimiento de leyes de protección de datos personales (LFPDPPP), estándares de industria (ISO/SAE 21434, TISAX) y acuerdos de confidencialidad (NDA). \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.OC-04}}: Los objetivos, capacidades y servicios críticos de los que dependen terceros se comprenden. &
+\textbf{Actividad 2, Actividad 3 y Actividad 6} &
+Se determinaron cuáles son los servicios y operaciones críticas de la organización y cuál sería el impacto operativo y financiero si llegaran a detenerse. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.OC-05}}: Los resultados, capacidades y servicios de los que depende la organización se comprenden y comunican. &
+\textbf{Práctica 2, Actividad 2, Actividad 3 y Actividad 6} &
+En la \textbf{Práctica 2}, mediante consultas DNS y \texttt{whois}, se identificó que dominios institucionales dependen de infraestructura externa alojada en Amazon Web Services (AWS) y Cloudflare. En las \textbf{Actividades 2 y 3} se mapearon las dependencias en nube y proveedores externos. \\
+\hline
+
+% --- GV.RM (Unificada en 1 sola categoría) ---
+\textbf{GV.RM}\newline Estrategia de Gestión de Riesgos &
+\textbf{\texttt{GV.RM-01}}: Los objetivos de gestión de riesgos se establecen y acuerdan.\newline
+\textbf{\texttt{GV.RM-02}}: Las declaraciones de apetito y tolerancia al riesgo se establecen y mantienen. &
+\textbf{Clase, Actividad 6, Actividad 7 y Tarea 3} &
+En la \textbf{Actividad 7} se definieron metas medibles de reducción de riesgo (cumplimiento del 70\% de hitos) y umbrales de tolerancia en indicadores KRI. En la \textbf{Tarea 3} (conferencia \textit{The Defensible Minimum}) se estudió la aceptación consciente del riesgo residual. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.RM-03}}: La gestión de riesgos de ciberseguridad se incluye en los procesos de riesgo empresarial (ERM). &
+\textbf{Clase, Actividad 6 y Actividad 7} &
+En la \textbf{Actividad 7} se integró el riesgo cibernético dentro de las categorías empresariales (Estratégico, Operativo, Financiero, Cumplimiento y Tecnológico) evaluando pérdidas económicas, costos de respuesta, reputación y multas. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.RM-04}}: Se establece dirección estratégica que describe opciones de respuesta al riesgo.\newline
+\textbf{\texttt{GV.RM-05}}: Se establecen líneas de comunicación para riesgos. &
+\textbf{Clase, Actividad 6 y Actividad 7} &
+Se trabajaron en clase y en las \textbf{Actividades 6 y 7} las cuatro estrategias de respuesta al riesgo (\textbf{Mitigar, Transferir, Evitar y Aceptar}), justificando cuál aplicar en cada escenario y definiendo el reporte hacia el Comité de Riesgos y dirección. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{GV.RM-06}}: Se establece un método estandarizado para calcular, documentar, categorizar y priorizar los riesgos. &
+\textbf{Clase, Actividad 4, Actividad 6 y Actividad 7} &
+En la \textbf{Actividad 4} se utilizó el estándar \textbf{CVSS v3.1}; en la \textbf{Actividad 6} se construyó la plantilla del \textbf{Registro de Riesgos} (redactando riesgos en Forma 1 y Forma 2); y en la \textbf{Actividad 7} se aplicó el cálculo cuantitativo de Frecuencia ($F$), Impacto promedio ($I$) y Nivel de Riesgo ($R = F \times I$). \\
+\hline
+
+% --- GV.RR ---
+\textbf{GV.RR}\newline Roles, Responsabilidades y Autoridades &
+\textbf{\texttt{GV.RR-01}}: Liderazgo responsable y cultura ética consciente del riesgo.\newline
+\textbf{\texttt{GV.RR-02}}: Roles y responsabilidades de riesgo establecidos.\newline
+\textbf{\texttt{GV.RR-03}}: Asignación de recursos adecuados.\newline
+\textbf{\texttt{GV.RR-04}}: Ciberseguridad en prácticas de RR.HH. &
+\textbf{Actividad 6, Actividad 7, Tarea 2 y Tarea 3} &
+En la \textbf{Tarea 2} se analizó la ética profesional frente a los mercados de exploits y la divulgación responsable. En las \textbf{Actividades 6 y 7} se asignó un \textbf{Propietario del Riesgo} (\textit{Risk Owner}) y área responsable a cada escenario y acción del plan, además de justificar recursos e incluir políticas obligatorias para el personal. \\
+\hline
+
+% --- GV.PO ---
+\textbf{GV.PO}\newline Políticas &
+\textbf{\texttt{GV.PO-01}}: Política para gestionar riesgos establecida y comunicada.\newline
+\textbf{\texttt{GV.PO-02}}: Política revisada y actualizada para reflejar cambios en amenazas y tecnología (como IA). &
+\textbf{Clase, Actividad 1, Actividad 6 y Actividad 7} &
+En la \textbf{Actividad 1} se estudió el papel normativo de las políticas de Seguridad de la Información. En las \textbf{Actividades 6 y 7} se diseñó la actualización de políticas corporativas ante la adopción de herramientas de Inteligencia Artificial Generativa (\textit{ShadowAI}). \\
+\hline
+
+% --- GV.OV ---
+\textbf{GV.OV}\newline Supervisión (\textit{Oversight}) &
+\textbf{\texttt{GV.OV-01}}: Revisión de resultados de la estrategia.\newline
+\textbf{\texttt{GV.OV-02}}: Ajuste de estrategia ante incidentes.\newline
+\textbf{\texttt{GV.OV-03}}: Evaluación del desempeño mediante métricas (KPIs y KRIs). &
+\textbf{Actividad 5, Actividad 6 y Actividad 7} &
+En la \textbf{Actividad 5} se analizaron incidentes recientes del sector para ajustar el registro de riesgos, y en la \textbf{Actividad 7} se diseñaron \textbf{3 Indicadores Clave de Riesgo (KRIs)} con métricas, frecuencias de medición y umbrales para evaluar el desempeño de los controles. \\
+\hline
+
+% --- GV.SC ---
+\textbf{GV.SC}\newline Gestión de Riesgos en Cadena de Suministro &
+\textbf{\texttt{GV.SC-01}} a \textbf{\texttt{GV.SC-05}} y \textbf{\texttt{GV.SC-07}}: Estrategia, roles, priorización de proveedores críticos, requisitos contractuales y evaluación continua de riesgos de terceros. &
+\textbf{Actividad 2, Actividad 3, Actividad 5, Actividad 6 y Tarea 3} &
+En las \textbf{Actividades 2 y 3} se identificaron proveedores críticos de tecnología y nube; en la \textbf{Actividad 5} se estudiaron ataques reales a la cadena de suministro; en la \textbf{Actividad 6} se documentó el tratamiento del riesgo de proveedores mediante mitigación y transferencia contractual; y en la \textbf{Tarea 3} se analizó el riesgo de integraciones SaaS y proveedores MSP. \\
+\hline
+\end{longtable}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Función 2: IDENTIFY (ID) --- Identificar}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{IDENTIFY (ID)} con las actividades del semestre.}
+\label{tab:mapeo-id} \\
+\hline
+\rowcolor{csfID}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfID}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- ID.AM (Unificada en 1 sola categoría) ---
+\textbf{ID.AM}\newline Gestión de Activos &
+\textbf{\texttt{ID.AM-01}}: Se mantienen inventarios de hardware gestionados por la organización. &
+\textbf{Práctica 3, Práctica 6, Práctica 7 y Actividad 3} &
+En la \textbf{Práctica 3} se realizó descubrimiento de hosts activos en la red local con \texttt{nmap -sP}, y en las \textbf{Prácticas 6 y 7} se creó un script de barrido para descubrir servidores ocultos en la red interna. En la \textbf{Actividad 3} se elaboró un inventario completo de hardware y endpoints. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-02}}: Se mantienen inventarios de software, servicios y sistemas. &
+\textbf{Práctica 2, Práctica 3, Práctica 6, Práctica 7 y Actividad 3} &
+En la \textbf{Práctica 2} se enumeraron subdominios con \texttt{subfinder} y tecnologías web con \texttt{httpx}; en la \textbf{Práctica 3} se identificaron puertos y versiones de servicios con \texttt{nmap -sV -A}; en las \textbf{Prácticas 6 y 7} se inventariaron procesos y sistemas operativos (\texttt{uname}, \texttt{ps}, \texttt{systeminfo}); y en la \textbf{Actividad 3} se realizó el catálogo de software, bases de datos y APIs. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-03}}: Se mantienen representaciones de la comunicación de red autorizada y flujos de datos internos y externos. &
+\textbf{Práctica 2, Práctica 6, Práctica 7 y Actividad 3} &
+En las \textbf{Prácticas 6 y 7} se inspeccionaron interfaces de red (\texttt{ifconfig -a}) y tablas de ruteo (\texttt{route -n}) para mapear la comunicación entre segmentos. En la \textbf{Actividad 3} se diseñó el diagrama de arquitectura y conectividad de red dividido en zonas de confianza y protocolos permitidos. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-04}}: Se mantienen inventarios de servicios proporcionados por proveedores. &
+\textbf{Práctica 2, Actividad 3 y Actividad 7} &
+En la \textbf{Práctica 2} se identificaron servicios externos en la nube (AWS y Cloudflare) asociados a dominios institucionales, y en las \textbf{Actividades 3 y 7} se inventariaron servicios Cloud, SaaS y APIs de terceros. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-05}}: Los activos se priorizan según su clasificación, criticidad e impacto en la misión. &
+\textbf{Actividad 3, Actividad 4 y Actividad 6} &
+En la \textbf{Actividad 3} se clasificaron y priorizaron los activos tecnológicos más críticos explicando el impacto operativo de su compromiso. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-07}}: Se mantienen inventarios de datos y metadatos para tipos de datos designados. &
+\textbf{Práctica 5, Práctica 6, Práctica 7, Actividad 3 y Actividad 7} &
+En las \textbf{Prácticas 5, 6 y 7} se realizó búsqueda y localización de archivos sensibles en el sistema (\texttt{find}, \texttt{grep -rnI}, respaldos y código fuente). En las \textbf{Actividades 3 y 7} se clasificaron los datos sensibles (propiedad intelectual, secretos criptográficos y datos personales). \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.AM-08}}: Los sistemas, hardware, software, servicios y datos se gestionan en su ciclo de vida (incluyendo detección de software obsoleto EOL y \textit{Shadow IT / Shadow AI}). &
+\textbf{Práctica 1, Práctica 2, Práctica 4, Actividad 6 y Actividad 7} &
+En las \textbf{Prácticas 2 y 4} se identificaron sistemas y versiones fuera de soporte (EOL) como PHP 5.x y Debian 8.11 que aumentaban la superficie de ataque. En las \textbf{Actividades 6 y 7} se analizó a fondo el problema de \textbf{ShadowAI} (uso no autorizado de servicios de IA por empleados). \\
+\hline
+
+% --- ID.RA (Unificada en 1 sola categoría) ---
+\textbf{ID.RA}\newline Evaluación de Riesgos &
+\textbf{\texttt{ID.RA-01}}: Las vulnerabilidades en los activos se identifican, validan y registran. &
+\textbf{Práctica 2, Práctica 3, Práctica 4, Actividad 4 y Tarea 2} &
+En la \textbf{Práctica 2} se escaneó un servidor web con \texttt{nuclei} (detectando TLS 1.0/1.1 obsoletos y cifrados débiles); en la \textbf{Práctica 4} se ejecutó \texttt{LinPEAS} identificando y validando 13 CVEs de escalación de privilegios en Linux; y en la \textbf{Actividad 4} se investigaron y registraron 27 vulnerabilidades CVE con su debilidad CWE y severidad CVSS v3.1. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.RA-02}}: Se recibe inteligencia de amenazas cibernéticas (CTI) de foros y fuentes.\newline
+\textbf{\texttt{ID.RA-03}}: Las amenazas internas y externas se identifican y registran. &
+\textbf{Práctica 2, Actividad 1, Actividad 5, Presentación en Clase, Actividad 6, Actividad 7 y Tarea 3} &
+En la \textbf{Práctica 2} se integraron las APIs de inteligencia de VirusTotal y GitHub en \texttt{subfinder}. En la \textbf{Actividad 5} y en la \textbf{Presentación en clase} se investigaron los grupos de amenaza más activos y se diseñó una taxonomía de adversarios externos e internos. En la \textbf{Tarea 3} se revisaron las actualizaciones de \textbf{MITRE ATT\&CK v21} y \textbf{MITRE ATLAS}. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.RA-04}}: Se identifican y registran impactos potenciales y probabilidades.\newline
+\textbf{\texttt{ID.RA-05}}: Amenazas, vulnerabilidades, probabilidades e impactos se usan para comprender el riesgo inherente y priorizar respuestas. &
+\textbf{Clase, Actividad 6 y Actividad 7} &
+En la \textbf{Actividad 6} se estructuraron 10 escenarios de riesgo en el Registro de Riesgos, y en la \textbf{Actividad 7} se estimó cuantitativamente la frecuencia anual y el impacto en cuatro dimensiones para calcular el nivel de riesgo inherente y priorizar su tratamiento. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.RA-06}}: Las respuestas al riesgo se eligen, priorizan, planifican, rastrean y comunican (Registro de Riesgos y Plan de Acción POA\&M).\newline
+\textbf{\texttt{ID.RA-07}}: Gestión de cambios y excepciones. &
+\textbf{Actividad 6, Actividad 7 y Tarea 3} &
+En la \textbf{Actividad 6} se documentó el estado de los planes de acción en el Registro de Riesgos, y en la \textbf{Actividad 7} se construyó el \textbf{Plan de Acción e Hitos (POA\&M)} con 5 controles técnicos, responsables y fechas compromiso. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{ID.RA-08}}: Se establecen procesos para recibir, analizar y responder a divulgaciones de vulnerabilidades. &
+\textbf{Tarea 2 y Actividad 4} &
+En la \textbf{Tarea 2} se investigó el ciclo de las vulnerabilidades \textit{Zero-Day}, el funcionamiento de los mercados blanco, gris y negro, el rol de los \textit{brokers} y la divulgación responsable (\textit{Bug Bounty}). \\
+\hline
+
+% --- ID.IM ---
+\textbf{ID.IM}\newline Mejora (\textit{Improvement}) &
+\textbf{\texttt{ID.IM-01}}: Mejoras identificadas a partir de evaluaciones.\newline
+\textbf{\texttt{ID.IM-02}}: Mejoras identificadas a partir de pruebas y ejercicios de seguridad (\textit{Penetration Testing}).\newline
+\textbf{\texttt{ID.IM-03}} y \textbf{\texttt{ID.IM-04}}: Mejora de procesos y planes de gestión de vulnerabilidades. &
+\textbf{Prácticas 2 a 7, Actividad 4, Actividad 7, Actividad 8 y Tarea 3} &
+A lo largo de las \textbf{Prácticas 2 a 7} se ejecutó una prueba de penetración (\textit{Penetration Testing}) completa en laboratorio (reconocimiento, escaneo, acceso inicial, escalación de privilegios, cracking de hashes y movimiento lateral), identificando las mejoras requeridas. En la \textbf{Tarea 3} se estudió cómo validar coberturas de detección con pruebas reales (\texttt{T1055}). \\
+\hline
+\end{longtable}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Función 3: PROTECT (PR) --- Proteger}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{PROTECT (PR)} con las actividades del semestre.}
+\label{tab:mapeo-pr} \\
+\hline
+\rowcolor{csfPR}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfPR}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- PR.AA (Unificada en 1 sola categoría) ---
+\textbf{PR.AA}\newline Gestión de Identidad, Autenticación y Control de Acceso &
+\textbf{\texttt{PR.AA-01}}: Identidades y credenciales gestionadas para usuarios, servicios y hardware.\newline
+\textbf{\texttt{PR.AA-02}}: Identidades vinculadas a credenciales individuales. &
+\textbf{Práctica 1, Práctica 2, Práctica 5, Práctica 6, Actividad 3 y Actividad 7} &
+En la \textbf{Práctica 1} se crearon cuentas de usuario individuales en Linux para no operar como \texttt{root}; en la \textbf{Práctica 2} se gestionaron llaves de API; en las \textbf{Prácticas 5 y 6} se auditaron los archivos \texttt{/etc/passwd}, \texttt{/etc/shadow} y credenciales en respaldos; y en las \textbf{Actividades 3 y 7} se definieron controles de gestión de identidades y rotación de secretos en bóvedas criptográficas. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{PR.AA-03}}: Usuarios, servicios y hardware son autenticados (políticas de fortaleza de contraseñas y MFA).\newline
+\textbf{\texttt{PR.AA-04}}: Aserciones de identidad protegidas (SSO, OAuth 2.0). &
+\textbf{Práctica 3, Práctica 5, Práctica 7, Actividad 3, Actividad 6 y Actividad 7} &
+En la \textbf{Práctica 3} se auditó la debilidad de contraseñas en SSH mediante un ataque de diccionario con \texttt{Hydra}, y en la \textbf{Práctica 5} se auditaron hashes \texttt{SHA512-crypt} offline con \texttt{John the Ripper}, demostrando experimentalmente la importancia de aplicar políticas de complejidad de contraseñas y MFA. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{PR.AA-05}}: Permisos de acceso y autorizaciones definidos y aplicados bajo el principio de mínimo privilegio. &
+\textbf{Práctica 1, Práctica 4, Actividad 3 y Actividad 4} &
+En la \textbf{Práctica 1} se configuró el archivo \texttt{/etc/sudoers} para otorgar privilegios mínimos controlados. En la \textbf{Práctica 4} se auditaron con \texttt{LinPEAS} permisos excesivos en sockets y binarios SUID de root (\texttt{pkexec}), explotando \texttt{CVE-2021-4034} para demostrar el impacto de fallas en el control de privilegios. \\
+\hline
+
+% --- PR.AT ---
+\textbf{PR.AT}\newline Concientización y Capacitación &
+\textbf{\texttt{PR.AT-01}}: Concientización y capacitación general al personal.\newline
+\textbf{\texttt{PR.AT-02}}: Capacitación especializada según el rol. &
+\textbf{Actividad 6 y Actividad 7} &
+En las \textbf{Actividades 6 y 7} se incluyeron programas de capacitación y evaluación obligatoria para el personal sobre ingeniería social, manejo seguro de código fuente y políticas de uso aceptable de IA. \\
+\hline
+
+% --- PR.DS (Unificada en 1 sola categoría) ---
+\textbf{PR.DS}\newline Seguridad de los Datos &
+\textbf{\texttt{PR.DS-01}}: Se protege la confidencialidad, integridad y disponibilidad de los datos en reposo (\textit{data-at-rest}). &
+\textbf{Práctica 5, Práctica 6, Práctica 7, Actividad 1 y Actividad 3} &
+En la \textbf{Práctica 5} se verificó la integridad de archivos en reposo con \texttt{sha256sum} y se analizó el cifrado/hashing de contraseñas en \texttt{/etc/shadow}. En la \textbf{Práctica 6} se evidenció el riesgo de dejar contraseñas en texto plano en respaldos. En la \textbf{Práctica 7} se calculó el hash \texttt{SHA256} del código fuente en Windows con \texttt{certutil -hashfile}. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{PR.DS-02}}: Se protege la confidencialidad, integridad y disponibilidad de los datos en tránsito (\textit{data-in-transit}). &
+\textbf{Práctica 2, Práctica 5, Práctica 7, Actividad 3 y Actividad 7} &
+En la \textbf{Práctica 2} se auditaron protocolos TLS y suites de cifrado en tránsito con \texttt{nuclei}; en la \textbf{Práctica 5} se realizaron transferencias cifradas con \texttt{scp} validando hashes en ambos extremos; en la \textbf{Práctica 7} se creó un túnel cifrado SSH (\texttt{ssh -L}) para encapsular tráfico RDP; y en la \textbf{Actividad 7} se definieron controles DLP y CASB para bloquear fugas de datos hacia Internet. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{PR.DS-10}}: Protección de datos en uso (\textit{data-in-use}).\newline
+\textbf{\texttt{PR.DS-11}}: Copias de seguridad (respaldos) creadas, protegidas y probadas. &
+\textbf{Práctica 6, Actividad 3, Actividad 6, Actividad 7 y Tarea 3} &
+En la \textbf{Práctica 6} se inspeccionaron respaldos comprimidos (\texttt{tar -ztvf}) comprobando las consecuencias de no cifrar ni aislar las copias de seguridad. En la \textbf{Tarea 3} se analizó la inyección en memoria (\texttt{T1055}) y cómo el ransomware elimina respaldos antes de cifrar un sistema. \\
+\hline
+
+% --- PR.PS ---
+\textbf{PR.PS}\newline Seguridad de Plataformas &
+\textbf{\texttt{PR.PS-01}}: Prácticas de gestión de configuración.\newline
+\textbf{\texttt{PR.PS-02}}: Mantenimiento y actualización de software (reemplazo de software EOL).\newline
+\textbf{\texttt{PR.PS-04}}: Generación de registros de log.\newline
+\textbf{\texttt{PR.PS-05}}: Prevención de software no autorizado.\newline
+\textbf{\texttt{PR.PS-06}}: Desarrollo seguro de software (SDLC). &
+\textbf{Práctica 1, Práctica 2, Práctica 4, Práctica 6, Práctica 7, Actividad 4, Actividad 7 y Tarea 3} &
+En la \textbf{Práctica 1} se configuraron repositorios oficiales (\texttt{sources.list}) y se aplicaron actualizaciones con \texttt{apt update \&\& apt upgrade}. En las \textbf{Prácticas 2, 4, 6 y 7} se auditaron configuraciones inseguras, software EOL, falta de integridad SRI en scripts web y credenciales expuestas en respaldos de código. En la \textbf{Tarea 3} se estudió la generación de logs con PowerShell (Eventos 4103/4104) y Sysmon (Eventos 1, 7 y 17). \\
+\hline
+
+% --- PR.IR ---
+\textbf{PR.IR}\newline Resiliencia de la Infraestructura Tecnológica &
+\textbf{\texttt{PR.IR-01}}: Redes y entornos protegidos y segmentados lógicamente.\newline
+\textbf{\texttt{PR.IR-03}} y \textbf{\texttt{PR.IR-04}}: Mecanismos de resiliencia, alta disponibilidad y capacidad ante DDoS. &
+\textbf{Práctica 2, Práctica 6, Práctica 7, Actividad 3 y Actividad 6} &
+En las \textbf{Prácticas 6 y 7} se comprobó prácticamente el aislamiento entre dos segmentos de red distintos y cómo un equipo con doble interfaz de red permite realizar pivoteo si no se restringe el reenvío de puertos. En la \textbf{Práctica 2} se verificó el uso de Cloudflare WAF/CDN, y en la \textbf{Actividad 3} se diseñó la segmentación de red en 4 zonas. \\
+\hline
+\end{longtable}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Función 4: DETECT (DE) --- Detectar}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{DETECT (DE)} con las actividades del semestre.}
+\label{tab:mapeo-de} \\
+\hline
+\rowcolor{csfDE}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfDE}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- DE.CM (Unificada en 1 sola categoría) ---
+\textbf{DE.CM}\newline Monitoreo Continuo &
+\textbf{\texttt{DE.CM-01}}: Las redes y los servicios de red se monitorean para encontrar eventos potencialmente adversos. &
+\textbf{Práctica 2, Práctica 6, Práctica 7, Actividad 3 y Actividad 7} &
+En las \textbf{Prácticas 2, 6 y 7} se verificaron servicios de red, registros DNS y puertos activos, mientras que en las \textbf{Actividades 3 y 7} se definió el monitoreo continuo de tráfico de red y consultas DNS/HTTPS hacia dominios no autorizados (KRI 1). \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{DE.CM-03}}: La actividad del personal y el uso de tecnología se monitorean (incluyendo el monitoreo continuo de \textbf{tecnología de ciberengaño / Deception y Honeypots}). &
+\textbf{Tarea 1 y Actividad 7} &
+En la \textbf{Tarea 1} se estudió a fondo el uso de \textbf{Deception y Honeypots} en ciberseguridad defensiva: despliegue y monitoreo continuo de \textit{Honey files} (archivos trampa), \textit{Honey tokens} (llaves API y credenciales falsas) y cuentas señuelo en Active Directory para detectar intrusos y ataques de \textit{Kerberoasting}. En la \textbf{Actividad 7} se definió el monitoreo de uso de herramientas no autorizadas mediante DLP/CASB. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{DE.CM-06}}: Las actividades y servicios de proveedores externos se monitorean.\newline
+\textbf{\texttt{DE.CM-09}}: El hardware, software, entornos de ejecución (\textit{runtime}) y datos se monitorean. &
+\textbf{Práctica 6, Actividad 3, Actividad 7 y Tarea 3} &
+En la \textbf{Práctica 6} se inspeccionaron los procesos en ejecución (\texttt{ps aux awf}) en el servidor. En la \textbf{Tarea 3} se analizó el monitoreo de actividad en proveedores SaaS/MSP, la detección de inyección de procesos en tiempo de ejecución y la detección de evasión de defensas (AMSI/ETW/BYOVD) con EDR y Sysmon. \\
+\hline
+
+% --- DE.AE (Unificada en 1 sola categoría) ---
+\textbf{DE.AE}\newline Análisis de Eventos Adversos &
+\textbf{\texttt{DE.AE-02}}: Análisis de eventos potencialmente adversos (SIEM).\newline
+\textbf{\texttt{DE.AE-03}}: Correlación de información de múltiples fuentes.\newline
+\textbf{\texttt{DE.AE-04}}: Estimación de impacto y alcance. &
+\textbf{Tarea 1, Tarea 3, Actividad 3 y Actividad 7} &
+En la \textbf{Tarea 3} (conferencias \textit{Obfuscated Tale} y \textit{Multi-Tenant Kill Chain Correlation}) se estudió la diferencia entre recolectar logs y analizarlos en un \textbf{SIEM}, así como la correlación de eventos entre múltiples fuentes (identidad, endpoints y nube). En la \textbf{Actividad 7} se diseñó la correlación de alertas de firewall, DLP y repositorios. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{DE.AE-06}}: Entrega de alertas al SOC y sistemas de tickets.\newline
+\textbf{\texttt{DE.AE-07}}: Integración de ciberinteligencia (CTI) en el análisis.\newline
+\textbf{\texttt{DE.AE-08}}: Declaración de incidentes y reducción de falsos positivos. &
+\textbf{Tarea 1, Tarea 3, Actividad 5 y Actividad 7} &
+En la \textbf{Tarea 1} se analizó el problema del exceso de ruido y \textbf{falsos positivos en el SOC}, y cómo el envío de alertas desde señuelos (\textit{Honeypots}) vía \texttt{syslog} o \textit{webhooks} permite declarar incidentes con alta certeza. En la \textbf{Tarea 3} se estudió cómo distinguir entre una anomalía y una evidencia real de compromiso. \\
+\hline
+\end{longtable}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Función 5: RESPOND (RS) --- Responder}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{RESPOND (RS)} con las actividades del semestre.}
+\label{tab:mapeo-rs} \\
+\hline
+\rowcolor{csfRS}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfRS}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- RS.MA ---
+\textbf{RS.MA}\newline Gestión de Incidentes &
+\textbf{\texttt{RS.MA-01}}: Ejecución del plan de respuesta a incidentes.\newline
+\textbf{\texttt{RS.MA-02}}: Triaje y validación de reportes de incidentes.\newline
+\textbf{\texttt{RS.MA-03}}: Categorización y priorización de incidentes (incluyendo el balance entre contener rápido u observar al atacante en un Honeypot). &
+\textbf{Tarea 1, Tarea 2, Tarea 3, Actividad 5, Actividad 6 y Actividad 7} &
+En la \textbf{Tarea 1} se estudió la estrategia de mantener al atacante interactuando dentro de un \textbf{Honeypot} controlado para observar sus técnicas antes de contenerlo. En las \textbf{Actividades 5, 6 y 7} se categorizaron los incidentes por tipo (ransomware, DDoS, fuga de datos, compromiso de cuenta) y se estimaron los costos y tiempos de respuesta del SOC. \\
+\hline
+
+% --- RS.AN (Unificada en 1 sola categoría) ---
+\textbf{RS.AN}\newline Análisis de Incidentes &
+\textbf{\texttt{RS.AN-03}}: Análisis para determinar qué ocurrió durante un incidente, su causa raíz y revisión de tecnología de ciberengaño (\textit{Deception}). &
+\textbf{Tarea 1, Tarea 2 y Actividad 5} &
+En la \textbf{Tarea 2} y en la \textbf{Actividad 5} se realizó el análisis de causa raíz, vector de entrada y cadena de ataque de incidentes históricos reales (\textit{Operation Triangulation}, \textit{MOVEit}, \textit{EternalBlue}/\textit{WannaCry} y 5 ciberataques en la industria automotriz). En la \textbf{Tarea 1} se estudió el análisis forense de las acciones del intruso registradas en un Honeypot. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{RS.AN-07}}: Recolección de datos y metadatos del incidente preservando su integridad y procedencia.\newline
+\textbf{\texttt{RS.AN-08}}: Estimación y validación de la magnitud del incidente. &
+\textbf{Práctica 4, Práctica 5, Práctica 6 y Práctica 7} &
+En la \textbf{Práctica 5}, al extraer los archivos de contraseñas del servidor, se calculó su hash criptográfico con \texttt{sha256sum} antes y después de la transferencia para preservar y comprobar la integridad de la evidencia recolectada. En la \textbf{Práctica 7} se verificó el hash \texttt{SHA256} del código recolectado con \texttt{certutil}, y en las \textbf{Prácticas 4 y 6} se dimensionó el alcance del compromiso en el servidor y la red interna. \\
+\hline
+
+% --- RS.CO ---
+\textbf{RS.CO}\newline Reporte y Comunicación de Respuesta &
+\textbf{\texttt{RS.CO-02}}: Notificación de incidentes a partes interesadas internas y externas.\newline
+\textbf{\texttt{RS.CO-03}}: Intercambio de información con áreas designadas. &
+\textbf{Actividad 5, Actividad 6 y Actividad 7} &
+En las \textbf{Actividades 5 y 7} se analizaron las obligaciones de notificación de brechas de datos a clientes afectados, socios comerciales, autoridades regulatorias y dirección. \\
+\hline
+
+% --- RS.MI ---
+\textbf{RS.MI}\newline Mitigación de Incidentes &
+\textbf{\texttt{RS.MI-01}}: Contención de incidentes.\newline
+\textbf{\texttt{RS.MI-02}}: Erradicación de incidentes. &
+\textbf{Práctica 4, Actividad 6 y Actividad 7} &
+En la \textbf{Práctica 4} se realizó la limpieza y eliminación de los binarios compilados (\texttt{make clean}) tras la prueba de escalación de privilegios. En las \textbf{Actividades 6 y 7} se definieron las acciones de contención en firewall/EDR y erradicación mediante revocación y rotación inmediata de credenciales y llaves criptográficas comprometidas. \\
+\hline
+\end{longtable}
+\endgroup
+
+% ---------------------------------------------------------
+\subsection{Función 6: RECOVER (RC) --- Recuperar}
+% ---------------------------------------------------------
+
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.24}
+\begin{longtable}{|L{2.8cm}|L{4.5cm}|L{2.9cm}|L{6.5cm}|}
+\caption{Mapeo de Categorías y Subcategorías de la función \textbf{RECOVER (RC)} con las actividades del semestre.}
+\label{tab:mapeo-rc} \\
+\hline
+\rowcolor{csfRC}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endfirsthead
+\hline
+\rowcolor{csfRC}
+\textbf{Categoría} & \textbf{Subcategoría Relacionada} & \textbf{Actividad / Práctica / Tarea} & \textbf{Qué se hizo en el semestre y cómo se relaciona} \\
+\hline
+\endhead
+\hline
+\endfoot
+
+% --- RC.RP (Unificada en 1 sola categoría) ---
+\textbf{RC.RP}\newline Ejecución del Plan de Recuperación &
+\textbf{\texttt{RC.RP-01}} y \textbf{\texttt{RC.RP-02}}: Ejecución del plan de recuperación y selección/priorización de acciones de restauración.\newline
+\textbf{\texttt{RC.RP-04}} y \textbf{\texttt{RC.RP-05}}: Consideración de funciones críticas de misión y verificación de servicios restaurados. &
+\textbf{Actividad 3, Actividad 5, Actividad 6 y Tarea 2} &
+En la \textbf{Tarea 2} (\textit{WannaCry}) y en la \textbf{Actividad 5} se analizó el impacto y proceso de recuperación operativa tras ataques de ransomware que detuvieron operaciones críticas, y en las \textbf{Actividades 3 y 6} se priorizó el orden de restauración de los sistemas según su criticidad. \\
+\cline{2-4}\nopagebreak
+ &
+\textbf{\texttt{RC.RP-03}}: La integridad de las copias de seguridad (respaldos) y otros activos de restauración se verifica antes de usarlos. &
+\textbf{Práctica 5, Práctica 6, Práctica 7 y Tarea 3} &
+En la \textbf{Práctica 6} se inspeccionaron archivos de respaldo comprimidos (\texttt{tar -ztvf}) en el servidor Linux, y en las \textbf{Prácticas 5 y 7} se aplicó la verificación de integridad criptográfica mediante hashes \textbf{SHA-256} (\texttt{sha256sum} y \texttt{certutil -hashfile}) para comprobar que los archivos no hubieran sido alterados ni corrompidos. \\
+\hline
+
+% --- RC.CO ---
+\textbf{RC.CO}\newline Comunicación de Recuperación &
+\textbf{\texttt{RC.CO-03}}: Comunicación de las actividades y progreso de recuperación a partes interesadas internas y externas. &
+\textbf{Actividad 5 y Actividad 7} &
+Se revisó la comunicación hacia clientes, socios y alta dirección durante y después de la restauración de servicios afectados por un incidente. \\
+\hline
+\end{longtable}
+\endgroup
+
+% =========================================================
+\section{Total de Categorías y Subcategorías Cubiertas en el Curso}
+% =========================================================
+
+Como resultado final de la revisión y mapeo de \textbf{The NIST Cybersecurity Framework (CSF) 2.0} frente a los temas vistos en clase, las Actividades 1 a 7, las Prácticas 1 a 7, la Presentación en clase y las Tareas 1 a 3, se obtuvo la siguiente cobertura:
+
+\begin{itemize}[leftmargin=1.2cm, itemsep=3pt]
+    \item \textbf{Categorías cubiertas en el curso:} Se encontraron \textbf{22 de las 22 categorías (100\%)} del framework relacionadas con al menos una actividad, práctica, tarea o tema visto durante el semestre.
+    \item \textbf{Subcategorías cubiertas en el curso:} Se encontraron \textbf{89 de las 106 subcategorías (84.0\%)} del framework cubiertas a lo largo del semestre.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.28}
+\caption{Conteo final de Categorías y Subcategorías del NIST CSF 2.0 cubiertas en el curso.}
+\label{tab:conteo-final}
+\begin{tabular}{|L{4.2cm}|C{3.2cm}|C{3.4cm}|C{3.6cm}|}
+\hline
+\rowcolor{blue!20}
+\textbf{Función Core del Framework} & \textbf{Categorías Cubiertas} & \textbf{Subcategorías Cubiertas} & \textbf{Porcentaje de Subcategorías} \\
+\hline
+\rowcolor{csfGV}
+\textbf{1. GOVERN (\texttt{GV})} & \textbf{6 de 6} (100\%) & \textbf{25 de 31} & 80.6\% \\
+\hline
+\rowcolor{csfID}
+\textbf{2. IDENTIFY (\texttt{ID})} & \textbf{3 de 3} (100\%) & \textbf{19 de 21} & 90.5\% \\
+\hline
+\rowcolor{csfPR}
+\textbf{3. PROTECT (\texttt{PR})} & \textbf{5 de 5} (100\%) & \textbf{19 de 22} & 86.4\% \\
+\hline
+\rowcolor{csfDE}
+\textbf{4. DETECT (\texttt{DE})} & \textbf{2 de 2} (100\%) & \textbf{10 de 11} & 90.9\% \\
+\hline
+\rowcolor{csfRS}
+\textbf{5. RESPOND (\texttt{RS})} & \textbf{4 de 4} (100\%) & \textbf{10 de 13} & 76.9\% \\
+\hline
+\rowcolor{csfRC}
+\textbf{6. RECOVER (\texttt{RC})} & \textbf{2 de 2} (100\%) & \textbf{6 de 8} & 75.0\% \\
+\hline
+\rowcolor{xlSummary}
+\textbf{TOTAL EN EL CURSO} & \textbf{22 de 22 (100\%)} & \textbf{89 de 106} & \textbf{84.0\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+% =========================================================
+\newpage
+\printbibliography[title={Referencias Bibliográficas}]
+% =========================================================
+
+\end{document}

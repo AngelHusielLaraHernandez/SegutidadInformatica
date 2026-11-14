@@ -1,0 +1,15 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción y Alcance de la Revisión de The NIST CSF 2.0 en el Curso}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Estructura del Framework en \texttt {csf2.xlsx}}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Niveles de Aplicación Evaluados}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Revisión de Carpetas e Historial Completo del Curso}{2}{section.2}%
+\contentsline {section}{\numberline {3}Resumen Estadístico de Cobertura y Aplicación en el Curso}{6}{section.3}%
+\contentsline {section}{\numberline {4}Listado Detallado de Subcategorías y Actividades Vistas y Aplicadas por Función}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Función 1: GOVERN (GV) --- Gobernanza de Ciberseguridad}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Función 2: IDENTIFY (ID) --- Identificación de Activos, Vulnerabilidades y Riesgos}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Función 3: PROTECT (PR) --- Salvaguardas y Controles de Protección}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Función 4: DETECT (DE) --- Monitoreo Continuo y Análisis de Eventos Adversos}{20}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Función 5: RESPOND (RS) --- Respuesta y Mitigación de Incidentes}{22}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Función 6: RECOVER (RC) --- Recuperación y Restauración}{24}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Matriz Completa de las 106 Subcategorías de \texttt {csf2.xlsx} en el Curso}{25}{section.5}%
+\contentsline {section}{\numberline {6}Conclusiones sobre la Aplicación del NIST CSF 2.0 en el Curso}{29}{section.6}%

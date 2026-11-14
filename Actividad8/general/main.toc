@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Categorías y Subcategorías por Función Core de The NIST CSF 2.0}{1}{section.1}%
+\contentsline {section}{\numberline {2}Mapeo de Categorías, Subcategorías y Actividades Realizadas en el Semestre}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Función 1: GOVERN (GV) --- Gobernanza}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Función 2: IDENTIFY (ID) --- Identificar}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Función 3: PROTECT (PR) --- Proteger}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Función 4: DETECT (DE) --- Detectar}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Función 5: RESPOND (RS) --- Responder}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Función 6: RECOVER (RC) --- Recuperar}{7}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Total de Categorías y Subcategorías Cubiertas en el Curso}{8}{section.3}%
