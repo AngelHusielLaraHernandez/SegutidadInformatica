@@ -1,0 +1,565 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{first-cvss}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3e76a87865c99226a0be07effe38600e}{%
+           family={{Forum of Incident Response and Security Teams (FIRST)}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{fullhash}{3e76a87865c99226a0be07effe38600e}
+      \strng{fullhashraw}{3e76a87865c99226a0be07effe38600e}
+      \strng{bibnamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorbibnamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authornamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorfullhash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorfullhashraw}{3e76a87865c99226a0be07effe38600e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Common Vulnerability Scoring System (CVSS) v3.1 Specification Document}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.first.org/cvss/v3.1/specification-document
+      \endverb
+      \verb{url}
+      \verb https://www.first.org/cvss/v3.1/specification-document
+      \endverb
+    \endentry
+    \entry{iso-27005}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ISO/IEC}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27005:2022 Information security, cybersecurity and privacy protection: Guidance on managing information security risks}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{nist-sp800-30}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Department of Commerce}%
+      }
+      \list{location}{1}{%
+        {Gaithersburg, MD}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NIST Special Publication 800-30 Revision 1}
+      \field{title}{Guide for Conducting Risk Assessments}
+      \field{type}{techreport}
+      \field{year}{2012}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
+      \endverb
+    \endentry
+    \entry{nvd-nist}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{National Vulnerability Database (NVD): CVE-2021-4034, CVE-2016-5195, CVE-2017-0358}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nvd.nist.gov/
+      \endverb
+      \verb{url}
+      \verb https://nvd.nist.gov/
+      \endverb
+    \endentry
+    \entry{nist-csf-20}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Department of Commerce}%
+      }
+      \list{location}{1}{%
+        {Gaithersburg, MD}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NIST CSWP 29}
+      \field{title}{The NIST Cybersecurity Framework (CSF) 2.0}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.6028/NIST.CSWP.29
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+    \endentry
+    \entry{owasp-llm-top10}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b0d7a4bf1a0878d4e92cdd7461e48710}{%
+           family={{OWASP Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{bibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorbibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authornamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWASP Top 10 for Large Language Model Applications}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
+      \endverb
+    \endentry
+    \entry{apache-cve-2410}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f57c55dac81a8285538aae51dacc9857}{%
+           family={{The Apache Software Foundation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{fullhash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{fullhashraw}{f57c55dac81a8285538aae51dacc9857}
+      \strng{bibnamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorbibnamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authornamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorfullhash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorfullhashraw}{f57c55dac81a8285538aae51dacc9857}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache HTTP Server 2.4 Security Vulnerabilities}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://httpd.apache.org/security/vulnerabilities_24.html
+      \endverb
+      \verb{url}
+      \verb https://httpd.apache.org/security/vulnerabilities_24.html
+      \endverb
+    \endentry
+    \entry{mitre-attack}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=949b0970111d9a772f0458ebd4208987}{%
+           family={{The MITRE Corporation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \strng{bibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorbibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authornamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MITRE ATT\&CK Enterprise Matrix and CWE Common Weakness Enumeration}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{first-cvss}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3e76a87865c99226a0be07effe38600e}{%
+           family={{Forum of Incident Response and Security Teams (FIRST)}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{fullhash}{3e76a87865c99226a0be07effe38600e}
+      \strng{fullhashraw}{3e76a87865c99226a0be07effe38600e}
+      \strng{bibnamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorbibnamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authornamehash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorfullhash}{3e76a87865c99226a0be07effe38600e}
+      \strng{authorfullhashraw}{3e76a87865c99226a0be07effe38600e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Common Vulnerability Scoring System (CVSS) v3.1 Specification Document}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.first.org/cvss/v3.1/specification-document
+      \endverb
+      \verb{url}
+      \verb https://www.first.org/cvss/v3.1/specification-document
+      \endverb
+    \endentry
+    \entry{iso-27005}{standard}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7058e4bd76f877c52b621c942b30613c}{%
+           family={{International Organization for Standardization}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {ISO/IEC}%
+      }
+      \strng{namehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{fullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \strng{bibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorbibnamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authornamehash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhash}{7058e4bd76f877c52b621c942b30613c}
+      \strng{authorfullhashraw}{7058e4bd76f877c52b621c942b30613c}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/IEC 27005:2022 Information security, cybersecurity and privacy protection: Guidance on managing information security risks}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{nist-sp800-30}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Department of Commerce}%
+      }
+      \list{location}{1}{%
+        {Gaithersburg, MD}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NIST Special Publication 800-30 Revision 1}
+      \field{title}{Guide for Conducting Risk Assessments}
+      \field{type}{techreport}
+      \field{year}{2012}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
+      \endverb
+      \verb{url}
+      \verb https://csrc.nist.gov/publications/detail/sp/800-30/rev-1/final
+      \endverb
+    \endentry
+    \entry{nvd-nist}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{National Vulnerability Database (NVD): CVE-2021-4034, CVE-2016-5195, CVE-2017-0358}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://nvd.nist.gov/
+      \endverb
+      \verb{url}
+      \verb https://nvd.nist.gov/
+      \endverb
+    \endentry
+    \entry{nist-csf-20}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef9cb61878e61d434507444346b29d1a}{%
+           family={{National Institute of Standards and Technology}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Department of Commerce}%
+      }
+      \list{location}{1}{%
+        {Gaithersburg, MD}%
+      }
+      \strng{namehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{fullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \strng{bibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorbibnamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authornamehash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhash}{ef9cb61878e61d434507444346b29d1a}
+      \strng{authorfullhashraw}{ef9cb61878e61d434507444346b29d1a}
+      \field{extraname}{3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{NIST CSWP 29}
+      \field{title}{The NIST Cybersecurity Framework (CSF) 2.0}
+      \field{type}{techreport}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.6028/NIST.CSWP.29
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.6028/NIST.CSWP.29
+      \endverb
+    \endentry
+    \entry{owasp-llm-top10}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b0d7a4bf1a0878d4e92cdd7461e48710}{%
+           family={{OWASP Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{fullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{bibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorbibnamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authornamehash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhash}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \strng{authorfullhashraw}{b0d7a4bf1a0878d4e92cdd7461e48710}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OWASP Top 10 for Large Language Model Applications}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
+      \endverb
+    \endentry
+    \entry{apache-cve-2410}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f57c55dac81a8285538aae51dacc9857}{%
+           family={{The Apache Software Foundation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{fullhash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{fullhashraw}{f57c55dac81a8285538aae51dacc9857}
+      \strng{bibnamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorbibnamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authornamehash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorfullhash}{f57c55dac81a8285538aae51dacc9857}
+      \strng{authorfullhashraw}{f57c55dac81a8285538aae51dacc9857}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Apache HTTP Server 2.4 Security Vulnerabilities}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://httpd.apache.org/security/vulnerabilities_24.html
+      \endverb
+      \verb{url}
+      \verb https://httpd.apache.org/security/vulnerabilities_24.html
+      \endverb
+    \endentry
+    \entry{mitre-attack}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=949b0970111d9a772f0458ebd4208987}{%
+           family={{The MITRE Corporation}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{fullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \strng{bibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorbibnamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authornamehash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhash}{949b0970111d9a772f0458ebd4208987}
+      \strng{authorfullhashraw}{949b0970111d9a772f0458ebd4208987}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MITRE ATT\&CK Enterprise Matrix and CWE Common Weakness Enumeration}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://attack.mitre.org/
+      \endverb
+      \verb{url}
+      \verb https://attack.mitre.org/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
