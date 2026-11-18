@@ -226,6 +226,37 @@
       \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
       \endverb
     \endentry
+    \entry{sae-21434}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c823732636c3fca8652a18a68c2391eb}{%
+           family={{SAE International}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \strng{bibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorbibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authornamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/SAE 21434: Road Vehicles: Cybersecurity Engineering}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.sae.org/standards/content/iso_sae21434/
+      \endverb
+      \verb{url}
+      \verb https://www.sae.org/standards/content/iso_sae21434/
+      \endverb
+    \endentry
     \entry{apache-cve-2410}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f57c55dac81a8285538aae51dacc9857}{%
@@ -286,6 +317,37 @@
       \endverb
       \verb{url}
       \verb https://attack.mitre.org/
+      \endverb
+    \endentry
+    \entry{upstream-security-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7d8928e93ab70a4ce74746faa1bbbdf}{%
+           family={{Upstream Security}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{bibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorbibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authornamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Automotive Cybersecurity Report 2024}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+      \verb{url}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
       \endverb
     \endentry
   \enddatalist
@@ -497,6 +559,37 @@
       \verb https://owasp.org/www-project-top-10-for-large-language-model-applications/
       \endverb
     \endentry
+    \entry{sae-21434}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c823732636c3fca8652a18a68c2391eb}{%
+           family={{SAE International}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{fullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \strng{bibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorbibnamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authornamehash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhash}{c823732636c3fca8652a18a68c2391eb}
+      \strng{authorfullhashraw}{c823732636c3fca8652a18a68c2391eb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ISO/SAE 21434: Road Vehicles: Cybersecurity Engineering}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.sae.org/standards/content/iso_sae21434/
+      \endverb
+      \verb{url}
+      \verb https://www.sae.org/standards/content/iso_sae21434/
+      \endverb
+    \endentry
     \entry{apache-cve-2410}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f57c55dac81a8285538aae51dacc9857}{%
@@ -557,6 +650,37 @@
       \endverb
       \verb{url}
       \verb https://attack.mitre.org/
+      \endverb
+    \endentry
+    \entry{upstream-security-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f7d8928e93ab70a4ce74746faa1bbbdf}{%
+           family={{Upstream Security}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{fullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{bibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorbibnamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authornamehash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhash}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \strng{authorfullhashraw}{f7d8928e93ab70a4ce74746faa1bbbdf}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global Automotive Cybersecurity Report 2024}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
+      \endverb
+      \verb{url}
+      \verb https://upstream.auto/reports/global-automotive-cybersecurity-report/
       \endverb
     \endentry
   \enddatalist

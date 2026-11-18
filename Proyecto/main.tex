@@ -81,6 +81,7 @@
 
 % --- BIBLIOGRAFÍA ---
 \usepackage[backend=biber, style=apa, sortcites, url=true]{biblatex}
+\DeclareBibliographyAlias{standard}{misc}
 \addbibresource{referencias.bib}
 
 % --- HIPERVÍNCULOS ---
@@ -101,6 +102,7 @@
 
 \begin{document}
 
+\hypersetup{pageanchor=false}
 \input{portada.tex}
 
 \newpage
@@ -108,15 +110,31 @@
 
 \newpage
 \setcounter{page}{1}
+\hypersetup{pageanchor=true}
 \singlespacing
 
 % =========================================================
-\section{Definición Empresarial}
+\section{Definicion de la empresa}
 % =========================================================
 
-\textbf{Aetheria FinTech \& AI Solutions S.A. de C.V.} es una empresa mexicana dedicada al desarrollo de herramientas de inteligencia artificial para el sector financiero. Su servicio principal consiste en un asistente automatizado y un motor de evaluación crediticia que ayuda a financieras y cajas de ahorro a responder dudas de clientes y calificar solicitudes de préstamo en pocos segundos.
+Primero vamos a definir la empresa con la que trabajamos en este
+proyecto. Para esto, retomamos el caso de \textbf{VELOX Automotriz
+S.A. de C.V.}, la empresa mexicana ficticia del sector automotriz
+con la que trabajamos durante el semestre, dedicada a la fabricacion
+y distribucion de vehiculos electricos conectados con planta en
+Guanajuato y concesionarios en 12 estados del pais.
 
-En la Tabla~\ref{tab:definicion-empresarial} se describen los datos generales de la organización, su giro, sus objetivos y los servicios que ofrece.
+Donde en este caso, la plataforma digital \textit{VELOX Connect}
+integra un asistente con inteligencia artificial que atiende las
+dudas de los conductores y concesionarios, mientras que el motor
+predictivo analiza la telemetria del vehiculo y diagnostica fallas
+en pocos segundos.
+
+Ahora bien, para entender que tenemos que proteger, primero
+necesitamos saber que ofrece la empresa y de que depende el
+servicio. En la tabla~\ref{tab:definicion-empresarial} ponemos el
+giro, el objetivo del negocio y los productos que vamos a tomar en
+cuenta.
 
 \vspace{0.2cm}
 \begingroup
@@ -124,68 +142,151 @@ En la Tabla~\ref{tab:definicion-empresarial} se describen los datos generales de
 \setlength{\tabcolsep}{5pt}
 \renewcommand{\arraystretch}{1.32}
 \noindent
-\begin{longtable}{|C{1.2cm}|L{3.6cm}|L{12.2cm}|}
-\caption{Datos generales de \textit{Aetheria FinTech \& AI Solutions S.A. de C.V.}}
+\begin{longtable}{|C{1.2cm}|L{3.6cm}|L{12.0cm}|}
+\caption{Datos generales de \textit{VELOX Automotriz S.A. de C.V.}}
 \label{tab:definicion-empresarial} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{Inciso} & \textbf{Elemento Empresarial} & \textbf{Descripción} \\
+\textbf{Inciso} & \textbf{Elemento Empresarial} & \textbf{Descripcion} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{Inciso} & \textbf{Elemento Empresarial} & \textbf{Descripción} \\
+\textbf{Inciso} & \textbf{Elemento Empresarial} & \textbf{Descripcion} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-\textbf{a.} & \textbf{Sector} & Sector financiero tecnológico (FinTech) y de tecnologías de la información, enfocado en servicios automatizados de evaluación crediticia y atención a clientes mediante inteligencia artificial. \\
+\textbf{a.}
+  & \textbf{Sector}
+  & Trabajamos en el sector automotriz y de tecnologias de la
+informacion. En este caso fabricamos vehiculos electricos conectados
+y utilizamos IA para analizar telemetria vehicular, diagnosticar
+fallas y atender a clientes y concesionarios. \\
 \hline
 
-\textbf{b.} & \textbf{Nombre} & \textbf{Aetheria FinTech \& AI Solutions S.A. de C.V.} (nombre comercial: \textit{Aetheria AI}). \\
+\textbf{b.}
+  & \textbf{Nombre}
+  & \textbf{VELOX Automotriz S.A. de C.V.} (plataforma digital:
+\textit{VELOX Connect}). \\
 \hline
 
-\textbf{c.} & \textbf{Objetivo de negocio} & Ofrecer a instituciones microfinancieras, cooperativas de ahorro y comercios en línea una plataforma para atender clientes y evaluar solicitudes de crédito de forma automática mediante el archivo de Python que es el bot, reduciendo los tiempos de respuesta y manteniendo una disponibilidad del $99.9\%$. \\
+\textbf{c.}
+  & \textbf{Objetivo de negocio}
+  & Buscamos diseñar, fabricar y comercializar vehiculos electricos
+conectados que ofrezcan al cliente y a los concesionarios monitoreo
+remoto, actualizaciones OTA, diagnostico predictivo y atencion con
+el archivo de Python que es el bot, reduciendo los tiempos de
+soporte en taller y manteniendo una disponibilidad del $99.9\%$. \\
 \hline
 
-\textbf{d.} & \textbf{Activo principal} & El \textbf{modelo de inteligencia artificial y el archivo de Python que es el bot en producción}, junto con su \textbf{dataset de entrenamiento} y la \textbf{base de datos de clientes}. En estos componentes se concentran las reglas de calificación crediticia, los pesos entrenados del modelo y los datos personales y financieros de los usuarios. \\
+\textbf{d.}
+  & \textbf{Activo principal}
+  & Lo principal son los \textbf{vehiculos electricos conectados
+(con su unidad VCU Renesas RH850 y sensores ADAS), el modelo de IA y
+el archivo de Python que es el bot} en produccion. Ademas,
+necesitamos proteger el \textbf{dataset de entrenamiento} y la
+\textbf{base de datos de telemetria y clientes}, donde se manejan
+los numeros de serie (VIN), ubicacion GPS, historial de mantenimiento
+y datos personales. En conjunto, estos activos contienen las reglas
+de diagnostico y los pesos del modelo. \\
 \hline
 
-\textbf{e.} & \textbf{Misión y Visión} & \textbf{Misión:} Brindar soluciones de inteligencia artificial confiables y seguras que agilicen el otorgamiento de créditos y la atención al cliente, cuidando en todo momento la privacidad y la integridad de la información financiera.\newline
-\textbf{Visión:} Ser una empresa referente en México en el desarrollo de sistemas automatizados para servicios financieros, destacando por la estabilidad de su plataforma y el manejo seguro de los datos de sus clientes. \\
+\textbf{e.}
+  & \textbf{Mision y Vision}
+  & \textbf{Mision.} Diseñar y fabricar vehiculos electricos seguros y
+conectados, apoyados por servicios digitales de telemetria e IA para
+agilizar el diagnostico vehicular y la atencion al cliente, cuidando
+la privacidad y la integridad de la informacion.\newline
+\textbf{Vision.} Buscamos ser una empresa automotriz referente en
+Mexico en movilidad electrica conectada y sistemas inteligentes de
+asistencia, con una plataforma estable y un manejo seguro de los
+datos de sus vehiculos, clientes y proveedores Tier 1 y Tier 2. \\
 \hline
 
-\textbf{f.} & \textbf{Modelo de negocio} & Esquema de software como servicio (SaaS) dividido en tres modalidades:\newline
-1. \textit{Renta mensual empresarial:} Cobro fijo mensual a financieras y comercios por usar el asistente conversacional y el motor de calificación.\newline
-2. \textit{Cobro por consulta vía API:} Tarifa por volumen de evaluaciones de crédito y peticiones procesadas por el archivo de Python que es el bot.\newline
-3. \textit{Portal web para usuarios:} Sitio web alojado en el servidor frontal webserver donde los clientes consultan su estado de crédito y reciben atención directa. \\
+\textbf{f.} & \textbf{Modelo de negocio} & Ofrecemos nuestros
+vehiculos y el software como servicio (SaaS) en tres
+modalidades.\newline
+1. \textit{Venta de vehiculos electricos y flotillas.}
+Comercializacion de unidades conectadas en nuestra red de
+concesionarios en 12 estados de la republica mexicana.\newline
+2. \textit{Suscripcion y cobro por consulta via API en VELOX
+Connect.} Las flotillas y concesionarios pagan una cuota mensual y
+por consumo de API para telemetria, actualizaciones OTA y consultas
+que procesa el archivo de Python que es el bot.\newline
+3. \textit{Portal web para propietarios y talleres.} Los clientes
+consultan el estado de su vehiculo, agendan citas de taller y
+reciben atencion desde el sitio que se aloja en webserver. \\
 \hline
 
-\textbf{g.} & \textbf{Catálogo de productos y servicios} & \textbf{1. AetheriaBot (el archivo de Python que es el bot):} Asistente virtual programado en Python y alojado en el servidor interno codeserver para responder dudas de clientes, simular préstamos y preaprobar créditos.\newline
-\textbf{2. Aetheria ScoreEngine:} Módulo que consulta la base de datos del modelo de IA para estimar el riesgo de impago de cada solicitante.\newline
-\textbf{3. Aetheria Web Portal:} Aplicación web pública montada sobre Apache 2.4.10 en el servidor webserver que sirve como interfaz para los clientes.\newline
-\textbf{4. Aetheria Custom-Train:} Servicio de ajuste y entrenamiento del modelo utilizando el dataset de la empresa sobre la infraestructura física de servidores GPU. \\
+\textbf{g.}
+  & \textbf{Catalogo de productos y servicios}
+  & \textbf{1. VELOX Bot (el archivo de Python que es el bot).} Es el
+asistente en Python que alojamos en codeserver. Sirve para responder
+dudas de conductores, interpretar codigos de falla OBD-II y agendar
+citas de servicio.\newline
+\textbf{2. VELOX Telemetry \& OTA Engine.} Consulta la base de datos
+del modelo para analizar datos del CAN Bus, predecir fallas de
+bateria o frenos y distribuir actualizaciones firmadas.\newline
+\textbf{3. VELOX Connect Web Portal.} Es el sitio que le mostramos
+al cliente y a los concesionarios. Lo alojamos en webserver con
+Apache 2.4.10.\newline
+\textbf{4. VELOX AI Custom-Train.} Con el dataset automotriz de la
+empresa y los servidores GPU, podemos entrenar y ajustar el modelo
+de diagnostico y asistencia ADAS. \\
 \hline
 \end{longtable}
 \endgroup
 
 % =========================================================
-\section{Identificación de Activos de Tecnología e Información}
+\section{Identificacion de activos de tecnologia e informacion}
 % =========================================================
 
-El inventario tecnológico de la empresa abarca tanto la infraestructura que da soporte al modelo de inteligencia artificial (la base de datos del modelo, el servidor que la aloja, el modelo mismo junto con el archivo de Python que es el bot, el dataset de entrenamiento y los servidores físicos de cómputo GPU) como los equipos de red y servidores de aplicación que permiten dar servicio hacia internet (el servidor frontal Linux webserver y el servidor interno Windows codeserver).
+Despues de esto, vamos a revisar los equipos y la informacion que
+hacen posible el servicio de \textbf{VELOX Automotriz}. Para esto,
+retomamos webserver, Apache y codeserver de las practicas. En el
+caso de la empresa automotriz, agregamos la base de datos del modelo
+y de telemetria vehicular, el servidor que la aloja, el archivo de
+Python que es el bot, el dataset de entrenamiento con bitacoras CAN
+Bus y los equipos GPU que se utilizan para entrenarlo.
+
+De igual forma, tomamos en cuenta el perimetro de la red con el
+firewall FortiGate y los respaldos locales, por que de estos tambien
+depende que el portal \textit{VELOX Connect} y los servicios de
+planta y posventa puedan seguir operando o recuperarse ante una
+falla.
 
 % ---------------------------------------------------------
-\subsection{Diagrama de Red de la Organización}
+\subsection{Diagrama de Red de la Organizacion}
 % ---------------------------------------------------------
 
-La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aetheria}):
+Para ubicar cada equipo, primero separamos la red en cuatro zonas.
+Con el diagrama de la figura~\ref{fig:red-velox-proy} podemos seguir
+por donde entra una peticion del conductor o del concesionario y
+cuales equipos se necesitan para procesarla.
 \begin{enumerate}[noitemsep,topsep=2pt]
-    \item \textbf{Zona Externa y Perímetro:} Punto de entrada para los clientes desde internet mediante conexiones HTTPS a través de Cloudflare y el firewall perimetral.
-    \item \textbf{Zona Desmilitarizada (DMZ, subred 192.168.177.0/24):} Contiene el servidor Linux frontal \textbf{webserver} con IP 192.168.177.129 (interfaz eth0), donde corren \textbf{Apache 2.4.10} en el puerto 80/tcp y \textbf{OpenSSH 6.7p1} en el puerto 13337/tcp. Este equipo tiene una segunda tarjeta de red (eth1 con IP 10.0.0.78) conectada hacia la red interna.
-    \item \textbf{Red Interna de Producción (subred 10.0.0.0/24):} Segmento privado donde se ubica el servidor \textbf{codeserver} (10.0.0.201) con \textbf{Windows Server 2012 R2 Standard} (puertos RDP 3389/tcp y WinRM 5985/tcp). En este servidor se ejecuta en producción \textbf{el archivo de Python que es el bot}.
-    \item \textbf{Zona de Datos y Entrenamiento IA (rango 10.0.0.210 a 10.0.0.230):} Red interna donde se encuentran el \textbf{Servidor de Base de Datos} (10.0.0.210), la \textbf{Base de Datos del Modelo de IA}, el \textbf{Dataset de Entrenamiento} (10.0.0.220) y la \textbf{Infraestructura Física GPU} (10.0.0.230).
+    \item \textbf{Zona externa y perimetro.} Los conductores,
+    vehiculos conectados y concesionarios entran desde internet por
+    HTTPS. Para esto, la conexion pasa por Cloudflare y el firewall
+    perimetral FortiGate.
+    \item \textbf{Zona desmilitarizada (DMZ).} En la subred
+    192.168.177.0/24 ponemos webserver. Su interfaz eth0 tiene la
+    IP 192.168.177.129. Aqui corren Apache 2.4.10 en 80/tcp, donde
+    se publica el portal \textit{VELOX Connect}, y OpenSSH 6.7p1 en
+    13337/tcp. La segunda interfaz es eth1, con la IP 10.0.0.78, y
+    conecta con la red interna.
+    \item \textbf{Red interna de produccion.} Dentro de la subred
+    10.0.0.0/24 se encuentra codeserver con la IP 10.0.0.201.
+    Utiliza Windows Server 2012 R2 Standard, con RDP en 3389/tcp y
+    WinRM en 5985/tcp para administracion. Donde en este caso, el
+    archivo de Python que es el bot corre en este equipo junto con
+    herramientas de ingenieria automotriz.
+    \item \textbf{Zona de datos y entrenamiento.} El servidor de la
+    base de datos esta en 10.0.0.210, el dataset de telemetria en
+    10.0.0.220 y los servidores GPU en 10.0.0.230. Aqui guardamos
+    los datos del modelo, los registros de los vehiculos y se
+    realiza su entrenamiento.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -204,14 +305,14 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 
 % ==================== FILA 1: EXTERNO Y DMZ ====================
 \node[ext] (internet) at (0, 0) {
-    \textbf{Usuarios y Clientes}\\
-    Internet Público\\
+    \textbf{Clientes y Concesionarios}\\
+    Vehiculos Conectados\\
     (HTTPS 443/tcp)
 };
 
 \node[ext] (waf) at (5.0, 0) {
-    \textbf{[ACT-10] WAF y Proxy CDN}\\
-    Cloudflare + Firewall\\
+    \textbf{[ACT-10] WAF y Perimetro}\\
+    Cloudflare + FortiGate\\
     (TLS 1.2/1.3 $\rightarrow$ HTTP)
 };
 
@@ -224,12 +325,12 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 
 \node[srv] (apache) at (17.4, 0) {
     \textbf{[ACT-07] Servicio Web Apache}\\
-    Apache/2.4.10 (Debian) Puerto 80/tcp\\
+    Apache/2.4.10 (VELOX Connect) 80/tcp\\
     \textbf{[ACT-09] Respaldos Locales:}\\
     Archivo comprimido en /var/backups/
 };
 
-% ==================== FILA 2: RED INTERNA PRODUCCIÓN ====================
+% ==================== FILA 2: RED INTERNA PRODUCCION ====================
 \node[crit] (codeserver) at (11.2, -3.9) {
     \textbf{[ACT-08] codeserver (Windows)}\\
     Windows Server 2012 R2 Standard\\
@@ -240,9 +341,9 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 
 \node[crit] (botmodel) at (17.4, -3.9) {
     \textbf{[ACT-03] Modelo de IA}\\
-    Motor \textit{Aetheria-Core LLM}\\
+    Motor \textit{VELOX-Core LLM}\\
     Archivo de Python que es el bot\\
-    Pesos neuronales y lógica crediticia
+    Reglas de diagnostico y telemetria VCU
 };
 
 % ==================== FILA 3: ZONA DE DATOS Y ENTRENAMIENTO IA ====================
@@ -250,19 +351,19 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
     \textbf{[ACT-02] Servidor de Base de Datos}\\
     PostgreSQL / VectorDB (10.0.0.210:5432)\\
     \textbf{[ACT-01] Base de Datos con el}\\
-    \textbf{Modelo de IA y Registros PII}
+    \textbf{Modelo de IA, Telemetria y PII}
 };
 
 \node[data] (dataset) at (11.2, -7.8) {
     \textbf{[ACT-04] Dataset de Entrenamiento}\\
     Repositorio NAS IA (10.0.0.220)\\
-    Corpus financiero y crediticio (2.4 TB)\\
-    Datos de calibración del bot
+    Corpus CAN Bus y OBD-II (2.4 TB)\\
+    Datos de calibracion del bot
 };
 
 \node[data] (gpucluster) at (17.4, -7.8) {
-    \textbf{[ACT-05] Infraestructura Física IA}\\
-    Clúster de Servidores GPU (10.0.0.230)\\
+    \textbf{[ACT-05] Infraestructura Fisica IA}\\
+    Cluster de Servidores GPU (10.0.0.230)\\
     Aceleradores NVIDIA A100\\
     Procesamiento y entrenamiento del bot
 };
@@ -270,8 +371,8 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 % ==================== FONDOS DE ZONAS ====================
 \begin{scope}[on background layer]
     \node[zone, fill=csfGV!25, fit=(webserver) (apache), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Zona Desmilitarizada: DMZ Perimetral (192.168.177.0/24)}] (dmzbox) {};
-    \node[zone, fill=csfRS!15, fit=(codeserver) (botmodel), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Red Interna de Producción Aislada (10.0.0.0/24)}] (intbox) {};
-    \node[zone, fill=csfID!25, fit=(dbsrv) (dataset) (gpucluster), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Zona de Datos y Cómputo de Entrenamiento IA (10.0.0.210 a 10.0.0.230)}] (databox) {};
+    \node[zone, fill=csfRS!15, fit=(codeserver) (botmodel), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Red Interna de Produccion Aislada (10.0.0.0/24)}] (intbox) {};
+    \node[zone, fill=csfID!25, fit=(dbsrv) (dataset) (gpucluster), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Zona de Datos y Computo de Entrenamiento IA (10.0.0.210 a 10.0.0.230)}] (databox) {};
 \end{scope}
 
 % ==================== CONEXIONES ====================
@@ -280,9 +381,9 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 \draw[arr] (webserver.east) -- node[above=2pt]{\tiny Local} (apache.west);
 
 % Pivoteo SSH entre webserver y codeserver
-\draw[piv] (webserver.south) -- node[right=4pt, pos=0.42, text=red!75!black]{\tiny \textbf{Túnel SSH / Pivoteo (10.0.0.78 $\rightarrow$ 10.0.0.201: RDP 3389 / WinRM 5985)}} (codeserver.north);
+\draw[piv] (webserver.south) -- node[right=4pt, pos=0.42, text=red!75!black]{\tiny \textbf{Riesgo de movimiento lateral entre zonas}} (codeserver.north);
 
-% Relación entre codeserver y el archivo de Python que es el bot
+% Relacion entre codeserver y el archivo de Python que es el bot
 \draw[arr] (codeserver.east) -- node[above=2pt]{\tiny Aloja} (botmodel.west);
 
 % Conexiones hacia la Zona de Datos e IA
@@ -293,15 +394,24 @@ La red de la empresa está dividida en cuatro segmentos (Figura~\ref{fig:red-aet
 
 \end{tikzpicture}%
 }
-\caption{Diagrama de red de \textit{Aetheria FinTech \& AI Solutions S.A. de C.V.}}
-\label{fig:red-aetheria}
+\caption{Diagrama de red de \textit{VELOX Automotriz S.A. de C.V.}}
+\label{fig:red-velox-proy}
 \end{figure}
 
 % ---------------------------------------------------------
-\subsection{Registro de Activos de Información y Tecnología}
+\subsection{Registro de Activos de Informacion y Tecnologia}
 % ---------------------------------------------------------
 
-En la Tabla~\ref{tab:registro-activos} se listan los activos de la empresa junto con su ubicación, características técnicas y las propiedades de seguridad que se deben resguardar (Confidencialidad, Integridad y Disponibilidad).
+Ahora bien, para registrar los activos ponemos un identificador para
+cada uno. Esto nos permite relacionar el mismo equipo o archivo con
+las amenazas y los riesgos que se describen despues.
+
+En la tabla~\ref{tab:registro-activos} anotamos donde se encuentra
+cada activo, para que se utiliza y que necesitamos proteger. Donde C
+corresponde a confidencialidad, I a integridad y D a disponibilidad.
+Tambien ponemos la criticidad, que nos indica que tan importante es
+ese activo para que funcione el servicio de \textbf{VELOX
+Automotriz}.
 
 \vspace{0.2cm}
 \begingroup
@@ -309,63 +419,173 @@ En la Tabla~\ref{tab:registro-activos} se listan los activos de la empresa junto
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.28}
 \noindent
-\begin{longtable}{|C{1.2cm}|L{2.9cm}|L{2.0cm}|L{2.3cm}|L{5.05cm}|C{1.4cm}|C{1.45cm}|}
-\caption{Registro de activos de información y tecnología de \textit{Aetheria FinTech \& AI Solutions}.}
+\begin{longtable}{|C{1.2cm}|L{2.75cm}|L{1.8cm}|L{2.15cm}|L{4.85cm}|C{1.55cm}|C{1.6cm}|}
+\caption{Registro de activos de informacion y tecnologia de \textit{VELOX Automotriz S.A. de C.V.}}
 \label{tab:registro-activos} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Nombre del Activo} & \textbf{Categoría} & \textbf{Ubicación / IP} & \textbf{Características Técnicas} & \textbf{Propiedad CIA} & \textbf{Criticidad} \\
+\textbf{ID}
+  & \textbf{Nombre del Activo}
+  & \textbf{Categoria}
+  & \textbf{Ubicacion / IP}
+  & \textbf{Caracteristicas Tecnicas}
+  & \textbf{Propiedad CIA}
+  & \textbf{Criticidad} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Nombre del Activo} & \textbf{Categoría} & \textbf{Ubicación / IP} & \textbf{Características Técnicas} & \textbf{Propiedad CIA} & \textbf{Criticidad} \\
+\textbf{ID}
+  & \textbf{Nombre del Activo}
+  & \textbf{Categoria}
+  & \textbf{Ubicacion / IP}
+  & \textbf{Caracteristicas Tecnicas}
+  & \textbf{Propiedad CIA}
+  & \textbf{Criticidad} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-\textbf{ACT-01} & \textbf{Base de datos con el modelo de IA y registros de clientes} & Información / Base de Datos & Zona de Datos (10.0.0.210, puerto 5432/tcp) & Guarda los vectores e hiperparámetros del modelo de IA, además del historial de solicitudes, expedientes y datos personales (PII) de 450,000 clientes. & \textbf{C, I, D} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-01}
+  & \textbf{Base de datos con el modelo de IA, telemetria y clientes}
+  & Informacion / Base de Datos
+  & Zona de Datos (10.0.0.210, puerto 5432/tcp)
+  & Guarda los vectores y los hiperparametros del modelo. Ademas,
+contiene el historial de telemetria vehicular, numeros de serie
+(VIN), ubicacion GPS, citas de taller y datos personales (PII) de
+450,000 propietarios.
+  & \textbf{C, I, D}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-02} & \textbf{Servidor donde vive la base de datos (dbserver)} & Infraestructura / Servidor & Zona de Datos (10.0.0.210/24) & Servidor Linux con PostgreSQL y extensión vectorial pgvector que atiende las consultas de ACT-01 solicitadas desde codeserver. & \textbf{D, I, C} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-02}
+  & \textbf{Servidor donde vive la base de datos (dbserver)}
+  & Infraestruc\-tura / Servidor
+  & Zona de Datos (10.0.0.210/24)
+  & Este servidor Linux aloja PostgreSQL con la extension pgvector.
+Desde codeserver se realizan las consultas a ACT-01 para el portal
+\textit{VELOX Connect}.
+  & \textbf{D, I, C}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-03} & \textbf{El modelo de Inteligencia Artificial y el archivo de Python que es el bot} & Software / Propiedad Intelectual & Servidor codeserver (10.0.0.201) & Motor de inferencia \textit{Aetheria-Core LLM} y \textbf{el archivo de Python que es el bot} en producción. Recibe las consultas de los usuarios y calcula los dictámenes de crédito. & \textbf{I, C, D} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-03}
+  & \textbf{El modelo de Inteligencia Artificial y el archivo de Python
+que es el bot}
+  & Software / Propiedad Intelectual
+  & Servidor codeserver (10.0.0.201)
+  & Aqui tenemos el motor de inferencia \textit{VELOX-Core LLM} y el
+archivo de Python que es el bot en produccion. Con estos se reciben
+las consultas de conductores y concesionarios, se diagnostican
+codigos OBD-II y se calculan recomendaciones de servicio junto con
+algoritmos de control de la VCU.
+  & \textbf{I, C, D}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-04} & \textbf{El dataset para el entrenamiento del bot} & Información / Corpus de Datos & Almacenamiento NAS IA (10.0.0.220) & Conjunto de datos de 2.4 TB con historiales crediticios, contratos y conversaciones previas que se usan para entrenar y calibrar al bot. & \textbf{C, I} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-04}
+  & \textbf{El dataset para el entrenamiento del bot}
+  & Informacion / Corpus de Datos
+  & Almacena\-miento NAS IA (10.0.0.220)
+  & Son 2.4 TB de bitacoras de telemetria CAN Bus, fallas OBD-II,
+manuales de taller de vehiculos electricos y conversaciones previas.
+Usamos este conjunto de datos para entrenar y calibrar el bot.
+  & \textbf{C, I}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-05} & \textbf{Infraestructura física para procesar y entrenar al bot} & Hardware / Clúster GPU & Centro de Datos (10.0.0.230) & Servidores físicos de alto rendimiento con tarjetas GPU NVIDIA A100 y almacenamiento NVMe RAID dedicados al procesamiento y entrenamiento del modelo. & \textbf{D, I} & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
+\textbf{ACT-05}
+  & \textbf{Infraestructura fisica para procesar y entrenar al bot}
+  & Hardware / Cluster GPU
+  & Centro de Datos Planta Guanajuato (10.0.0.230)
+  & Utilizamos servidores HPE ProLiant con tarjetas NVIDIA A100 y
+almacenamiento NVMe RAID para procesar los datos de telemetria y
+entrenar el modelo.
+  & \textbf{D, I}
+  & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
 \hline
 
-\textbf{ACT-06} & \textbf{Servidor Linux Frontal (webserver)} & Infraestructura / Servidor DMZ & DMZ 192.168.177.129 (eth0) e Interna 10.0.0.78 (eth1) & Servidor con \textbf{Debian GNU/Linux 8.11 (jessie)}, kernel 3.16.0-6-686-pae (i686), cuentas root y webadmin, servicio OpenSSH 6.7p1 en el puerto 13337/tcp y rpcbind en 111/tcp. & \textbf{I, C, D} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-06}
+  & \textbf{Servidor Linux Frontal (webserver)}
+  & Infraestruc\-tura / Servidor DMZ
+  & DMZ 192.168.177.129 (eth0) e Interna 10.0.0.78 (eth1)
+  & Es el equipo frontal con \textbf{Debian GNU/Linux 8.11 (jessie)} y
+kernel 3.16.0-6-686-pae (i686). Incluye las cuentas root y
+webadmin, OpenSSH 6.7p1 en 13337/tcp y rpcbind en 111/tcp.
+  & \textbf{I, C, D}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-07} & \textbf{Servicio Web Apache (Apache/2.4.10)} & Servicio / Aplicación Web & Sobre webserver\newline (192.168.177.129, puerto 80/tcp) & Servidor HTTP \textbf{Apache/2.4.10 (Debian)} en el puerto 80/tcp que publica el portal web de la empresa y el formulario de conexión con el bot. & \textbf{D, I} & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
+\textbf{ACT-07}
+  & \textbf{Servicio Web Apache (Apache/2.4.10)}
+  & Servicio / Aplicacion Web
+  & Sobre webserver\newline 192.168.177.129\newline Puerto 80/tcp
+  & Con \textbf{Apache/2.4.10 (Debian)} en 80/tcp publicamos el portal
+\textit{VELOX Connect} y el formulario con el que los propietarios y
+concesionarios se comunican con el bot.
+  & \textbf{D, I}
+  & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
 \hline
 
-\textbf{ACT-08} & \textbf{Servidor Interno Windows (codeserver)} & Infraestructura / Servidor Producción & Red Interna aislada (10.0.0.201/24) & Servidor con \textbf{Microsoft Windows Server 2012 R2 Standard} (versión 6.3.9600), usuario developer2024, servicios \textbf{RDP (3389/tcp)}, \textbf{WinRM (5985/tcp)} e IIS local. Aloja el archivo de Python que es el bot. & \textbf{C, I, D} & \cellcolor{csfRS}\textbf{Crítico (5/5)} \\
+\textbf{ACT-08}
+  & \textbf{Servidor Interno Windows (codeserver)}
+  & Infraestruc\-tura / Servidor Produccion
+  & Red Interna aislada (10.0.0.201/24)
+  & Es el equipo interno que aloja el archivo de Python que es el bot y
+herramientas de ingenieria automotriz. Tiene \textbf{Windows Server
+2012 R2 Standard} (version 6.3.9600), la cuenta developer2024, RDP
+(3389/tcp), WinRM (5985/tcp) e IIS local.
+  & \textbf{C, I, D}
+  & \cellcolor{csfRS}\textbf{Critico (5/5)} \\
 \hline
 
-\textbf{ACT-09} & \textbf{Archivos Comprimidos de Respaldo y Credenciales} & Información / Respaldos y Secretos & webserver (/root/ y /var/backups/) & Copias de respaldo comprimidas del proyecto guardadas localmente en webserver, las cuales contienen scripts de configuración y el archivo de texto con las contraseñas. & \textbf{C, I} & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
+\textbf{ACT-09}
+  & \textbf{Archivos Comprimidos de Respaldo y Credenciales}
+  & Informacion / Respaldos y Secretos
+  & webserver (/root/ y /var/backups/)
+  & Son las copias comprimidas del proyecto que se guardan en
+webserver. En estas se incluyen scripts de configuracion y el
+archivo de texto con las contraseñas.
+  & \textbf{C, I}
+  & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
 \hline
 
-\textbf{ACT-10} & \textbf{Perímetro WAF/CDN, Certificados TLS y DNS Corporativo} & Seguridad / Red Perimetral & Perímetro Externo (Cloudflare / Firewall) & Configuración del dominio, certificados digitales X.509 (SHA-256 con RSA), protocolos TLS y filtrado de tráfico entrante. & \textbf{D, I, A} & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
+\textbf{ACT-10}
+  & \textbf{Perimetro WAF/CDN, Firewall FortiGate, Certificados TLS y
+DNS Corporativo}
+  & Seguridad / Red Perimetral
+  & Perimetro Externo (Cloudflare / FortiGate 600F)
+  & Aqui reunimos la configuracion del dominio de VELOX Automotriz, el
+firewall perimetral FortiGate, los certificados X.509 (SHA-256 con
+RSA), los protocolos TLS y el filtrado del trafico entrante.
+  & \textbf{C, I, D}
+  & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
 \hline
 \end{longtable}
 \endgroup
 
 % =========================================================
-\section{Registro de Amenazas Relevantes}
+\section{Registro de amenazas relevantes}
 % =========================================================
 
-El análisis de amenazas de la empresa contempla tanto las vulnerabilidades técnicas detectadas en los servidores y componentes de red como los perfiles de atacantes internos y externos que tienen interés en comprometer el sistema.
+Ya que tenemos los activos de \textbf{VELOX Automotriz}, ahora vamos
+a revisar que los puede afectar. Primero anotamos las
+vulnerabilidades de los equipos y servicios. Despues, revisamos
+quienes podrian aprovecharlas o exponer informacion durante su
+trabajo, tomando en cuenta incidentes del sector automotriz como los
+casos de Continental AG, Yanfeng Automotive, Toyota Connected,
+Hyundai y Volkswagen Cariad.
 
 % ---------------------------------------------------------
-\subsection{Vulnerabilidades Técnicas en los Activos}
+\subsection{Vulnerabilidades Tecnicas en los Activos}
 % ---------------------------------------------------------
+
+Para esto, relacionamos cada vulnerabilidad con el activo donde se
+encuentra. Los identificadores CVE nos sirven para ubicar
+vulnerabilidades registradas y los CWE para identificar tipos de
+debilidades. Tambien dejamos la calificacion que se uso en el
+registro del proyecto.
 
 \begingroup
 \scriptsize
@@ -373,46 +593,122 @@ El análisis de amenazas de la empresa contempla tanto las vulnerabilidades téc
 \renewcommand{\arraystretch}{1.28}
 \noindent
 \begin{longtable}{|C{2.3cm}|C{1.4cm}|L{3.6cm}|L{7.2cm}|C{1.8cm}|}
-\caption{Vulnerabilidades técnicas presentes en los activos de \textit{Aetheria FinTech \& AI Solutions}.}
+\caption{Vulnerabilidades tecnicas presentes en los activos de \textit{VELOX Automotriz S.A. de C.V.}}
 \label{tab:vulnerabilidades} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{CVE / CWE} & \textbf{Activo} & \textbf{Vulnerabilidad / Debilidad} & \textbf{Detalle Técnico en la Infraestructura} & \textbf{CVSS v3.1} \\
+\textbf{CVE / CWE}
+  & \textbf{Activo}
+  & \textbf{Vulnerabilidad / Debilidad}
+  & \textbf{Detalle Tecnico en la Infraestructura}
+  & \textbf{CVSS v3.1} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{CVE / CWE} & \textbf{Activo} & \textbf{Vulnerabilidad / Debilidad} & \textbf{Detalle Técnico en la Infraestructura} & \textbf{CVSS v3.1} \\
+\textbf{CVE / CWE}
+  & \textbf{Activo}
+  & \textbf{Vulnerabilidad / Debilidad}
+  & \textbf{Detalle Tecnico en la Infraestructura}
+  & \textbf{CVSS v3.1} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-\textbf{CVE-2021-4034} (\textit{PwnKit}) / CWE-787 & \textbf{ACT-06} (webserver) & Escalación local de privilegios en pkexec (Polkit) por escritura fuera de límites. & El binario SUID /usr/bin/pkexec instalado en Debian 8.11 no valida correctamente el número de argumentos y permite al usuario webadmin obtener acceso como root (uid=0) de inmediato. & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
+\textbf{CVE-2021-4034} (\textit{PwnKit}) / CWE-787
+  & \textbf{ACT-06} (webserver)
+  & Escalacion local de privilegios en pkexec (Polkit) por escritura
+fuera de limites.
+  & En webserver, CVE-2021-4034 es un problema de validacion en Polkit.
+Por lo que una cuenta local con permisos limitados podria llegar a
+tener permisos de administracion.
+  & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
 \hline
 
-\textbf{CVE-2016-5195} (\textit{DirtyCow}) / CWE-362 & \textbf{ACT-06} (webserver) & Condición de carrera (\textit{Race Condition}) en el mecanismo \textit{Copy-on-Write} del kernel Linux 3.16.0-6. & La versión del kernel 3.16.0-6-686-pae sin actualizar permite modificar páginas de memoria de solo lectura para escalar privilegios a root. & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
+\textbf{CVE-2016-5195} (\textit{DirtyCow}) / CWE-362
+  & \textbf{ACT-06} (webserver)
+  & Condicion de carrera (\textit{Race Condition}) en el mecanismo
+\textit{Copy-on-Write} del kernel Linux 3.16.0-6.
+  & El kernel de webserver tiene una condicion de carrera en el
+mecanismo que copia paginas de memoria al escribir. En el
+escenario, esto pone en riesgo la separacion entre usuarios
+normales y administradores.
+  & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
 \hline
 
-\textbf{CVE-2017-0358} / CWE-269 & \textbf{ACT-06} (webserver) & Carga insegura de módulos en ntfs-3g con bit SUID activo. & El paquete ntfs-3g instalado en Debian 8 conserva el permiso SUID activo y representa otra vía de escalación local de privilegios. & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
+\textbf{CVE-2017-0358} / CWE-269
+  & \textbf{ACT-06} (webserver)
+  & Carga insegura de modulos en ntfs-3g con bit SUID activo.
+  & El paquete ntfs-3g tiene activo el permiso SUID en el equipo del
+escenario, lo que aumenta el riesgo de que un usuario local obtenga
+permisos que no le corresponden.
+  & \cellcolor{csfDE}\textbf{7.8 (Alto)} \\
 \hline
 
-\textbf{CWE-521} / \textbf{CWE-307} & \textbf{ACT-06} (webserver) & Contraseñas débiles y falta de bloqueo por intentos fallidos en SSH (13337/tcp). & La cuenta webadmin utiliza una contraseña de diccionario (kitty123) vulnerable a ataques con Hydra, mientras que el hash SHA-512 de root corresponde a una clave débil (colorado) recuperable con John the Ripper. & \cellcolor{csfRS}\textbf{9.8 (Crítico)} \\
+\textbf{CWE-521} / \textbf{CWE-307}
+  & \textbf{ACT-06} (webserver)
+  & Contraseñas debiles y falta de bloqueo por intentos fallidos en SSH
+(13337/tcp).
+  & En SSH tenemos contraseñas debiles y falta un limite para los
+intentos fallidos. Tambien consideramos debil la contraseña de la
+cuenta de administracion.
+  & \cellcolor{csfRS}\textbf{9.8 (Critico)} \\
 \hline
 
-\textbf{CWE-256} / \textbf{CWE-312} & \textbf{ACT-09} y \textbf{ACT-08} & Almacenamiento de credenciales en texto claro dentro de respaldos sin cifrar. & Dentro del directorio /var/backups/ se guarda un archivo comprimido de respaldo que incluye un archivo de texto con las contraseñas en claro (developer2024 : LetMeIn2024!) para acceder a codeserver. & \cellcolor{csfDE}\textbf{8.8 (Alto)} \\
+\textbf{CWE-256} / \textbf{CWE-312}
+  & \textbf{ACT-09} y \textbf{ACT-08}
+  & Almacenamiento de credenciales en texto claro dentro de respaldos
+sin cifrar.
+  & Los respaldos comprimidos sin cifrar contienen el archivo de texto
+con las contraseñas para codeserver. Si alguien obtiene una copia,
+tambien podria quedar expuesta la cuenta del servidor interno.
+  & \cellcolor{csfDE}\textbf{8.8 (Alto)} \\
 \hline
 
-\textbf{CWE-284} (Túnel SSH / Pivoteo) & \textbf{ACT-06} y \textbf{ACT-08} & Falta de segmentación interna y reenvío de puertos habilitado (AllowTcpForwarding yes). & La doble interfaz de red de webserver (192.168.177.129 y 10.0.0.78) permite levantar túneles SSH (ssh -L) desde la DMZ para alcanzar los puertos 3389/tcp (RDP) y 5985/tcp (WinRM) de codeserver. & \cellcolor{csfDE}\textbf{8.6 (Alto)} \\
+\textbf{CWE-284} (Tunel SSH / Pivoteo)
+  & \textbf{ACT-06} y \textbf{ACT-08}
+  & Falta de segmentacion interna y reenvio de puertos habilitado
+(AllowTcpForwarding yes).
+  & webserver tiene una interfaz en la DMZ y otra en la red interna. Si
+no se restringe el reenvio de puertos, la separacion entre ambas
+redes deja de proteger a los servicios de administracion de
+codeserver.
+  & \cellcolor{csfDE}\textbf{8.6 (Alto)} \\
 \hline
 
-\textbf{CVE-2017-9798} (\textit{Optionsbleed}) / CWE-1104 & \textbf{ACT-07} (Apache 2.4.10) & Servidor web obsoleto (Apache/2.4.10) fuera de soporte y con fuga de memoria en cabeceras HTTP. & El servicio HTTP en el puerto 80/tcp muestra su versión en las cabeceras de respuesta y no cuenta con parches de seguridad recientes. & \cellcolor{csfDE}\textbf{7.5 (Alto)} \\
+\textbf{CVE-2017-9798} (\textit{Optionsbleed}) / CWE-1104
+  & \textbf{ACT-07} (Apache 2.4.10)
+  & Servidor web obsoleto (Apache/2.4.10) fuera de soporte y con fuga
+de memoria en cabeceras HTTP.
+  & Apache responde en 80/tcp para el portal \textit{VELOX Connect} y
+publica su version en las cabeceras. En el escenario tenemos una
+version antigua con parches pendientes y riesgo de que se filtre
+informacion por las respuestas HTTP.
+  & \cellcolor{csfDE}\textbf{7.5 (Alto)} \\
 \hline
 
-\textbf{OWASP LLM01 / LLM06} y \textbf{CWE-200} & \textbf{ACT-03}, \textbf{ACT-04} y \textbf{ACT-01} & Inyección de prompts (\textit{Prompt Injection}), fuga de código por \textit{ShadowAI} y envenenamiento de datos. & El personal de desarrollo llega a pegar fragmentos del archivo de Python que es el bot o del dataset en modelos públicos, además de que el bot carece de filtros estrictos en las entradas de los usuarios. & \cellcolor{csfDE}\textbf{8.5 (Alto)} \\
+\textbf{OWASP LLM01 / LLM06} y \textbf{CWE-200}
+  & \textbf{ACT-03}, \textbf{ACT-04} y \textbf{ACT-01}
+  & Inyeccion de prompts (\textit{Prompt Injection}), fuga de codigo
+por \textit{ShadowAI} y envenenamiento de datos.
+  & Los ingenieros de desarrollo pueden exponer el archivo de Python que
+es el bot, rutinas de la VCU o datos de entrenamiento al usar
+asistentes publicos como GroqCloud. Ademas, si no se validan las
+entradas del bot, este puede recibir instrucciones que busquen
+alterar sus respuestas.
+  & \cellcolor{csfDE}\textbf{8.5 (Alto)} \\
 \hline
 
-\textbf{CWE-326} / \textbf{CWE-353} & \textbf{ACT-10} y \textbf{ACT-07} & Aceptación de protocolos antiguos (TLS 1.0/1.1), cifrados CBC y recursos externos sin SRI. & La compatibilidad con versiones viejas de TLS debilita el cifrado del canal y la carga de scripts externos sin validación de integridad (SRI) expone el portal a modificaciones. & \cellcolor{csfGV}\textbf{6.5 (Medio)} \\
+\textbf{CWE-326} / \textbf{CWE-353}
+  & \textbf{ACT-10} y \textbf{ACT-07}
+  & Aceptacion de protocolos antiguos (TLS 1.0/1.1), cifrados CBC y
+recursos externos sin SRI.
+  & El canal queda expuesto al permitir TLS antiguo y cifrados CBC.
+Ademas, si el portal \textit{VELOX Connect} carga scripts externos
+sin SRI, el navegador no comprueba que esos archivos conserven su
+contenido original.
+  & \cellcolor{csfGV}\textbf{6.5 (Medio)} \\
 \hline
 \end{longtable}
 \endgroup
@@ -421,7 +717,16 @@ El análisis de amenazas de la empresa contempla tanto las vulnerabilidades téc
 \subsection{Registro de Actores de Amenaza}
 % ---------------------------------------------------------
 
-En la Tabla~\ref{tab:actores-amenaza} se describen los actores de amenaza internos y externos identificados para la operación de la empresa, considerando incidentes frecuentes en el sector como el robo de bases de datos mediante vulnerabilidades en servidores web expuestos, cadenas de escalación de privilegios, movimientos laterales hacia sistemas Windows antiguos y fugas de información en plataformas externas de inteligencia artificial.
+Despues de esto, vamos a identificar de quien se tiene que proteger
+\textbf{VELOX Automotriz}. Para esto, en la
+tabla~\ref{tab:actores-amenaza} ponemos que busca cada actor, con que
+recursos cuenta y que activos podria afectar.
+
+Donde en este caso, ademas de grupos de ransomware y espionaje
+automotriz, tambien tenemos personal interno que puede exponer
+informacion al usar herramientas externas de IA para hacer su
+trabajo. Por lo que tomamos en cuenta tanto los ataques como los
+errores que pueden terminar en una fuga de datos.
 
 \vspace{0.2cm}
 \begingroup
@@ -429,51 +734,132 @@ En la Tabla~\ref{tab:actores-amenaza} se describen los actores de amenaza intern
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.28}
 \noindent
-\begin{longtable}{|C{1.3cm}|L{2.9cm}|L{2.2cm}|L{2.8cm}|L{5.1cm}|C{2.0cm}|}
-\caption{Registro de actores de amenaza para \textit{Aetheria FinTech \& AI Solutions}.}
+\begin{longtable}{|C{1.3cm}|L{2.9cm}|L{2.2cm}|L{2.8cm}|L{4.95cm}|C{2.0cm}|}
+\caption{Registro de actores de amenaza para \textit{VELOX Automotriz S.A. de C.V.}}
 \label{tab:actores-amenaza} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Actor de Amenaza} & \textbf{Categoría / Origen} & \textbf{Motivación y Recursos} & \textbf{Tácticas, Técnicas y Procedimientos (TTPs)} & \textbf{Activos Objetivo} \\
+\textbf{ID}
+  & \textbf{Actor de Amenaza}
+  & \textbf{Categoria / Origen}
+  & \textbf{Motivacion y Recursos}
+  & \textbf{Tacticas, Tecnicas y Procedimientos (TTPs)}
+  & \textbf{Activos Objetivo} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Actor de Amenaza} & \textbf{Categoría / Origen} & \textbf{Motivación y Recursos} & \textbf{Tácticas, Técnicas y Procedimientos (TTPs)} & \textbf{Activos Objetivo} \\
+\textbf{ID}
+  & \textbf{Actor de Amenaza}
+  & \textbf{Categoria / Origen}
+  & \textbf{Motivacion y Recursos}
+  & \textbf{Tacticas, Tecnicas y Procedimientos (TTPs)}
+  & \textbf{Activos Objetivo} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-\textbf{THR-01} & \textbf{Grupos de Ransomware y Cibercrimen Financiero} (\textit{LockBit, Cl0p, BlackCat}) & Externo / Crimen Organizado & \textbf{Motivación:} Obtener ganancias mediante extorsión y venta de datos personales.\newline \textbf{Recursos:} Altos. & Escaneo de puertos SSH y HTTP (T1595), fuerza bruta con diccionarios (T1110), escalación local con \textit{PwnKit} (T1068), lectura de contraseñas en respaldos (T1552.001), pivoteo por túnel SSH (T1572) hacia codeserver y cifrado de la base de datos. & \textbf{ACT-01, ACT-02, ACT-06, ACT-08, ACT-09} \\
+\textbf{THR-01}
+  & \textbf{Grupos de Ransomware Automotriz e Industrial}
+(\textit{BlackCat/ALPHV, LockBit, Akira} / \textit{Gengar})
+  & Externo / Crimen Organizado
+  & \textbf{Motivacion:} Obtener ganancias mediante extorsion, paro de
+operaciones y venta de datos de clientes y vehiculos.\newline
+\textbf{Recursos:} Altos.
+  & Pueden buscar servicios expuestos (T1595) y abusar de contraseñas
+debiles (T1110). Tambien consideramos la escalacion de privilegios
+(T1068), la exposicion de secretos en respaldos (T1552.001), el uso
+indebido de tuneles (T1572) y el cifrado de datos como riesgos para
+la empresa.
+  & \textbf{ACT-01, ACT-02, ACT-06, ACT-08, ACT-09} \\
 \hline
 
-\textbf{THR-02} & \textbf{Competidores Desleales y Brokers de Propiedad Intelectual} & Externo / Espionaje Corporativo & \textbf{Motivación:} Robar los pesos del modelo de IA, el archivo de Python que es el bot y el dataset.\newline \textbf{Recursos:} Medios a altos. & Uso de credenciales filtradas (T1078), conexión remota a codeserver por WinRM o RDP (T1021.001, T1021.006), copia del archivo de Python que es el bot y extracción del dataset de entrenamiento. & \textbf{ACT-03, ACT-04, ACT-08, ACT-09} \\
+\textbf{THR-02}
+  & \textbf{APTs, Competidores y Brokers de Propiedad Intelectual
+Automotriz} (\textit{APT41, Lazarus} / \textit{Mewtwo, Bisharp})
+  & Externo / Espionaje Industrial
+  & \textbf{Motivacion:} Robar los pesos del modelo de IA, el archivo de
+Python que es el bot, algoritmos ADAS/VCU y el dataset de
+telemetria.\newline \textbf{Recursos:} Medios a altos.
+  & Buscan obtener el archivo de Python que es el bot y el dataset
+automotriz. Para este caso consideramos el uso de cuentas filtradas
+(T1078) y el acceso no autorizado por servicios remotos (T1021.001
+y T1021.006).
+  & \textbf{ACT-03, ACT-04, ACT-08, ACT-09} \\
 \hline
 
-\textbf{THR-03} & \textbf{Amenaza Interna No Maliciosa (\textit{Insider Negligente / ShadowAI})} & Interno / Desarrolladores y Analistas & \textbf{Motivación:} Resolver errores de programación rápido durante la jornada laboral.\newline \textbf{Recursos:} Cuentas legítimas (developer2024, webadmin). & Guardar un archivo de texto con las contraseñas sin cifrar, dejar respaldos comprimidos en /var/backups/ y pegar partes del archivo de Python que es el bot o del dataset en servicios externos de IA (GroqCloud, Claude, DeepSeek). & \textbf{ACT-01, ACT-03, ACT-04, ACT-09} \\
+\textbf{THR-03}
+  & \textbf{Amenaza Interna No Maliciosa (\textit{Insider Negligente /
+ShadowAI} / \textit{Ditto})}
+  & Interno / Ingenieros y Desarrolladores
+  & \textbf{Motivacion:} Resolver errores de programacion y firmware
+rapido durante la jornada laboral.\newline \textbf{Recursos:}
+Cuentas legitimas (developer2024, webadmin).
+  & Pueden dejar el archivo de texto con las contraseñas en respaldos
+sin cifrar o compartir fragmentos del archivo de Python que es el
+bot, codigo de la VCU y muestras del dataset con GroqCloud, Claude o
+DeepSeek para revisar un error.
+  & \textbf{ACT-01, ACT-03, ACT-04, ACT-09} \\
 \hline
 
-\textbf{THR-04} & \textbf{Amenaza Interna Maliciosa (\textit{Empleado Disconforme})} & Interno / Administradores o Exempleados & \textbf{Motivación:} Represalia laboral o beneficio económico por fraude.\newline \textbf{Recursos:} Acceso directo a la red interna 10.0.0.0/24. & Modificación intencional de las reglas de crédito en el archivo de Python que es el bot, alteración de etiquetas en el dataset de entrenamiento (\textit{Data Poisoning}) o borrado de registros en dbserver. & \textbf{ACT-01, ACT-02, ACT-03, ACT-04} \\
+\textbf{THR-04}
+  & \textbf{Amenaza Interna Maliciosa (\textit{Empleado o Proveedor
+Disconforme} / \textit{Rotom})}
+  & Interno / Administradores o Exempleados
+  & \textbf{Motivacion:} Represalia laboral o beneficio economico
+ilícito.\newline \textbf{Recursos:} Acceso directo a la red interna
+10.0.0.0/24.
+  & Con acceso interno, pueden cambiar las reglas de diagnostico en el
+archivo de Python que es el bot, alterar el dataset de telemetria
+(\textit{Data Poisoning}) o borrar registros de dbserver.
+  & \textbf{ACT-01, ACT-02, ACT-03, ACT-04} \\
 \hline
 
-\textbf{THR-05} & \textbf{Atacantes de Sistemas de IA (\textit{Prompt Injectors})} & Externo / Usuarios Maliciosos y Defraudadores & \textbf{Motivación:} Alterar las respuestas del bot para aprobar créditos o extraer datos de la base de datos.\newline \textbf{Recursos:} Bajos a medios. & Envío de instrucciones manipuladas mediante \textit{Prompt Injection} (AML.T0051), salto de restricciones del modelo (\textit{Jailbreak}) y consultas indebidas desde el portal web Apache. & \textbf{ACT-01, ACT-03, ACT-07} \\
+\textbf{THR-05}
+  & \textbf{Atacantes de Sistemas de IA (\textit{Prompt Injectors})}
+  & Externo / Usuarios Maliciosos y Defraudadores
+  & \textbf{Motivacion:} Alterar las respuestas del bot para autorizar
+garantias o servicios indebidos y extraer datos de vehiculos o
+clientes.\newline \textbf{Recursos:} Bajos a medios.
+  & Intentan alterar el comportamiento del asistente con \textit{Prompt
+Injection} (AML.T0051) u obtener informacion de telemetria y VIN que
+el portal \textit{VELOX Connect} no debe entregar.
+  & \textbf{ACT-01, ACT-03, ACT-07} \\
 \hline
 
-\textbf{THR-06} & \textbf{Grupos Hacktivistas y Botnets de DDoS / Cryptojacking} & Externo / Colectivos y Atacantes Oportunistas & \textbf{Motivación:} Tirar el portal financiero o usar las GPUs para minar criptomonedas.\newline \textbf{Recursos:} Medios. & Ataques de denegación de servicio (DDoS) contra Apache/2.4.10 (T1498), alteración visual del portal web y ejecución de mineros en el clúster de servidores GPU (T1496). & \textbf{ACT-05, ACT-06, ACT-07, ACT-10} \\
+\textbf{THR-06}
+  & \textbf{Grupos Hacktivistas y Botnets de DDoS / Cryptojacking}
+(\textit{KillNet} / \textit{Electrode})
+  & Externo / Colectivos y Atacantes Oportunistas
+  & \textbf{Motivacion:} Tirar el portal automotriz \textit{VELOX
+Connect} o usar las GPUs para minar criptomonedas.\newline
+\textbf{Recursos:} Medios.
+  & Pueden saturar el portal con DDoS (T1498), alterar su contenido o
+consumir los recursos de las GPU con programas de mineria (T1496).
+  & \textbf{ACT-05, ACT-06, ACT-07, ACT-10} \\
 \hline
 \end{longtable}
 \endgroup
 
 % =========================================================
-\section{Registro de Riesgos (10 Escenarios de Riesgo)}
+\section{Registro de los diez escenarios de riesgo}
 % =========================================================
 
-A partir de los activos y amenazas anteriores, se definieron diez escenarios de riesgo (RK-001 a RK-010) para \textbf{Aetheria FinTech \& AI Solutions S.A. de C.V.}, redactados tanto por su impacto operativo (Forma 1) como por el actor y activo involucrado (Forma 2), además de su registro general.
+Con los activos y las amenazas que ya tenemos para \textbf{VELOX
+Automotriz S.A. de C.V.}, vamos a registrar diez escenarios, del
+RK-001 al RK-010. Para esto, en cada caso revisamos que tendria que
+pasar, a quien le afectaria y de que forma se veria interrumpido el
+trabajo de la empresa.
 
 % ---------------------------------------------------------
 \subsection{Escenarios de Riesgo en Forma 1 y Forma 2}
 % ---------------------------------------------------------
+
+Cada escenario lo redactamos de dos formas. En la Forma 1 explicamos
+que proceso se ve afectado y cual seria la consecuencia. En la Forma
+2 partimos del actor de amenaza y lo relacionamos con el activo que
+podria comprometer.
 
 \begingroup
 \scriptsize
@@ -481,124 +867,403 @@ A partir de los activos y amenazas anteriores, se definieron diez escenarios de 
 \renewcommand{\arraystretch}{1.28}
 \noindent
 \begin{longtable}{|C{0.6cm}|C{1.3cm}|L{2.8cm}|L{5.8cm}|L{5.8cm}|}
-\caption{Escenarios de riesgo redactados en Forma 1 y Forma 2.}
+\caption{Escenarios de riesgo de \textit{VELOX Automotriz} redactados en Forma 1 y Forma 2.}
 \label{tab:escenarios-formas} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{\#} & \textbf{ID} & \textbf{Nombre del Riesgo} & \textbf{Escenario en Forma 1 (Orientado al Impacto y Proceso Operativo)} & \textbf{Escenario en Forma 2 (Orientado al Actor y Activo Comprometido)} \\
+\textbf{\#}
+  & \textbf{ID}
+  & \textbf{Nombre del Riesgo}
+  & \textbf{Escenario en Forma 1 (Orientado al Impacto y Proceso
+Operativo)}
+  & \textbf{Escenario en Forma 2 (Orientado al Actor y Activo
+Comprometido)} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{\#} & \textbf{ID} & \textbf{Nombre del Riesgo} & \textbf{Escenario en Forma 1 (Orientado al Impacto y Proceso Operativo)} & \textbf{Escenario en Forma 2 (Orientado al Actor y Activo Comprometido)} \\
+\textbf{\#}
+  & \textbf{ID}
+  & \textbf{Nombre del Riesgo}
+  & \textbf{Escenario en Forma 1 (Orientado al Impacto y Proceso
+Operativo)}
+  & \textbf{Escenario en Forma 2 (Orientado al Actor y Activo
+Comprometido)} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-1 & RK-001 & Compromiso de webserver, escalación a root y pivoteo hacia codeserver & Compromiso total del servidor Linux frontal (webserver) y acceso lateral hacia el servidor interno de producción (codeserver) debido a contraseñas débiles en SSH (13337/tcp), falta de parches en pkexec (CVE-2021-4034) y contraseñas guardadas en texto claro dentro de respaldos, provocando el robo o alteración del archivo de Python que es el bot y la caída del servicio. & Un grupo de cibercrimen (\textbf{THR-01}) entra a webserver (\textbf{ACT-06}) por fuerza bruta en SSH, escala privilegios a root con \textit{PwnKit}, obtiene las credenciales de developer2024 del archivo comprimido de respaldo en /var/backups/ (\textbf{ACT-09}) y abre un túnel SSH hacia codeserver (\textbf{ACT-08}) para tomar control del archivo de Python que es el bot (\textbf{ACT-03}). \\
+1
+  & RK-001
+  & Compromiso de webserver, escalacion a root y pivoteo hacia
+codeserver
+  & Si se compromete webserver, la empresa puede perder el acceso al
+portal \textit{VELOX Connect} y al archivo de Python que es el bot.
+Las contraseñas debiles, los parches pendientes de Polkit y el
+archivo de texto con las contraseñas en los respaldos tambien ponen
+en riesgo la operacion de codeserver.
+  & Un grupo de cibercrimen (\textbf{THR-01}) puede comprometer
+webserver (\textbf{ACT-06}) y poner en riesgo codeserver
+(\textbf{ACT-08}). Los respaldos (\textbf{ACT-09}) y el archivo de
+Python que es el bot (\textbf{ACT-03}) podrian quedar expuestos. \\
 \hline
 
-2 & RK-002 & ShadowAI (Fuga del archivo de Python que es el bot y dataset en IA externa) & Un desarrollador utiliza plataformas externas de inteligencia artificial (GroqCloud, Claude, DeepSeek) sin permiso de la empresa para revisar errores del archivo de Python que es el bot y probar muestras del dataset, ocasionando la filtración de la lógica del modelo, credenciales de base de datos y datos personales de clientes. & Un colaborador interno del área de desarrollo (\textbf{THR-03}) compromete la confidencialidad del archivo de Python que es el bot (\textbf{ACT-03}), del dataset de entrenamiento (\textbf{ACT-04}) y de la base de datos (\textbf{ACT-01}) al subirlos a servidores externos de IA (CWE-200, OWASP LLM06). \\
+2
+  & RK-002
+  & ShadowAI (Fuga del archivo de Python que es el bot y dataset en IA
+externa)
+  & Si un ingeniero o desarrollador de VELOX usa GroqCloud, Claude o
+DeepSeek sin autorizacion para revisar errores, puede exponer el
+archivo de Python que es el bot, rutinas de la VCU, datos de
+telemetria o credenciales de la base de datos.
+  & Un colaborador (\textbf{THR-03}) puede comprometer la
+confidencialidad del archivo de Python que es el bot
+(\textbf{ACT-03}), el dataset (\textbf{ACT-04}) y la base de datos
+(\textbf{ACT-01}) al compartir informacion con un servicio externo
+(CWE-200, OWASP LLM06). \\
 \hline
 
-3 & RK-003 & Exfiltración y cifrado por Ransomware de la Base de Datos del Modelo de IA & Robo masivo de información y cifrado por ransomware de la Base de Datos del Modelo de IA y registros de clientes (ACT-01) por falta de doble factor de autenticación en la red 10.0.0.0/24 y reutilización de contraseñas en dbserver (ACT-02), generando extorsión económica y multas regulatorias. & Un grupo de ransomware (\textbf{THR-01}), una vez dentro de la subred 10.0.0.0/24, ingresa al servidor de base de datos (\textbf{ACT-02}) con credenciales locales, extrae los 450,000 registros de clientes (\textbf{ACT-01}) y cifra las tablas de producción. \\
+3
+  & RK-003
+  & Exfiltracion y cifrado por Ransomware de la Base de Datos del
+Modelo de IA y Telemetria
+  & Si se reutilizan contraseñas en dbserver y falta un segundo factor
+en la red interna, un incidente de ransomware puede dejar expuestos
+los datos de clientes y vehiculos y dejar las tablas de produccion
+sin acceso. Esto puede causar extorsion y multas.
+  & Un grupo de ransomware (\textbf{THR-01}) puede afectar dbserver
+(\textbf{ACT-02}) y comprometer los 450,000 registros de clientes y
+telemetria vehicular de \textbf{ACT-01}, tanto por la exposicion
+como por el cifrado de las tablas. \\
 \hline
 
-4 & RK-004 & Envenenamiento (\textit{Data Poisoning}) del Dataset de entrenamiento del bot & Alteración maliciosa y sesgo en las evaluaciones crediticias del modelo de IA (ACT-03) a causa de la modificación del dataset de entrenamiento (ACT-04) por no contar con verificación de integridad mediante hashes SHA-256, lo que deriva en la aprobación de préstamos incobrables. & Un actor interno malicioso (\textbf{THR-04}) o intruso altera las etiquetas de riesgo en el dataset de entrenamiento (\textbf{ACT-04}) antes de que se ejecute el reentrenamiento en el clúster GPU (\textbf{ACT-05}), dañando la precisión del modelo (\textbf{ACT-03}). \\
+4
+  & RK-004
+  & Envenenamiento (\textit{Data Poisoning}) del Dataset de
+entrenamiento del bot
+  & Si el dataset de telemetria CAN Bus y codigos OBD-II se modifica y
+no comprobamos su integridad con SHA-256, el modelo puede aprender
+de datos incorrectos. Con esto se pueden emitir diagnosticos
+equivocados en taller o autorizar garantias improcedentes.
+  & Un actor interno (\textbf{THR-04}) o un intruso puede alterar el
+dataset (\textbf{ACT-04}). Si se utiliza ese conjunto al entrenar
+en el cluster (\textbf{ACT-05}), pierde precision el modelo
+(\textbf{ACT-03}). \\
 \hline
 
-5 & RK-005 & Manipulación del archivo de Python que es el bot vía \textit{Prompt Injection} & Autorización indebida de créditos y exposición de información de otros clientes mediante el archivo de Python que es el bot (ACT-03) debido a ataques de \textit{Prompt Injection} (OWASP LLM01) y a la falta de validación entre las salidas del modelo y las consultas hacia la base de datos (ACT-01). & Usuarios maliciosos externos (\textbf{THR-05}) introducen instrucciones manipuladas desde el portal web (\textbf{ACT-07}) hacia el archivo de Python que es el bot (\textbf{ACT-03}), saltando las reglas del asistente para consultar saldos ajenos en \textbf{ACT-01} o forzar créditos aprobados. \\
+5
+  & RK-005
+  & Manipulacion del archivo de Python que es el bot via \textit{Prompt
+Injection}
+  & Si las respuestas del modelo y las consultas a la base de datos se
+usan sin validacion, la inyeccion de instrucciones puede terminar
+en servicios o garantias indebidas y en la exposicion de datos de
+ubicacion GPS o VIN de otros clientes.
+  & Usuarios maliciosos (\textbf{THR-05}) pueden intentar alterar las
+respuestas del archivo de Python que es el bot (\textbf{ACT-03})
+desde el portal \textit{VELOX Connect} (\textbf{ACT-07}) y poner en
+riesgo los registros de \textbf{ACT-01}. \\
 \hline
 
-6 & RK-006 & Caída del portal web por explotación de Apache/2.4.10 o ataque DDoS & Interrupción del portal web y de la conexión con el bot debido al uso de una versión antigua de Apache/2.4.10 (ACT-07) o a un ataque de denegación de servicio distribuido (DDoS) que agota la memoria y el ancho de banda de webserver (ACT-06). & Un grupo hacktivista o competidor (\textbf{THR-06}) lanza un ataque DDoS y explota fallos en Apache/2.4.10 (\textbf{ACT-07}, CVE-2017-9798), dejando sin servicio el portal de la empresa e incumpliendo la disponibilidad del $99.9\%$. \\
+6
+  & RK-006
+  & Caida del portal VELOX Connect por explotacion de Apache/2.4.10 o
+ataque DDoS
+  & Si Apache/2.4.10 falla o si se agotan la memoria y el ancho de
+banda de webserver durante un DDoS, se interrumpe tanto el portal
+de clientes y concesionarios como la conexion con el bot.
+  & Un grupo hacktivista o un competidor (\textbf{THR-06}) puede
+afectar el portal (\textbf{ACT-07}) por DDoS o por fallas como
+CVE-2017-9798. La empresa podria incumplir la disponibilidad del
+$99.9\%$. \\
 \hline
 
-7 & RK-007 & Secuestro de cómputo (\textit{Cryptojacking}) o fallo en la infraestructura física GPU & Pérdida de capacidad de procesamiento e interrupción del entrenamiento del modelo en la infraestructura física de servidores GPU (ACT-05) por la instalación de mineros de criptomonedas (\textit{Cryptojacking}) o por sobrecalentamiento de los equipos sin respaldo activo. & Atacantes oportunistas (\textbf{THR-06}) acceden a los nodos del clúster GPU (\textbf{ACT-05}) mediante paneles de administración mal protegidos e instalan programas de minería que consumen el $100\%$ de las tarjetas gráficas, frenando el entrenamiento del bot. \\
+7
+  & RK-007
+  & Secuestro de computo (\textit{Cryptojacking}) o fallo en la
+infraestructura fisica GPU
+  & Si el cluster usa todos sus recursos en mineria no autorizada o si
+los equipos se sobrecalientan sin tener un respaldo activo, se
+detiene el procesamiento de telemetria y se retrasa el
+entrenamiento.
+  & Atacantes oportunistas (\textbf{THR-06}) pueden aprovechar
+controles debiles en la administracion del cluster
+(\textbf{ACT-05}). La mineria puede llegar a ocupar el $100\%$ de
+las GPU y frenar el entrenamiento. \\
 \hline
 
-8 & RK-008 & Compromiso de codeserver por servicios RDP y WinRM en Windows 2012 R2 & Toma de control del servidor interno codeserver (ACT-08) por mantener en operación un sistema operativo fuera de soporte (\textbf{Windows Server 2012 R2 Standard}) con los puertos de administración remota RDP (3389/tcp) y WinRM (5985/tcp) abiertos sin autenticación multifactor. & Un atacante externo o competidor (\textbf{THR-02}) emplea las credenciales de la cuenta developer2024 en los servicios WinRM y RDP de codeserver (\textbf{ACT-08}), ejecutando sesiones remotas con Evil-WinRM para copiar el archivo de Python que es el bot (\textbf{ACT-03}). \\
+8
+  & RK-008
+  & Compromiso de codeserver por servicios RDP y WinRM en Windows 2012
+R2
+  & codeserver utiliza Windows Server 2012 R2 Standard. Si sus
+servicios de administracion remota no cuentan con autenticacion
+multifactor, un acceso indebido pone en riesgo el equipo y el
+archivo de Python que es el bot.
+  & Un competidor o atacante externo (\textbf{THR-02}) puede abusar de
+credenciales expuestas y comprometer codeserver (\textbf{ACT-08}) y
+el archivo de Python que es el bot (\textbf{ACT-03}). \\
 \hline
 
-9 & RK-009 & Degradación criptográfica TLS (1.0/1.1) e inyección por falta de SRI & Modificación no autorizada del portal web en el navegador del usuario o intercepción de tráfico por permitir versiones obsoletas de TLS (1.0 y 1.1) y cargar librerías externas de JavaScript sin verificación de integridad (SRI) en ACT-07 y ACT-10. & Un atacante externo intercepta la sesión de un cliente degradando el protocolo TLS en \textbf{ACT-10} o altera un recurso externo cargado sin validación de integridad en el servidor Apache (\textbf{ACT-07}) para robar datos de acceso. \\
+9
+  & RK-009
+  & Degradacion criptografica TLS (1.0/1.1) e inyeccion por falta de
+SRI
+  & Si el portal \textit{VELOX Connect} permite TLS 1.0 o 1.1, se
+debilita la proteccion del trafico. De igual forma, si carga
+JavaScript externo sin SRI, aumenta el riesgo de que el navegador
+reciba contenido modificado.
+  & Un atacante externo puede comprometer la privacidad de la sesion de
+un cliente o concesionario (\textbf{ACT-10}) o afectar los recursos
+que carga el portal Apache (\textbf{ACT-07}). \\
 \hline
 
-10 & RK-010 & Pérdida de archivos de respaldo por almacenamiento local en DMZ & Imposibilidad de recuperar la versión funcional del modelo de IA (ACT-03) y de la plataforma debido a que los archivos comprimidos de respaldo (ACT-09 en /root/ y /var/backups/) están guardados dentro del mismo servidor frontal expuesto (webserver). & Durante una intrusión o daño de almacenamiento en webserver (\textbf{ACT-06}), el atacante (\textbf{THR-01}) borra tanto el sistema activo como los archivos comprimidos de respaldo locales (\textbf{ACT-09}), dejando a la empresa sin copias de recuperación. \\
+10
+  & RK-010
+  & Perdida de archivos de respaldo por almacenamiento local en DMZ
+  & Si webserver se daña y los respaldos quedan en el mismo equipo,
+podemos perder al mismo tiempo la plataforma y la copia que
+necesitamos para recuperar el modelo.
+  & Una intrusion de \textbf{THR-01} o una falla de disco en webserver
+(\textbf{ACT-06}) puede dejar sin acceso al sistema y a los
+respaldos locales (\textbf{ACT-09}). \\
 \hline
 \end{longtable}
 \endgroup
 
 % ---------------------------------------------------------
-\subsection{Plantilla Completa del Registro de Riesgos}
+\subsection{Registro general de riesgos}
 % ---------------------------------------------------------
+
+Ahora bien, pasamos esos mismos escenarios al registro general. Aqui
+ponemos al responsable de cada riesgo, su nivel, la respuesta
+elegida y el avance del plan. Con esto podemos comparar los
+escenarios y saber cuales necesitan una revision mas detallada.
 
 \begingroup
 \tiny
 \setlength{\tabcolsep}{2.2pt}
 \renewcommand{\arraystretch}{1.35}
 \noindent
-\begin{longtable}{|C{0.80cm}|L{1.75cm}|L{1.20cm}|L{1.85cm}|L{1.65cm}|L{1.80cm}|L{1.70cm}|C{1.15cm}|C{1.30cm}|C{1.35cm}|C{1.35cm}|}
-\caption{Registro general de riesgos de \textit{Aetheria FinTech \& AI Solutions S.A. de C.V.}}
+\begin{longtable}{|C{0.80cm}|L{1.58cm}|L{1.20cm}|L{1.92cm}|L{1.65cm}|L{1.70cm}|L{1.70cm}|C{1.35cm}|C{1.30cm}|C{1.35cm}|C{1.35cm}|}
+\caption{Registro general de riesgos de \textit{VELOX Automotriz S.A. de C.V.}}
 \label{tab:plantilla-registro-riesgos} \\
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Nombre del Riesgo} & \textbf{Activo Afectado} & \textbf{Vulnerabilidad} & \textbf{Actor de Amenaza} & \textbf{Impacto} & \textbf{Propietario del Riesgo} & \textbf{Nivel de Riesgo} & \textbf{Respuesta al Riesgo} & \textbf{Estado Plan de Acción} & \textbf{Última Evaluación} \\
+\textbf{ID}
+  & \textbf{Nombre del Riesgo}
+  & \textbf{Activo Afectado}
+  & \textbf{Vulnerabilidad}
+  & \textbf{Actor de Amenaza}
+  & \textbf{Impacto}
+  & \textbf{Propietario del Riesgo}
+  & \textbf{Nivel de Riesgo}
+  & \textbf{Respuesta al Riesgo}
+  & \textbf{Estado Plan de Accion}
+  & \textbf{Ultima Evaluacion} \\
 \hline
 \endfirsthead
 \hline
 \rowcolor{xlSummary}
-\textbf{ID} & \textbf{Nombre del Riesgo} & \textbf{Activo Afectado} & \textbf{Vulnerabilidad} & \textbf{Actor de Amenaza} & \textbf{Impacto} & \textbf{Propietario del Riesgo} & \textbf{Nivel de Riesgo} & \textbf{Respuesta al Riesgo} & \textbf{Estado Plan de Acción} & \textbf{Última Evaluación} \\
+\textbf{ID}
+  & \textbf{Nombre del Riesgo}
+  & \textbf{Activo Afectado}
+  & \textbf{Vulnerabilidad}
+  & \textbf{Actor de Amenaza}
+  & \textbf{Impacto}
+  & \textbf{Propietario del Riesgo}
+  & \textbf{Nivel de Riesgo}
+  & \textbf{Respuesta al Riesgo}
+  & \textbf{Estado Plan de Accion}
+  & \textbf{Ultima Evaluacion} \\
 \hline
 \endhead
 \hline
 \endlastfoot
 
-\textbf{RK-001} & Compromiso de webserver, escalación a root y pivoteo a codeserver & \textbf{ACT-06, ACT-08, ACT-03, ACT-09} & CVE-2021-4034 (\textit{PwnKit}), CWE-521, CWE-256, CWE-284 & \textbf{THR-01} (Ransomware / Cibercrimen) & Pérdida total de \textbf{C, I, D}: control de webserver y codeserver, robo del archivo de Python que es el bot y paro operativo. & CISO y Líder de Infraestructura TI & \cellcolor{csfRS}\textbf{CRÍTICO (16.25)} & \textbf{Mitigar} & En implementación (60\%) & 14/11/2026 \\
+\textbf{RK-001}
+  & Compromiso de webserver, escalacion a root y pivoteo a codeserver
+  & \textbf{ACT-06, ACT-08, ACT-03, ACT-09}
+  & CVE-2021-4034 (\textit{PwnKit}), CWE-521, CWE-256, CWE-284
+  & \textbf{THR-01} (Ransomware / Cibercrimen)
+  & Se afectan \textbf{C, I y D}. Se puede perder el control de los dos
+servidores, el archivo de Python que es el bot y la operacion del
+portal \textit{VELOX Connect}.
+  & CISO y Lider de Infraestructura TI
+  & \cellcolor{csfRS}\textbf{CRITICO (16.25)}
+  & \textbf{Mitigar}
+  & En implementacion (60\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-002} & ShadowAI (Fuga del archivo de Python que es el bot y dataset) & \textbf{ACT-03, ACT-04, ACT-01} & OWASP LLM06, CWE-200 (Ausencia de DLP y gobierno IA) & \textbf{THR-03} (Insider Negligente / Desarrollo) & Pérdida de \textbf{Confidencialidad}: fuga de propiedad intelectual del modelo y sanciones por exposición de PII. & CISO, DPO y Director de IA & \cellcolor{csfDE}\textbf{ALTO (11.00)} & \textbf{Mitigar / Evitar} & En implementación (70\%) & 14/11/2026 \\
+\textbf{RK-002}
+  & ShadowAI (Fuga del archivo de Python que es el bot y dataset)
+  & \textbf{ACT-03, ACT-04, ACT-01}
+  & OWASP LLM06, CWE-200 (Ausencia de DLP y gobierno IA)
+  & \textbf{THR-03} (Insider Negligente / Desarrollo)
+  & Se pierde \textbf{confidencialidad}. Se exponen datos de vehiculos,
+clientes y propiedad intelectual del modelo, con posibles sanciones.
+  & CISO, DPO y Director de IA
+  & \cellcolor{csfDE}\textbf{ALTO (11.00)}
+  & \textbf{Mitigar / Evitar}
+  & En implementacion (70\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-003} & Exfiltración y cifrado por Ransomware de la BD del Modelo de IA & \textbf{ACT-01, ACT-02} & CWE-306, CWE-522 (Credenciales locales sin MFA ni cifrado) & \textbf{THR-01} (Grupos RaaS / Extorsión) & Pérdida severa de \textbf{C, I, D}: secuestro de 450,000 registros financieros, extorsión y multas CNBV. & Director de Base de Datos (DBA) y CISO & \cellcolor{csfRS}\textbf{CRÍTICO (15.00)} & \textbf{Mitigar / Transferir} & En progreso (40\%) & 14/11/2026 \\
+\textbf{RK-003}
+  & Exfiltracion y cifrado por Ransomware de la BD del Modelo de IA
+  & \textbf{ACT-01, ACT-02}
+  & CWE-306, CWE-522 (Credenciales locales sin MFA ni cifrado)
+  & \textbf{THR-01} (Grupos RaaS / Extorsion)
+  & Se afectan \textbf{C, I y D}. Quedan en riesgo 450,000 registros de
+telemetria y clientes, y se pueden generar extorsion y multas.
+  & Director de Base de Datos (DBA) y CISO
+  & \cellcolor{csfRS}\textbf{CRITICO (15.00)}
+  & \textbf{Mitigar / Transferir}
+  & En progreso (40\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-004} & Envenena\-miento (\textit{Data Poisoning}) del Dataset de entrenamiento & \textbf{ACT-04, ACT-03, ACT-05} & AML.T0020, CWE-345 (Falta de firma SHA-256 del corpus) & \textbf{THR-04} (Insider Malicioso) / \textbf{THR-02} & Pérdida de \textbf{Integridad}: degradación del modelo predictivo y otorgamiento de créditos incobrables. & Líder de Ciencia de Datos e IA & \cellcolor{csfDE}\textbf{ALTO (10.50)} & \textbf{Mitigar} & Planificado & 14/11/2026 \\
+\textbf{RK-004}
+  & Envenena\-miento (\textit{Data Poisoning}) del Dataset de
+entrenamiento
+  & \textbf{ACT-04, ACT-03, ACT-05}
+  & AML.T0020, CWE-345 (Falta de firma SHA-256 del corpus)
+  & \textbf{THR-04} (Insider Malicioso) / \textbf{THR-02}
+  & Se pierde \textbf{integridad}. El modelo pierde precision al
+diagnosticar fallas vehiculares y puede autorizar garantias
+indebidas.
+  & Lider de Ciencia de Datos e IA
+  & \cellcolor{csfDE}\textbf{ALTO (10.50)}
+  & \textbf{Mitigar}
+  & Planificado
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-005} & Manipulación del archivo de Python que es el bot vía \textit{Prompt Injection} & \textbf{ACT-03, ACT-01, ACT-07} & OWASP LLM01, CWE-77 (Falta de guardrails y privilegios BD) & \textbf{THR-05} (Defraudadores y Atacantes de IA) & Pérdida de \textbf{Integridad y Confidencialidad}: préstamos fraudulentos autorizados por el bot y fuga de saldos. & Líder de Desarrollo de IA & \cellcolor{csfDE}\textbf{ALTO (10.00)} & \textbf{Mitigar} & En pruebas (50\%) & 14/11/2026 \\
+\textbf{RK-005}
+  & Manipulacion del archivo de Python que es el bot via \textit{Prompt
+Injection}
+  & \textbf{ACT-03, ACT-01, ACT-07}
+  & OWASP LLM01, CWE-77 (Falta de guardrails y privilegios BD)
+  & \textbf{THR-05} (Defraudadores y Atacantes de IA)
+  & Se afectan la \textbf{integridad y la confidencialidad}. El bot
+puede autorizar servicios indebidos o exponer datos de telemetria y
+VIN.
+  & Lider de Desarrollo de IA
+  & \cellcolor{csfDE}\textbf{ALTO (10.00)}
+  & \textbf{Mitigar}
+  & En pruebas (50\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-006} & Caída del portal financiero por explotación de Apache/2.4.10 o DDoS & \textbf{ACT-07, ACT-06, ACT-10} & CVE-2017-9798 (\textit{Optionsbleed}), CWE-400 (Servidor web EoL) & \textbf{THR-06} (Hacktivismo / Botnets DDoS) & Pérdida de \textbf{Disponibilidad}: interrupción del portal web y API del bot, penalización de SLA. & Líder de Redes y Operaciones & \cellcolor{csfDE}\textbf{ALTO (9.75)} & \textbf{Mitigar} & En progreso (65\%) & 14/11/2026 \\
+\textbf{RK-006}
+  & Caida del portal VELOX Connect por explotacion de Apache/2.4.10 o
+DDoS
+  & \textbf{ACT-07, ACT-06, ACT-10}
+  & CVE-2017-9798 (\textit{Optionsbleed}), CWE-400 (Servidor web EoL)
+  & \textbf{THR-06} (Hacktivismo / Botnets DDoS)
+  & Se pierde \textbf{disponibilidad}. Se interrumpen el portal y la
+API del bot, y se pueden generar penalizaciones por el SLA.
+  & Lider de Redes y Operaciones
+  & \cellcolor{csfDE}\textbf{ALTO (9.75)}
+  & \textbf{Mitigar}
+  & En progreso (65\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-007} & Secuestro de cómputo (\textit{Cryptojacking}) o fallo en clúster GPU & \textbf{ACT-05} & CWE-250, contenedores sin cuotas y falta de failover GPU & \textbf{THR-06} (Oportunistas) / Amenaza Ambiental & Pérdida de \textbf{Disponibilidad}: retraso en reentrenamiento del bot, sobrecosto eléctrico y daño de GPUs. & Gerente de Centro de Datos & \cellcolor{csfGV}\textbf{MEDIO (6.75)} & \textbf{Mitigar / Transferir} & Planificado & 14/11/2026 \\
+\textbf{RK-007}
+  & Secuestro de computo (\textit{Cryptojacking}) o fallo en cluster
+GPU
+  & \textbf{ACT-05}
+  & CWE-250, contenedores sin cuotas y falta de failover GPU
+  & \textbf{THR-06} (Oportunistas) / Amenaza Ambiental
+  & Se pierde \textbf{disponibilidad}. El entrenamiento se retrasa,
+sube el consumo electrico y las GPU se pueden dañar.
+  & Gerente de Centro de Datos
+  & \cellcolor{csfGV}\textbf{MEDIO (6.75)}
+  & \textbf{Mitigar / Transferir}
+  & Planificado
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-008} & Compromiso de codeserver por RDP/WinRM en Windows 2012 R2 & \textbf{ACT-08, ACT-03} & CWE-1104 (SO sin soporte EoL), CWE-308 (WinRM 5985 y RDP 3389 sin MFA) & \textbf{THR-02} (Espionaje Corporativo) / \textbf{THR-01} & Pérdida de \textbf{Confidencialidad e Integridad}: ejecución remota de comandos y robo del archivo de Python que es el bot. & Líder de Sistemas Windows & \cellcolor{csfDE}\textbf{ALTO (12.00)} & \textbf{Mitigar} & En ejecución (45\%) & 14/11/2026 \\
+\textbf{RK-008}
+  & Compromiso de codeserver por RDP/WinRM en Windows 2012 R2
+  & \textbf{ACT-08, ACT-03}
+  & CWE-1104 (SO sin soporte EoL), CWE-308 (WinRM 5985 y RDP 3389 sin
+MFA)
+  & \textbf{THR-02} (Espionaje Industrial) / \textbf{THR-01}
+  & Se afectan la \textbf{confidencialidad y la integridad}. Se puede
+perder el control del equipo y quedar expuesto el archivo de Python
+que es el bot.
+  & Lider de Sistemas Windows
+  & \cellcolor{csfDE}\textbf{ALTO (12.00)}
+  & \textbf{Mitigar}
+  & En ejecucion (45\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-009} & Interceptación o inyección web por TLS legado (1.0/1.1) y falta de SRI & \textbf{ACT-10, ACT-07} & CWE-326 (TLS débil / CBC), CWE-353 (Ausencia de validación SRI) & \textbf{THR-01} / Atacantes \textit{Man-in-the-Middle} & Pérdida de \textbf{Confidencialidad e Integridad}: captura de credenciales de clientes y alteración del frontend web. & Líder de Seguridad de Aplicaciones & \cellcolor{csfGV}\textbf{MEDIO (5.50)} & \textbf{Mitigar} & Completado (80\%) & 14/11/2026 \\
+\textbf{RK-009}
+  & Intercepcion o inyeccion web por TLS legado (1.0/1.1) y falta de
+SRI
+  & \textbf{ACT-10, ACT-07}
+  & CWE-326 (TLS debil / CBC), CWE-353 (Ausencia de validacion SRI)
+  & \textbf{THR-01} / Atacantes \textit{Man-in-the-Middle}
+  & Se afectan la \textbf{confidencialidad y la integridad}. Pueden
+quedar expuestos los datos de acceso o cambiar el contenido del
+portal.
+  & Lider de Seguridad de Aplicaciones
+  & \cellcolor{csfGV}\textbf{MEDIO (5.50)}
+  & \textbf{Mitigar}
+  & En progreso (80\%)
+  & 14/11/2026 \\
 \hline
 
-\textbf{RK-010} & Pérdida de archivos de respaldo por almacenamiento local en DMZ & \textbf{ACT-09, ACT-06} & CWE-312, ausencia de regla de respaldo 3-2-1 e inmutabilidad & \textbf{THR-01} (Ransomware) / Fallo de disco & Pérdida de \textbf{Disponibilidad y Confidencialidad}: imposibilidad de recuperar el sistema tras un ataque. & Director de Continuidad (DRP) & \cellcolor{csfDE}\textbf{ALTO (9.00)} & \textbf{Mitigar} & En implementación (50\%) & 14/11/2026 \\
+\textbf{RK-010}
+  & Perdida de archivos de respaldo por almacenamiento local en DMZ
+  & \textbf{ACT-09, ACT-06}
+  & CWE-312, ausencia de regla de respaldo 3-2-1 e inmutabilidad
+  & \textbf{THR-01} (Ransomware) / Fallo de disco
+  & Se afectan la \textbf{disponibilidad y la confidencialidad}. Si los
+respaldos tambien se pierden, no se puede recuperar el sistema.
+  & Director de Continuidad (DRP)
+  & \cellcolor{csfDE}\textbf{ALTO (9.00)}
+  & \textbf{Mitigar}
+  & En implementacion (50\%)
+  & 14/11/2026 \\
 \hline
 \end{longtable}
 \endgroup
 
 \newpage
 % =========================================================
-\section{Análisis Detallado de Dos Riesgos Relevantes y Planes de Respuesta}
+\section{Analisis de dos riesgos y planes de respuesta}
 % =========================================================
 
-A continuación se presenta la evaluación cuantitativa, el plan de respuesta y los indicadores de monitoreo para dos de los riesgos principales de la organización:
+Ahora vamos a revisar con mas detalle dos de los riesgos del
+registro general de \textbf{VELOX Automotriz}. Para esto, calculamos
+el nivel y despues ponemos que acciones se van a tomar y como se les
+va a dar seguimiento.
 \begin{enumerate}[noitemsep,topsep=2pt]
-    \item \textbf{Caso 1 (RK-001):} Compromiso del servidor Linux frontal (webserver), escalación de privilegios a root (CVE-2021-4034), obtención del archivo de texto con las contraseñas en los respaldos y pivoteo por túnel SSH hacia codeserver (10.0.0.201) para tomar control del archivo de Python que es el bot.
-    \item \textbf{Caso 2 (RK-002):} Fuga del archivo de Python que es el bot, de muestras del dataset de entrenamiento y de esquemas de la base de datos por el uso no autorizado de servicios externos de IA (ShadowAI).
+    \item \textbf{Caso 1 (RK-001).} Si se compromete webserver, las fallas de acceso y de segmentacion pueden dejar expuesto codeserver, donde se ejecuta el archivo de Python que es el bot.
+    \item \textbf{Caso 2 (RK-002).} El uso de servicios externos de IA sin autorizacion puede exponer el archivo de Python que es el bot, el dataset automotriz y la informacion de la base de datos.
 \end{enumerate}
 
 % ---------------------------------------------------------
-\subsection{Evaluación del Riesgo 1 (RK-001): Intrusión en webserver, Escalación a root y Pivoteo hacia codeserver}
+\subsection{Evaluacion de RK-001 por compromiso de webserver y
+codeserver}
 % ---------------------------------------------------------
+
+Para el primer caso, lo que vamos a revisar es como una intrusion en
+el equipo frontal puede afectar tambien al equipo interno. Esto por
+que webserver tiene comunicacion con ambas redes y los respaldos del
+escenario guardan informacion que se debe proteger.
+
+Primero ponemos la frecuencia y el impacto. Despues, en el plan de
+respuesta, relacionamos cada problema con la medida que le
+corresponde. Por ultimo, usamos los indicadores para revisar si se
+reducen los accesos indebidos y si siguen quedando credenciales
+expuestas.
 
 \begingroup
 \scriptsize
@@ -607,82 +1272,198 @@ A continuación se presenta la evaluación cuantitativa, el plan de respuesta y 
 \noindent
 \begin{longtable}{|L{3.5cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|}
 \hline
-% ==================== SECCIÓN I - RESUMEN ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección I - Resumen (RK-001)}} \\
+% ==================== SECCION I - RESUMEN ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion I - Resumen (RK-001)}} \\
 \hline
-\textbf{ID del riesgo} & \multicolumn{3}{l|}{RK-001} & \multicolumn{2}{l|}{\textbf{Nivel de Riesgo}} & \cellcolor{xlSummary}\textbf{CRÍTICO (16.25)} \\
+\textbf{ID del riesgo}
+  & \multicolumn{3}{l|}{RK-001}
+  & \multicolumn{2}{l|}{\textbf{Nivel de Riesgo}}
+  & \cellcolor{xlSummary}\textbf{CRITICO (16.25)} \\
 \hline
-\textbf{Nombre del riesgo} & \multicolumn{3}{p{6.0cm}|}{Compromiso de webserver, escalación a root (CVE-2021-4034) y pivoteo SSH hacia codeserver (el archivo de Python que es el bot)} & \multicolumn{2}{l|}{\textbf{Respuesta al riesgo}} & \cellcolor{xlSummary}\textbf{MITIGAR} \\
+\textbf{Nombre del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{Compromiso de webserver, escalacion a
+root (CVE-2021-4034) y pivoteo SSH hacia codeserver (el archivo de
+Python que es el bot)}
+  & \multicolumn{2}{l|}{\textbf{Respuesta al riesgo}}
+  & \cellcolor{xlSummary}\textbf{MITIGAR} \\
 \hline
-\textbf{Propietario del riesgo} & \multicolumn{3}{p{6.0cm}|}{CISO y Líder de Infraestructura de TI} & \multicolumn{2}{l|}{\textbf{Estado del plan de acción}} & \cellcolor{xlSummary}\textbf{EN IMPLEMENTACIÓN (60\%)} \\
+\textbf{Propietario del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{CISO y Lider de Infraestructura de TI}
+  & \multicolumn{2}{l|}{\textbf{Estado del plan de accion}}
+  & \cellcolor{xlSummary}\textbf{EN IMPLEMENTACION (60\%)} \\
 \hline
-\textbf{Descripción del riesgo} & \multicolumn{3}{p{6.0cm}|}{Intrusión por fuerza bruta SSH en webserver, escalación con \textit{PwnKit}, robo del archivo de texto con las contraseñas y túnel SSH hacia codeserver} & \multicolumn{2}{l|}{\textbf{Última evaluación del riesgo}} & \cellcolor{xlSummary}\textbf{14/11/2026} \\
+\textbf{Descripcion del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{El acceso no autorizado a webserver
+puede poner en riesgo los privilegios locales, el archivo de texto
+con las contraseñas en los respaldos y los servicios internos.}
+  & \multicolumn{2}{l|}{\textbf{Ultima evaluacion del riesgo}}
+  & \cellcolor{xlSummary}\textbf{14/11/2026} \\
 \hline
 
-% ==================== SECCIÓN II - DESCRIPCIÓN DEL RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección II - Descripción del riesgo (RK-001)}} \\
+% ==================== SECCION II - DESCRIPCION DEL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion II - Descripcion del riesgo (RK-001)}} \\
 \hline
-\textbf{Nombre del riesgo} & \multicolumn{6}{p{12.8cm}|}{Compromiso del servidor Linux frontal (webserver), escalación de privilegios a root y movimiento lateral hacia el servidor interno Windows (codeserver) donde se encuentra el archivo de Python que es el bot} \\
+\textbf{Nombre del riesgo}
+  & \multicolumn{6}{p{12.8cm}|}{Compromiso del servidor Linux frontal
+(webserver), escalacion de privilegios a root y movimiento lateral
+hacia el servidor interno Windows (codeserver) donde se encuentra
+el archivo de Python que es el bot} \\
 \hline
-\textbf{Categoría de riesgo} & Estratégico & Programa & Proyecto & \cellcolor{xlSelected}\textbf{Operativo} & Otro: & \\
+\textbf{Categoria de riesgo} & Estrategico & Programa & Proyecto &
+\cellcolor{xlSelected}\textbf{Operativo} & Otro: & \\
 \hline
-\textbf{Escenario de alto nivel} & \multicolumn{6}{p{12.8cm}|}{Un atacante externo localiza mediante un escaneo de puertos el servicio OpenSSH 6.7p1 en el puerto 13337/tcp y Apache/2.4.10 en el puerto 80/tcp del servidor webserver (192.168.177.129). Obtiene acceso a la cuenta webadmin por fuerza bruta con Hydra (contraseña kitty123), escala privilegios a root explotando CVE-2021-4034 (\textit{PwnKit}) en /usr/bin/pkexec, extrae del archivo comprimido de respaldo en /var/backups/ el archivo de texto con las contraseñas (developer2024 : LetMeIn2024!) y usa la segunda interfaz de red (10.0.0.78) para crear un túnel SSH hacia codeserver (10.0.0.201), logrando acceder por RDP o WinRM al archivo de Python que es el bot.} \\
+\textbf{Escenario de alto nivel}
+  & \multicolumn{6}{p{12.8cm}|}{Si webserver queda comprometido, la
+falta de parches, el archivo de texto con las contraseñas en los
+respaldos y la comunicacion entre las dos redes pueden dejar
+expuesto codeserver. Donde en este caso, lo que mas le afecta a
+VELOX Automotriz es que el equipo interno aloja el archivo de
+Python que es el bot y participa en el diagnostico vehicular y la
+atencion a clientes y concesionarios.} \\
 \hline
-\textbf{Descripción detallada del riesgo} & \textbf{Evento} & \multicolumn{5}{p{10.5cm}|}{Toma de control de webserver en la DMZ y salto hacia codeserver en la red interna 10.0.0.0/24, comprometiendo el archivo de Python que es el bot} \\
+\textbf{Descripcion detallada del riesgo}
+  & \textbf{Evento}
+  & \multicolumn{5}{p{10.5cm}|}{Perdida de control de webserver en la
+DMZ, con posible afectacion de codeserver y del archivo de Python
+que es el bot en la red interna 10.0.0.0/24.} \\
 \cline{2-7}
- & \textbf{Activo / Recurso} & \multicolumn{5}{p{10.5cm}|}{webserver (\textbf{ACT-06}), Apache/2.4.10 (\textbf{ACT-07}), archivos comprimidos de respaldo (\textbf{ACT-09}), codeserver (\textbf{ACT-08}) y el archivo de Python que es el bot (\textbf{ACT-03})} \\
+
+  & \textbf{Activo / Recurso}
+  & \multicolumn{5}{p{10.5cm}|}{webserver (\textbf{ACT-06}),
+Apache/2.4.10 (\textbf{ACT-07}), archivos comprimidos de respaldo
+(\textbf{ACT-09}), codeserver (\textbf{ACT-08}) y el archivo de
+Python que es el bot (\textbf{ACT-03})} \\
 \cline{2-7}
- & \textbf{Tipo de Amenaza} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}Intrusión Externa, Escalación Local de Privilegios (CVE-2021-4034), Exposición de Credenciales (CWE-256) y Pivoteo de Red (CWE-284)} \\
+
+  & \textbf{Tipo de Amenaza}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}Intrusion Externa,
+Escalacion Local de Privilegios (CVE-2021-4034), Exposicion de
+Credenciales (CWE-256) y Pivoteo de Red (CWE-284)} \\
 \cline{2-7}
- & \textbf{Actor} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}\textbf{THR-01} (Grupos de Ransomware y Cibercrimen Financiero) y \textbf{THR-02} (Competidores / Brokers de Acceso Inicial)} \\
+
+  & \textbf{Actor}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}\textbf{THR-01}
+(Grupos de Ransomware Automotriz e Industrial) y \textbf{THR-02}
+(Competidores / Brokers de Acceso Inicial)} \\
 \cline{2-7}
  & \textbf{Probabilidad} & \multicolumn{5}{p{10.5cm}|}{Muy Alta} \\
 \cline{2-7}
- & \textbf{Consecuencias} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlComment}Robo o modificación del archivo de Python que es el bot, pérdida de propiedad intelectual, caída del portal web e incumplimiento del nivel de servicio con clientes financieros} \\
+
+  & \textbf{Efectos}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlComment}Si se copia o
+cambia el archivo de Python que es el bot, la empresa puede perder
+propiedad intelectual y dejar de atender por el portal \textit{VELOX
+Connect}. Con esto tambien se afecta el nivel de servicio acordado
+con los clientes y concesionarios.} \\
 \hline
-\multicolumn{2}{|l|}{\textbf{Otra información del escenario}} & \multicolumn{5}{p{10.5cm}|}{El ataque combina el escaneo de puertos, ataque de diccionario sobre SSH, uso de exploit local en Polkit, lectura de respaldos sin cifrar y reenvío de puertos SSH hacia el segmento interno.} \\
+\multicolumn{2}{|l|}{\textbf{Otra informacion del escenario}}
+  & \multicolumn{5}{p{10.5cm}|}{Para revisar este escenario tomamos en
+cuenta la autenticacion de SSH, los privilegios locales, el cifrado
+de los respaldos y la separacion entre la DMZ y la red interna.} \\
 \hline
 
-% ==================== SECCIÓN III - ANÁLISIS DE RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección III - Análisis de Riesgo (RK-001)}} \\
+% ==================== SECCION III - ANALISIS DE RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion III - Analisis de Riesgo (RK-001)}} \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Frecuencia}} \\
 \hline
 \textbf{Ocurrencia Anual} & 0.0 & 1.0 & 2.0 & 3.0 & 4.0 & \cellcolor{xlSelected}\textbf{5.0} \\
 \cline{2-7}
- & $N \leq 0.01$ & $0.01 < N \leq 0.1$ & $0.1 < N \leq 1$ & $1 < N \leq 10$ & $10 < N \leq 100$ & \cellcolor{xlSelected}\boldmath$100 < N$ \\
+
+  & $N \leq 0.01$
+  & $0.01 < N \leq 0.1$
+  & $0.1 < N \leq 1$
+  & $1 < N \leq 10$
+  & $10 < N \leq 100$
+  & \cellcolor{xlSelected}\boldmath$100 < N$ \\
 \hline
-\textbf{Comentarios sobre la frecuencia} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Al estar expuesto directamente en la DMZ, el servidor webserver recibe de forma constante más de 100 intentos de escaneo y ataques de fuerza bruta por SSH al año ($100 < N$), además de que el exploit para CVE-2021-4034 es público y muy fácil de ejecutar.} \\
+\textbf{Comentarios sobre la frecuencia}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Como webserver
+queda expuesto en la DMZ, en el escenario estimamos mas de 100
+intentos anuales de escaneo y fuerza bruta por SSH ($100 < N$). De
+ahi tomamos la calificacion de frecuencia.} \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Impacto}} \\
 \hline
-\textbf{Pérdida de ganancia anual} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
+\textbf{Perdida de ganancia anual} & 0.0 & 1.0 & 2.0 & 3.0 &
+\cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
 \cline{2-7}
- & $I \leq 0.1\%$ & $0.1\% < I \leq 1\%$ & $1\% < I \leq 3\%$ & $3\% < I \leq 5\%$ & \cellcolor{xlSelected}\boldmath$5\% < I \leq 10\%$ & $10\% < I$ \\
+
+  & $I \leq 0.1\%$
+  & $0.1\% < I \leq 1\%$
+  & $1\% < I \leq 3\%$
+  & $3\% < I \leq 5\%$
+  & \cellcolor{xlSelected}\boldmath$5\% < I \leq 10\%$
+  & $10\% < I$ \\
 \hline
-\textbf{Comentarios sobre la pérdida} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Un paro en el portal Apache y la alteración del archivo de Python que es el bot en codeserver detendrían el cobro por consultas API y la evaluación de créditos, causando pérdidas estimadas entre el 5\% y el 10\% de los ingresos anuales.} \\
+\textbf{Comentarios sobre la perdida}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Si Apache deja de
+atender peticiones o se altera el archivo de Python que es el bot en
+codeserver, la empresa deja de procesar diagnosticos vehiculares,
+citas de servicio y cobros de la API de \textit{VELOX Connect}. Para
+este caso estimamos una perdida de entre el 5\% y el 10\% anual.} \\
 \hline
-\textbf{Costo de la respuesta al riesgo} & 0.0 & 1.0 & \cellcolor{xlSelected}\textbf{2.0} & 3.0 & 4.0 & 5.0 \\
+\textbf{Costo de la respuesta al riesgo} & 0.0 & 1.0 &
+\cellcolor{xlSelected}\textbf{2.0} & 3.0 & 4.0 & 5.0 \\
 \cline{2-7}
- & $I \leq \$10\text{k}$ & $\$10\text{k} < I \leq \$100\text{k}$ & \cellcolor{xlSelected}\boldmath$\$100\text{k} < I \leq \$1\text{M}$ & $\$1\text{M} < I \leq \$10\text{M}$ & $\$10\text{M} < I \leq \$100\text{M}$ & $\$100\text{M} < I$ \\
+
+  & $I \leq \$10\text{k}$
+  & $\$10\text{k} < I \leq \$100\text{k}$
+  & \cellcolor{xlSelected}\boldmath$\$100\text{k} < I \leq \$1\text{M}$
+  & $\$1\text{M} < I \leq \$10\text{M}$
+  & $\$10\text{M} < I \leq \$100\text{M}$
+  & $\$100\text{M} < I$ \\
 \hline
-\textbf{Comentarios sobre el costo de la respuesta} & \multicolumn{6}{p{12.8cm}|}{Actualizar webserver (de Debian 8 a Debian 12) y codeserver (de Windows Server 2012 R2 a Windows Server 2022), junto con la puesta en marcha de un firewall interno y un gestor de secretos, tiene un costo aproximado de \$180,000 USD ($\$100\text{k} < I \leq \$1\text{M}$).} \\
+\textbf{Comentarios sobre el costo de la respuesta}
+  & \multicolumn{6}{p{12.8cm}|}{Para responder hay que migrar webserver
+de Debian 8 a Debian 12 y codeserver de Windows Server 2012 R2 a
+Windows Server 2022. Ademas, consideramos instalar OPNsense como
+firewall interno y usar un gestor de secretos. El costo total
+estimado para estas medidas es de \$180,000 USD
+($\$100\text{k} < I \leq \$1\text{M}$).} \\
 \hline
 \textbf{Impacto reputacional} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
 \cline{2-7}
- & $I \leq 0.5$ & $0.5 < I \leq 1$ & $1 < I \leq 1.5$ & $1.5 < I \leq 2$ & \cellcolor{xlSelected}\boldmath$2 < I \leq 2.5$ & $2.5 < I$ \\
+
+  & $I \leq 0.5$
+  & $0.5 < I \leq 1$
+  & $1 < I \leq 1.5$
+  & $1.5 < I \leq 2$
+  & \cellcolor{xlSelected}\boldmath$2 < I \leq 2.5$
+  & $2.5 < I$ \\
 \hline
-\textbf{Comentarios sobre el impacto reputacional} & \multicolumn{6}{p{12.8cm}|}{La afectación del archivo de Python que es el bot en producción y la interrupción del servicio generarían desconfianza directa entre las financieras y cajas de ahorro clientes, con un impacto de entre 2.0 y 2.5 puntos.} \\
+\textbf{Comentarios sobre el impacto reputacional}
+  & \multicolumn{6}{p{12.8cm}|}{Si falla el archivo de Python que es el
+bot y se interrumpe el portal \textit{VELOX Connect}, los
+propietarios de vehiculos, concesionarios y socios Tier 1 pueden
+perder confianza en la plataforma. Por esto le damos un impacto de
+mas de 2.0 y hasta 2.5 puntos.} \\
 \hline
-\textbf{Costo de multas por incumplimiento} & 0.0 & 1.0 & 2.0 & \cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
+\textbf{Costo de multas por incumplimiento} & 0.0 & 1.0 & 2.0 &
+\cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
 \cline{2-7}
- & $\$0.00$ & $< \$1\text{M}$ & $< \$10\text{M}$ & \cellcolor{xlSelected}\boldmath$< \$100\text{M}$ & $< \$1\text{B}$ & $> \$1\text{B}$ \\
+
+  & $\$0.00$
+  & $< \$1\text{M}$
+  & $< \$10\text{M}$
+  & \cellcolor{xlSelected}\boldmath$< \$100\text{M}$
+  & $< \$1\text{B}$
+  & $> \$1\text{B}$ \\
 \hline
-\textbf{Comentarios sobre el incumplimiento regulatorio} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Operar servidores con sistemas fuera de soporte (Debian 8 y Windows Server 2012 R2) y guardar contraseñas en texto claro incumple los controles exigidos por la CNBV y la LFPDPPP, lo que puede derivar en multas y penalizaciones contractuales ($< \$100\text{M}$).} \\
+\textbf{Comentarios sobre el incumplimiento regulatorio}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Para el escenario
+tomamos en cuenta posibles multas y penalizaciones por operar con
+sistemas fuera de soporte y guardar contraseñas en texto claro. En
+la tabla se usa el rango menor a \$100\text{M}, considerando las
+normas automotrices ISO/SAE 21434, TISAX y la LFPDPPP.} \\
 \hline
-\multicolumn{4}{|l|}{\textbf{Calificación general del impacto (promedio de los 4 aspectos)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{3.25}} \\
+\multicolumn{4}{|l|}{\textbf{Calificacion general del impacto
+(promedio de los 4 aspectos)}}
+  & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{3.25}} \\
 \hline
-\multicolumn{4}{|l|}{\textbf{Calificación general del nivel de riesgo (Frecuencia $\times$ Impacto)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{16.25}} \\
+\multicolumn{4}{|l|}{\textbf{Calificacion general del nivel de
+riesgo (Frecuencia $\times$ Impacto)}}
+  & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{16.25}} \\
 \hline
 \end{longtable}
 \endgroup
@@ -696,58 +1477,145 @@ A continuación se presenta la evaluación cuantitativa, el plan de respuesta y 
 \noindent
 \begin{longtable}{|C{0.8cm}|L{3.1cm}|C{1.9cm}|C{1.9cm}|C{1.9cm}|C{2.2cm}|C{2.2cm}|}
 \hline
-% ==================== SECCIÓN IV - RESPUESTA AL RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección IV - Respuesta al riesgo (RK-001)}} \\
+% ==================== SECCION IV - RESPUESTA AL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion IV - Respuesta al riesgo (RK-001)}} \\
 \hline
 \multicolumn{3}{|l|}{\textbf{Respuesta seleccionada:}} & Aceptar & Transferir & \cellcolor{xlSelected}\textbf{Mitigar} & Evitar \\
 \hline
-\multicolumn{2}{|c|}{\textbf{Justificación}} & \multicolumn{5}{p{10.9cm}|}{\cellcolor{xlComment}El riesgo tiene un nivel crítico de \textbf{16.25} ($F=5.0 \times I_{\text{prom}}=3.25$) y compromete tanto el servidor perimetral como el servidor interno donde corre el bot. No es posible aceptarlo por el daño operativo ni evitarlo apagando el portal público, por lo que se opta por \textbf{MITIGAR} el riesgo reforzando el acceso SSH, corrigiendo los permisos de pkexec, actualizando los sistemas operativos, borrando el archivo de texto con las contraseñas de los respaldos y bloqueando el reenvío de puertos hacia la red interna 10.0.0.0/24.} \\
+\multicolumn{2}{|c|}{\textbf{Justificacion}}
+  & \multicolumn{5}{p{10.9cm}|}{\cellcolor{xlComment}El riesgo sale
+critico con \textbf{16.25}. Como hay que mantener el portal
+\textit{VELOX Connect} operando, vamos a \textbf{mitigar} el riesgo.
+Para esto, reforzamos el acceso por SSH, corregimos los permisos de
+pkexec, actualizamos los sistemas, quitamos el archivo de texto con
+las contraseñas de los respaldos y restringimos el reenvio de
+puertos hacia la red interna.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Estatus general del plan de acción}} & \multicolumn{4}{p{8.8cm}|}{En implementación (60\% de avance: ya se configuró el acceso por llave en SSH, se retiró el bit SUID en pkexec y se eliminó el archivo de texto con las contraseñas)} \\
+\multicolumn{3}{|l|}{\textbf{Estatus general del plan de accion}}
+  & \multicolumn{4}{p{8.8cm}|}{El plan va al 60\%. Ya se configuro el
+acceso por llave en SSH, se retiro el permiso SUID de pkexec y se
+quito el archivo de texto con las contraseñas.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Problemas relevantes de las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Algunas librerías de 32 bits en Debian 8.11 requieren actualización previa y se necesita programar una ventana de mantenimiento nocturna para migrar Windows Server 2012 R2 en codeserver sin afectar las consultas hacia el archivo de Python que es el bot.} \\
+\multicolumn{3}{|l|}{\textbf{Problemas relevantes de las acciones
+de respuesta}}
+  & \multicolumn{4}{p{8.8cm}|}{Primero necesitamos actualizar algunas
+librerias de 32 bits de Debian 8.11. Ademas, la migracion de
+Windows Server 2012 R2 requiere una ventana nocturna para cuidar
+las consultas hacia el archivo de Python que es el bot.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Hitos conseguidos en las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Autenticación por llave pública Ed25519 habilitada en SSH (13337/tcp); reenvío de puertos desactivado (AllowTcpForwarding no); archivo de texto con las contraseñas borrado de los respaldos en /var/backups/ y cambio de claves completado.} \\
+\multicolumn{3}{|l|}{\textbf{Hitos conseguidos en las acciones de
+respuesta}}
+  & \multicolumn{4}{p{8.8cm}|}{Ya se habilitaron las llaves Ed25519
+para SSH (13337/tcp), se desactivo el reenvio de puertos
+(AllowTcpForwarding no) y se quitaron las contraseñas de los
+respaldos en /var/backups/. Tambien se hizo el cambio de claves.}
+\\
 \hline
 
-% ==================== PLAN DE ACCIÓN ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Plan de acción (RK-001)}} \\
+% ==================== PLAN DE ACCION ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Plan de accion (RK-001)}} \\
 \hline
-\textbf{\#} & \multicolumn{4}{c|}{\textbf{Acción de respuesta}} & \textbf{Fecha compromiso} & \textbf{Estatus} \\
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Accion de respuesta}} &
+\textbf{Fecha compromiso} & \textbf{Estatus} \\
 \hline
-1.0 & \multicolumn{4}{p{9.2cm}|}{Desactivar el inicio de sesión por contraseña (PasswordAuthentication no), el acceso directo de root y el reenvío de puertos (AllowTcpForwarding no) en OpenSSH (13337/tcp) dentro de webserver, usando llaves Ed25519 y Fail2Ban} & 01/11/2026 & Completado \\
+1.0
+  & \multicolumn{4}{p{9.2cm}|}{Primero dejamos el acceso SSH en
+webserver (13337/tcp) por llaves Ed25519. Desactivamos el acceso
+por contraseña (PasswordAuthentication no), el acceso directo de
+root y el reenvio de puertos (AllowTcpForwarding no). Tambien
+usamos Fail2Ban.}
+  & 01/11/2026
+  & Completado \\
 \hline
-2.0 & \multicolumn{4}{p{9.2cm}|}{Quitar el permiso SUID en /usr/bin/pkexec (CVE-2021-4034) y ntfs-3g (CVE-2017-0358), y actualizar webserver de Debian 8.11 a Debian 12 LTS con Apache 2.4.62} & 08/11/2026 & Completado \\
+2.0
+  & \multicolumn{4}{p{9.2cm}|}{Quitamos el permiso SUID de
+/usr/bin/pkexec (CVE-2021-4034) y ntfs-3g (CVE-2017-0358). Despues
+actualizamos webserver de Debian 8.11 a Debian 12 LTS con Apache
+2.4.62.}
+  & 08/11/2026
+  & Completado \\
 \hline
-3.0 & \multicolumn{4}{p{9.2cm}|}{Borrar el archivo de texto con las contraseñas de los respaldos comprimidos en /var/backups/ y /root/, cambiar la clave de developer2024 y guardar las credenciales en un gestor de secretos con respaldos cifrados fuera del servidor} & 12/11/2026 & Completado \\
+3.0
+  & \multicolumn{4}{p{9.2cm}|}{Quitamos el archivo de texto con las
+contraseñas de los respaldos en /var/backups/ y /root/ y cambiamos
+la clave de developer2024. Para guardar las credenciales usamos
+HashiCorp Vault y respaldos cifrados fuera del equipo.}
+  & 12/11/2026
+  & Completado \\
 \hline
-4.0 & \multicolumn{4}{p{9.2cm}|}{Colocar reglas de firewall interno entre la interfaz eth1 (10.0.0.78) de webserver y la subred 10.0.0.0/24 para impedir conexiones desde la DMZ hacia los puertos RDP (3389/tcp) y WinRM (5985/tcp) de codeserver} & 20/11/2026 & En progreso \\
+4.0
+  & \multicolumn{4}{p{9.2cm}|}{Vamos a poner \textbf{OPNsense} como
+firewall entre la DMZ y la red interna. Para esto, vamos a quitar
+la conexion directa de webserver a la red interna por eth1, de
+modo que el trafico entre las dos redes pase por OPNsense.
+El firewall lleva el estado de las conexiones y permite poner
+reglas por interfaz. Vamos a permitir solo el trafico necesario
+para el servicio y a bloquear y registrar los intentos de acceso
+desde la DMZ a codeserver por RDP (3389/tcp) y WinRM (5985/tcp).}
+  & 20/11/2026
+  & En progreso \\
 \hline
-5.0 & \multicolumn{4}{p{9.2cm}|}{Migrar codeserver (10.0.0.201) de Windows Server 2012 R2 a Windows Server 2022 y permitir la administración del archivo de Python que es el bot únicamente desde un servidor bastión con MFA} & 30/11/2026 & En progreso \\
+5.0
+  & \multicolumn{4}{p{9.2cm}|}{Migramos codeserver (10.0.0.201) a
+Windows Server 2022. Para administrar el archivo de Python que es el
+bot se usara un servidor bastion con autenticacion multifactor
+(MFA).}
+  & 30/11/2026
+  & En progreso \\
 \hline
 
-% ==================== SECCIÓN V - MONITOREO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección V - Monitoreo (RK-001)}} \\
+% ==================== SECCION V - MONITOREO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion V - Monitoreo (RK-001)}} \\
 \hline
-\multicolumn{2}{|l|}{\textbf{Última evaluación del riesgo}} & \multicolumn{2}{c|}{14/11/2026} & \multicolumn{2}{l|}{\textbf{Siguiente evaluación}} & 14/12/2026 \\
+\multicolumn{2}{|l|}{\textbf{Ultima evaluacion del riesgo}}
+  & \multicolumn{2}{c|}{14/11/2026}
+  & \multicolumn{2}{l|}{\textbf{Siguiente evaluacion}}
+  & 14/12/2026 \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Indicadores clave de riesgo (KRIs)}} \\
 \hline
-\textbf{\#} & \multicolumn{4}{c|}{\textbf{Indicador}} & \textbf{Medición} & \textbf{Fecha} \\
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Indicador}} & \textbf{Medicion} & \textbf{Fecha} \\
 \hline
-1.0 & \multicolumn{4}{p{9.2cm}|}{Intentos de fuerza bruta SSH en el puerto 13337/tcp de webserver bloqueados por Fail2Ban} & 0 accesos exitosos (42 IPs bloqueadas) & 14/11/2026 \\
+1.0
+  & \multicolumn{4}{p{9.2cm}|}{Intentos de fuerza bruta SSH en el
+puerto 13337/tcp de webserver bloqueados por Fail2Ban}
+  & 0 accesos exitosos (42 IPs bloqueadas)
+  & 14/11/2026 \\
 \hline
-2.0 & \multicolumn{4}{p{9.2cm}|}{Cantidad de binarios SUID vulnerables a escalación local (CVE-2021-4034, CVE-2016-5195) o archivos de texto con contraseñas en claro en webserver} & 0 vulnerabilidades / 0 archivos en claro & 14/11/2026 \\
+2.0
+  & \multicolumn{4}{p{9.2cm}|}{Cantidad de binarios SUID vulnerables a
+escalacion local (CVE-2021-4034, CVE-2016-5195) o archivos de texto
+con contraseñas en claro en webserver}
+  & 0 vulnerabilidades / 0 archivos en claro
+  & 14/11/2026 \\
 \hline
-3.0 & \multicolumn{4}{p{9.2cm}|}{Intentos de conexión TCP desde la interfaz interna de la DMZ (10.0.0.78) hacia los puertos 3389/tcp (RDP) y 5985/tcp (WinRM) de codeserver} & 0 conexiones permitidas & 14/11/2026 \\
+3.0
+  & \multicolumn{4}{p{9.2cm}|}{Intentos de conexion TCP desde la
+interfaz interna de la DMZ (10.0.0.78) hacia los puertos 3389/tcp
+(RDP) y 5985/tcp (WinRM) de codeserver}
+  & 0 conexiones permitidas
+  & 14/11/2026 \\
 \hline
 \end{longtable}
 \endgroup
 
 \newpage
 % ---------------------------------------------------------
-\subsection{Evaluación del Riesgo 2 (RK-002): Exfiltración del Archivo de Python que es el Bot, Dataset y Base de Datos por Uso de ShadowAI}
+\subsection{Evaluacion de RK-002 por fuga de informacion mediante
+ShadowAI}
 % ---------------------------------------------------------
+
+Para el segundo caso revisamos ShadowAI en \textbf{VELOX
+Automotriz}, que aqui significa que el personal de ingenieria usa
+herramientas de IA que la empresa no autorizo. Donde en este caso,
+al pedir ayuda para corregir un error se puede compartir el archivo
+de Python que es el bot, codigo de la VCU, datos de entrenamiento de
+telemetria o informacion para conectarse a la base de datos.
+
+Ahora bien, uno de los controles del plan es DLP, que sirve para
+detectar o bloquear la salida de datos. De igual forma, se contempla
+un asistente interno para que el equipo pueda pedir ayuda con el
+codigo dentro de la red de la empresa.
 
 \begingroup
 \scriptsize
@@ -756,82 +1624,203 @@ A continuación se presenta la evaluación cuantitativa, el plan de respuesta y 
 \noindent
 \begin{longtable}{|L{3.5cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|C{2.0cm}|}
 \hline
-% ==================== SECCIÓN I - RESUMEN ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección I - Resumen (RK-002)}} \\
+% ==================== SECCION I - RESUMEN ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion I - Resumen (RK-002)}} \\
 \hline
-\textbf{ID del riesgo} & \multicolumn{3}{l|}{RK-002} & \multicolumn{2}{l|}{\textbf{Nivel de Riesgo}} & \cellcolor{xlSummary}\textbf{ALTO (11.00)} \\
+\textbf{ID del riesgo}
+  & \multicolumn{3}{l|}{RK-002}
+  & \multicolumn{2}{l|}{\textbf{Nivel de Riesgo}}
+  & \cellcolor{xlSummary}\textbf{ALTO (11.00)} \\
 \hline
-\textbf{Nombre del riesgo} & \multicolumn{3}{p{6.0cm}|}{ShadowAI: Exfiltración del archivo de Python que es el bot, dataset de entrenamiento y esquemas de BD en servicios externos de IA} & \multicolumn{2}{l|}{\textbf{Respuesta al riesgo}} & \cellcolor{xlSummary}\textbf{MITIGAR / EVITAR} \\
+\textbf{Nombre del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{ShadowAI: Exfiltracion del archivo de
+Python que es el bot, dataset de telemetria y esquemas de BD en
+servicios externos de IA}
+  & \multicolumn{2}{l|}{\textbf{Respuesta al riesgo}}
+  & \cellcolor{xlSummary}\textbf{MITIGAR / EVITAR} \\
 \hline
-\textbf{Propietario del riesgo} & \multicolumn{3}{p{6.0cm}|}{CISO, Oficial de Privacidad (DPO) y Director de IA} & \multicolumn{2}{l|}{\textbf{Estado del plan de acción}} & \cellcolor{xlSummary}\textbf{EN IMPLEMENTACIÓN (70\%)} \\
+\textbf{Propietario del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{CISO, Oficial de Privacidad (DPO) y
+Director de IA}
+  & \multicolumn{2}{l|}{\textbf{Estado del plan de accion}}
+  & \cellcolor{xlSummary}\textbf{EN IMPLEMENTACION (70\%)} \\
 \hline
-\textbf{Descripción del riesgo} & \multicolumn{3}{p{6.0cm}|}{Filtración del archivo de Python que es el bot, muestras del dataset de entrenamiento y credenciales de BD en plataformas públicas de IA} & \multicolumn{2}{l|}{\textbf{Última evaluación del riesgo}} & \cellcolor{xlSummary}\textbf{14/11/2026} \\
+\textbf{Descripcion del riesgo}
+  & \multicolumn{3}{p{6.0cm}|}{Se puede exponer el archivo de Python
+que es el bot, muestras del dataset automotriz y credenciales de la
+base de datos al usar plataformas publicas de IA.}
+  & \multicolumn{2}{l|}{\textbf{Ultima evaluacion del riesgo}}
+  & \cellcolor{xlSummary}\textbf{14/11/2026} \\
 \hline
 
-% ==================== SECCIÓN II - DESCRIPCIÓN DEL RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección II - Descripción del riesgo (RK-002)}} \\
+% ==================== SECCION II - DESCRIPCION DEL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion II - Descripcion del riesgo (RK-002)}} \\
 \hline
-\textbf{Nombre del riesgo} & \multicolumn{6}{p{12.8cm}|}{Uso no autorizado de plataformas externas de IA (GroqCloud, Claude, DeepSeek) para depurar el archivo de Python que es el bot y revisar muestras del dataset de entrenamiento} \\
+\textbf{Nombre del riesgo}
+  & \multicolumn{6}{p{12.8cm}|}{Uso no autorizado de plataformas
+externas de IA (GroqCloud, Claude, DeepSeek) para depurar el archivo
+de Python que es el bot y revisar muestras del dataset de
+entrenamiento automotriz} \\
 \hline
-\textbf{Categoría de riesgo} & Estratégico & Programa & Proyecto & \cellcolor{xlSelected}\textbf{Operativo} & Otro: & \\
+\textbf{Categoria de riesgo} & Estrategico & Programa & Proyecto &
+\cellcolor{xlSelected}\textbf{Operativo} & Otro: & \\
 \hline
-\textbf{Escenario de alto nivel} & \multicolumn{6}{p{12.8cm}|}{Un programador o analista con acceso al servidor interno codeserver (10.0.0.201) copia partes del archivo de Python que es el bot, cadenas de conexión a la base de datos del modelo (ACT-01) y registros reales del dataset de entrenamiento (ACT-04) en asistentes externos (como GroqCloud, Claude o DeepSeek) para corregir errores de código más rápido. Al hacer esto sin autorización, el código propietario y los datos personales de los clientes quedan almacenados en servidores externos fuera del control de la empresa.} \\
+\textbf{Escenario de alto nivel}
+  & \multicolumn{6}{p{12.8cm}|}{En este caso, un ingeniero o
+programador de VELOX Automotriz usa GroqCloud, Claude o DeepSeek
+para corregir un error del archivo de Python que es el bot en
+codeserver o revisar rutinas de diagnostico de la VCU. Si comparte
+codigo, datos reales de telemetria y VIN de ACT-04 o informacion de
+conexion de ACT-01, esos datos pasan a un servicio externo que la
+empresa no autorizo.} \\
 \hline
-\textbf{Descripción detallada del riesgo} & \textbf{Evento} & \multicolumn{5}{p{10.5cm}|}{Envío y exposición del archivo de Python que es el bot, muestras del dataset de entrenamiento y datos de conexión de la BD en servicios externos de IA} \\
+\textbf{Descripcion detallada del riesgo}
+  & \textbf{Evento}
+  & \multicolumn{5}{p{10.5cm}|}{Envio del archivo de Python que es el
+bot, muestras del dataset de telemetria o datos de conexion de la
+base de datos a servicios externos de IA.} \\
 \cline{2-7}
- & \textbf{Activo / Recurso} & \multicolumn{5}{p{10.5cm}|}{Modelo de IA y el archivo de Python que es el bot (\textbf{ACT-03}), Dataset para el entrenamiento del bot (\textbf{ACT-04}), Base de datos con el modelo de IA (\textbf{ACT-01}) y Servidor codeserver (\textbf{ACT-08})} \\
+
+  & \textbf{Activo / Recurso}
+  & \multicolumn{5}{p{10.5cm}|}{Modelo de IA y el archivo de Python que
+es el bot (\textbf{ACT-03}), Dataset para el entrenamiento del bot
+(\textbf{ACT-04}), Base de datos con el modelo de IA
+(\textbf{ACT-01}) y Servidor codeserver (\textbf{ACT-08})} \\
 \cline{2-7}
- & \textbf{Tipo de Amenaza} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}Amenaza Interna No Maliciosa (\textit{Insider} / Colaborador) y Fuga de Información en Modelos LLM Externos (CWE-200, OWASP LLM06)} \\
+
+  & \textbf{Tipo de Amenaza}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}Amenaza Interna No
+Maliciosa (\textit{Insider} / Colaborador) y Fuga de Informacion en
+Modelos LLM Externos (CWE-200, OWASP LLM06)} \\
 \cline{2-7}
- & \textbf{Actor} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}\textbf{THR-03} (Colaborador interno con cuenta de desarrollo developer2024) o atacante externo que compromete cuentas en servicios de terceros} \\
+
+  & \textbf{Actor}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlSummary}\textbf{THR-03}
+(\textit{Ditto} / Colaborador interno con cuenta de desarrollo
+developer2024) o atacante externo que compromete cuentas en
+servicios de terceros} \\
 \cline{2-7}
  & \textbf{Probabilidad} & \multicolumn{5}{p{10.5cm}|}{Alta} \\
 \cline{2-7}
- & \textbf{Consecuencias} & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlComment}Pérdida de ventaja competitiva por filtración de las reglas de negocio del archivo de Python que es el bot, exposición del dataset de entrenamiento y sanciones legales por compartir datos personales con terceros} \\
+
+  & \textbf{Efectos}
+  & \multicolumn{5}{p{10.5cm}|}{\cellcolor{xlComment}La empresa puede
+perder la ventaja que le da la logica del archivo de Python que es
+el bot y del diagnostico vehicular. Ademas, queda expuesto el
+dataset y se pueden generar sanciones si se comparten datos
+personales o VIN de clientes.} \\
 \hline
-\multicolumn{2}{|l|}{\textbf{Otra información del escenario}} & \multicolumn{5}{p{10.5cm}|}{Debilidad asociada a CWE-200 y OWASP LLM06 (\textit{Sensitive Information Disclosure}) por la falta de filtros de salida de datos (DLP) y políticas sobre el uso de herramientas de IA.} \\
+\multicolumn{2}{|l|}{\textbf{Otra informacion del escenario}}
+  & \multicolumn{5}{p{10.5cm}|}{Lo relacionamos con CWE-200 y OWASP
+LLM06. En este caso faltan reglas sobre el uso de IA y controles
+DLP para revisar que informacion sale de las estaciones de
+ingenieria y de codeserver.} \\
 \hline
 
-% ==================== SECCIÓN III - ANÁLISIS DE RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección III - Análisis de Riesgo (RK-002)}} \\
+% ==================== SECCION III - ANALISIS DE RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion III - Analisis de Riesgo (RK-002)}} \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Frecuencia}} \\
 \hline
 \textbf{Ocurrencia Anual} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
 \cline{2-7}
- & $N \leq 0.01$ & $0.01 < N \leq 0.1$ & $0.1 < N \leq 1$ & $1 < N \leq 10$ & \cellcolor{xlSelected}\boldmath$10 < N \leq 100$ & $100 < N$ \\
+
+  & $N \leq 0.01$
+  & $0.01 < N \leq 0.1$
+  & $0.1 < N \leq 1$
+  & $1 < N \leq 10$
+  & \cellcolor{xlSelected}\boldmath$10 < N \leq 100$
+  & $100 < N$ \\
 \hline
-\textbf{Comentarios sobre la frecuencia} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Durante las tareas cotidianas de programación y ajuste del modelo en codeserver, el uso de asistentes web externos para revisar funciones del archivo de Python que es el bot ocasiona entre 10 y 100 eventos de fuga de fragmentos de código o datos al año ($10 < N \leq 100$).} \\
+\textbf{Comentarios sobre la frecuencia}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}En el trabajo
+diario de ingenieria se pueden usar asistentes externos para
+corregir funciones del archivo de Python que es el bot. Para este
+escenario estimamos mas de 10 y hasta 100 exposiciones de codigo o
+datos al año ($10 < N \leq 100$).} \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Impacto}} \\
 \hline
-\textbf{Pérdida de ganancia anual} & 0.0 & 1.0 & 2.0 & 3.0 & \cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
+\textbf{Perdida de ganancia anual} & 0.0 & 1.0 & 2.0 & 3.0 &
+\cellcolor{xlSelected}\textbf{4.0} & 5.0 \\
 \cline{2-7}
- & $I \leq 0.1\%$ & $0.1\% < I \leq 1\%$ & $1\% < I \leq 3\%$ & $3\% < I \leq 5\%$ & \cellcolor{xlSelected}\boldmath$5\% < I \leq 10\%$ & $10\% < I$ \\
+
+  & $I \leq 0.1\%$
+  & $0.1\% < I \leq 1\%$
+  & $1\% < I \leq 3\%$
+  & $3\% < I \leq 5\%$
+  & \cellcolor{xlSelected}\boldmath$5\% < I \leq 10\%$
+  & $10\% < I$ \\
 \hline
-\textbf{Comentarios sobre la pérdida} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Si la lógica del archivo de Python que es el bot o el dataset financiero quedan expuestos, otros competidores podrían replicar el modelo y se cancelarían contratos empresariales, representando una pérdida de entre el 5\% y el 10\% de la ganancia anual.} \\
+\textbf{Comentarios sobre la perdida}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Si se exponen las
+reglas del archivo de Python que es el bot o el dataset de
+telemetria, un competidor podria copiar parte del modelo y algunos
+socios Tier 1 o flotillas podrian cancelar sus contratos. Para esto
+estimamos una perdida anual de mas del 5\% y hasta el 10\%.} \\
 \hline
-\textbf{Costo de la respuesta al riesgo} & 0.0 & \cellcolor{xlSelected}\textbf{1.0} & 2.0 & 3.0 & 4.0 & 5.0 \\
+\textbf{Costo de la respuesta al riesgo} & 0.0 &
+\cellcolor{xlSelected}\textbf{1.0} & 2.0 & 3.0 & 4.0 & 5.0 \\
 \cline{2-7}
- & $I \leq \$10\text{k}$ & \cellcolor{xlSelected}\boldmath$\$10\text{k} < I \leq \$100\text{k}$ & $\$100\text{k} < I \leq \$1\text{M}$ & $\$1\text{M} < I \leq \$10\text{M}$ & $\$10\text{M} < I \leq \$100\text{M}$ & $\$100\text{M} < I$ \\
+
+  & $I \leq \$10\text{k}$
+  & \cellcolor{xlSelected}\boldmath$\$10\text{k} < I \leq
+\$100\text{k}$
+  & $\$100\text{k} < I \leq \$1\text{M}$
+  & $\$1\text{M} < I \leq \$10\text{M}$
+  & $\$10\text{M} < I \leq \$100\text{M}$
+  & $\$100\text{M} < I$ \\
 \hline
-\textbf{Comentarios sobre el costo de la respuesta} & \multicolumn{6}{p{12.8cm}|}{Se puede aprovechar la infraestructura física de servidores GPU que ya tiene la empresa (\textbf{ACT-05}) para montar un asistente de programación local, por lo que solo se requiere adquirir licencias de DLP y filtrado web con un costo anual cercano a \$40,000 USD ($\$10\text{k} < I \leq \$100\text{k}$).} \\
+\textbf{Comentarios sobre el costo de la respuesta}
+  & \multicolumn{6}{p{12.8cm}|}{Como ya tenemos los servidores GPU
+(\textbf{ACT-05}) y el firewall FortiGate, los podemos usar para un
+asistente local y bloqueo web. El costo que contemplamos es de unos
+\$40,000 USD anuales por DLP y filtrado web ($\$10\text{k} < I \leq
+\$100\text{k}$).} \\
 \hline
 \textbf{Impacto reputacional} & 0.0 & 1.0 & 2.0 & \cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
 \cline{2-7}
- & $I \leq 0.5$ & $0.5 < I \leq 1$ & $1 < I \leq 1.5$ & \cellcolor{xlSelected}\boldmath$1.5 < I \leq 2$ & $2 < I \leq 2.5$ & $2.5 < I$ \\
+
+  & $I \leq 0.5$
+  & $0.5 < I \leq 1$
+  & $1 < I \leq 1.5$
+  & \cellcolor{xlSelected}\boldmath$1.5 < I \leq 2$
+  & $2 < I \leq 2.5$
+  & $2.5 < I$ \\
 \hline
-\textbf{Comentarios sobre el impacto reputacional} & \multicolumn{6}{p{12.8cm}|}{En caso de darse a conocer que datos del dataset crediticio o partes del archivo de Python que es el bot se subieron a plataformas públicas, la empresa tendría una afectación reputacional de entre 1.5 y 2.0 puntos frente a sus clientes.} \\
+\textbf{Comentarios sobre el impacto reputacional}
+  & \multicolumn{6}{p{12.8cm}|}{Si los clientes o proveedores Tier 1 se
+enteran de que parte del archivo de Python que es el bot o del
+dataset automotriz se subio a un servicio publico, pueden perder
+confianza en VELOX Automotriz. En el escenario consideramos mas de
+1.5 y hasta 2.0 puntos.} \\
 \hline
-\textbf{Costo de multas por incumplimiento} & 0.0 & 1.0 & 2.0 & \cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
+\textbf{Costo de multas por incumplimiento} & 0.0 & 1.0 & 2.0 &
+\cellcolor{xlSelected}\textbf{3.0} & 4.0 & 5.0 \\
 \cline{2-7}
- & $\$0.00$ & $< \$1\text{M}$ & $< \$10\text{M}$ & \cellcolor{xlSelected}\boldmath$< \$100\text{M}$ & $< \$1\text{B}$ & $> \$1\text{B}$ \\
+
+  & $\$0.00$
+  & $< \$1\text{M}$
+  & $< \$10\text{M}$
+  & \cellcolor{xlSelected}\boldmath$< \$100\text{M}$
+  & $< \$1\text{B}$
+  & $> \$1\text{B}$ \\
 \hline
-\textbf{Comentarios sobre el incumplimiento regulatorio} & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Enviar datos personales y crediticios contenidos en el dataset (\textbf{ACT-04}) o en la base de datos (\textbf{ACT-01}) hacia servicios externos sin autorización de los titulares viola la LFPDPPP y las disposiciones financieras aplicables ($< \$100\text{M}$).} \\
+\textbf{Comentarios sobre el incumplimiento regulatorio}
+  & \multicolumn{6}{p{12.8cm}|}{\cellcolor{xlComment}Al compartir datos
+de telemetria, VIN o datos personales de \textbf{ACT-04} o
+\textbf{ACT-01} sin autorizacion hacia servidores sin acuerdo TISAX,
+la empresa se expone a sanciones en el escenario. Se considera
+ISO/SAE 21434, TISAX, la LFPDPPP y el rango de multa menor a
+\$100\text{M}.} \\
 \hline
-\multicolumn{4}{|l|}{\textbf{Calificación general del impacto (promedio de los 4 aspectos)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{2.75}} \\
+\multicolumn{4}{|l|}{\textbf{Calificacion general del impacto
+(promedio de los 4 aspectos)}}
+  & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{2.75}} \\
 \hline
-\multicolumn{4}{|l|}{\textbf{Calificación general del nivel de riesgo (Frecuencia $\times$ Impacto)}} & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{11.00}} \\
+\multicolumn{4}{|l|}{\textbf{Calificacion general del nivel de
+riesgo (Frecuencia $\times$ Impacto)}}
+  & \multicolumn{3}{r|}{\cellcolor{xlSummary}\textbf{11.00}} \\
 \hline
 \end{longtable}
 \endgroup
@@ -845,82 +1834,168 @@ A continuación se presenta la evaluación cuantitativa, el plan de respuesta y 
 \noindent
 \begin{longtable}{|C{0.8cm}|L{3.1cm}|C{1.9cm}|C{1.9cm}|C{1.9cm}|C{2.2cm}|C{2.2cm}|}
 \hline
-% ==================== SECCIÓN IV - RESPUESTA AL RIESGO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección IV - Respuesta al riesgo (RK-002)}} \\
+% ==================== SECCION IV - RESPUESTA AL RIESGO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion IV - Respuesta al riesgo (RK-002)}} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Respuesta seleccionada:}} & Aceptar & Transferir & \cellcolor{xlSelected}\textbf{Mitigar} & \cellcolor{xlSelected}\textbf{Evitar} \\
+\multicolumn{3}{|l|}{\textbf{Respuesta seleccionada:}}
+  & Aceptar
+  & Transferir
+  & \cellcolor{xlSelected}\textbf{Mitigar}
+  & \cellcolor{xlSelected}\textbf{Evitar} \\
 \hline
-\multicolumn{2}{|c|}{\textbf{Justificación}} & \multicolumn{5}{p{10.9cm}|}{\cellcolor{xlComment}El riesgo alcanza un nivel alto (\textbf{11.00}) y compromete directamente los activos principales del negocio (el modelo de IA, el archivo de Python que es el bot, el dataset de entrenamiento y la base de datos). Como el costo de implementación es moderado frente a las pérdidas potenciales, se decide \textbf{MITIGAR} el riesgo mediante reglas de DLP, anonimización del dataset y la instalación de un modelo de apoyo local en el clúster GPU (\textbf{ACT-05}), además de \textbf{EVITAR} el uso de plataformas externas bloqueando su acceso por firewall y políticas de grupo.} \\
+\multicolumn{2}{|c|}{\textbf{Justificacion}}
+  & \multicolumn{5}{p{10.9cm}|}{\cellcolor{xlComment}El resultado es
+alto con \textbf{11.00}. Para esto, vamos a \textbf{mitigar} con
+DLP, la anonimizacion del dataset y un asistente local en el
+cluster GPU (\textbf{ACT-05}). Ademas, vamos a \textbf{evitar} el
+uso de servicios externos con el firewall FortiGate y las politicas
+de grupo.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Estatus general del plan de acción}} & \multicolumn{4}{p{8.8cm}|}{En implementación (70\% de avance: bloqueo de dominios de IA externos y reglas DLP activas en codeserver y equipos de desarrollo)} \\
+\multicolumn{3}{|l|}{\textbf{Estatus general del plan de accion}}
+  & \multicolumn{4}{p{8.8cm}|}{El plan va al 70\%. Ya funcionan el
+bloqueo de dominios externos de IA y las reglas DLP en codeserver y
+en las estaciones de ingenieria.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Problemas relevantes de las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Se presentaron algunos falsos positivos iniciales en las reglas DLP al revisar código genérico de Python y fue necesario repartir la memoria VRAM del clúster GPU (\textbf{ACT-05}) para correr el asistente local sin retrasar los entrenamientos.} \\
+\multicolumn{3}{|l|}{\textbf{Problemas relevantes de las acciones
+de respuesta}}
+  & \multicolumn{4}{p{8.8cm}|}{Al principio las reglas de DLP marcaron
+codigo generico de Python. Tambien hubo que repartir la memoria
+VRAM del cluster (\textbf{ACT-05}) para que el asistente local no
+retrasara los entrenamientos.} \\
 \hline
-\multicolumn{3}{|l|}{\textbf{Hitos conseguidos en las acciones de respuesta}} & \multicolumn{4}{p{8.8cm}|}{Bloqueo DNS y reglas DLP funcionando para sitios públicos de IA; política interna de uso de IA firmada por el equipo; enmascaramiento de datos personales aplicado sobre el dataset de entrenamiento (\textbf{ACT-04}).} \\
+\multicolumn{3}{|l|}{\textbf{Hitos conseguidos en las acciones de
+respuesta}}
+  & \multicolumn{4}{p{8.8cm}|}{Ya tenemos el bloqueo DNS y las reglas
+DLP para sitios publicos de IA. El equipo firmo la politica interna
+y se enmascararon los datos personales y numeros VIN del dataset
+(\textbf{ACT-04}).} \\
 \hline
 
-% ==================== PLAN DE ACCIÓN ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Plan de acción (RK-002)}} \\
+% ==================== PLAN DE ACCION ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Plan de accion (RK-002)}} \\
 \hline
-\textbf{\#} & \multicolumn{4}{c|}{\textbf{Acción de respuesta}} & \textbf{Fecha compromiso} & \textbf{Estatus} \\
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Accion de respuesta}} &
+\textbf{Fecha compromiso} & \textbf{Estatus} \\
 \hline
-1.0 & \multicolumn{4}{p{9.2cm}|}{Configurar políticas de grupo (GPO) en Windows Server (codeserver) y en los equipos de desarrollo para bloquear navegadores con IA integrada y extensiones no autorizadas} & 02/11/2026 & Completado \\
+1.0
+  & \multicolumn{4}{p{9.2cm}|}{Usamos politicas de grupo (GPO) en
+codeserver y en las estaciones de ingenieria para bloquear
+navegadores con IA integrada y extensiones que la empresa no
+autorizo.}
+  & 02/11/2026
+  & Completado \\
 \hline
-2.0 & \multicolumn{4}{p{9.2cm}|}{Activar reglas de Endpoint DLP y filtrado web para impedir que se suba o pegue el archivo de Python que es el bot, archivos de datos estructurados del dataset o cadenas de conexión en sitios externos (GroqCloud, Claude, DeepSeek)} & 09/11/2026 & Completado \\
+2.0
+  & \multicolumn{4}{p{9.2cm}|}{Activamos el DLP de los equipos y el
+filtrado web en FortiGate. Esto sirve para impedir el envio del
+archivo de Python que es el bot, archivos del dataset o cadenas de
+conexion a GroqCloud, Claude y DeepSeek.}
+  & 09/11/2026
+  & Completado \\
 \hline
-3.0 & \multicolumn{4}{p{9.2cm}|}{Anonimizar los datos personales (PII) dentro del dataset de entrenamiento (\textbf{ACT-04}) y verificar cada lote autorizado mediante hashes SHA-256 antes de entrenar al modelo} & 14/11/2026 & Completado \\
+3.0
+  & \multicolumn{4}{p{9.2cm}|}{Anonimizamos los datos personales y
+numeros VIN del dataset (\textbf{ACT-04}). Despues verificamos cada
+lote autorizado con SHA-256 antes de usarlo para entrenar.}
+  & 14/11/2026
+  & Completado \\
 \hline
-4.0 & \multicolumn{4}{p{9.2cm}|}{Habilitar un asistente de programación privado dentro de la infraestructura física de servidores GPU (\textbf{ACT-05}, 10.0.0.230) para que los desarrolladores trabajen sin enviar código fuera de la red interna} & 22/11/2026 & En progreso \\
+4.0
+  & \multicolumn{4}{p{9.2cm}|}{Ponemos un asistente de programacion
+privado en los servidores GPU (\textbf{ACT-05}, 10.0.0.230), para
+que el equipo pueda trabajar con el codigo dentro de la red.}
+  & 22/11/2026
+  & En progreso \\
 \hline
-5.0 & \multicolumn{4}{p{9.2cm}|}{Agregar revisión automática de secretos (GitLeaks) y filtros contra \textit{Prompt Injection} en el archivo de Python que es el bot (\textbf{ACT-03}), limitando su cuenta de base de datos (\textbf{ACT-01}) a permisos de solo lectura} & 29/11/2026 & En progreso \\
+5.0
+  & \multicolumn{4}{p{9.2cm}|}{Agregamos Gitleaks para revisar secretos
+y ponemos filtros contra \textit{Prompt Injection} en el archivo de
+Python que es el bot (\textbf{ACT-03}). Ademas, dejamos su cuenta de
+base de datos (\textbf{ACT-01}) con permisos de solo lectura.}
+  & 29/11/2026
+  & En progreso \\
 \hline
 
-% ==================== SECCIÓN V - MONITOREO ====================
-\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Sección V - Monitoreo (RK-002)}} \\
+% ==================== SECCION V - MONITOREO ====================
+\multicolumn{7}{|c|}{\cellcolor{xlHeader}\textbf{Seccion V - Monitoreo (RK-002)}} \\
 \hline
-\multicolumn{2}{|l|}{\textbf{Última evaluación del riesgo}} & \multicolumn{2}{c|}{14/11/2026} & \multicolumn{2}{l|}{\textbf{Siguiente evaluación}} & 14/12/2026 \\
+\multicolumn{2}{|l|}{\textbf{Ultima evaluacion del riesgo}}
+  & \multicolumn{2}{c|}{14/11/2026}
+  & \multicolumn{2}{l|}{\textbf{Siguiente evaluacion}}
+  & 14/12/2026 \\
 \hline
 \multicolumn{7}{|c|}{\textbf{Indicadores clave de riesgo (KRIs)}} \\
 \hline
-\textbf{\#} & \multicolumn{4}{c|}{\textbf{Indicador}} & \textbf{Medición} & \textbf{Fecha} \\
+\textbf{\#} & \multicolumn{4}{c|}{\textbf{Indicador}} & \textbf{Medicion} & \textbf{Fecha} \\
 \hline
-1.0 & \multicolumn{4}{p{9.2cm}|}{Intentos mensuales de envío de partes del archivo de Python que es el bot o del dataset hacia sitios externos de IA bloqueados por el filtro DLP y el firewall} & 9 alertas bloqueadas/mes & 14/11/2026 \\
+1.0
+  & \multicolumn{4}{p{9.2cm}|}{Intentos mensuales de envio de partes
+del archivo de Python que es el bot o del dataset hacia sitios
+externos de IA bloqueados por el filtro DLP y el firewall}
+  & 9 alertas bloqueadas/mes
+  & 14/11/2026 \\
 \hline
-2.0 & \multicolumn{4}{p{9.2cm}|}{Porcentaje de lotes del dataset de entrenamiento (\textbf{ACT-04}) anonimizados y validados con hash SHA-256} & 100\% de lotes en producción & 14/11/2026 \\
+2.0
+  & \multicolumn{4}{p{9.2cm}|}{Porcentaje de lotes del dataset de
+entrenamiento (\textbf{ACT-04}) anonimizados y validados con hash
+SHA-256}
+  & 100\% de lotes en produccion
+  & 14/11/2026 \\
 \hline
-3.0 & \multicolumn{4}{p{9.2cm}|}{Porcentaje de desarrolladores utilizando el asistente de código local montado en el clúster GPU interno (\textbf{ACT-05})} & 75\% completado & 14/11/2026 \\
+3.0
+  & \multicolumn{4}{p{9.2cm}|}{Porcentaje de desarrolladores utilizando
+el asistente de codigo local montado en el cluster GPU interno
+(\textbf{ACT-05})}
+  & 75\% completado
+  & 14/11/2026 \\
 \hline
 \end{longtable}
 \endgroup
 
 % ---------------------------------------------------------
-\subsection{Cálculo del Nivel de Riesgo}
+\clearpage
+\subsection{Calculo del nivel de riesgo}
 % ---------------------------------------------------------
 
-El nivel de riesgo de cada escenario se obtiene multiplicando la frecuencia anual ($F$) por el promedio de los cuatro rubros de impacto ($I_{\text{prom}}$):
+Para calcular el nivel de riesgo, primero sumamos los cuatro valores
+de impacto y dividimos el resultado entre cuatro. Donde en este caso
+tomamos la perdida de ganancia, el costo de responder, el impacto en
+la reputacion y las posibles multas.
+
+Despues de esto, multiplicamos ese promedio ($I_{\text{prom}}$) por
+la calificacion de frecuencia ($F$). En el primer caso nos da 16.25,
+que queda como critico, y en el segundo nos da 11.00, que queda como
+alto. En los dos casos utilizamos el rango de eventos anuales para
+elegir la frecuencia.
 
 \begin{enumerate}[leftmargin=1.5cm]
-    \item \textbf{Escenario 1 (RK-001: Intrusión en webserver, escalación a root y pivoteo hacia codeserver):}
+    \item \textbf{Escenario 1 (RK-001: Intrusion en webserver, escalacion a root y pivoteo hacia codeserver).}
     \begin{itemize}[noitemsep,topsep=2pt]
-        \item \textbf{Frecuencia Anual ($F_1$):} $F_1 = 5.0$ ($100 < N$ eventos anuales de escaneo y fuerza bruta sobre el servidor expuesto en la DMZ).
-        \item \textbf{Calificación General del Impacto ($I_{\text{prom},1}$):}
+        \item \textbf{Frecuencia Anual ($F_1$).} $F_1 = 5.0$ ($100 < N$ eventos anuales de escaneo y fuerza bruta sobre el servidor expuesto en la DMZ).
+        \item \textbf{Calificacion General del Impacto ($I_{\text{prom},1}$).}
         \[
-            I_{\text{prom},1} = \frac{I_{\text{ganancia}} + I_{\text{costo\_respuesta}} + I_{\text{reputacional}} + I_{\text{multas}}}{4} = \frac{4.0 + 2.0 + 4.0 + 3.0}{4} = \frac{13.0}{4} = 3.25
+          \begin{aligned}
+            I_{\text{prom},1} &= \frac{I_{\text{ganancia}} + I_{\text{costo\_respuesta}} + I_{\text{reputacional}} + I_{\text{multas}}}{4} \\
+                        &= \frac{4.0 + 2.0 + 4.0 + 3.0}{4} = \frac{13.0}{4} = 3.25
+          \end{aligned}
         \]
-        \item \textbf{Calificación General del Nivel de Riesgo ($R_1$):}
+        \item \textbf{Calificacion General del Nivel de Riesgo ($R_1$).}
         \[
-            R_1 = F_1 \times I_{\text{prom},1} = 5.0 \times 3.25 = 16.25 \quad \Longrightarrow \quad \textbf{Nivel de Riesgo: CRÍTICO}
+            R_1 = F_1 \times I_{\text{prom},1} = 5.0 \times 3.25 = 16.25 \quad \Longrightarrow \quad \textbf{Nivel de Riesgo: CRITICO}
         \]
     \end{itemize}
 
-    \item \textbf{Escenario 2 (RK-002: ShadowAI y exposición del archivo de Python que es el bot, dataset y BD):}
+    \item \textbf{Escenario 2 (RK-002: ShadowAI y exposicion del archivo de Python que es el bot, dataset y BD).}
     \begin{itemize}[noitemsep,topsep=2pt]
-        \item \textbf{Frecuencia Anual ($F_2$):} $F_2 = 4.0$ ($10 < N \leq 100$ eventos anuales de uso no autorizado de plataformas externas de IA).
-        \item \textbf{Calificación General del Impacto ($I_{\text{prom},2}$):}
+        \item \textbf{Frecuencia Anual ($F_2$).} $F_2 = 4.0$ ($10 < N \leq 100$ eventos anuales de uso no autorizado de plataformas externas de IA).
+        \item \textbf{Calificacion General del Impacto ($I_{\text{prom},2}$).}
         \[
-            I_{\text{prom},2} = \frac{I_{\text{ganancia}} + I_{\text{costo\_respuesta}} + I_{\text{reputacional}} + I_{\text{multas}}}{4} = \frac{4.0 + 1.0 + 3.0 + 3.0}{4} = \frac{11.0}{4} = 2.75
+          \begin{aligned}
+            I_{\text{prom},2} &= \frac{I_{\text{ganancia}} + I_{\text{costo\_respuesta}} + I_{\text{reputacional}} + I_{\text{multas}}}{4} \\
+                        &= \frac{4.0 + 1.0 + 3.0 + 3.0}{4} = \frac{11.0}{4} = 2.75
+          \end{aligned}
         \]
-        \item \textbf{Calificación General del Nivel de Riesgo ($R_2$):}
+        \item \textbf{Calificacion General del Nivel de Riesgo ($R_2$).}
         \[
             R_2 = F_2 \times I_{\text{prom},2} = 4.0 \times 2.75 = 11.00 \quad \Longrightarrow \quad \textbf{Nivel de Riesgo: ALTO}
         \]
