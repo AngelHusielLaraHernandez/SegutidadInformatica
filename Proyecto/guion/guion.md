@@ -10,9 +10,9 @@
 
 Para cubrir todas las especificaciones del proyecto y los criterios de la rubrica de manera equilibrada, la exposicion se divide en **4 bloques** (uno por integrante) y **10 diapositivas**:
 
-| Orden | Integrante | Secciones del Reporte que Cubre | Diapositivas | Tiempo Asignado | Temas Principales aExplicar |
+| Orden | Integrante | Secciones del Reporte que Cubre | Diapositivas | Tiempo Asignado | Temas Principales a Explicar |
 |:---:|---|---|---:|---:|---|
-| **1** | **Angel Husiel Lara Hernandez** | **Seccion 1** (Tabla 1) y **Seccion 2** (Figura 1 y Tabla 2) | **Diapositivas 1, 2 y 3** | **0:00 – 3:30** (3 min 30 s) | • Presentacion del equipo y objetivo del proyecto.<br>• **Definicion empresarial de VELOX Automotriz S.A. de C.V.** (incisos **a** al **g**: sector automotriz, nombre, objetivo de negocio con SLA de 99.9%, activo principal, mision, vision, modelo de negocio y catalogo de 4 productos/servicios).<br>• **Identificacion de activos (Que se debe proteger):** explicacion de las 4 zonas del Diagrama de Red (Figura 1) y del Registro de Activos `ACT-01` a `ACT-10` (Tabla 2: triada CIA y criticidad). |
+| **1** | **Angel Husiel Lara Hernandez** | **Seccion 1** (Tabla 1) y **Seccion 2** (Figura 1 y Tabla 2; Figura 2 como propuesta) | **Diapositivas 1, 2 y 3** | **0:00 – 3:30** (3 min 30 s) | • Presentacion del equipo y objetivo del proyecto.<br>• **Definicion empresarial de VELOX Automotriz S.A. de C.V.** (incisos **a** al **g**: sector automotriz, nombre, objetivo de negocio con SLA de 99.9%, activo principal, mision, vision, modelo de negocio y catalogo de 4 productos/servicios).<br>• **Identificacion de activos (Que se debe proteger):** alcance de VELOX Connect e IA, perimetro, DMZ y red interna del estado actual (Figura 1). Datos y entrenamiento son un grupo funcional dentro de la misma subred. Diez activos principales, con `ACT-10a` (Cloudflare) y `ACT-10b` (FortiGate) como componentes de `ACT-10` (Tabla 2: triada CIA y criticidad). |
 | **2** | **Rodrigo Lugo Manzano** | **Seccion 3** (Tablas 3 y 4) y **Seccion 4** (Tablas 5 y 6) | **Diapositivas 4 y 5** | **3:30 – 7:00** (3 min 30 s) | • **Registro de amenazas relevantes (De quien se debe proteger):** vulnerabilidades tecnicas CVE/CWE y CVSS en los activos (Tabla 3), incidentes reales del sector automotriz monitoreados en el semestre (*Continental AG, Yanfeng, Toyota, Hyundai, Volkswagen Cariad*) y los 6 actores de amenaza `THR-01` a `THR-06` con su taxonomia (Tabla 4).<br>• **Registro de los 10 escenarios de riesgo (`RK-001` a `RK-010`):** explicacion de la redaccion en **Forma 1** (impacto operativo) y **Forma 2** (actor y activo) de la Tabla 5, y estructura del **Registro General de Riesgos** de la Tabla 6. |
 | **3** | **Victor Jaziel Flores Colin** | **Seccion 5** (Metodologia, Secciones I–III de `RK-001`, y evaluacion completa I–V de `RK-002` + Seccion 5.3) | **Diapositivas 6 y 7** | **7:00 – 10:40** (3 min 40 s) | • **Metodologia de analisis de riesgos (Como se evalua):** estructura de las 5 secciones del formato de clase, escala de frecuencia anual ($0.0$ a $5.0$), los 4 rubros de impacto (perdida de ganancia, costo de respuesta, reputacion y multas por ISO/SAE 21434, TISAX y LFPDPPP) y formula $R = F \times I_{\text{prom}}$.<br>• **Calculo de `RK-001`:** $F_1 = 5.0 \times I_{\text{prom},1} = 3.25 \Rightarrow \mathbf{16.25}$ (**CRITICO**).<br>• **Evaluacion completa y Plan de Respuesta de `RK-002` (ShadowAI):** $F_2 = 4.0 \times I_{\text{prom},2} = 2.75 \Rightarrow \mathbf{11.00}$ (**ALTO**), decision **Mitigar / Evitar**, las 5 acciones del plan de respuesta (GPO, DLP, anonimizacion SHA-256, asistente local en cluster GPU `ACT-05` y Gitleaks/Guardrails) y sus 3 KRIs. |
 | **4** | **Adolfo de Jesus Garcia Cortes** | **Seccion 5** (Secciones IV y V de `RK-001`: Plan de Respuesta a discutir en clase, OPNsense, KRIs y cierre) | **Diapositivas 8, 9 y 10** | **10:40 – 14:20** (3 min 40 s) | • **Plan de Respuesta de `RK-001` (Elemento central a discutir en clase segun el punto 6 de las instrucciones):** justificacion de la respuesta **MITIGAR**, avance al 60%, problemas tecnicos e hitos logrados.<br>• **Las 5 acciones de respuesta de `RK-001`:** endurecimiento de SSH (llaves Ed25519 y Fail2Ban), retiro de SUID en `pkexec`/`ntfs-3g` y migracion a Debian 12 + Apache 2.4.62, limpieza del archivo de texto con las contraseñas en respaldos con HashiCorp Vault, segmentacion con **OPNsense** entre DMZ y red interna, y migracion de `codeserver` a Windows Server 2022 con bastion y MFA.<br>• **Verificacion con los 3 KRIs (Seccion V)** y **conclusiones finales del proyecto**. |
@@ -24,7 +24,7 @@ Para cubrir todas las especificaciones del proyecto y los criterios de la rubric
 Antes de armar las diapositivas y ensayar, todos los integrantes deben tener presentes los criterios que evalua la rubrica:
 
 1. **Presentacion / Material visual (2.0 puntos):**
-   - **Uso consistente de elementos visuales:** Todas las diapositivas deben usar la misma paleta del reporte (encabezados en azul claro `#CFE2F3`, etiquetas de severidad en coral `#F8CBAD` para Critico, naranja `#FCE4D6` para Alto y amarillo `#FFF2CC` para Medio) y la misma tipografia sin saturar de texto.
+   - **Uso consistente de elementos visuales:** Conservar el fondo azul `#0e2a47`, la tipografia y los elementos de la plantilla de Canva. En ambos diagramas, usar contornos punteados con la misma clave: azul para perimetro, naranja para DMZ, morado para red interna y verde azulado para el grupo funcional de datos y entrenamiento. El acceso administrativo propuesto va en verde. Incluir los nombres de las zonas para no depender solo del color; conservar las etiquetas de severidad separadas de esta clave.
    - **Legibilidad del contenido:** Titulos de al menos `32 pt` y texto o tablas resumidas de al menos `20 pt`. Nunca pegar capturas de las tablas completas del PDF; usar las tablas resumidas indicadas en cada bloque.
    - **Extension de las diapositivas:** Exactamente **10 diapositivas** para 14:20 minutos (aproximadamente 1 minuto y 25 segundos por diapositiva).
 2. **Exposicion individual (2.0 puntos):**
@@ -37,10 +37,12 @@ Antes de armar las diapositivas y ensayar, todos los integrantes deben tener pre
 
 ## 3. Guion Detallado por Integrante
 
+**Referencia para el ensayo:** La Figura 1 muestra el estado actual y la Figura 2 la propuesta. Las delimitaciones no cambian las direcciones ni convierten los grupos funcionales en nuevas subredes. Al explicar los planes y sus avances, hablamos de los valores del escenario del proyecto. El reparto se conserva: Angel presenta el estado actual y Adolfo explica la propuesta, sin agregar diapositivas ni tiempo al bloque.
+
 ---
 
 ### INTEGRANTE 1: Angel Husiel Lara Hernandez (0:00 – 3:30)
-**Temas que le tocan:** Portada, Definicion empresarial de VELOX Automotriz S.A. de C.V. (Seccion 1, incisos a–g), Diagrama de Red (Seccion 2.1, Figura 1) y Registro de Activos `ACT-01` a `ACT-10` (Seccion 2.2, Tabla 2).
+**Temas que le tocan:** Portada, Definicion empresarial de VELOX Automotriz S.A. de C.V. (Seccion 1, incisos a–g), Diagrama de Red actual (Seccion 2.1, Figura 1; propuesta en Figura 2) y Registro de Activos `ACT-01` a `ACT-10` (Seccion 2.2, Tabla 2).
 
 #### Diapositiva 1 · Portada (0:00 – 0:40)
 - **Contenido visual en la diapositiva:**
@@ -69,20 +71,26 @@ Antes de armar las diapositivas y ensayar, todos los integrantes deben tener pre
   >
   > *(Señalar el catalogo en pantalla)*. Nuestro catalogo tiene cuatro servicios que conectan con nuestro activo principal: primero, **VELOX Bot**, que es el archivo de Python que es el bot para responder dudas e interpretar codigos de falla OBD-II; segundo, el motor **Telemetry & OTA Engine** para analizar datos del CAN Bus y enviar actualizaciones a la unidad de control VCU; tercero, el **VELOX Connect Web Portal**; y cuarto, **VELOX AI Custom-Train**, con el que entrenamos al modelo.»
 
-#### Diapositiva 3 · Diagrama de Red y Registro de Activos `ACT-01` a `ACT-10` (2:00 – 3:30)
+#### Diapositiva 3 · Red Actual y Registro de Activos `ACT-01` a `ACT-10` (2:00 – 3:30)
 - **Contenido visual en la diapositiva:**
-  - El **Diagrama de Red de la Figura 1** dividido en las 4 zonas (*Perimetro*, *DMZ 192.168.177.0/24*, *Red Interna de Produccion 10.0.0.0/24* y *Zona de Datos y Entrenamiento IA 10.0.0.210–230*).
-  - Al costado, lista compacta de los 10 activos (`ACT-01` a `ACT-10`) con su propiedad **CIA** y nivel de **Criticidad** (Critico 5/5 o Alto 4/5).
+  - Diagrama del **estado actual (Figura 1)** de la infraestructura de **VELOX Connect e IA**. No representa toda la empresa, las redes de planta/OT ni las redes locales de los concesionarios.
+  - Contornos punteados y fondos suaves: **azul, perimetro** (`ACT-10a` Cloudflare y `ACT-10b` FortiGate); **naranja, DMZ** (`192.168.177.0/24`); **morado, red interna** (`10.0.0.0/24`).
+  - Dentro del contorno morado, **verde azulado para datos y entrenamiento**, como grupo funcional de la misma subred, sin presentarlo como otra VLAN.
+  - Apache (`ACT-07`) y respaldos (`ACT-09`) dentro de `webserver` (`ACT-06`); modelo y bot (`ACT-03`) dentro de `codeserver` (`ACT-08`).
+  - Flecha roja: ruta de riesgo por `eth1`. Linea punteada: flujo portal–bot por definir. No mezclar estas dos relaciones ni presentar SSH como trafico del proxy web de Cloudflare.
+  - Lista corta de activos; **ACT-10 sigue siendo un activo compuesto**, no dos activos adicionales. La Figura 2 se explica despues, en la diapositiva 9.
 - **Guion a decir:**
-  > «Para responder **que se debe proteger**, mapeamos la arquitectura de red en cuatro zonas y registramos diez activos principales, del ACT-01 al ACT-10.
+  > «Ahora bien, para ubicar que debemos proteger, este diagrama muestra la red actual de **VELOX Connect y los servicios de IA**, no toda la red de planta.
   >
-  > *(Señalar de arriba hacia abajo en el diagrama)*. Primero, en el perimetro tenemos **ACT-10**, que agrupa Cloudflare, los certificados TLS y el firewall FortiGate. De ahi el trafico de los clientes y concesionarios pasa a la **DMZ** en la subred `192.168.177.0/24`, donde esta **ACT-06**, el servidor Linux frontal **webserver** con Debian 8.11 y SSH en el puerto 13337. Sobre ese servidor corre **ACT-07**, que es **Apache 2.4.10** publicando el portal *VELOX Connect*, y ahi mismo se guardan localmente los archivos comprimidos de respaldo, que registramos como **ACT-09**.
+  > Primero, el contorno azul delimita el perimetro. Separamos **Cloudflare como ACT-10a** y **FortiGate como ACT-10b**, pero ambos siguen dentro de ACT-10. Por esto conservamos diez activos principales.
   >
-  > Despues, en la **Red Interna de Produccion** (`10.0.0.0/24`), tenemos **ACT-08**, el servidor **codeserver** con Windows Server 2012 R2. Este equipo es critico porque aloja a **ACT-03**, que es el modelo de inteligencia artificial y **el archivo de Python que es el bot**.
+  > Despues esta la **DMZ en naranja**, donde tenemos a webserver. Dentro del mismo equipo corren Apache y los respaldos locales. En la **red interna, marcada en morado**, tenemos a codeserver, que aloja el modelo y el archivo de Python que es el bot. Estos servicios no son servidores adicionales.
   >
-  > Finalmente, en la **Zona de Datos y Entrenamiento IA**, ubicamos a **ACT-02**, el servidor Linux de base de datos **dbserver**; a **ACT-01**, que es la base de datos PostgreSQL con los vectores del modelo, telemetria vehicular, numeros de serie VIN, GPS y datos personales de 450,000 propietarios; a **ACT-04**, que es el dataset de 2.4 TB con bitacoras CAN Bus y codigos OBD-II para entrenar al bot; y a **ACT-05**, el cluster fisico de servidores GPU NVIDIA A100 en la planta de Guanajuato.
+  > De igual forma, el grupo verde azulado contiene dbserver y la base de datos, el dataset y los servidores GPU. Todos comparten **10.0.0.0/24** con codeserver; el color los agrupa por funcion, no indica otra subred.
   >
-  > Un punto clave en este diagrama de partida es que `webserver` tiene dos tarjetas de red: una en la DMZ y otra conectada directo a la red interna (`10.0.0.78`). Con esto claro, le cedo la palabra a Rodrigo para que explique las amenazas y el registro de riesgos.»
+  > Un punto importante es que webserver tambien tiene **eth1 en 10.0.0.78**, conectada directamente a esa red interna. Por esto no la llamamos aislada. La flecha roja representa la ruta de movimiento lateral de RK-001. La linea punteada representa el flujo que necesita el portal hacia el bot, cuyo protocolo y puerto quedan por definir. SSH se considera por separado del recorrido web.
+  >
+  > Con esto claro, Rodrigo va a explicar las amenazas y el registro de riesgos.»
 
 ---
 
@@ -195,7 +203,7 @@ Antes de armar las diapositivas y ensayar, todos los integrantes deben tener pre
 ---
 
 ### INTEGRANTE 4: Adolfo de Jesus Garcia Cortes (10:40 – 14:20)
-**Temas que le tocan:** Discusion en clase del Plan de Respuesta al Riesgo de `RK-001` (Seccion 5.1, Seccion IV), arquitectura de segmentacion con **OPNsense**, Monitoreo con Indicadores Clave de Riesgo (Seccion V, KRIs) y Conclusiones finales del equipo.
+**Temas que le tocan:** Discusion en clase del Plan de Respuesta al Riesgo de `RK-001` (Seccion 5.1, Seccion IV), arquitectura propuesta de segmentacion con **OPNsense** (Figura 2), Monitoreo con Indicadores Clave de Riesgo (Seccion V, KRIs) y Conclusiones finales del equipo.
 
 #### Diapositiva 8 · Plan de Respuesta al Riesgo `RK-001` (10:40 – 12:10)
 - **Contenido visual en la diapositiva:**
@@ -204,7 +212,7 @@ Antes de armar las diapositivas y ensayar, todos los integrantes deben tener pre
     1. **[Completado · 01/11/2026] Endurecimiento de OpenSSH (`13337/tcp`) en `webserver`:** Llaves Ed25519, `PasswordAuthentication no`, bloqueo de `root`, `AllowTcpForwarding no` y `Fail2Ban`.
     2. **[Completado · 08/11/2026] Remocion de SUID y actualizacion de `webserver`:** Quitar bit SUID en `/usr/bin/pkexec` (`CVE-2021-4034`) y `ntfs-3g` (`CVE-2017-0358`), y migrar de Debian 8.11 a **Debian 12 LTS con Apache 2.4.62**.
     3. **[Completado · 12/11/2026] Proteccion de respaldos y secretos:** Eliminar el archivo de texto con las contraseñas en `/var/backups/` y `/root/`, rotar la clave de `developer2024` y resguardar secretos en **HashiCorp Vault** con respaldos cifrados fuera del servidor.
-    4. **[En progreso · 20/11/2026] Segmentacion interna con firewall `OPNsense`:** Eliminar el puente directo por `eth1` entre la DMZ y la red interna `10.0.0.0/24`, filtrando e inspeccionando todo el trafico y bloqueando RDP (`3389/tcp`) y WinRM (`5985/tcp`) desde la DMZ.
+    4. **[En progreso · 20/11/2026] Segmentacion interna con firewall `OPNsense`:** Eliminar el puente directo por `eth1` entre la DMZ y la red interna `10.0.0.0/24`, haciendo pasar el trafico entre ambas redes por OPNsense, con reglas para los flujos autorizados y bloqueo de RDP (`3389/tcp`) y WinRM (`5985/tcp`) desde la DMZ.
     5. **[En progreso · 30/11/2026] Migracion de `codeserver` y acceso por Bastion:** Actualizar `codeserver` (`10.0.0.201`) a **Windows Server 2022** y restringir la administracion del archivo de Python que es el bot a un servidor **Bastion con MFA**.
 - **Guion a decir:**
   > «Gracias, Victor. Como pide la sexta especificacion del proyecto, vamos a discutir a fondo el **Plan de Respuesta al Riesgo para `RK-001`**, que obtuvo la calificacion mas alta del registro con **16.25 (Nivel CRITICO)**.
@@ -217,24 +225,27 @@ Antes de armar las diapositivas y ensayar, todos los integrantes deben tener pre
   > - **Accion 3 (Completada):** Eliminamos el archivo de texto con las contraseñas que estaba dentro de los respaldos comprimidos en `/var/backups/` y `/root/`, rotamos la contraseña de la cuenta `developer2024` y trasladamos la gestion de credenciales a **HashiCorp Vault**, guardando los respaldos cifrados fuera del servidor frontal.
   > - **Acciones 4 y 5 (En progreso):** Las dos medidas que estan en ventana de implementacion son colocar **OPNsense** como firewall de segmentacion entre la DMZ y la red interna, y migrar `codeserver` de Windows Server 2012 R2 a **Windows Server 2022**, permitiendo administrar el archivo de Python que es el bot unicamente desde un servidor **Bastion con autenticacion multifactor (MFA)**. El principal reto tecnico que documentamos fue actualizar primero librerias de 32 bits en Debian y programar una ventana nocturna para no interrumpir las consultas del bot.»
 
-#### Diapositiva 9 · Arquitectura de Segmentacion con OPNsense y Monitoreo KRI (12:10 – 13:50)
+#### Diapositiva 9 · Red Propuesta con OPNsense y Monitoreo KRI (12:10 – 13:50)
 - **Contenido visual en la diapositiva:**
-  - Diagrama comparativo **Antes vs. Despues (Propuesta con OPNsense)**:
-    - *Antes:* `webserver` en DMZ conectado directamente por `eth1 (10.0.0.78)` a `codeserver (10.0.0.201)` permitiendo tunel SSH a RDP (`3389/tcp`) y WinRM (`5985/tcp`).
-    - *Despues:* `DMZ (webserver)` $\longrightarrow$ **`Firewall Interno OPNsense (Stateful Inspection + Reglas por Interfaz)`** $\longrightarrow$ `Red Interna (codeserver + Bastion MFA)`.
-  - Al pie, la tabla de la **Seccion V - Monitoreo (3 Indicadores Clave de Riesgo - KRIs de `RK-001`)**:
-    1. **KRI 1.0:** Intentos de fuerza bruta SSH en `13337/tcp` de `webserver` bloqueados por Fail2Ban $\rightarrow$ **0 accesos exitosos (42 IPs bloqueadas)** · *14/11/2026*.
-    2. **KRI 2.0:** Cantidad de binarios SUID vulnerables a escalacion local (`CVE-2021-4034`, `CVE-2016-5195`) o archivos de texto con contraseñas en claro en `webserver` $\rightarrow$ **0 vulnerabilidades / 0 archivos en claro** · *14/11/2026*.
-    3. **KRI 3.0:** Intentos de conexion TCP desde la interfaz interna de la DMZ (`10.0.0.78`) hacia los puertos `3389/tcp` (RDP) y `5985/tcp` (WinRM) de `codeserver` $\rightarrow$ **0 conexiones permitidas** · *14/11/2026*.
+  - Usar la **Figura 2: propuesta de tratamiento de RK-001**, conservando la clave de colores de la Figura 1.
+  - Perimetro azul: `Cloudflare (ACT-10a)` y `FortiGate (ACT-10b)`, como componentes de `ACT-10`.
+  - DMZ naranja: `webserver` y Apache. Entre DMZ y red interna colocar **OPNsense, propuesto**.
+  - Red interna morada: `codeserver` y el bot; dentro de ella, grupo verde azulado de BD, dataset y GPU. No inventar una VLAN o subred nueva para los datos.
+  - Acceso administrativo propuesto en verde: **bastion con MFA**. Su contorno no implica una nueva VLAN ya definida.
+  - Resaltar: **retirar el enlace directo por eth1**, permitir solo el flujo necesario del servicio y bloquear/registrar RDP `3389/tcp` y WinRM `5985/tcp` desde la DMZ.
+  - Los contornos de color delimitan zonas o grupos. Las cajas rotuladas **propuesto** corresponden a medidas en progreso, no a equipos ya instalados del inventario actual.
+  - Sin asignar IP, interfaces ni puertos nuevos a OPNsense o al flujo portal–bot hasta definirlos y verificarlos.
+  - Resumen de los **3 KRIs de RK-001**, con los valores del ejercicio al **14/11/2026**: 0 accesos SSH exitosos y 42 IP bloqueadas; 0 binarios SUID vulnerables / 0 archivos de claves en claro; 0 conexiones RDP/WinRM permitidas. **Siguiente revision: 14/12/2026**. Estos valores no prueban que OPNsense ya este instalado.
 - **Guion a decir:**
-  > «Para profundizar en la **Accion 4**, en esta diapositiva mostramos como cambia la arquitectura con **OPNsense**.
+  > «Para explicar la accion cuatro, ahora pasamos del estado actual a la **red propuesta de la Figura 2**. Conservamos los mismos colores para seguir las zonas sin cambiar su significado.
   >
-  > *(Señalar el diagrama en pantalla)*. En la red original, `webserver` tenia conectada su segunda interfaz `eth1` directamente a la subred `10.0.0.0/24`, lo que permitia que cualquiera que comprometiera el servidor web usara un tunel SSH para alcanzar los puertos administrativos RDP (`3389/tcp`) y WinRM (`5985/tcp`) de `codeserver`. Con nuestra implementacion, retiramos ese enlace directo e interponemos **OPNsense** como firewall interno de inspeccion de estado (*stateful*). Asi, OPNsense aplica reglas por interfaz: unicamente deja pasar las peticiones especificas de la aplicacion *VELOX Connect* hacia el bot y bloquea y registra cualquier intento de abrir sesiones RDP o WinRM desde la DMZ hacia la red interna.
+  > En el escenario actual, webserver tiene una interfaz directamente en la red interna. Con la propuesta vamos a retirar ese enlace por eth1 y hacer que el trafico entre la DMZ y la red interna pase por **OPNsense**. Para esto, permitiremos solo los flujos necesarios del servicio y bloquearemos y registraremos los intentos por RDP y WinRM desde la DMZ.
   >
-  > *(Señalar la tabla de KRIs al pie)*. Finalmente, en la **Seccion V de Monitoreo**, establecimos la siguiente evaluacion para el **14 de diciembre de 2026** mediante tres Indicadores Clave de Riesgo (KRIs):
-  > 1. El primer KRI mide los intentos de fuerza bruta SSH en el puerto 13337 de `webserver`, donde Fail2Ban registra **0 accesos exitosos y 42 direcciones IP bloqueadas**;
-  > 2. El segundo KRI verifica que existan **0 binarios SUID vulnerables a escalacion local y 0 archivos de texto con contraseñas en claro** dentro del servidor; y
-  > 3. El tercer KRI monitorea en los registros del firewall que existan **0 conexiones TCP permitidas** desde la DMZ hacia los puertos 3389 y 5985 de `codeserver`.»
+  > Donde en este caso, **OPNsense y el bastion con MFA todavia son medidas propuestas y en progreso**. No los estamos presentando como instalados. Tambien falta definir las interfaces, las direcciones y las reglas exactas del flujo entre el portal y el bot. Los datos y los servidores GPU siguen dentro de la misma subred interna.
+  >
+  > De igual forma, usamos tres indicadores para el seguimiento: accesos SSH exitosos e IP bloqueadas, binarios SUID vulnerables y claves en claro, y conexiones permitidas hacia RDP y WinRM. Los valores registrados son parte del ejercicio y no prueban que ya se haya instalado OPNsense.
+  >
+  > La siguiente revision esta programada para el **14 de diciembre de 2026**. Con esto, ademas de proponer el control, tenemos como revisar si esta cumpliendo su funcion.»
 
 #### Diapositiva 10 · Conclusiones y Cierre del Proyecto (13:50 – 14:20)
 - **Contenido visual en la diapositiva:**

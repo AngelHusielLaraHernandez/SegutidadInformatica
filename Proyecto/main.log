@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  17 NOV 2026 11:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 NOV 2026 07:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1164,94 +1164,101 @@ File: portada_img/izq.png Graphic file (type png)
 Package pdftex.def Info: portada_img/izq.png  used on input line 239.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [1]
-LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 396.
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 400.
+Package pdftex.def Info: portada_img/der.png  used on input line 304.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 400.
+Package pdftex.def Info: portada_img/izq.png  used on input line 304.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [2]
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 440.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 440.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+ [3]
 ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 565.
+Package pdftex.def Info: portada_img/der.png  used on input line 610.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 565.
-(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [3]
-File: portada_img/der.png Graphic file (type png)
-<use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 589.
-(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
-File: portada_img/izq.png Graphic file (type png)
-<use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 589.
+Package pdftex.def Info: portada_img/izq.png  used on input line 610.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [4]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 736.
+Package pdftex.def Info: portada_img/der.png  used on input line 624.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 736.
+Package pdftex.def Info: portada_img/izq.png  used on input line 624.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [5]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 854.
+Package pdftex.def Info: portada_img/der.png  used on input line 775.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 854.
+Package pdftex.def Info: portada_img/izq.png  used on input line 775.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [6]
-ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1032.
+Package pdftex.def Info: portada_img/der.png  used on input line 899.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1032.
+Package pdftex.def Info: portada_img/izq.png  used on input line 899.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [7]
 ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1235.
+Package pdftex.def Info: portada_img/der.png  used on input line 1077.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1235.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1077.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [8]
-File: portada_img/der.png Graphic file (type png)
-<use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1238.
-(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
-File: portada_img/izq.png Graphic file (type png)
-<use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1238.
-(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [9]
 ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1468.
+Package pdftex.def Info: portada_img/der.png  used on input line 1280.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1468.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1280.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+ [9]
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 1283.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 1283.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [10]
-Underfull \hbox (badness 1286) in paragraph at lines 1595--1595
+ignored: Infinite glue shrinkage found in box being split
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 1513.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 1513.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+ [11]
+Underfull \hbox (badness 1286) in paragraph at lines 1640--1640
 []|\OT1/cmr/m/n/9 Intentos de co-ne-xion TCP des-de la in-ter-faz in-ter-na de la
  []
 
@@ -1259,71 +1266,71 @@ Underfull \hbox (badness 1286) in paragraph at lines 1595--1595
 ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1599.
+Package pdftex.def Info: portada_img/der.png  used on input line 1644.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1599.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1644.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
-[11{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[12{/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1602.
+Package pdftex.def Info: portada_img/der.png  used on input line 1647.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1602.
-(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [12]
-ignored: Infinite glue shrinkage found in box being split
-File: portada_img/der.png Graphic file (type png)
-<use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1825.
-(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
-File: portada_img/izq.png Graphic file (type png)
-<use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1825.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1647.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [13]
 ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1952.
+Package pdftex.def Info: portada_img/der.png  used on input line 1870.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1952.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1870.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [14]
+ignored: Infinite glue shrinkage found in box being split
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 1956.
+Package pdftex.def Info: portada_img/der.png  used on input line 1997.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 1956.
+Package pdftex.def Info: portada_img/izq.png  used on input line 1997.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
  [15]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 2005.
+Package pdftex.def Info: portada_img/der.png  used on input line 2001.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 2005.
+Package pdftex.def Info: portada_img/izq.png  used on input line 2001.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [16
+ [16]
+File: portada_img/der.png Graphic file (type png)
+<use portada_img/der.png>
+Package pdftex.def Info: portada_img/der.png  used on input line 2050.
+(pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
+File: portada_img/izq.png Graphic file (type png)
+<use portada_img/izq.png>
+Package pdftex.def Info: portada_img/izq.png  used on input line 2050.
+(pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
+ [17
 
 ]
 File: portada_img/der.png Graphic file (type png)
 <use portada_img/der.png>
-Package pdftex.def Info: portada_img/der.png  used on input line 2009.
+Package pdftex.def Info: portada_img/der.png  used on input line 2054.
 (pdftex.def)             Requested size: 36.0346pt x 42.67912pt.
 File: portada_img/izq.png Graphic file (type png)
 <use portada_img/izq.png>
-Package pdftex.def Info: portada_img/izq.png  used on input line 2009.
+Package pdftex.def Info: portada_img/izq.png  used on input line 2054.
 (pdftex.def)             Requested size: 36.13269pt x 42.67912pt.
- [17] (./main.aux
+ [18] (./main.aux
 LaTeX Info: Redefining \sptext on input line 8.
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
@@ -1333,24 +1340,24 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F3AE1B86E27661B191A0049BA837E9F4;3873.
+(rerunfilecheck)             Checksum: 682D49DEED9BDE2F10922B42E0D8BEF6;3873.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36916 strings out of 467525
- 718261 string characters out of 5418982
- 1699596 words of memory out of 5000000
- 65179 multiletter control sequences out of 15000+600000
- 645117 words of font info for 103 fonts, out of 8000000 for 9000
+ 36989 strings out of 467525
+ 719417 string characters out of 5418982
+ 1699751 words of memory out of 5000000
+ 65250 multiletter control sequences out of 15000+600000
+ 644772 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,94p,765b,2809s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on main.pdf (19 pages, 685026 bytes).
+ 84i,15n,94p,765b,2809s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on main.pdf (20 pages, 681527 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 295 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
  239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

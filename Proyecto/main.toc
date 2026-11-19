@@ -2,15 +2,15 @@
 \contentsline {section}{\numberline {1}Definicion de la empresa}{1}{section.1}%
 \contentsline {section}{\numberline {2}Identificacion de activos de tecnologia e informacion}{2}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Diagrama de Red de la Organizacion}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Registro de Activos de Informacion y Tecnologia}{3}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Registro de amenazas relevantes}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Vulnerabilidades Tecnicas en los Activos}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Registro de Actores de Amenaza}{5}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Registro de los diez escenarios de riesgo}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Escenarios de Riesgo en Forma 1 y Forma 2}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Registro general de riesgos}{8}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Analisis de dos riesgos y planes de respuesta}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Evaluacion de RK-001 por compromiso de webserver y codeserver}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Evaluacion de RK-002 por fuga de informacion mediante ShadowAI}{13}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Calculo del nivel de riesgo}{16}{subsection.5.3}%
-\contentsline {section}{Referencias}{17}{section*.2}%
+\contentsline {subsection}{\numberline {2.2}Registro de Activos de Informacion y Tecnologia}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Registro de amenazas relevantes}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Vulnerabilidades Tecnicas en los Activos}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Registro de Actores de Amenaza}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Registro de los diez escenarios de riesgo}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Escenarios de Riesgo en Forma 1 y Forma 2}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Registro general de riesgos}{9}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Analisis de dos riesgos y planes de respuesta}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Evaluacion de RK-001 por compromiso de webserver y codeserver}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Evaluacion de RK-002 por fuga de informacion mediante ShadowAI}{14}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Calculo del nivel de riesgo}{17}{subsection.5.3}%
+\contentsline {section}{Referencias}{18}{section*.3}%

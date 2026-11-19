@@ -261,142 +261,185 @@ falla.
 \subsection{Diagrama de Red de la Organizacion}
 % ---------------------------------------------------------
 
-Para ubicar cada equipo, primero separamos la red en cuatro zonas.
+Para ubicar cada equipo, primero delimitamos el alcance de la red.
+En este caso, documentamos la infraestructura de \textbf{VELOX Connect}
+y los servicios de IA. No estamos representando toda la red corporativa,
+los equipos de planta u OT, ni las redes locales de los concesionarios.
+Estos ultimos aparecen como usuarios externos del servicio.
+
+
 Con el diagrama de la figura~\ref{fig:red-velox-proy} podemos seguir
-por donde entra una peticion del conductor o del concesionario y
-cuales equipos se necesitan para procesarla.
+los equipos del escenario actual. Para esto, tomamos en cuenta lo siguiente:
 \begin{enumerate}[noitemsep,topsep=2pt]
-    \item \textbf{Zona externa y perimetro.} Los conductores,
+    \item \textbf{Acceso externo y perimetro.} Los conductores,
     vehiculos conectados y concesionarios entran desde internet por
-    HTTPS. Para esto, la conexion pasa por Cloudflare y el firewall
-    perimetral FortiGate.
-    \item \textbf{Zona desmilitarizada (DMZ).} En la subred
-    192.168.177.0/24 ponemos webserver. Su interfaz eth0 tiene la
-    IP 192.168.177.129. Aqui corren Apache 2.4.10 en 80/tcp, donde
-    se publica el portal \textit{VELOX Connect}, y OpenSSH 6.7p1 en
-    13337/tcp. La segunda interfaz es eth1, con la IP 10.0.0.78, y
-    conecta con la red interna.
-    \item \textbf{Red interna de produccion.} Dentro de la subred
-    10.0.0.0/24 se encuentra codeserver con la IP 10.0.0.201.
-    Utiliza Windows Server 2012 R2 Standard, con RDP en 3389/tcp y
-    WinRM en 5985/tcp para administracion. Donde en este caso, el
-    archivo de Python que es el bot corre en este equipo junto con
-    herramientas de ingenieria automotriz.
-    \item \textbf{Zona de datos y entrenamiento.} El servidor de la
-    base de datos esta en 10.0.0.210, el dataset de telemetria en
-    10.0.0.220 y los servidores GPU en 10.0.0.230. Aqui guardamos
-    los datos del modelo, los registros de los vehiculos y se
-    realiza su entrenamiento.
+    HTTPS. Separamos Cloudflare como \textbf{ACT-10a} y FortiGate como
+    \textbf{ACT-10b}. Los dos forman parte del activo compuesto
+    \textbf{ACT-10} del registro, por lo que conservamos diez activos
+    principales y distinguimos sus componentes.
+    \item \textbf{DMZ.} En 192.168.177.0/24 se encuentra webserver,
+    con eth0 en 192.168.177.129. Dentro del mismo equipo estan Apache
+    en 80/tcp y los respaldos locales. SSH utiliza 13337/tcp y se
+    muestra como acceso administrativo separado del recorrido web.
+    El alcance real de esa regla perimetral queda por verificar.
+    \item \textbf{Red interna de produccion.} codeserver tiene
+    10.0.0.201 y aloja el archivo de Python que es el bot. webserver
+    tambien tiene una interfaz en esta red, eth1 con 10.0.0.78.
+    Por esto, no la llamamos aislada. La flecha roja marca la ruta
+    de movimiento lateral que analizamos en RK-001.
+    \item \textbf{Datos y entrenamiento.} dbserver tiene 10.0.0.210,
+    el repositorio del dataset 10.0.0.220 y el cluster GPU 10.0.0.230.
+    Estos equipos comparten 10.0.0.0/24 con codeserver. Con los
+    contornos punteados distinguimos el perimetro, la DMZ y la red
+    interna. Dentro de esta ultima, datos y entrenamiento se agrupan
+    por su funcion, pero esto no representa otra subred ni una VLAN.
 \end{enumerate}
+
+
+De igual forma, el portal necesita entregar las solicitudes al bot.
+Marcamos esa relacion con una linea punteada, por que el protocolo,
+el puerto y su implementacion quedan por definir. Esta relacion de
+aplicacion no es la flecha roja del riesgo ni una conexion que ya
+hayamos comprobado en las practicas.
+
 
 \begin{figure}[H]
 \centering
-\resizebox{0.99\textwidth}{!}{%
 \begin{tikzpicture}[
-    font=\sffamily\scriptsize,
-    zone/.style={draw=armblue, dashed, thick, rounded corners=6pt, inner sep=11pt},
-    srv/.style={draw=black!80, fill=csfGV, thick, rounded corners=3pt, text width=4.6cm, minimum height=1.7cm, align=center, inner sep=4pt},
-    crit/.style={draw=black!85, fill=csfRS!45, thick, rounded corners=3pt, text width=4.8cm, minimum height=1.7cm, align=center, inner sep=4pt},
-    data/.style={draw=black!85, fill=csfID, thick, rounded corners=3pt, text width=4.6cm, minimum height=1.7cm, align=center, inner sep=4pt},
-    ext/.style={draw=armblue, fill=xlSummary, thick, rounded corners=4pt, text width=3.3cm, minimum height=1.5cm, align=center, inner sep=4pt},
-    arr/.style={-Stealth, thick, draw=black!80},
-    piv/.style={-Stealth, very thick, dashed, draw=red!75!black}
+    font=\sffamily\footnotesize,
+    execute at begin node={\hyphenpenalty=10000},
+    box/.style={draw=armblue, thick, rounded corners=3pt, fill=xlSummary,
+        text width=4.25cm, minimum height=1.45cm, align=center, inner sep=5pt},
+    host/.style={box, fill=csfGV, minimum height=3.2cm},
+    dat/.style={box, fill=csfID, minimum height=2.3cm},
+    arr/.style={-Stealth, thick},
+    pending/.style={-Stealth, densely dotted, thick, draw=black!65},
+    risk/.style={-Stealth, dashed, very thick, draw=red!75!black}
 ]
+\node[box] (clientes) at (0,0) {\textbf{Usuarios externos}\\
+Conductores, vehiculos\\y concesionarios\\HTTPS 443/tcp};
+\node[box] (cloud) at (5.5,0) {\textbf{[ACT-10a] Cloudflare}\\WAF, CDN y DNS\\Acceso web HTTPS};
+\node[box] (forti) at (11,0) {\textbf{[ACT-10b] FortiGate}\\Firewall perimetral\\Reglas hacia la DMZ};
+\draw[arr] (clientes) -- (cloud);
+\draw[arr] (cloud) -- (forti);
 
-% ==================== FILA 1: EXTERNO Y DMZ ====================
-\node[ext] (internet) at (0, 0) {
-    \textbf{Clientes y Concesionarios}\\
-    Vehiculos Conectados\\
-    (HTTPS 443/tcp)
-};
+\node[host] (web) at (0,-4.2) {\textbf{DMZ: [ACT-06] webserver}\\
+Debian 8.11 / Kernel 3.16\\
+eth0: 192.168.177.129\\eth1: 10.0.0.78\\[4pt]
+\textbf{Servicios dentro del equipo}\\
+{}[ACT-07] Apache 2.4.10, HTTP 80\\
+{}[ACT-09] Respaldos locales\\/var/backups/\\SSH 13337/tcp};
+\node[host,fill=csfRS!35] (code) at (5.5,-4.2) {\textbf{[ACT-08] codeserver}\\
+Windows Server 2012 R2\\10.0.0.201\\
+RDP 3389 / WinRM 5985\\[6pt]
+\textbf{Servicio dentro del equipo}\\
+{}[ACT-03] Modelo de IA y bot\\Archivo de Python\\Herramientas de ingenieria};
+\node[box,fill=white,text width=4.25cm] (nota) at (11,-4.2) {\textbf{Lectura de las conexiones}\\[4pt]
+Continua: relacion del escenario.\\[3pt]
+Punteada: flujo portal--bot\\por definir.\\[3pt]
+Roja: ruta por eth1 (RK-001).\\[3pt]
+Los recuadros de servicios\\no son equipos adicionales.};
+\draw[arr] (forti.south) -- ++(0,-0.75) -| node[pos=0.35,above,font=\scriptsize,fill=white]{HTTP 80 hacia eth0} ([xshift=60pt]web.north);
+\draw[pending] ([yshift=8pt]web.east) -- ([yshift=8pt]code.west);
+\draw[risk] ([yshift=-32pt]web.east) -- ([yshift=-32pt]code.west);
 
-\node[ext] (waf) at (5.0, 0) {
-    \textbf{[ACT-10] WAF y Perimetro}\\
-    Cloudflare + FortiGate\\
-    (TLS 1.2/1.3 $\rightarrow$ HTTP)
-};
-
-\node[srv] (webserver) at (11.2, 0) {
-    \textbf{[ACT-06] webserver (Linux)}\\
-    Debian GNU/Linux 8.11 (Kernel 3.16)\\
-    eth0: 192.168.177.129\\
-    eth1: 10.0.0.78 | SSH: 13337/tcp
-};
-
-\node[srv] (apache) at (17.4, 0) {
-    \textbf{[ACT-07] Servicio Web Apache}\\
-    Apache/2.4.10 (VELOX Connect) 80/tcp\\
-    \textbf{[ACT-09] Respaldos Locales:}\\
-    Archivo comprimido en /var/backups/
-};
-
-% ==================== FILA 2: RED INTERNA PRODUCCION ====================
-\node[crit] (codeserver) at (11.2, -3.9) {
-    \textbf{[ACT-08] codeserver (Windows)}\\
-    Windows Server 2012 R2 Standard\\
-    IP Interna: 10.0.0.201\\
-    RDP 3389/tcp | WinRM 5985/tcp\\
-    Cuenta: developer2024
-};
-
-\node[crit] (botmodel) at (17.4, -3.9) {
-    \textbf{[ACT-03] Modelo de IA}\\
-    Motor \textit{VELOX-Core LLM}\\
-    Archivo de Python que es el bot\\
-    Reglas de diagnostico y telemetria VCU
-};
-
-% ==================== FILA 3: ZONA DE DATOS Y ENTRENAMIENTO IA ====================
-\node[data] (dbsrv) at (5.0, -7.8) {
-    \textbf{[ACT-02] Servidor de Base de Datos}\\
-    PostgreSQL / VectorDB (10.0.0.210:5432)\\
-    \textbf{[ACT-01] Base de Datos con el}\\
-    \textbf{Modelo de IA, Telemetria y PII}
-};
-
-\node[data] (dataset) at (11.2, -7.8) {
-    \textbf{[ACT-04] Dataset de Entrenamiento}\\
-    Repositorio NAS IA (10.0.0.220)\\
-    Corpus CAN Bus y OBD-II (2.4 TB)\\
-    Datos de calibracion del bot
-};
-
-\node[data] (gpucluster) at (17.4, -7.8) {
-    \textbf{[ACT-05] Infraestructura Fisica IA}\\
-    Cluster de Servidores GPU (10.0.0.230)\\
-    Aceleradores NVIDIA A100\\
-    Procesamiento y entrenamiento del bot
-};
-
-% ==================== FONDOS DE ZONAS ====================
+\node[dat] (db) at (0,-9.1) {\textbf{[ACT-02] dbserver}\\10.0.0.210:5432\\PostgreSQL / datos vectoriales\\[4pt]
+\textbf{[ACT-01] Base de datos}\\Datos del modelo, telemetria y PII};
+\node[dat] (dataset) at (5.5,-9.1) {\textbf{[ACT-04] Dataset}\\Repositorio NAS: 10.0.0.220\\Corpus CAN Bus y OBD-II\\Datos de entrenamiento};
+\node[dat] (gpu) at (11,-9.1) {\textbf{[ACT-05] Cluster GPU}\\10.0.0.230\\Aceleradores NVIDIA A100\\Entrenamiento del modelo};
+\draw[arr] (code.south) -- ++(0,-0.7) -| node[pos=0.3,above,font=\scriptsize,fill=white]{SQL: 5432/tcp} (db.north);
+\draw[arr] (db) -- (dataset);
+\draw[arr] (dataset) -- (gpu);
+\draw[arr] (gpu.north) -- ++(0,1.25) -| ([xshift=45pt]code.south);
+\node[font=\scriptsize,align=center] at (5.5,-11.55) {Produccion, datos y entrenamiento comparten 10.0.0.0/24.\\
+DMZ: 192.168.177.0/24. SSH 13337 es una ruta administrativa separada, por verificar.\\
+BD a dataset: ingesta. Dataset a GPU: entrenamiento. GPU a bot: pesos del modelo.};
+% Delimitaciones funcionales y de red en la capa de fondo.
 \begin{scope}[on background layer]
-    \node[zone, fill=csfGV!25, fit=(webserver) (apache), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Zona Desmilitarizada: DMZ Perimetral (192.168.177.0/24)}] (dmzbox) {};
-    \node[zone, fill=csfRS!15, fit=(codeserver) (botmodel), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Red Interna de Produccion Aislada (10.0.0.0/24)}] (intbox) {};
-    \node[zone, fill=csfID!25, fit=(dbsrv) (dataset) (gpucluster), label={[anchor=south west, font=\sffamily\scriptsize\bfseries]north west:Zona de Datos y Computo de Entrenamiento IA (10.0.0.210 a 10.0.0.230)}] (databox) {};
+    \node[draw=armblue, densely dashed, thick, rounded corners=5pt,
+        fill=armblue!5, fit=(cloud) (forti), inner sep=7pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=armblue]above:Perimetro externo (ACT-10)}] {};
+    \node[draw=orange!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=orange!5, fit=(web), inner sep=6pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=orange!80!black]above:DMZ: 192.168.177.0/24}] {};
+    % La forma escalonada incluye codeserver y los tres activos de datos,
+    % sin encerrar webserver ni el recuadro explicativo.
+    \path[draw=violet!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=violet!4]
+        (2.95,-2.15) -- (8.05,-2.15) -- (8.05,-7.05) --
+        (13.65,-7.05) -- (13.65,-10.65) -- (-2.65,-10.65) --
+        (-2.65,-7.05) -- (2.95,-7.05) -- cycle;
+    \node[font=\sffamily\scriptsize\bfseries,text=violet!80!black,
+        anchor=south,fill=white,inner sep=2pt] at (5.5,-2.15)
+        {Red interna: 10.0.0.0/24};
+    \node[draw=teal!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=teal!4, fit=(db) (dataset) (gpu), inner sep=6pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=teal!80!black,fill=white]above:Datos y entrenamiento (grupo funcional)}] {};
 \end{scope}
-
-% ==================== CONEXIONES ====================
-\draw[arr] (internet.east) -- node[above=2pt]{\tiny HTTPS 443} (waf.west);
-\draw[arr] (waf.east) -- node[above=2pt]{\tiny HTTP 80} node[below=2pt]{\tiny SSH 13337} (webserver.west);
-\draw[arr] (webserver.east) -- node[above=2pt]{\tiny Local} (apache.west);
-
-% Pivoteo SSH entre webserver y codeserver
-\draw[piv] (webserver.south) -- node[right=4pt, pos=0.42, text=red!75!black]{\tiny \textbf{Riesgo de movimiento lateral entre zonas}} (codeserver.north);
-
-% Relacion entre codeserver y el archivo de Python que es el bot
-\draw[arr] (codeserver.east) -- node[above=2pt]{\tiny Aloja} (botmodel.west);
-
-% Conexiones hacia la Zona de Datos e IA
-\draw[arr] (codeserver.west) -| node[above, pos=0.25]{\tiny Consultas SQL / Vectores (5432/tcp)} (dbsrv.north);
-\draw[arr] (botmodel.south) -- node[right=4pt, pos=0.38]{\tiny Inferencia / Pesos} (gpucluster.north);
-\draw[arr] (dbsrv.east) -- node[above=2pt]{\tiny Ingesta} (dataset.west);
-\draw[arr] (dataset.east) -- node[above=2pt]{\tiny Entrenamiento} (gpucluster.west);
-
-\end{tikzpicture}%
-}
-\caption{Diagrama de red de \textit{VELOX Automotriz S.A. de C.V.}}
+\end{tikzpicture}
+\caption{Estado actual de la infraestructura de VELOX Connect e IA.}
 \label{fig:red-velox-proy}
 \end{figure}
+
+
+Para mostrar la respuesta al riesgo, separamos la propuesta en la
+figura~\ref{fig:red-velox-propuesta}. Aqui OPNsense todavia es una
+medida en progreso, como se indica en el plan de RK-001. No lo
+presentamos como un equipo instalado ni como otro activo del
+inventario actual.
+
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+    font=\sffamily\footnotesize,
+    execute at begin node={\hyphenpenalty=10000},
+    box/.style={draw=armblue, thick, rounded corners=3pt, fill=xlSummary,
+        text width=4.25cm, minimum height=1.6cm, align=center, inner sep=5pt},
+    arr/.style={-Stealth, thick},
+    prop/.style={box, dashed, fill=csfPR}
+]
+\node[box] (cloud) at (0,0) {\textbf{[ACT-10a] Cloudflare}\\Acceso web a VELOX Connect};
+\node[box] (forti) at (5.5,0) {\textbf{[ACT-10b] FortiGate}\\Filtrado perimetral};
+\node[box,fill=csfGV] (web) at (11,0) {\textbf{DMZ: webserver}\\{}[ACT-06], Apache [ACT-07]\\Conservar el servicio del portal};
+\draw[arr] (cloud) -- (forti);
+\draw[arr] (forti) -- (web);
+\node[prop] (fw) at (11,-3.4) {\textbf{OPNsense: propuesto}\\Firewall entre DMZ y red interna\\Permitir solo flujos autorizados\\Bloquear y registrar RDP/WinRM};
+\node[box,fill=csfRS!30] (code) at (5.5,-3.4) {\textbf{Produccion: codeserver}\\{}[ACT-08] y bot [ACT-03]\\Migracion de Windows en progreso};
+\node[box,fill=csfID] (datos) at (0,-3.4) {\textbf{Datos y entrenamiento}\\BD [ACT-01/02], dataset [ACT-04]\\GPU [ACT-05]\\Misma subred interna del escenario};
+\draw[arr] (web) -- node[right,font=\scriptsize]{Trafico del servicio} (fw);
+\draw[arr] (fw) -- (code);
+\draw[arr] (code) -- (datos);
+\node[prop] (admin) at (5.5,-6.7) {\textbf{Administracion propuesta}\\Bastion con MFA\\Acceso administrativo autorizado};
+\draw[arr] (admin) -- (code);
+\node[align=left,text width=4.25cm,font=\scriptsize] at (0,-6.7) {\textbf{Cambio de la ruta interna}\\
+Retirar la conexion directa por eth1. El trafico entre DMZ y red interna debe pasar por OPNsense.};
+\node[align=left,text width=4.25cm,font=\scriptsize] at (11,-6.7) {\textbf{Pendiente de definir}\\
+Interfaces e IP de OPNsense, enrutamiento y reglas del flujo portal--bot. No se asignan puertos nuevos sin verificarlos.};
+% Los colores de las zonas se conservan respecto al estado actual.
+\begin{scope}[on background layer]
+    \node[draw=armblue, densely dashed, thick, rounded corners=5pt,
+        fill=armblue!5, fit=(cloud) (forti), inner sep=7pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=armblue]above:Perimetro externo (ACT-10)}] {};
+    \node[draw=orange!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=orange!5, fit=(web), inner sep=7pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=orange!80!black]above:DMZ: 192.168.177.0/24}] {};
+    \node[draw=violet!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=violet!4, fit=(code) (datos), inner sep=9pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=violet!80!black]above:Red interna: 10.0.0.0/24}] {};
+    \node[draw=teal!80!black, densely dashed, thick, rounded corners=5pt,
+        fill=teal!4, fit=(datos), inner sep=5pt] {};
+    \node[draw=green!45!black, densely dashed, thick, rounded corners=5pt,
+        fill=green!4, fit=(admin), inner sep=7pt,
+        label={[font=\sffamily\scriptsize\bfseries,text=green!45!black]below:Acceso administrativo propuesto}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Propuesta de tratamiento de RK-001. Los contornos de color delimitan zonas; OPNsense y el bastion son medidas propuestas.}
+\label{fig:red-velox-propuesta}
+\end{figure}
+
+
+
 
 % ---------------------------------------------------------
 \subsection{Registro de Activos de Informacion y Tecnologia}
@@ -531,7 +574,7 @@ concesionarios se comunican con el bot.
 \textbf{ACT-08}
   & \textbf{Servidor Interno Windows (codeserver)}
   & Infraestruc\-tura / Servidor Produccion
-  & Red Interna aislada (10.0.0.201/24)
+  & Red interna de produccion (10.0.0.201/24)
   & Es el equipo interno que aloja el archivo de Python que es el bot y
 herramientas de ingenieria automotriz. Tiene \textbf{Windows Server
 2012 R2 Standard} (version 6.3.9600), la cuenta developer2024, RDP
@@ -551,13 +594,15 @@ archivo de texto con las contraseñas.
   & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
 \hline
 
-\textbf{ACT-10}
+\textbf{ACT-10}\newline {\scriptsize\mbox{ACT-10a}}\newline {\scriptsize\mbox{ACT-10b}}
   & \textbf{Perimetro WAF/CDN, Firewall FortiGate, Certificados TLS y
 DNS Corporativo}
   & Seguridad / Red Perimetral
   & Perimetro Externo (Cloudflare / FortiGate 600F)
-  & Aqui reunimos la configuracion del dominio de VELOX Automotriz, el
-firewall perimetral FortiGate, los certificados X.509 (SHA-256 con
+  & Aqui reunimos dos componentes: \textbf{ACT-10a}, Cloudflare
+(WAF, CDN y DNS), y \textbf{ACT-10b}, el firewall perimetral
+FortiGate 600F. Los mantenemos como un activo compuesto para el
+registro y el analisis de riesgos. Incluimos los certificados X.509 (SHA-256 con
 RSA), los protocolos TLS y el filtrado del trafico entrante.
   & \textbf{C, I, D}
   & \cellcolor{csfDE}\textbf{Alto (4/5)} \\
